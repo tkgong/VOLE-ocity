@@ -6,7 +6,7 @@ Project Structure
 
 #VOLEitH-FPGA: Contains the core HLS source code for the proof generation component (e.g., endtoend.cpp, defs.h).
 
-#SW Bench: Contains the software benchmark files, likely forked from the official VOLEitH repository: https://github.com/adust09/VOLEitH-bench.
+#SW Bench: Contains the software benchmark files, likely forked from https://github.com/adust09/VOLEitH-bench.
 
 Circuit Preparation and Input Generation
 

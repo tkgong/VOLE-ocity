@@ -1,0 +1,1 @@
+{"rustc":11594289678289209806,"features":"","declared_features":"","target":0,"profile":0,"path":0,"deps":[[5660005276056203114,"build_script_build",false,16224338966156174301]],"local":[{"RerunIfChanged":{"output":"release/build/swanky-field-ff-primes-464991d4c0e66d45/output","paths":["build.rs"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}

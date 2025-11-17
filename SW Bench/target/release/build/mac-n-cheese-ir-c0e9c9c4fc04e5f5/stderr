@@ -1,0 +1,1 @@
+Re-using flatbuffer compilation cache for src="src/compilation_format.fbs", dst="src/compilation_format_generated.rs"

@@ -1,0 +1,49 @@
+[package]
+name = "voleitH-bench"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "voleith_bench"
+path = "src/mod.rs"
+crate-type = ["rlib", "dylib"]
+
+[profile.release]
+debug = true
+lto = true
+
+[dependencies]
+schmivitz = { git = "https://github.com/adust09/swanky", rev="8bba422b4a7d6a97be4894a731d8d7aed15704a2"}
+schmivitz-snark = { git = "https://github.com/adust09/swanky", rev="8bba422b4a7d6a97be4894a731d8d7aed15704a2"}
+
+eyre = "0.6.12"
+rand = "0.8.5"
+merlin = "3.0.0"
+openssl = "0.10.55"
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+clap = { version = "4.4", features = ["derive"] }
+sysinfo = "0.29.10"
+once_cell = "1.18.0"
+num_cpus = "1.16.0"
+# rk
+ark-std = "0.3.0"
+ark-r1cs-std = "0.3.0"
+ark-relations = "0.3.0"
+ark-groth16 = "0.3.0"
+ark-bn254 = "0.3.0"
+ark-snark = "0.3.0"
+arkworks-solidity-verifier = "0.1.0"
+tracing = { version = "0.1", default-features = false, features = [ "attributes" ] }
+tracing-subscriber = { version = "0.2" }
+tempfile = "3.3.0"
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[[bench]]
+name = "voleith"
+harness = false
+
+[[bench]]
+name = "e2e"
+harness = false

@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build.rs
+cargo:rerun-if-changed=src/compilation_format.fbs
+cargo:rerun-if-changed=src/compilation_format_generated.rs

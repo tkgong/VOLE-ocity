@@ -1,0 +1,340 @@
+
+
+================================================================
+== Vitis HLS Report for 'EvalCircuit_Pipeline_VITIS_LOOP_107_2'
+================================================================
+* Date:           Mon Nov 17 18:41:28 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.978 ns|        0 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   |   min  |   max  |                      Type                      |
+    +---------+---------+----------+----------+--------+--------+------------------------------------------------+
+    |   576267|   576267|  2.881 ms|  2.881 ms|  576261|  576261|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+--------+--------+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_107_2  |   576265|   576265|        11|          3|          3|  192086|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 3, depth = 11
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 1
+  Pipeline-0 : II = 3, D = 11, States = { 1 2 3 4 5 6 7 8 9 10 11 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.57>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%i_10 = alloca i32 1" [gatebygate.cpp:107]   --->   Operation 14 'alloca' 'i_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1 %u_1, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 15 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1 %u_0, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 16 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i128 %V_1, i64 666, i64 24, i64 18446744073709551615"   --->   Operation 17 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i128 %V_0, i64 666, i64 24, i64 18446744073709551615"   --->   Operation 18 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %d_strm_cp, void @empty_46, i32 0, i32 0, void @empty_34, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %a1_strm, void @empty_46, i32 0, i32 0, void @empty_34, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %a0_strm, void @empty_46, i32 0, i32 0, void @empty_34, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %circuit, void @empty_26, i32 0, i32 0, void @empty_36, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %d_strm, void @empty_26, i32 0, i32 0, void @empty_36, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.38ns)   --->   "%store_ln107 = store i18 0, i18 %i_10" [gatebygate.cpp:107]   --->   Operation 24 'store' 'store_ln107' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln107 = br void %for.body10" [gatebygate.cpp:107]   --->   Operation 25 'br' 'br_ln107' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%i = load i18 %i_10" [gatebygate.cpp:107]   --->   Operation 26 'load' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.79ns)   --->   "%icmp_ln107 = icmp_eq  i18 %i, i18 192086" [gatebygate.cpp:107]   --->   Operation 27 'icmp' 'icmp_ln107' <Predicate = true> <Delay = 0.79> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.79ns)   --->   "%i_20 = add i18 %i, i18 1" [gatebygate.cpp:107]   --->   Operation 28 'add' 'i_20' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln107 = br i1 %icmp_ln107, void %for.body10.split, void %for.end69.exitStub" [gatebygate.cpp:107]   --->   Operation 29 'br' 'br_ln107' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.38ns)   --->   "%store_ln107 = store i18 %i_20, i18 %i_10" [gatebygate.cpp:107]   --->   Operation 30 'store' 'store_ln107' <Predicate = (!icmp_ln107)> <Delay = 0.38>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln107 = br void %for.body10" [gatebygate.cpp:107]   --->   Operation 31 'br' 'br_ln107' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.81>
+ST_2 : Operation 32 [1/1] (0.07ns)   --->   "%circuit_read = read i128 @_ssdm_op_Read.axis.volatile.i128P128A, i128 %circuit" [gatebygate.cpp:109]   --->   Operation 32 'read' 'circuit_read' <Predicate = (!icmp_ln107)> <Delay = 0.07> <CoreInst = "regslice">   --->   Core 147 'regslice' <Latency = 0> <II = 1> <Delay = 0.80> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%gate_is_and = trunc i128 %circuit_read" [gatebygate.cpp:109]   --->   Operation 33 'trunc' 'gate_is_and' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%gate_in1 = partselect i19 @_ssdm_op_PartSelect.i19.i128.i128, i128 %circuit_read, i128 32" [gatebygate.cpp:109]   --->   Operation 34 'partselect' 'gate_in1' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%gate_in2 = partselect i19 @_ssdm_op_PartSelect.i19.i128.i128, i128 %circuit_read, i128 64" [gatebygate.cpp:109]   --->   Operation 35 'partselect' 'gate_in2' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%gate_out = partselect i19 @_ssdm_op_PartSelect.i19.i128.i128, i128 %circuit_read, i128 96" [gatebygate.cpp:109]   --->   Operation 36 'partselect' 'gate_out' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln124 = zext i19 %gate_in1" [gatebygate.cpp:124]   --->   Operation 37 'zext' 'zext_ln124' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i128.i128, i128 %circuit_read, i128 32" [gatebygate.cpp:124]   --->   Operation 38 'bitselect' 'tmp' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i18 @_ssdm_op_PartSelect.i18.i128.i32.i32, i128 %circuit_read, i32 33, i32 50" [gatebygate.cpp:124]   --->   Operation 39 'partselect' 'lshr_ln' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%zext_ln124_1 = zext i18 %lshr_ln" [gatebygate.cpp:124]   --->   Operation 40 'zext' 'zext_ln124_1' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%extended_witness_addr = getelementptr i1 %extended_witness, i64 0, i64 %zext_ln124" [gatebygate.cpp:124]   --->   Operation 41 'getelementptr' 'extended_witness_addr' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%zext_ln124_2 = zext i19 %gate_in2" [gatebygate.cpp:124]   --->   Operation 42 'zext' 'zext_ln124_2' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_843 = bitselect i1 @_ssdm_op_BitSelect.i1.i128.i128, i128 %circuit_read, i128 64" [gatebygate.cpp:124]   --->   Operation 43 'bitselect' 'tmp_843' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%lshr_ln124_s = partselect i18 @_ssdm_op_PartSelect.i18.i128.i32.i32, i128 %circuit_read, i32 65, i32 82" [gatebygate.cpp:124]   --->   Operation 44 'partselect' 'lshr_ln124_s' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%zext_ln124_3 = zext i18 %lshr_ln124_s" [gatebygate.cpp:124]   --->   Operation 45 'zext' 'zext_ln124_3' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%extended_witness_addr_1 = getelementptr i1 %extended_witness, i64 0, i64 %zext_ln124_2" [gatebygate.cpp:124]   --->   Operation 46 'getelementptr' 'extended_witness_addr_1' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_844 = bitselect i1 @_ssdm_op_BitSelect.i1.i128.i128, i128 %circuit_read, i128 96" [gatebygate.cpp:124]   --->   Operation 47 'bitselect' 'tmp_844' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%lshr_ln124_1 = partselect i18 @_ssdm_op_PartSelect.i18.i128.i32.i32, i128 %circuit_read, i32 97, i32 114" [gatebygate.cpp:124]   --->   Operation 48 'partselect' 'lshr_ln124_1' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 49 [2/2] (1.21ns)   --->   "%extended_witness_load = load i19 %extended_witness_addr" [gatebygate.cpp:124]   --->   Operation 49 'load' 'extended_witness_load' <Predicate = (!icmp_ln107)> <Delay = 1.21> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 1> <Depth = 386045> <RAM>
+ST_2 : Operation 50 [2/2] (1.21ns)   --->   "%extended_witness_load_1 = load i19 %extended_witness_addr_1" [gatebygate.cpp:124]   --->   Operation 50 'load' 'extended_witness_load_1' <Predicate = (!icmp_ln107)> <Delay = 1.21> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 1> <Depth = 386045> <RAM>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln113 = br i1 %gate_is_and, void %if.else, void %if.then" [gatebygate.cpp:113]   --->   Operation 51 'br' 'br_ln113' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%V_0_addr_3 = getelementptr i128 %V_0, i64 0, i64 %zext_ln124_1" [gatebygate.cpp:126]   --->   Operation 52 'getelementptr' 'V_0_addr_3' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%V_1_addr_3 = getelementptr i128 %V_1, i64 0, i64 %zext_ln124_1" [gatebygate.cpp:126]   --->   Operation 53 'getelementptr' 'V_1_addr_3' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%V_0_addr_4 = getelementptr i128 %V_0, i64 0, i64 %zext_ln124_3" [gatebygate.cpp:126]   --->   Operation 54 'getelementptr' 'V_0_addr_4' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%V_1_addr_4 = getelementptr i128 %V_1, i64 0, i64 %zext_ln124_3" [gatebygate.cpp:126]   --->   Operation 55 'getelementptr' 'V_1_addr_4' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.00>
+ST_2 : Operation 56 [2/2] (2.73ns)   --->   "%V_0_load_3 = load i18 %V_0_addr_3" [gatebygate.cpp:126]   --->   Operation 56 'load' 'V_0_load_3' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_2 : Operation 57 [2/2] (2.73ns)   --->   "%V_1_load_3 = load i18 %V_1_addr_3" [gatebygate.cpp:126]   --->   Operation 57 'load' 'V_1_load_3' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_2 : Operation 58 [2/2] (2.73ns)   --->   "%V_0_load_4 = load i18 %V_0_addr_4" [gatebygate.cpp:126]   --->   Operation 58 'load' 'V_0_load_4' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_2 : Operation 59 [2/2] (2.73ns)   --->   "%V_1_load_4 = load i18 %V_1_addr_4" [gatebygate.cpp:126]   --->   Operation 59 'load' 'V_1_load_4' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln125 = br i1 %tmp_844, void %arrayidx663.case.0, void %arrayidx663.case.1" [gatebygate.cpp:125]   --->   Operation 60 'br' 'br_ln125' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc67"   --->   Operation 61 'br' 'br_ln0' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%V_0_addr = getelementptr i128 %V_0, i64 0, i64 %zext_ln124_1" [gatebygate.cpp:119]   --->   Operation 62 'getelementptr' 'V_0_addr' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%V_1_addr = getelementptr i128 %V_1, i64 0, i64 %zext_ln124_1" [gatebygate.cpp:119]   --->   Operation 63 'getelementptr' 'V_1_addr' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 0.00>
+ST_2 : Operation 64 [2/2] (2.73ns)   --->   "%V_0_load = load i18 %V_0_addr" [gatebygate.cpp:119]   --->   Operation 64 'load' 'V_0_load' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_2 : Operation 65 [2/2] (2.73ns)   --->   "%V_1_load = load i18 %V_1_addr" [gatebygate.cpp:119]   --->   Operation 65 'load' 'V_1_load' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%V_0_addr_1 = getelementptr i128 %V_0, i64 0, i64 %zext_ln124_3" [gatebygate.cpp:119]   --->   Operation 66 'getelementptr' 'V_0_addr_1' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%V_1_addr_1 = getelementptr i128 %V_1, i64 0, i64 %zext_ln124_3" [gatebygate.cpp:119]   --->   Operation 67 'getelementptr' 'V_1_addr_1' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 0.00>
+ST_2 : Operation 68 [2/2] (2.73ns)   --->   "%V_0_load_1 = load i18 %V_0_addr_1" [gatebygate.cpp:119]   --->   Operation 68 'load' 'V_0_load_1' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_2 : Operation 69 [2/2] (2.73ns)   --->   "%V_1_load_1 = load i18 %V_1_addr_1" [gatebygate.cpp:119]   --->   Operation 69 'load' 'V_1_load_1' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+
+State 3 <SV = 2> <Delay = 3.38>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%specpipeline_ln108 = specpipeline void @_ssdm_op_SpecPipeline, i32 3, i32 0, i32 0, i32 0, void @empty_34" [gatebygate.cpp:108]   --->   Operation 70 'specpipeline' 'specpipeline_ln108' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%speclooptripcount_ln107 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 192086, i64 192086, i64 192086" [gatebygate.cpp:107]   --->   Operation 71 'speclooptripcount' 'speclooptripcount_ln107' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%specloopname_ln107 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [gatebygate.cpp:107]   --->   Operation 72 'specloopname' 'specloopname_ln107' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%zext_ln124_4 = zext i19 %gate_out" [gatebygate.cpp:124]   --->   Operation 73 'zext' 'zext_ln124_4' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%zext_ln124_5 = zext i18 %lshr_ln124_1" [gatebygate.cpp:124]   --->   Operation 74 'zext' 'zext_ln124_5' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%extended_witness_addr_2 = getelementptr i1 %extended_witness, i64 0, i64 %zext_ln124_4" [gatebygate.cpp:124]   --->   Operation 75 'getelementptr' 'extended_witness_addr_2' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%u_0_addr = getelementptr i1 %u_0, i64 0, i64 %zext_ln124_5" [gatebygate.cpp:125]   --->   Operation 76 'getelementptr' 'u_0_addr' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%u_1_addr = getelementptr i1 %u_1, i64 0, i64 %zext_ln124_5" [gatebygate.cpp:125]   --->   Operation 77 'getelementptr' 'u_1_addr' <Predicate = (!icmp_ln107)> <Delay = 0.00>
+ST_3 : Operation 78 [1/2] ( I:1.21ns O:1.21ns )   --->   "%extended_witness_load = load i19 %extended_witness_addr" [gatebygate.cpp:124]   --->   Operation 78 'load' 'extended_witness_load' <Predicate = (!icmp_ln107)> <Delay = 1.21> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 1> <Depth = 386045> <RAM>
+ST_3 : Operation 79 [1/2] ( I:1.21ns O:1.21ns )   --->   "%extended_witness_load_1 = load i19 %extended_witness_addr_1" [gatebygate.cpp:124]   --->   Operation 79 'load' 'extended_witness_load_1' <Predicate = (!icmp_ln107)> <Delay = 1.21> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 1> <Depth = 386045> <RAM>
+ST_3 : Operation 80 [1/1] (0.12ns)   --->   "%xor_ln124 = xor i1 %extended_witness_load, i1 %extended_witness_load_1" [gatebygate.cpp:124]   --->   Operation 80 'xor' 'xor_ln124' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 81 [1/1] ( I:1.21ns O:1.21ns )   --->   "%store_ln124 = store i1 %xor_ln124, i19 %extended_witness_addr_2" [gatebygate.cpp:124]   --->   Operation 81 'store' 'store_ln124' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 1> <Depth = 386045> <RAM>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%u_0_addr_1 = getelementptr i1 %u_0, i64 0, i64 %zext_ln124_1" [gatebygate.cpp:125]   --->   Operation 82 'getelementptr' 'u_0_addr_1' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%u_1_addr_1 = getelementptr i1 %u_1, i64 0, i64 %zext_ln124_1" [gatebygate.cpp:125]   --->   Operation 83 'getelementptr' 'u_1_addr_1' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.00>
+ST_3 : Operation 84 [2/2] (1.21ns)   --->   "%u_0_load_1 = load i18 %u_0_addr_1" [gatebygate.cpp:125]   --->   Operation 84 'load' 'u_0_load_1' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_2P_BRAM">   --->   Core 93 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 193023> <RAM>
+ST_3 : Operation 85 [2/2] (1.21ns)   --->   "%u_1_load_1 = load i18 %u_1_addr_1" [gatebygate.cpp:125]   --->   Operation 85 'load' 'u_1_load_1' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_2P_BRAM">   --->   Core 93 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 193023> <RAM>
+ST_3 : Operation 86 [1/2] ( I:2.73ns O:2.73ns )   --->   "%V_0_load_3 = load i18 %V_0_addr_3" [gatebygate.cpp:126]   --->   Operation 86 'load' 'V_0_load_3' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_3 : Operation 87 [1/2] ( I:2.73ns O:2.73ns )   --->   "%V_1_load_3 = load i18 %V_1_addr_3" [gatebygate.cpp:126]   --->   Operation 87 'load' 'V_1_load_3' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_3 : Operation 88 [1/1] (0.34ns)   --->   "%select_ln126 = select i1 %tmp, i128 %V_1_load_3, i128 %V_0_load_3" [gatebygate.cpp:126]   --->   Operation 88 'select' 'select_ln126' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.34> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 89 [1/2] ( I:2.73ns O:2.73ns )   --->   "%V_0_load_4 = load i18 %V_0_addr_4" [gatebygate.cpp:126]   --->   Operation 89 'load' 'V_0_load_4' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_3 : Operation 90 [1/2] ( I:2.73ns O:2.73ns )   --->   "%V_1_load_4 = load i18 %V_1_addr_4" [gatebygate.cpp:126]   --->   Operation 90 'load' 'V_1_load_4' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_3 : Operation 91 [1/1] (0.34ns)   --->   "%select_ln126_1 = select i1 %tmp_843, i128 %V_1_load_4, i128 %V_0_load_4" [gatebygate.cpp:126]   --->   Operation 91 'select' 'select_ln126_1' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.34> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 92 [1/1] (0.30ns)   --->   "%xor_ln126 = xor i128 %select_ln126_1, i128 %select_ln126" [gatebygate.cpp:126]   --->   Operation 92 'xor' 'xor_ln126' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.30> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "%V_0_addr_5 = getelementptr i128 %V_0, i64 0, i64 %zext_ln124_5" [gatebygate.cpp:126]   --->   Operation 93 'getelementptr' 'V_0_addr_5' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "%V_1_addr_5 = getelementptr i128 %V_1, i64 0, i64 %zext_ln124_5" [gatebygate.cpp:126]   --->   Operation 94 'getelementptr' 'V_1_addr_5' <Predicate = (!icmp_ln107 & !gate_is_and)> <Delay = 0.00>
+ST_3 : Operation 95 [1/1] (0.12ns)   --->   "%and_ln114 = and i1 %extended_witness_load, i1 %extended_witness_load_1" [gatebygate.cpp:114]   --->   Operation 95 'and' 'and_ln114' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 96 [1/1] ( I:1.21ns O:1.21ns )   --->   "%store_ln114 = store i1 %and_ln114, i19 %extended_witness_addr_2" [gatebygate.cpp:114]   --->   Operation 96 'store' 'store_ln114' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 1> <Depth = 386045> <RAM>
+ST_3 : Operation 97 [2/2] (1.21ns)   --->   "%u_0_load = load i18 %u_0_addr" [gatebygate.cpp:115]   --->   Operation 97 'load' 'u_0_load' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_2P_BRAM">   --->   Core 93 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 193023> <RAM>
+ST_3 : Operation 98 [2/2] (1.21ns)   --->   "%u_1_load = load i18 %u_1_addr" [gatebygate.cpp:115]   --->   Operation 98 'load' 'u_1_load' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_2P_BRAM">   --->   Core 93 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 193023> <RAM>
+ST_3 : Operation 99 [1/2] ( I:2.73ns O:2.73ns )   --->   "%V_0_load = load i18 %V_0_addr" [gatebygate.cpp:119]   --->   Operation 99 'load' 'V_0_load' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_3 : Operation 100 [1/2] ( I:2.73ns O:2.73ns )   --->   "%V_1_load = load i18 %V_1_addr" [gatebygate.cpp:119]   --->   Operation 100 'load' 'V_1_load' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_3 : Operation 101 [1/2] ( I:2.73ns O:2.73ns )   --->   "%V_0_load_1 = load i18 %V_0_addr_1" [gatebygate.cpp:119]   --->   Operation 101 'load' 'V_0_load_1' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_3 : Operation 102 [1/2] ( I:2.73ns O:2.73ns )   --->   "%V_1_load_1 = load i18 %V_1_addr_1" [gatebygate.cpp:119]   --->   Operation 102 'load' 'V_1_load_1' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_3 : Operation 103 [1/1] (0.00ns)   --->   "%V_0_addr_2 = getelementptr i128 %V_0, i64 0, i64 %zext_ln124_5" [gatebygate.cpp:120]   --->   Operation 103 'getelementptr' 'V_0_addr_2' <Predicate = (!icmp_ln107 & gate_is_and & !tmp_844)> <Delay = 0.00>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "%V_1_addr_2 = getelementptr i128 %V_1, i64 0, i64 %zext_ln124_5" [gatebygate.cpp:120]   --->   Operation 104 'getelementptr' 'V_1_addr_2' <Predicate = (!icmp_ln107 & gate_is_and & tmp_844)> <Delay = 0.00>
+ST_3 : Operation 105 [2/2] (2.73ns)   --->   "%V_0_load_2 = load i18 %V_0_addr_2" [gatebygate.cpp:120]   --->   Operation 105 'load' 'V_0_load_2' <Predicate = (!icmp_ln107 & gate_is_and & !tmp_844)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_3 : Operation 106 [2/2] (2.73ns)   --->   "%V_1_load_2 = load i18 %V_1_addr_2" [gatebygate.cpp:120]   --->   Operation 106 'load' 'V_1_load_2' <Predicate = (!icmp_ln107 & gate_is_and & tmp_844)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+
+State 4 <SV = 3> <Delay = 4.32>
+ST_4 : Operation 107 [1/2] ( I:1.21ns O:1.21ns )   --->   "%u_0_load_1 = load i18 %u_0_addr_1" [gatebygate.cpp:125]   --->   Operation 107 'load' 'u_0_load_1' <Predicate = (!gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_2P_BRAM">   --->   Core 93 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 193023> <RAM>
+ST_4 : Operation 108 [1/2] ( I:1.21ns O:1.21ns )   --->   "%u_1_load_1 = load i18 %u_1_addr_1" [gatebygate.cpp:125]   --->   Operation 108 'load' 'u_1_load_1' <Predicate = (!gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_2P_BRAM">   --->   Core 93 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 193023> <RAM>
+ST_4 : Operation 109 [1/1] (0.27ns)   --->   "%select_ln125 = select i1 %tmp, i1 %u_1_load_1, i1 %u_0_load_1" [gatebygate.cpp:125]   --->   Operation 109 'select' 'select_ln125' <Predicate = (!gate_is_and)> <Delay = 0.27> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 110 [2/2] (1.21ns)   --->   "%extended_witness_load_4 = load i19 %extended_witness_addr_1" [gatebygate.cpp:125]   --->   Operation 110 'load' 'extended_witness_load_4' <Predicate = (!gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 1> <Depth = 386045> <RAM>
+ST_4 : Operation 111 [1/1] ( I:2.73ns O:2.73ns )   --->   "%store_ln126 = store i128 %xor_ln126, i18 %V_0_addr_5" [gatebygate.cpp:126]   --->   Operation 111 'store' 'store_ln126' <Predicate = (!gate_is_and & !tmp_844)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_4 : Operation 112 [1/1] ( I:2.73ns O:2.73ns )   --->   "%store_ln126 = store i128 %xor_ln126, i18 %V_1_addr_5" [gatebygate.cpp:126]   --->   Operation 112 'store' 'store_ln126' <Predicate = (!gate_is_and & tmp_844)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_4 : Operation 113 [1/2] ( I:1.21ns O:1.21ns )   --->   "%u_0_load = load i18 %u_0_addr" [gatebygate.cpp:115]   --->   Operation 113 'load' 'u_0_load' <Predicate = (gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_2P_BRAM">   --->   Core 93 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 193023> <RAM>
+ST_4 : Operation 114 [1/2] ( I:1.21ns O:1.21ns )   --->   "%u_1_load = load i18 %u_1_addr" [gatebygate.cpp:115]   --->   Operation 114 'load' 'u_1_load' <Predicate = (gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_2P_BRAM">   --->   Core 93 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 193023> <RAM>
+ST_4 : Operation 115 [1/1] (0.34ns)   --->   "%select_ln119 = select i1 %tmp, i128 %V_1_load, i128 %V_0_load" [gatebygate.cpp:119]   --->   Operation 115 'select' 'select_ln119' <Predicate = (gate_is_and)> <Delay = 0.34> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 116 [1/1] (0.34ns)   --->   "%select_ln119_1 = select i1 %tmp_843, i128 %V_1_load_1, i128 %V_0_load_1" [gatebygate.cpp:119]   --->   Operation 116 'select' 'select_ln119_1' <Predicate = (gate_is_and)> <Delay = 0.34> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 117 [7/7] (3.97ns)   --->   "%a0 = call i255 @gf128_clmul, i128 %select_ln119, i128 %select_ln119_1" [gatebygate.cpp:119]   --->   Operation 117 'call' 'a0' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 3.97> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 118 [2/2] (1.21ns)   --->   "%extended_witness_load_2 = load i19 %extended_witness_addr" [gatebygate.cpp:120]   --->   Operation 118 'load' 'extended_witness_load_2' <Predicate = (gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 1> <Depth = 386045> <RAM>
+ST_4 : Operation 119 [2/2] (1.21ns)   --->   "%extended_witness_load_3 = load i19 %extended_witness_addr_1" [gatebygate.cpp:120]   --->   Operation 119 'load' 'extended_witness_load_3' <Predicate = (gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 1> <Depth = 386045> <RAM>
+ST_4 : Operation 120 [1/2] ( I:2.73ns O:2.73ns )   --->   "%V_0_load_2 = load i18 %V_0_addr_2" [gatebygate.cpp:120]   --->   Operation 120 'load' 'V_0_load_2' <Predicate = (gate_is_and & !tmp_844)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+ST_4 : Operation 121 [1/2] ( I:2.73ns O:2.73ns )   --->   "%V_1_load_2 = load i18 %V_1_addr_2" [gatebygate.cpp:120]   --->   Operation 121 'load' 'V_1_load_2' <Predicate = (gate_is_and & tmp_844)> <Delay = 2.73> <CoreInst = "RAM_2P_URAM">   --->   Core 94 'RAM_2P_URAM' <Latency = 1> <II = 1> <Delay = 2.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 193023> <RAM>
+
+State 5 <SV = 4> <Delay = 4.97>
+ST_5 : Operation 122 [1/2] ( I:1.21ns O:1.21ns )   --->   "%extended_witness_load_4 = load i19 %extended_witness_addr_1" [gatebygate.cpp:125]   --->   Operation 122 'load' 'extended_witness_load_4' <Predicate = (!gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 1> <Depth = 386045> <RAM>
+ST_5 : Operation 123 [1/1] (0.12ns)   --->   "%xor_ln125 = xor i1 %extended_witness_load_4, i1 %select_ln125" [gatebygate.cpp:125]   --->   Operation 123 'xor' 'xor_ln125' <Predicate = (!gate_is_and)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 124 [1/1] ( I:1.21ns O:1.21ns )   --->   "%store_ln125 = store i1 %xor_ln125, i18 %u_0_addr" [gatebygate.cpp:125]   --->   Operation 124 'store' 'store_ln125' <Predicate = (!gate_is_and & !tmp_844)> <Delay = 1.21> <CoreInst = "RAM_2P_BRAM">   --->   Core 93 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 193023> <RAM>
+ST_5 : Operation 125 [1/1] (0.00ns)   --->   "%br_ln126 = br void %arrayidx663.exit" [gatebygate.cpp:126]   --->   Operation 125 'br' 'br_ln126' <Predicate = (!gate_is_and & !tmp_844)> <Delay = 0.00>
+ST_5 : Operation 126 [1/1] ( I:1.21ns O:1.21ns )   --->   "%store_ln125 = store i1 %xor_ln125, i18 %u_1_addr" [gatebygate.cpp:125]   --->   Operation 126 'store' 'store_ln125' <Predicate = (!gate_is_and & tmp_844)> <Delay = 1.21> <CoreInst = "RAM_2P_BRAM">   --->   Core 93 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 193023> <RAM>
+ST_5 : Operation 127 [1/1] (0.00ns)   --->   "%br_ln126 = br void %arrayidx663.exit" [gatebygate.cpp:126]   --->   Operation 127 'br' 'br_ln126' <Predicate = (!gate_is_and & tmp_844)> <Delay = 0.00>
+ST_5 : Operation 128 [1/1] (0.27ns)   --->   "%select_ln115 = select i1 %tmp_844, i1 %u_1_load, i1 %u_0_load" [gatebygate.cpp:115]   --->   Operation 128 'select' 'select_ln115' <Predicate = (gate_is_and)> <Delay = 0.27> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 129 [1/1] (0.12ns)   --->   "%d = xor i1 %and_ln114, i1 %select_ln115" [gatebygate.cpp:115]   --->   Operation 129 'xor' 'd' <Predicate = (gate_is_and)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 130 [6/7] (4.97ns)   --->   "%a0 = call i255 @gf128_clmul, i128 %select_ln119, i128 %select_ln119_1" [gatebygate.cpp:119]   --->   Operation 130 'call' 'a0' <Predicate = (gate_is_and)> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+ST_5 : Operation 131 [1/2] ( I:1.21ns O:1.21ns )   --->   "%extended_witness_load_2 = load i19 %extended_witness_addr" [gatebygate.cpp:120]   --->   Operation 131 'load' 'extended_witness_load_2' <Predicate = (gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 1> <Depth = 386045> <RAM>
+ST_5 : Operation 132 [1/2] ( I:1.21ns O:1.21ns )   --->   "%extended_witness_load_3 = load i19 %extended_witness_addr_1" [gatebygate.cpp:120]   --->   Operation 132 'load' 'extended_witness_load_3' <Predicate = (gate_is_and)> <Delay = 1.21> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 1.21> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 1> <Depth = 386045> <RAM>
+ST_5 : Operation 133 [1/1] (0.27ns)   --->   "%select_ln120_1 = select i1 %extended_witness_load_2, i128 340282366920938463463374607431768211455, i128 0" [gatebygate.cpp:120]   --->   Operation 133 'select' 'select_ln120_1' <Predicate = (gate_is_and)> <Delay = 0.27> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 134 [1/1] (0.30ns)   --->   "%and_ln120 = and i128 %select_ln119_1, i128 %select_ln120_1" [gatebygate.cpp:120]   --->   Operation 134 'and' 'and_ln120' <Predicate = (gate_is_and)> <Delay = 0.30> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 135 [1/1] (0.27ns)   --->   "%select_ln120_2 = select i1 %extended_witness_load_3, i128 340282366920938463463374607431768211455, i128 0" [gatebygate.cpp:120]   --->   Operation 135 'select' 'select_ln120_2' <Predicate = (gate_is_and)> <Delay = 0.27> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 136 [1/1] (0.30ns)   --->   "%and_ln120_1 = and i128 %select_ln119, i128 %select_ln120_2" [gatebygate.cpp:120]   --->   Operation 136 'and' 'and_ln120_1' <Predicate = (gate_is_and)> <Delay = 0.30> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 137 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln120 = add i128 %and_ln120_1, i128 %and_ln120" [gatebygate.cpp:120]   --->   Operation 137 'add' 'add_ln120' <Predicate = (gate_is_and)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 138 [1/1] (0.34ns)   --->   "%select_ln120 = select i1 %tmp_844, i128 %V_1_load_2, i128 %V_0_load_2" [gatebygate.cpp:120]   --->   Operation 138 'select' 'select_ln120' <Predicate = (gate_is_and)> <Delay = 0.34> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 139 [1/1] (1.06ns) (root node of TernaryAdder)   --->   "%a1 = sub i128 %add_ln120, i128 %select_ln120" [gatebygate.cpp:120]   --->   Operation 139 'sub' 'a1' <Predicate = (gate_is_and)> <Delay = 1.06> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 4.97>
+ST_6 : Operation 140 [5/7] (4.97ns)   --->   "%a0 = call i255 @gf128_clmul, i128 %select_ln119, i128 %select_ln119_1" [gatebygate.cpp:119]   --->   Operation 140 'call' 'a0' <Predicate = (gate_is_and)> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 7 <SV = 6> <Delay = 4.97>
+ST_7 : Operation 141 [4/7] (4.97ns)   --->   "%a0 = call i255 @gf128_clmul, i128 %select_ln119, i128 %select_ln119_1" [gatebygate.cpp:119]   --->   Operation 141 'call' 'a0' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 8 <SV = 7> <Delay = 4.97>
+ST_8 : Operation 142 [3/7] (4.97ns)   --->   "%a0 = call i255 @gf128_clmul, i128 %select_ln119, i128 %select_ln119_1" [gatebygate.cpp:119]   --->   Operation 142 'call' 'a0' <Predicate = (gate_is_and)> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+ST_8 : Operation 152 [1/1] (0.38ns)   --->   "%ret_ln0 = ret"   --->   Operation 152 'ret' 'ret_ln0' <Predicate = (icmp_ln107)> <Delay = 0.38>
+
+State 9 <SV = 8> <Delay = 4.97>
+ST_9 : Operation 143 [2/7] (4.97ns)   --->   "%a0 = call i255 @gf128_clmul, i128 %select_ln119, i128 %select_ln119_1" [gatebygate.cpp:119]   --->   Operation 143 'call' 'a0' <Predicate = (gate_is_and)> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 10 <SV = 9> <Delay = 4.97>
+ST_10 : Operation 144 [1/7] (4.97ns)   --->   "%a0 = call i255 @gf128_clmul, i128 %select_ln119, i128 %select_ln119_1" [gatebygate.cpp:119]   --->   Operation 144 'call' 'a0' <Predicate = (!icmp_ln107 & gate_is_and)> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 11 <SV = 10> <Delay = 1.42>
+ST_11 : Operation 145 [1/1] (0.00ns)   --->   "%zext_ln116 = zext i1 %d" [gatebygate.cpp:116]   --->   Operation 145 'zext' 'zext_ln116' <Predicate = (gate_is_and)> <Delay = 0.00>
+ST_11 : Operation 146 [1/1] (0.43ns)   --->   "%write_ln116 = write void @_ssdm_op_Write.axis.volatile.i8P128A, i8 %d_strm, i8 %zext_ln116" [gatebygate.cpp:116]   --->   Operation 146 'write' 'write_ln116' <Predicate = (gate_is_and)> <Delay = 0.43> <CoreInst = "regslice">   --->   Core 147 'regslice' <Latency = 0> <II = 1> <Delay = 0.58> <Adapter> <Opcode : 'read' 'write'>
+ST_11 : Operation 147 [1/1] ( I:1.42ns O:1.42ns )   --->   "%write_ln117 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %d_strm_cp, i1 %d" [gatebygate.cpp:117]   --->   Operation 147 'write' 'write_ln117' <Predicate = (gate_is_and)> <Delay = 1.42> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_11 : Operation 148 [1/1] (0.00ns)   --->   "%zext_ln119 = zext i255 %a0" [gatebygate.cpp:119]   --->   Operation 148 'zext' 'zext_ln119' <Predicate = (gate_is_and)> <Delay = 0.00>
+ST_11 : Operation 149 [1/1] ( I:1.42ns O:1.42ns )   --->   "%write_ln121 = write void @_ssdm_op_Write.ap_fifo.volatile.i256P0A, i256 %a0_strm, i256 %zext_ln119" [gatebygate.cpp:121]   --->   Operation 149 'write' 'write_ln121' <Predicate = (gate_is_and)> <Delay = 1.42> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 2> <FIFO>
+ST_11 : Operation 150 [1/1] ( I:1.40ns O:1.40ns )   --->   "%write_ln122 = write void @_ssdm_op_Write.ap_fifo.volatile.i128P0A, i128 %a1_strm, i128 %a1" [gatebygate.cpp:122]   --->   Operation 150 'write' 'write_ln122' <Predicate = (gate_is_and)> <Delay = 1.40> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 2> <FIFO>
+ST_11 : Operation 151 [1/1] (0.00ns)   --->   "%br_ln123 = br void %for.inc67" [gatebygate.cpp:123]   --->   Operation 151 'br' 'br_ln123' <Predicate = (gate_is_and)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 0.000ns.
+
+ <State 1>: 1.571ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln107', gatebygate.cpp:107) of constant 0 on local variable 'i', gatebygate.cpp:107 [21]  (0.387 ns)
+	'load' operation 18 bit ('i', gatebygate.cpp:107) on local variable 'i', gatebygate.cpp:107 [24]  (0.000 ns)
+	'add' operation 18 bit ('i', gatebygate.cpp:107) [26]  (0.797 ns)
+	'store' operation 0 bit ('store_ln107', gatebygate.cpp:107) of variable 'i', gatebygate.cpp:107 on local variable 'i', gatebygate.cpp:107 [130]  (0.387 ns)
+
+ <State 2>: 2.817ns
+The critical path consists of the following:
+	axis read operation ('circuit_read', gatebygate.cpp:109) on port 'circuit' (gatebygate.cpp:109) [32]  (0.078 ns)
+	'getelementptr' operation 18 bit ('V_0_addr', gatebygate.cpp:119) [101]  (0.000 ns)
+	'load' operation 128 bit ('V_0_load', gatebygate.cpp:119) on array 'V_0' [103]  (2.739 ns)
+
+ <State 3>: 3.385ns
+The critical path consists of the following:
+	'load' operation 128 bit ('V_0_load_3', gatebygate.cpp:126) on array 'V_0' [71]  (2.739 ns)
+	'select' operation 128 bit ('select_ln126', gatebygate.cpp:126) [73]  (0.346 ns)
+	'xor' operation 128 bit ('xor_ln126', gatebygate.cpp:126) [77]  (0.300 ns)
+
+ <State 4>: 4.321ns
+The critical path consists of the following:
+	'select' operation 128 bit ('select_ln119', gatebygate.cpp:119) [105]  (0.346 ns)
+	'call' operation 255 bit ('a0', gatebygate.cpp:119) to 'gf128_clmul' [111]  (3.975 ns)
+
+ <State 5>: 4.978ns
+The critical path consists of the following:
+	'call' operation 255 bit ('a0', gatebygate.cpp:119) to 'gf128_clmul' [111]  (4.978 ns)
+
+ <State 6>: 4.978ns
+The critical path consists of the following:
+	'call' operation 255 bit ('a0', gatebygate.cpp:119) to 'gf128_clmul' [111]  (4.978 ns)
+
+ <State 7>: 4.978ns
+The critical path consists of the following:
+	'call' operation 255 bit ('a0', gatebygate.cpp:119) to 'gf128_clmul' [111]  (4.978 ns)
+
+ <State 8>: 4.978ns
+The critical path consists of the following:
+	'call' operation 255 bit ('a0', gatebygate.cpp:119) to 'gf128_clmul' [111]  (4.978 ns)
+
+ <State 9>: 4.978ns
+The critical path consists of the following:
+	'call' operation 255 bit ('a0', gatebygate.cpp:119) to 'gf128_clmul' [111]  (4.978 ns)
+
+ <State 10>: 4.978ns
+The critical path consists of the following:
+	'call' operation 255 bit ('a0', gatebygate.cpp:119) to 'gf128_clmul' [111]  (4.978 ns)
+
+ <State 11>: 1.429ns
+The critical path consists of the following:
+	fifo write operation ('write_ln117', gatebygate.cpp:117) on port 'd_strm_cp' (gatebygate.cpp:117) [100]  (1.429 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

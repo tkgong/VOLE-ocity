@@ -1,0 +1,554 @@
+
+
+================================================================
+== Vitis HLS Report for 'updateKey'
+================================================================
+* Date:           Mon Nov 17 18:41:02 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.182 ns|        0 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       10|       10|  50.000 ns|  50.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 11
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 11, States = { 1 2 3 4 5 6 7 8 9 10 11 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.17>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%cipherkey_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %cipherkey" [./aes.hpp:393]   --->   Operation 12 'read' 'cipherkey_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%round_tmp = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32, i128 %cipherkey_read, i32 96" [./aes.hpp:401]   --->   Operation 13 'partselect' 'round_tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%tmp_1 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %cipherkey_read, i32 96, i32 103" [./aes.hpp:402]   --->   Operation 14 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%tmp = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %cipherkey_read, i32 104, i32 111" [./aes.hpp:404]   --->   Operation 15 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln404 = zext i8 %tmp" [./aes.hpp:404]   --->   Operation 16 'zext' 'zext_ln404' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln404" [./aes.hpp:404]   --->   Operation 17 'getelementptr' 'cipher_0_ssbox40_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load = load i8 %cipher_0_ssbox40_addr" [./aes.hpp:404]   --->   Operation 18 'load' 'cipher_0_ssbox40_load' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_s = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %cipherkey_read, i32 112, i32 119" [./aes.hpp:405]   --->   Operation 19 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln405 = zext i8 %tmp_s" [./aes.hpp:405]   --->   Operation 20 'zext' 'zext_ln405' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_1 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln405" [./aes.hpp:405]   --->   Operation 21 'getelementptr' 'cipher_0_ssbox40_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_1 = load i8 %cipher_0_ssbox40_addr_1" [./aes.hpp:405]   --->   Operation 22 'load' 'cipher_0_ssbox40_load_1' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i8 @_ssdm_op_PartSelect.i8.i128.i32.i32, i128 %cipherkey_read, i32 120, i32 127" [./aes.hpp:406]   --->   Operation 23 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln406 = zext i8 %tmp_2" [./aes.hpp:406]   --->   Operation 24 'zext' 'zext_ln406' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_2 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln406" [./aes.hpp:406]   --->   Operation 25 'getelementptr' 'cipher_0_ssbox40_addr_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_2 = load i8 %cipher_0_ssbox40_addr_2" [./aes.hpp:406]   --->   Operation 26 'load' 'cipher_0_ssbox40_load_2' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln407 = zext i8 %tmp_1" [./aes.hpp:407]   --->   Operation 27 'zext' 'zext_ln407' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_3 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln407" [./aes.hpp:407]   --->   Operation 28 'getelementptr' 'cipher_0_ssbox40_addr_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_3 = load i8 %cipher_0_ssbox40_addr_3" [./aes.hpp:407]   --->   Operation 29 'load' 'cipher_0_ssbox40_load_3' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_4 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32, i128 %cipherkey_read, i32 32" [./aes.hpp:410]   --->   Operation 30 'partselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_5 = partselect i32 @_ssdm_op_PartSelect.i32.i128.i32, i128 %cipherkey_read, i32 64" [./aes.hpp:411]   --->   Operation 31 'partselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.18>
+ST_2 : Operation 32 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load = load i8 %cipher_0_ssbox40_addr" [./aes.hpp:404]   --->   Operation 32 'load' 'cipher_0_ssbox40_load' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_2 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409)   --->   "%bit_sel2 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i8, i8 %cipher_0_ssbox40_load, i8 0" [./aes.hpp:404]   --->   Operation 33 'bitselect' 'bit_sel2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409)   --->   "%xor_ln404 = xor i1 %bit_sel2, i1 1" [./aes.hpp:404]   --->   Operation 34 'xor' 'xor_ln404' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409)   --->   "%part_sel1 = partselect i7 @_ssdm_op_PartSelect.i7.i8.i8.i8, i8 %cipher_0_ssbox40_load, i8 1, i8 7" [./aes.hpp:404]   --->   Operation 35 'partselect' 'part_sel1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_1 = load i8 %cipher_0_ssbox40_addr_1" [./aes.hpp:405]   --->   Operation 36 'load' 'cipher_0_ssbox40_load_1' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_2 : Operation 37 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_2 = load i8 %cipher_0_ssbox40_addr_2" [./aes.hpp:406]   --->   Operation 37 'load' 'cipher_0_ssbox40_load_2' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_2 : Operation 38 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_3 = load i8 %cipher_0_ssbox40_addr_3" [./aes.hpp:407]   --->   Operation 38 'load' 'cipher_0_ssbox40_load_3' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_2 : Operation 39 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409)   --->   "%round_tmp_1 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i7.i1, i8 %cipher_0_ssbox40_load_3, i8 %cipher_0_ssbox40_load_2, i8 %cipher_0_ssbox40_load_1, i7 %part_sel1, i1 %xor_ln404" [./aes.hpp:407]   --->   Operation 39 'bitconcatenate' 'round_tmp_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409)   --->   "%trunc_ln409 = trunc i128 %cipherkey_read" [./aes.hpp:409]   --->   Operation 40 'trunc' 'trunc_ln409' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.21ns) (out node of the LUT)   --->   "%xor_ln409 = xor i32 %trunc_ln409, i32 %round_tmp_1" [./aes.hpp:409]   --->   Operation 41 'xor' 'xor_ln409' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.21ns)   --->   "%xor_ln410 = xor i32 %tmp_4, i32 %xor_ln409" [./aes.hpp:410]   --->   Operation 42 'xor' 'xor_ln410' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.21ns)   --->   "%xor_ln411 = xor i32 %tmp_5, i32 %xor_ln410" [./aes.hpp:411]   --->   Operation 43 'xor' 'xor_ln411' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 44 [1/1] (0.21ns)   --->   "%round_tmp_2 = xor i32 %xor_ln411, i32 %round_tmp" [./aes.hpp:412]   --->   Operation 44 'xor' 'round_tmp_2' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%trunc_ln402 = trunc i32 %round_tmp_2" [./aes.hpp:402]   --->   Operation 45 'trunc' 'trunc_ln402' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_7 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_2, i32 8, i32 15" [./aes.hpp:404]   --->   Operation 46 'partselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln404_1 = zext i8 %tmp_7" [./aes.hpp:404]   --->   Operation 47 'zext' 'zext_ln404_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_4 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln404_1" [./aes.hpp:404]   --->   Operation 48 'getelementptr' 'cipher_0_ssbox40_addr_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_4 = load i8 %cipher_0_ssbox40_addr_4" [./aes.hpp:404]   --->   Operation 49 'load' 'cipher_0_ssbox40_load_4' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_8 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_2, i32 16, i32 23" [./aes.hpp:405]   --->   Operation 50 'partselect' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%zext_ln405_1 = zext i8 %tmp_8" [./aes.hpp:405]   --->   Operation 51 'zext' 'zext_ln405_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_5 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln405_1" [./aes.hpp:405]   --->   Operation 52 'getelementptr' 'cipher_0_ssbox40_addr_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_5 = load i8 %cipher_0_ssbox40_addr_5" [./aes.hpp:405]   --->   Operation 53 'load' 'cipher_0_ssbox40_load_5' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_9 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_2, i32 24, i32 31" [./aes.hpp:406]   --->   Operation 54 'partselect' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln406_1 = zext i8 %tmp_9" [./aes.hpp:406]   --->   Operation 55 'zext' 'zext_ln406_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_6 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln406_1" [./aes.hpp:406]   --->   Operation 56 'getelementptr' 'cipher_0_ssbox40_addr_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_6 = load i8 %cipher_0_ssbox40_addr_6" [./aes.hpp:406]   --->   Operation 57 'load' 'cipher_0_ssbox40_load_6' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%zext_ln407_1 = zext i8 %trunc_ln402" [./aes.hpp:407]   --->   Operation 58 'zext' 'zext_ln407_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_7 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln407_1" [./aes.hpp:407]   --->   Operation 59 'getelementptr' 'cipher_0_ssbox40_addr_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_7 = load i8 %cipher_0_ssbox40_addr_7" [./aes.hpp:407]   --->   Operation 60 'load' 'cipher_0_ssbox40_load_7' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 3 <SV = 2> <Delay = 2.88>
+ST_3 : Operation 61 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_4 = load i8 %cipher_0_ssbox40_addr_4" [./aes.hpp:404]   --->   Operation 61 'load' 'cipher_0_ssbox40_load_4' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "%bit_sel3 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i8, i8 %cipher_0_ssbox40_load_4, i8 1" [./aes.hpp:404]   --->   Operation 62 'bitselect' 'bit_sel3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.12ns)   --->   "%xor_ln404_1 = xor i1 %bit_sel3, i1 1" [./aes.hpp:404]   --->   Operation 63 'xor' 'xor_ln404_1' <Predicate = true> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%trunc_ln404 = trunc i8 %cipher_0_ssbox40_load_4" [./aes.hpp:404]   --->   Operation 64 'trunc' 'trunc_ln404' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%part_sel5 = partselect i6 @_ssdm_op_PartSelect.i6.i8.i8.i8, i8 %cipher_0_ssbox40_load_4, i8 2, i8 7" [./aes.hpp:404]   --->   Operation 65 'partselect' 'part_sel5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_5 = load i8 %cipher_0_ssbox40_addr_5" [./aes.hpp:405]   --->   Operation 66 'load' 'cipher_0_ssbox40_load_5' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 67 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_6 = load i8 %cipher_0_ssbox40_addr_6" [./aes.hpp:406]   --->   Operation 67 'load' 'cipher_0_ssbox40_load_6' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 68 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_7 = load i8 %cipher_0_ssbox40_addr_7" [./aes.hpp:407]   --->   Operation 68 'load' 'cipher_0_ssbox40_load_7' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%round_tmp_3 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i6.i1.i1, i8 %cipher_0_ssbox40_load_7, i8 %cipher_0_ssbox40_load_6, i8 %cipher_0_ssbox40_load_5, i6 %part_sel5, i1 %xor_ln404_1, i1 %trunc_ln404" [./aes.hpp:407]   --->   Operation 69 'bitconcatenate' 'round_tmp_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.21ns)   --->   "%xor_ln409_1 = xor i32 %round_tmp_3, i32 %xor_ln409" [./aes.hpp:409]   --->   Operation 70 'xor' 'xor_ln409_1' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 71 [1/1] (0.21ns)   --->   "%xor_ln410_1 = xor i32 %round_tmp_3, i32 %tmp_4" [./aes.hpp:410]   --->   Operation 71 'xor' 'xor_ln410_1' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 72 [1/1] (0.21ns)   --->   "%round_tmp_4 = xor i32 %xor_ln410_1, i32 %round_tmp" [./aes.hpp:412]   --->   Operation 72 'xor' 'round_tmp_4' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%trunc_ln402_1 = trunc i32 %round_tmp_4" [./aes.hpp:402]   --->   Operation 73 'trunc' 'trunc_ln402_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_4, i32 8, i32 15" [./aes.hpp:404]   --->   Operation 74 'partselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%zext_ln404_2 = zext i8 %tmp_3" [./aes.hpp:404]   --->   Operation 75 'zext' 'zext_ln404_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_8 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln404_2" [./aes.hpp:404]   --->   Operation 76 'getelementptr' 'cipher_0_ssbox40_addr_8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 77 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_8 = load i8 %cipher_0_ssbox40_addr_8" [./aes.hpp:404]   --->   Operation 77 'load' 'cipher_0_ssbox40_load_8' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_6 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_4, i32 16, i32 23" [./aes.hpp:405]   --->   Operation 78 'partselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%zext_ln405_2 = zext i8 %tmp_6" [./aes.hpp:405]   --->   Operation 79 'zext' 'zext_ln405_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_9 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln405_2" [./aes.hpp:405]   --->   Operation 80 'getelementptr' 'cipher_0_ssbox40_addr_9' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_9 = load i8 %cipher_0_ssbox40_addr_9" [./aes.hpp:405]   --->   Operation 81 'load' 'cipher_0_ssbox40_load_9' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_10 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_4, i32 24, i32 31" [./aes.hpp:406]   --->   Operation 82 'partselect' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%zext_ln406_2 = zext i8 %tmp_10" [./aes.hpp:406]   --->   Operation 83 'zext' 'zext_ln406_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_10 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln406_2" [./aes.hpp:406]   --->   Operation 84 'getelementptr' 'cipher_0_ssbox40_addr_10' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 85 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_10 = load i8 %cipher_0_ssbox40_addr_10" [./aes.hpp:406]   --->   Operation 85 'load' 'cipher_0_ssbox40_load_10' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%zext_ln407_2 = zext i8 %trunc_ln402_1" [./aes.hpp:407]   --->   Operation 86 'zext' 'zext_ln407_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_11 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln407_2" [./aes.hpp:407]   --->   Operation 87 'getelementptr' 'cipher_0_ssbox40_addr_11' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 88 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_11 = load i8 %cipher_0_ssbox40_addr_11" [./aes.hpp:407]   --->   Operation 88 'load' 'cipher_0_ssbox40_load_11' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 4 <SV = 3> <Delay = 2.97>
+ST_4 : Operation 89 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_8 = load i8 %cipher_0_ssbox40_addr_8" [./aes.hpp:404]   --->   Operation 89 'load' 'cipher_0_ssbox40_load_8' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_2)   --->   "%bit_sel4 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i8, i8 %cipher_0_ssbox40_load_8, i8 2" [./aes.hpp:404]   --->   Operation 90 'bitselect' 'bit_sel4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 91 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_2)   --->   "%xor_ln404_2 = xor i1 %bit_sel4, i1 1" [./aes.hpp:404]   --->   Operation 91 'xor' 'xor_ln404_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 92 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_2)   --->   "%trunc_ln404_1 = trunc i8 %cipher_0_ssbox40_load_8" [./aes.hpp:404]   --->   Operation 92 'trunc' 'trunc_ln404_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 93 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_2)   --->   "%part_sel7 = partselect i5 @_ssdm_op_PartSelect.i5.i8.i8.i8, i8 %cipher_0_ssbox40_load_8, i8 3, i8 7" [./aes.hpp:404]   --->   Operation 93 'partselect' 'part_sel7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 94 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_9 = load i8 %cipher_0_ssbox40_addr_9" [./aes.hpp:405]   --->   Operation 94 'load' 'cipher_0_ssbox40_load_9' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 95 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_10 = load i8 %cipher_0_ssbox40_addr_10" [./aes.hpp:406]   --->   Operation 95 'load' 'cipher_0_ssbox40_load_10' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 96 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_11 = load i8 %cipher_0_ssbox40_addr_11" [./aes.hpp:407]   --->   Operation 96 'load' 'cipher_0_ssbox40_load_11' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 97 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_2)   --->   "%round_tmp_5 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i5.i1.i2, i8 %cipher_0_ssbox40_load_11, i8 %cipher_0_ssbox40_load_10, i8 %cipher_0_ssbox40_load_9, i5 %part_sel7, i1 %xor_ln404_2, i2 %trunc_ln404_1" [./aes.hpp:407]   --->   Operation 97 'bitconcatenate' 'round_tmp_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 98 [1/1] (0.21ns) (out node of the LUT)   --->   "%xor_ln409_2 = xor i32 %round_tmp_5, i32 %xor_ln409_1" [./aes.hpp:409]   --->   Operation 98 'xor' 'xor_ln409_2' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 99 [1/1] (0.21ns)   --->   "%xor_ln411_2 = xor i32 %xor_ln409_2, i32 %xor_ln411" [./aes.hpp:411]   --->   Operation 99 'xor' 'xor_ln411_2' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 100 [1/1] (0.21ns)   --->   "%round_tmp_6 = xor i32 %xor_ln411_2, i32 %round_tmp_4" [./aes.hpp:412]   --->   Operation 100 'xor' 'round_tmp_6' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 101 [1/1] (0.00ns)   --->   "%trunc_ln402_2 = trunc i32 %round_tmp_6" [./aes.hpp:402]   --->   Operation 101 'trunc' 'trunc_ln402_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 102 [1/1] (0.00ns)   --->   "%tmp_11 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_6, i32 8, i32 15" [./aes.hpp:404]   --->   Operation 102 'partselect' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 103 [1/1] (0.00ns)   --->   "%zext_ln404_3 = zext i8 %tmp_11" [./aes.hpp:404]   --->   Operation 103 'zext' 'zext_ln404_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 104 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_12 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln404_3" [./aes.hpp:404]   --->   Operation 104 'getelementptr' 'cipher_0_ssbox40_addr_12' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 105 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_12 = load i8 %cipher_0_ssbox40_addr_12" [./aes.hpp:404]   --->   Operation 105 'load' 'cipher_0_ssbox40_load_12' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 106 [1/1] (0.00ns)   --->   "%tmp_12 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_6, i32 16, i32 23" [./aes.hpp:405]   --->   Operation 106 'partselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 107 [1/1] (0.00ns)   --->   "%zext_ln405_3 = zext i8 %tmp_12" [./aes.hpp:405]   --->   Operation 107 'zext' 'zext_ln405_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 108 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_13 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln405_3" [./aes.hpp:405]   --->   Operation 108 'getelementptr' 'cipher_0_ssbox40_addr_13' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 109 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_13 = load i8 %cipher_0_ssbox40_addr_13" [./aes.hpp:405]   --->   Operation 109 'load' 'cipher_0_ssbox40_load_13' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_13 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_6, i32 24, i32 31" [./aes.hpp:406]   --->   Operation 110 'partselect' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 111 [1/1] (0.00ns)   --->   "%zext_ln406_3 = zext i8 %tmp_13" [./aes.hpp:406]   --->   Operation 111 'zext' 'zext_ln406_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 112 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_14 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln406_3" [./aes.hpp:406]   --->   Operation 112 'getelementptr' 'cipher_0_ssbox40_addr_14' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 113 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_14 = load i8 %cipher_0_ssbox40_addr_14" [./aes.hpp:406]   --->   Operation 113 'load' 'cipher_0_ssbox40_load_14' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_4 : Operation 114 [1/1] (0.00ns)   --->   "%zext_ln407_3 = zext i8 %trunc_ln402_2" [./aes.hpp:407]   --->   Operation 114 'zext' 'zext_ln407_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_15 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln407_3" [./aes.hpp:407]   --->   Operation 115 'getelementptr' 'cipher_0_ssbox40_addr_15' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 116 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_15 = load i8 %cipher_0_ssbox40_addr_15" [./aes.hpp:407]   --->   Operation 116 'load' 'cipher_0_ssbox40_load_15' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 5 <SV = 4> <Delay = 2.67>
+ST_5 : Operation 117 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_12 = load i8 %cipher_0_ssbox40_addr_12" [./aes.hpp:404]   --->   Operation 117 'load' 'cipher_0_ssbox40_load_12' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_5 : Operation 118 [1/1] (0.00ns)   --->   "%bit_sel5 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i8, i8 %cipher_0_ssbox40_load_12, i8 3" [./aes.hpp:404]   --->   Operation 118 'bitselect' 'bit_sel5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 119 [1/1] (0.12ns)   --->   "%xor_ln404_3 = xor i1 %bit_sel5, i1 1" [./aes.hpp:404]   --->   Operation 119 'xor' 'xor_ln404_3' <Predicate = true> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 120 [1/1] (0.00ns)   --->   "%trunc_ln404_2 = trunc i8 %cipher_0_ssbox40_load_12" [./aes.hpp:404]   --->   Operation 120 'trunc' 'trunc_ln404_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 121 [1/1] (0.00ns)   --->   "%part_sel = partselect i4 @_ssdm_op_PartSelect.i4.i8.i8.i8, i8 %cipher_0_ssbox40_load_12, i8 4, i8 7" [./aes.hpp:404]   --->   Operation 121 'partselect' 'part_sel' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 122 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_13 = load i8 %cipher_0_ssbox40_addr_13" [./aes.hpp:405]   --->   Operation 122 'load' 'cipher_0_ssbox40_load_13' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_5 : Operation 123 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_14 = load i8 %cipher_0_ssbox40_addr_14" [./aes.hpp:406]   --->   Operation 123 'load' 'cipher_0_ssbox40_load_14' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_5 : Operation 124 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_15 = load i8 %cipher_0_ssbox40_addr_15" [./aes.hpp:407]   --->   Operation 124 'load' 'cipher_0_ssbox40_load_15' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_5 : Operation 125 [1/1] (0.00ns)   --->   "%round_tmp_7 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i4.i1.i3, i8 %cipher_0_ssbox40_load_15, i8 %cipher_0_ssbox40_load_14, i8 %cipher_0_ssbox40_load_13, i4 %part_sel, i1 %xor_ln404_3, i3 %trunc_ln404_2" [./aes.hpp:407]   --->   Operation 125 'bitconcatenate' 'round_tmp_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 126 [1/1] (0.21ns)   --->   "%round_tmp_8 = xor i32 %round_tmp_7, i32 %round_tmp" [./aes.hpp:412]   --->   Operation 126 'xor' 'round_tmp_8' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 127 [1/1] (0.00ns)   --->   "%trunc_ln402_3 = trunc i32 %round_tmp_8" [./aes.hpp:402]   --->   Operation 127 'trunc' 'trunc_ln402_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 128 [1/1] (0.00ns)   --->   "%tmp_14 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_8, i32 8, i32 15" [./aes.hpp:404]   --->   Operation 128 'partselect' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 129 [1/1] (0.00ns)   --->   "%zext_ln404_4 = zext i8 %tmp_14" [./aes.hpp:404]   --->   Operation 129 'zext' 'zext_ln404_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 130 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_16 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln404_4" [./aes.hpp:404]   --->   Operation 130 'getelementptr' 'cipher_0_ssbox40_addr_16' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 131 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_16 = load i8 %cipher_0_ssbox40_addr_16" [./aes.hpp:404]   --->   Operation 131 'load' 'cipher_0_ssbox40_load_16' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_5 : Operation 132 [1/1] (0.00ns)   --->   "%tmp_15 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_8, i32 16, i32 23" [./aes.hpp:405]   --->   Operation 132 'partselect' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 133 [1/1] (0.00ns)   --->   "%zext_ln405_4 = zext i8 %tmp_15" [./aes.hpp:405]   --->   Operation 133 'zext' 'zext_ln405_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 134 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_17 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln405_4" [./aes.hpp:405]   --->   Operation 134 'getelementptr' 'cipher_0_ssbox40_addr_17' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 135 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_17 = load i8 %cipher_0_ssbox40_addr_17" [./aes.hpp:405]   --->   Operation 135 'load' 'cipher_0_ssbox40_load_17' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_5 : Operation 136 [1/1] (0.00ns)   --->   "%tmp_16 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_8, i32 24, i32 31" [./aes.hpp:406]   --->   Operation 136 'partselect' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 137 [1/1] (0.00ns)   --->   "%zext_ln406_4 = zext i8 %tmp_16" [./aes.hpp:406]   --->   Operation 137 'zext' 'zext_ln406_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 138 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_18 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln406_4" [./aes.hpp:406]   --->   Operation 138 'getelementptr' 'cipher_0_ssbox40_addr_18' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 139 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_18 = load i8 %cipher_0_ssbox40_addr_18" [./aes.hpp:406]   --->   Operation 139 'load' 'cipher_0_ssbox40_load_18' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_5 : Operation 140 [1/1] (0.00ns)   --->   "%zext_ln407_4 = zext i8 %trunc_ln402_3" [./aes.hpp:407]   --->   Operation 140 'zext' 'zext_ln407_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 141 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_19 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln407_4" [./aes.hpp:407]   --->   Operation 141 'getelementptr' 'cipher_0_ssbox40_addr_19' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 142 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_19 = load i8 %cipher_0_ssbox40_addr_19" [./aes.hpp:407]   --->   Operation 142 'load' 'cipher_0_ssbox40_load_19' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 6 <SV = 5> <Delay = 2.97>
+ST_6 : Operation 143 [1/1] (0.21ns)   --->   "%xor_ln409_3 = xor i32 %round_tmp_7, i32 %xor_ln409_2" [./aes.hpp:409]   --->   Operation 143 'xor' 'xor_ln409_3' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 144 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_16 = load i8 %cipher_0_ssbox40_addr_16" [./aes.hpp:404]   --->   Operation 144 'load' 'cipher_0_ssbox40_load_16' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_6 : Operation 145 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_4)   --->   "%bit_sel7 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i8, i8 %cipher_0_ssbox40_load_16, i8 4" [./aes.hpp:404]   --->   Operation 145 'bitselect' 'bit_sel7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 146 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_4)   --->   "%xor_ln404_4 = xor i1 %bit_sel7, i1 1" [./aes.hpp:404]   --->   Operation 146 'xor' 'xor_ln404_4' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 147 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_4)   --->   "%trunc_ln404_3 = trunc i8 %cipher_0_ssbox40_load_16" [./aes.hpp:404]   --->   Operation 147 'trunc' 'trunc_ln404_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 148 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_4)   --->   "%part_sel2 = partselect i3 @_ssdm_op_PartSelect.i3.i8.i8.i8, i8 %cipher_0_ssbox40_load_16, i8 5, i8 7" [./aes.hpp:404]   --->   Operation 148 'partselect' 'part_sel2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 149 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_17 = load i8 %cipher_0_ssbox40_addr_17" [./aes.hpp:405]   --->   Operation 149 'load' 'cipher_0_ssbox40_load_17' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_6 : Operation 150 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_18 = load i8 %cipher_0_ssbox40_addr_18" [./aes.hpp:406]   --->   Operation 150 'load' 'cipher_0_ssbox40_load_18' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_6 : Operation 151 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_19 = load i8 %cipher_0_ssbox40_addr_19" [./aes.hpp:407]   --->   Operation 151 'load' 'cipher_0_ssbox40_load_19' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_6 : Operation 152 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_4)   --->   "%round_tmp_9 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i3.i1.i4, i8 %cipher_0_ssbox40_load_19, i8 %cipher_0_ssbox40_load_18, i8 %cipher_0_ssbox40_load_17, i3 %part_sel2, i1 %xor_ln404_4, i4 %trunc_ln404_3" [./aes.hpp:407]   --->   Operation 152 'bitconcatenate' 'round_tmp_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 153 [1/1] (0.21ns) (out node of the LUT)   --->   "%xor_ln409_4 = xor i32 %round_tmp_9, i32 %xor_ln409_3" [./aes.hpp:409]   --->   Operation 153 'xor' 'xor_ln409_4' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 154 [1/1] (0.21ns)   --->   "%xor_ln411_4 = xor i32 %xor_ln409_4, i32 %xor_ln411_2" [./aes.hpp:411]   --->   Operation 154 'xor' 'xor_ln411_4' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 155 [1/1] (0.21ns)   --->   "%round_tmp_10 = xor i32 %xor_ln411_4, i32 %round_tmp_8" [./aes.hpp:412]   --->   Operation 155 'xor' 'round_tmp_10' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 156 [1/1] (0.00ns)   --->   "%trunc_ln402_4 = trunc i32 %round_tmp_10" [./aes.hpp:402]   --->   Operation 156 'trunc' 'trunc_ln402_4' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 157 [1/1] (0.00ns)   --->   "%tmp_17 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_10, i32 8, i32 15" [./aes.hpp:404]   --->   Operation 157 'partselect' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 158 [1/1] (0.00ns)   --->   "%zext_ln404_5 = zext i8 %tmp_17" [./aes.hpp:404]   --->   Operation 158 'zext' 'zext_ln404_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 159 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_20 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln404_5" [./aes.hpp:404]   --->   Operation 159 'getelementptr' 'cipher_0_ssbox40_addr_20' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 160 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_20 = load i8 %cipher_0_ssbox40_addr_20" [./aes.hpp:404]   --->   Operation 160 'load' 'cipher_0_ssbox40_load_20' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_6 : Operation 161 [1/1] (0.00ns)   --->   "%tmp_18 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_10, i32 16, i32 23" [./aes.hpp:405]   --->   Operation 161 'partselect' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 162 [1/1] (0.00ns)   --->   "%zext_ln405_5 = zext i8 %tmp_18" [./aes.hpp:405]   --->   Operation 162 'zext' 'zext_ln405_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 163 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_21 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln405_5" [./aes.hpp:405]   --->   Operation 163 'getelementptr' 'cipher_0_ssbox40_addr_21' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 164 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_21 = load i8 %cipher_0_ssbox40_addr_21" [./aes.hpp:405]   --->   Operation 164 'load' 'cipher_0_ssbox40_load_21' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_6 : Operation 165 [1/1] (0.00ns)   --->   "%tmp_19 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_10, i32 24, i32 31" [./aes.hpp:406]   --->   Operation 165 'partselect' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 166 [1/1] (0.00ns)   --->   "%zext_ln406_5 = zext i8 %tmp_19" [./aes.hpp:406]   --->   Operation 166 'zext' 'zext_ln406_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 167 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_22 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln406_5" [./aes.hpp:406]   --->   Operation 167 'getelementptr' 'cipher_0_ssbox40_addr_22' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 168 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_22 = load i8 %cipher_0_ssbox40_addr_22" [./aes.hpp:406]   --->   Operation 168 'load' 'cipher_0_ssbox40_load_22' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_6 : Operation 169 [1/1] (0.00ns)   --->   "%zext_ln407_5 = zext i8 %trunc_ln402_4" [./aes.hpp:407]   --->   Operation 169 'zext' 'zext_ln407_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 170 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_23 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln407_5" [./aes.hpp:407]   --->   Operation 170 'getelementptr' 'cipher_0_ssbox40_addr_23' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 171 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_23 = load i8 %cipher_0_ssbox40_addr_23" [./aes.hpp:407]   --->   Operation 171 'load' 'cipher_0_ssbox40_load_23' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 7 <SV = 6> <Delay = 2.88>
+ST_7 : Operation 172 [1/1] (0.21ns)   --->   "%xor_ln410_3 = xor i32 %round_tmp_7, i32 %xor_ln410_1" [./aes.hpp:410]   --->   Operation 172 'xor' 'xor_ln410_3' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 173 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_20 = load i8 %cipher_0_ssbox40_addr_20" [./aes.hpp:404]   --->   Operation 173 'load' 'cipher_0_ssbox40_load_20' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_7 : Operation 174 [1/1] (0.00ns)   --->   "%bit_sel6 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i8, i8 %cipher_0_ssbox40_load_20, i8 5" [./aes.hpp:404]   --->   Operation 174 'bitselect' 'bit_sel6' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 175 [1/1] (0.12ns)   --->   "%xor_ln404_5 = xor i1 %bit_sel6, i1 1" [./aes.hpp:404]   --->   Operation 175 'xor' 'xor_ln404_5' <Predicate = true> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 176 [1/1] (0.00ns)   --->   "%trunc_ln404_4 = trunc i8 %cipher_0_ssbox40_load_20" [./aes.hpp:404]   --->   Operation 176 'trunc' 'trunc_ln404_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 177 [1/1] (0.00ns)   --->   "%part_sel3 = partselect i2 @_ssdm_op_PartSelect.i2.i8.i8.i8, i8 %cipher_0_ssbox40_load_20, i8 6, i8 7" [./aes.hpp:404]   --->   Operation 177 'partselect' 'part_sel3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 178 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_21 = load i8 %cipher_0_ssbox40_addr_21" [./aes.hpp:405]   --->   Operation 178 'load' 'cipher_0_ssbox40_load_21' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_7 : Operation 179 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_22 = load i8 %cipher_0_ssbox40_addr_22" [./aes.hpp:406]   --->   Operation 179 'load' 'cipher_0_ssbox40_load_22' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_7 : Operation 180 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_23 = load i8 %cipher_0_ssbox40_addr_23" [./aes.hpp:407]   --->   Operation 180 'load' 'cipher_0_ssbox40_load_23' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_7 : Operation 181 [1/1] (0.00ns)   --->   "%round_tmp_11 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i2.i1.i5, i8 %cipher_0_ssbox40_load_23, i8 %cipher_0_ssbox40_load_22, i8 %cipher_0_ssbox40_load_21, i2 %part_sel3, i1 %xor_ln404_5, i5 %trunc_ln404_4" [./aes.hpp:407]   --->   Operation 181 'bitconcatenate' 'round_tmp_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 182 [1/1] (0.21ns)   --->   "%xor_ln410_5 = xor i32 %round_tmp_11, i32 %xor_ln410_3" [./aes.hpp:410]   --->   Operation 182 'xor' 'xor_ln410_5' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 183 [1/1] (0.21ns)   --->   "%round_tmp_12 = xor i32 %xor_ln410_5, i32 %round_tmp_8" [./aes.hpp:412]   --->   Operation 183 'xor' 'round_tmp_12' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 184 [1/1] (0.00ns)   --->   "%trunc_ln402_5 = trunc i32 %round_tmp_12" [./aes.hpp:402]   --->   Operation 184 'trunc' 'trunc_ln402_5' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 185 [1/1] (0.00ns)   --->   "%tmp_20 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_12, i32 8, i32 15" [./aes.hpp:404]   --->   Operation 185 'partselect' 'tmp_20' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 186 [1/1] (0.00ns)   --->   "%zext_ln404_6 = zext i8 %tmp_20" [./aes.hpp:404]   --->   Operation 186 'zext' 'zext_ln404_6' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 187 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_24 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln404_6" [./aes.hpp:404]   --->   Operation 187 'getelementptr' 'cipher_0_ssbox40_addr_24' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 188 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_24 = load i8 %cipher_0_ssbox40_addr_24" [./aes.hpp:404]   --->   Operation 188 'load' 'cipher_0_ssbox40_load_24' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_7 : Operation 189 [1/1] (0.00ns)   --->   "%tmp_22 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_12, i32 16, i32 23" [./aes.hpp:405]   --->   Operation 189 'partselect' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 190 [1/1] (0.00ns)   --->   "%zext_ln405_6 = zext i8 %tmp_22" [./aes.hpp:405]   --->   Operation 190 'zext' 'zext_ln405_6' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 191 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_25 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln405_6" [./aes.hpp:405]   --->   Operation 191 'getelementptr' 'cipher_0_ssbox40_addr_25' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 192 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_25 = load i8 %cipher_0_ssbox40_addr_25" [./aes.hpp:405]   --->   Operation 192 'load' 'cipher_0_ssbox40_load_25' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_7 : Operation 193 [1/1] (0.00ns)   --->   "%tmp_23 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_12, i32 24, i32 31" [./aes.hpp:406]   --->   Operation 193 'partselect' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 194 [1/1] (0.00ns)   --->   "%zext_ln406_6 = zext i8 %tmp_23" [./aes.hpp:406]   --->   Operation 194 'zext' 'zext_ln406_6' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 195 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_26 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln406_6" [./aes.hpp:406]   --->   Operation 195 'getelementptr' 'cipher_0_ssbox40_addr_26' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 196 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_26 = load i8 %cipher_0_ssbox40_addr_26" [./aes.hpp:406]   --->   Operation 196 'load' 'cipher_0_ssbox40_load_26' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_7 : Operation 197 [1/1] (0.00ns)   --->   "%zext_ln407_6 = zext i8 %trunc_ln402_5" [./aes.hpp:407]   --->   Operation 197 'zext' 'zext_ln407_6' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 198 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_27 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln407_6" [./aes.hpp:407]   --->   Operation 198 'getelementptr' 'cipher_0_ssbox40_addr_27' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 199 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_27 = load i8 %cipher_0_ssbox40_addr_27" [./aes.hpp:407]   --->   Operation 199 'load' 'cipher_0_ssbox40_load_27' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 8 <SV = 7> <Delay = 2.97>
+ST_8 : Operation 200 [1/1] (0.21ns)   --->   "%xor_ln409_5 = xor i32 %round_tmp_11, i32 %xor_ln409_4" [./aes.hpp:409]   --->   Operation 200 'xor' 'xor_ln409_5' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 201 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_24 = load i8 %cipher_0_ssbox40_addr_24" [./aes.hpp:404]   --->   Operation 201 'load' 'cipher_0_ssbox40_load_24' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 202 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_6)   --->   "%bit_sel1 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i8, i8 %cipher_0_ssbox40_load_24, i8 6" [./aes.hpp:404]   --->   Operation 202 'bitselect' 'bit_sel1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 203 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_6)   --->   "%xor_ln404_6 = xor i1 %bit_sel1, i1 1" [./aes.hpp:404]   --->   Operation 203 'xor' 'xor_ln404_6' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 204 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_6)   --->   "%trunc_ln404_5 = trunc i8 %cipher_0_ssbox40_load_24" [./aes.hpp:404]   --->   Operation 204 'trunc' 'trunc_ln404_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 205 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_6)   --->   "%tmp_21 = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i8, i8 %cipher_0_ssbox40_load_24, i8 7" [./aes.hpp:404]   --->   Operation 205 'bitselect' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 206 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_25 = load i8 %cipher_0_ssbox40_addr_25" [./aes.hpp:405]   --->   Operation 206 'load' 'cipher_0_ssbox40_load_25' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 207 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_26 = load i8 %cipher_0_ssbox40_addr_26" [./aes.hpp:406]   --->   Operation 207 'load' 'cipher_0_ssbox40_load_26' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 208 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_27 = load i8 %cipher_0_ssbox40_addr_27" [./aes.hpp:407]   --->   Operation 208 'load' 'cipher_0_ssbox40_load_27' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 209 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_6)   --->   "%round_tmp_13 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i1.i1.i6, i8 %cipher_0_ssbox40_load_27, i8 %cipher_0_ssbox40_load_26, i8 %cipher_0_ssbox40_load_25, i1 %tmp_21, i1 %xor_ln404_6, i6 %trunc_ln404_5" [./aes.hpp:407]   --->   Operation 209 'bitconcatenate' 'round_tmp_13' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 210 [1/1] (0.21ns) (out node of the LUT)   --->   "%xor_ln409_6 = xor i32 %round_tmp_13, i32 %xor_ln409_5" [./aes.hpp:409]   --->   Operation 210 'xor' 'xor_ln409_6' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 211 [1/1] (0.21ns)   --->   "%xor_ln411_6 = xor i32 %xor_ln409_6, i32 %xor_ln411_4" [./aes.hpp:411]   --->   Operation 211 'xor' 'xor_ln411_6' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 212 [1/1] (0.21ns)   --->   "%round_tmp_14 = xor i32 %xor_ln411_6, i32 %round_tmp_12" [./aes.hpp:412]   --->   Operation 212 'xor' 'round_tmp_14' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 213 [1/1] (0.00ns)   --->   "%trunc_ln402_6 = trunc i32 %round_tmp_14" [./aes.hpp:402]   --->   Operation 213 'trunc' 'trunc_ln402_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 214 [1/1] (0.00ns)   --->   "%tmp_24 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_14, i32 8, i32 15" [./aes.hpp:404]   --->   Operation 214 'partselect' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 215 [1/1] (0.00ns)   --->   "%zext_ln404_7 = zext i8 %tmp_24" [./aes.hpp:404]   --->   Operation 215 'zext' 'zext_ln404_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 216 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_28 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln404_7" [./aes.hpp:404]   --->   Operation 216 'getelementptr' 'cipher_0_ssbox40_addr_28' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 217 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_28 = load i8 %cipher_0_ssbox40_addr_28" [./aes.hpp:404]   --->   Operation 217 'load' 'cipher_0_ssbox40_load_28' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 218 [1/1] (0.00ns)   --->   "%tmp_25 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_14, i32 16, i32 23" [./aes.hpp:405]   --->   Operation 218 'partselect' 'tmp_25' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 219 [1/1] (0.00ns)   --->   "%zext_ln405_7 = zext i8 %tmp_25" [./aes.hpp:405]   --->   Operation 219 'zext' 'zext_ln405_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 220 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_29 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln405_7" [./aes.hpp:405]   --->   Operation 220 'getelementptr' 'cipher_0_ssbox40_addr_29' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 221 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_29 = load i8 %cipher_0_ssbox40_addr_29" [./aes.hpp:405]   --->   Operation 221 'load' 'cipher_0_ssbox40_load_29' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 222 [1/1] (0.00ns)   --->   "%tmp_26 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_14, i32 24, i32 31" [./aes.hpp:406]   --->   Operation 222 'partselect' 'tmp_26' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 223 [1/1] (0.00ns)   --->   "%zext_ln406_7 = zext i8 %tmp_26" [./aes.hpp:406]   --->   Operation 223 'zext' 'zext_ln406_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 224 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_30 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln406_7" [./aes.hpp:406]   --->   Operation 224 'getelementptr' 'cipher_0_ssbox40_addr_30' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 225 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_30 = load i8 %cipher_0_ssbox40_addr_30" [./aes.hpp:406]   --->   Operation 225 'load' 'cipher_0_ssbox40_load_30' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_8 : Operation 226 [1/1] (0.00ns)   --->   "%zext_ln407_7 = zext i8 %trunc_ln402_6" [./aes.hpp:407]   --->   Operation 226 'zext' 'zext_ln407_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 227 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_31 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln407_7" [./aes.hpp:407]   --->   Operation 227 'getelementptr' 'cipher_0_ssbox40_addr_31' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 228 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_31 = load i8 %cipher_0_ssbox40_addr_31" [./aes.hpp:407]   --->   Operation 228 'load' 'cipher_0_ssbox40_load_31' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 9 <SV = 8> <Delay = 2.67>
+ST_9 : Operation 229 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_28 = load i8 %cipher_0_ssbox40_addr_28" [./aes.hpp:404]   --->   Operation 229 'load' 'cipher_0_ssbox40_load_28' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_9 : Operation 230 [1/1] (0.00ns)   --->   "%bit_sel = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i8, i8 %cipher_0_ssbox40_load_28, i8 7" [./aes.hpp:404]   --->   Operation 230 'bitselect' 'bit_sel' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 231 [1/1] (0.12ns)   --->   "%xor_ln404_7 = xor i1 %bit_sel, i1 1" [./aes.hpp:404]   --->   Operation 231 'xor' 'xor_ln404_7' <Predicate = true> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 232 [1/1] (0.00ns)   --->   "%trunc_ln404_6 = trunc i8 %cipher_0_ssbox40_load_28" [./aes.hpp:404]   --->   Operation 232 'trunc' 'trunc_ln404_6' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 233 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_29 = load i8 %cipher_0_ssbox40_addr_29" [./aes.hpp:405]   --->   Operation 233 'load' 'cipher_0_ssbox40_load_29' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_9 : Operation 234 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_30 = load i8 %cipher_0_ssbox40_addr_30" [./aes.hpp:406]   --->   Operation 234 'load' 'cipher_0_ssbox40_load_30' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_9 : Operation 235 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_31 = load i8 %cipher_0_ssbox40_addr_31" [./aes.hpp:407]   --->   Operation 235 'load' 'cipher_0_ssbox40_load_31' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_9 : Operation 236 [1/1] (0.00ns)   --->   "%round_tmp_15 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i1.i7, i8 %cipher_0_ssbox40_load_31, i8 %cipher_0_ssbox40_load_30, i8 %cipher_0_ssbox40_load_29, i1 %xor_ln404_7, i7 %trunc_ln404_6" [./aes.hpp:407]   --->   Operation 236 'bitconcatenate' 'round_tmp_15' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 237 [1/1] (0.21ns)   --->   "%round_tmp_16 = xor i32 %round_tmp_15, i32 %round_tmp_8" [./aes.hpp:412]   --->   Operation 237 'xor' 'round_tmp_16' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 238 [1/1] (0.00ns)   --->   "%trunc_ln402_7 = trunc i32 %round_tmp_16" [./aes.hpp:402]   --->   Operation 238 'trunc' 'trunc_ln402_7' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 239 [1/1] (0.00ns)   --->   "%tmp_27 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_16, i32 8, i32 15" [./aes.hpp:404]   --->   Operation 239 'partselect' 'tmp_27' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 240 [1/1] (0.00ns)   --->   "%zext_ln404_8 = zext i8 %tmp_27" [./aes.hpp:404]   --->   Operation 240 'zext' 'zext_ln404_8' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 241 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_32 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln404_8" [./aes.hpp:404]   --->   Operation 241 'getelementptr' 'cipher_0_ssbox40_addr_32' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 242 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_32 = load i8 %cipher_0_ssbox40_addr_32" [./aes.hpp:404]   --->   Operation 242 'load' 'cipher_0_ssbox40_load_32' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_9 : Operation 243 [1/1] (0.00ns)   --->   "%tmp_28 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_16, i32 16, i32 23" [./aes.hpp:405]   --->   Operation 243 'partselect' 'tmp_28' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 244 [1/1] (0.00ns)   --->   "%zext_ln405_8 = zext i8 %tmp_28" [./aes.hpp:405]   --->   Operation 244 'zext' 'zext_ln405_8' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 245 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_33 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln405_8" [./aes.hpp:405]   --->   Operation 245 'getelementptr' 'cipher_0_ssbox40_addr_33' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 246 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_33 = load i8 %cipher_0_ssbox40_addr_33" [./aes.hpp:405]   --->   Operation 246 'load' 'cipher_0_ssbox40_load_33' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_9 : Operation 247 [1/1] (0.00ns)   --->   "%tmp_29 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_16, i32 24, i32 31" [./aes.hpp:406]   --->   Operation 247 'partselect' 'tmp_29' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 248 [1/1] (0.00ns)   --->   "%zext_ln406_8 = zext i8 %tmp_29" [./aes.hpp:406]   --->   Operation 248 'zext' 'zext_ln406_8' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 249 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_34 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln406_8" [./aes.hpp:406]   --->   Operation 249 'getelementptr' 'cipher_0_ssbox40_addr_34' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 250 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_34 = load i8 %cipher_0_ssbox40_addr_34" [./aes.hpp:406]   --->   Operation 250 'load' 'cipher_0_ssbox40_load_34' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_9 : Operation 251 [1/1] (0.00ns)   --->   "%zext_ln407_8 = zext i8 %trunc_ln402_7" [./aes.hpp:407]   --->   Operation 251 'zext' 'zext_ln407_8' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 252 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_35 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln407_8" [./aes.hpp:407]   --->   Operation 252 'getelementptr' 'cipher_0_ssbox40_addr_35' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 253 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_35 = load i8 %cipher_0_ssbox40_addr_35" [./aes.hpp:407]   --->   Operation 253 'load' 'cipher_0_ssbox40_load_35' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 10 <SV = 9> <Delay = 2.99>
+ST_10 : Operation 254 [1/1] (0.21ns)   --->   "%xor_ln409_7 = xor i32 %round_tmp_15, i32 %xor_ln409_6" [./aes.hpp:409]   --->   Operation 254 'xor' 'xor_ln409_7' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 255 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_32 = load i8 %cipher_0_ssbox40_addr_32" [./aes.hpp:404]   --->   Operation 255 'load' 'cipher_0_ssbox40_load_32' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 256 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_8)   --->   "%xor_ln404_8 = xor i8 %cipher_0_ssbox40_load_32, i8 27" [./aes.hpp:404]   --->   Operation 256 'xor' 'xor_ln404_8' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 257 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_33 = load i8 %cipher_0_ssbox40_addr_33" [./aes.hpp:405]   --->   Operation 257 'load' 'cipher_0_ssbox40_load_33' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 258 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_34 = load i8 %cipher_0_ssbox40_addr_34" [./aes.hpp:406]   --->   Operation 258 'load' 'cipher_0_ssbox40_load_34' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 259 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_35 = load i8 %cipher_0_ssbox40_addr_35" [./aes.hpp:407]   --->   Operation 259 'load' 'cipher_0_ssbox40_load_35' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 260 [1/1] (0.00ns) (grouped into LUT with out node xor_ln409_8)   --->   "%round_tmp_17 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8, i8 %cipher_0_ssbox40_load_35, i8 %cipher_0_ssbox40_load_34, i8 %cipher_0_ssbox40_load_33, i8 %xor_ln404_8" [./aes.hpp:407]   --->   Operation 260 'bitconcatenate' 'round_tmp_17' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 261 [1/1] (0.22ns) (out node of the LUT)   --->   "%xor_ln409_8 = xor i32 %round_tmp_17, i32 %xor_ln409_7" [./aes.hpp:409]   --->   Operation 261 'xor' 'xor_ln409_8' <Predicate = true> <Delay = 0.22> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 262 [1/1] (0.21ns)   --->   "%xor_ln411_8 = xor i32 %xor_ln409_8, i32 %xor_ln411_6" [./aes.hpp:411]   --->   Operation 262 'xor' 'xor_ln411_8' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 263 [1/1] (0.21ns)   --->   "%round_tmp_18 = xor i32 %xor_ln411_8, i32 %round_tmp_16" [./aes.hpp:412]   --->   Operation 263 'xor' 'round_tmp_18' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 264 [1/1] (0.00ns)   --->   "%trunc_ln402_8 = trunc i32 %round_tmp_18" [./aes.hpp:402]   --->   Operation 264 'trunc' 'trunc_ln402_8' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 265 [1/1] (0.00ns)   --->   "%tmp_30 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_18, i32 8, i32 15" [./aes.hpp:404]   --->   Operation 265 'partselect' 'tmp_30' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 266 [1/1] (0.00ns)   --->   "%zext_ln404_9 = zext i8 %tmp_30" [./aes.hpp:404]   --->   Operation 266 'zext' 'zext_ln404_9' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 267 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_36 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln404_9" [./aes.hpp:404]   --->   Operation 267 'getelementptr' 'cipher_0_ssbox40_addr_36' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 268 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_36 = load i8 %cipher_0_ssbox40_addr_36" [./aes.hpp:404]   --->   Operation 268 'load' 'cipher_0_ssbox40_load_36' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 269 [1/1] (0.00ns)   --->   "%tmp_31 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_18, i32 16, i32 23" [./aes.hpp:405]   --->   Operation 269 'partselect' 'tmp_31' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 270 [1/1] (0.00ns)   --->   "%zext_ln405_9 = zext i8 %tmp_31" [./aes.hpp:405]   --->   Operation 270 'zext' 'zext_ln405_9' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 271 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_37 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln405_9" [./aes.hpp:405]   --->   Operation 271 'getelementptr' 'cipher_0_ssbox40_addr_37' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 272 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_37 = load i8 %cipher_0_ssbox40_addr_37" [./aes.hpp:405]   --->   Operation 272 'load' 'cipher_0_ssbox40_load_37' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 273 [1/1] (0.00ns)   --->   "%tmp_32 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %round_tmp_18, i32 24, i32 31" [./aes.hpp:406]   --->   Operation 273 'partselect' 'tmp_32' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 274 [1/1] (0.00ns)   --->   "%zext_ln406_9 = zext i8 %tmp_32" [./aes.hpp:406]   --->   Operation 274 'zext' 'zext_ln406_9' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 275 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_38 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln406_9" [./aes.hpp:406]   --->   Operation 275 'getelementptr' 'cipher_0_ssbox40_addr_38' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 276 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_38 = load i8 %cipher_0_ssbox40_addr_38" [./aes.hpp:406]   --->   Operation 276 'load' 'cipher_0_ssbox40_load_38' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_10 : Operation 277 [1/1] (0.00ns)   --->   "%zext_ln407_9 = zext i8 %trunc_ln402_8" [./aes.hpp:407]   --->   Operation 277 'zext' 'zext_ln407_9' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 278 [1/1] (0.00ns)   --->   "%cipher_0_ssbox40_addr_39 = getelementptr i8 %cipher_0_ssbox40, i64 0, i64 %zext_ln407_9" [./aes.hpp:407]   --->   Operation 278 'getelementptr' 'cipher_0_ssbox40_addr_39' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 279 [2/2] (1.17ns)   --->   "%cipher_0_ssbox40_load_39 = load i8 %cipher_0_ssbox40_addr_39" [./aes.hpp:407]   --->   Operation 279 'load' 'cipher_0_ssbox40_load_39' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 11 <SV = 10> <Delay = 1.81>
+ST_11 : Operation 280 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %cipher_0_ssbox40, i64 666, i64 38, i64 18446744073709551615"   --->   Operation 280 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 281 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %cipher_0_ssbox40, i64 666, i64 38, i64 18446744073709551615"   --->   Operation 281 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 282 [1/1] (0.00ns)   --->   "%specmemcore_ln18 = specmemcore void @_ssdm_op_SpecMemCore, i8 %cipher_0_ssbox40, i64 666, i64 38, i64 18446744073709551615" [./aes.hpp:18->./aes.hpp:388->encrypt.cpp:5]   --->   Operation 282 'specmemcore' 'specmemcore_ln18' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 283 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, void @cipher_0_ssbox, i64 666, i64 38, i64 18446744073709551615"   --->   Operation 283 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 284 [1/1] (0.00ns)   --->   "%lastRound = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i32.i32.i32.i32, i32 %round_tmp_2, i32 %xor_ln411, i32 %xor_ln410, i32 %xor_ln409" [./aes.hpp:412]   --->   Operation 284 'bitconcatenate' 'lastRound' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 285 [1/1] (0.21ns)   --->   "%xor_ln411_1 = xor i32 %xor_ln410_1, i32 %xor_ln411" [./aes.hpp:411]   --->   Operation 285 'xor' 'xor_ln411_1' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 286 [1/1] (0.00ns)   --->   "%lastRound_1 = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i32.i32.i32.i32, i32 %round_tmp_4, i32 %xor_ln411_1, i32 %xor_ln410_1, i32 %xor_ln409_1" [./aes.hpp:412]   --->   Operation 286 'bitconcatenate' 'lastRound_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 287 [1/1] (0.21ns)   --->   "%xor_ln410_2 = xor i32 %xor_ln409_2, i32 %xor_ln410_1" [./aes.hpp:410]   --->   Operation 287 'xor' 'xor_ln410_2' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 288 [1/1] (0.00ns)   --->   "%lastRound_2 = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i32.i32.i32.i32, i32 %round_tmp_6, i32 %xor_ln411_2, i32 %xor_ln410_2, i32 %xor_ln409_2" [./aes.hpp:412]   --->   Operation 288 'bitconcatenate' 'lastRound_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 289 [1/1] (0.21ns)   --->   "%xor_ln411_3 = xor i32 %xor_ln410_3, i32 %xor_ln411_2" [./aes.hpp:411]   --->   Operation 289 'xor' 'xor_ln411_3' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 290 [1/1] (0.00ns)   --->   "%lastRound_3 = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i32.i32.i32.i32, i32 %round_tmp_8, i32 %xor_ln411_3, i32 %xor_ln410_3, i32 %xor_ln409_3" [./aes.hpp:412]   --->   Operation 290 'bitconcatenate' 'lastRound_3' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 291 [1/1] (0.21ns)   --->   "%xor_ln410_4 = xor i32 %xor_ln409_4, i32 %xor_ln410_3" [./aes.hpp:410]   --->   Operation 291 'xor' 'xor_ln410_4' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 292 [1/1] (0.00ns)   --->   "%lastRound_4 = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i32.i32.i32.i32, i32 %round_tmp_10, i32 %xor_ln411_4, i32 %xor_ln410_4, i32 %xor_ln409_4" [./aes.hpp:412]   --->   Operation 292 'bitconcatenate' 'lastRound_4' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 293 [1/1] (0.21ns)   --->   "%xor_ln411_5 = xor i32 %xor_ln410_5, i32 %xor_ln411_4" [./aes.hpp:411]   --->   Operation 293 'xor' 'xor_ln411_5' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 294 [1/1] (0.00ns)   --->   "%lastRound_5 = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i32.i32.i32.i32, i32 %round_tmp_12, i32 %xor_ln411_5, i32 %xor_ln410_5, i32 %xor_ln409_5" [./aes.hpp:412]   --->   Operation 294 'bitconcatenate' 'lastRound_5' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 295 [1/1] (0.21ns)   --->   "%xor_ln410_6 = xor i32 %xor_ln409_6, i32 %xor_ln410_5" [./aes.hpp:410]   --->   Operation 295 'xor' 'xor_ln410_6' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 296 [1/1] (0.00ns)   --->   "%lastRound_6 = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i32.i32.i32.i32, i32 %round_tmp_14, i32 %xor_ln411_6, i32 %xor_ln410_6, i32 %xor_ln409_6" [./aes.hpp:412]   --->   Operation 296 'bitconcatenate' 'lastRound_6' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 297 [1/1] (0.21ns)   --->   "%xor_ln410_7 = xor i32 %round_tmp_15, i32 %xor_ln410_5" [./aes.hpp:410]   --->   Operation 297 'xor' 'xor_ln410_7' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 298 [1/1] (0.21ns)   --->   "%xor_ln411_7 = xor i32 %xor_ln410_7, i32 %xor_ln411_6" [./aes.hpp:411]   --->   Operation 298 'xor' 'xor_ln411_7' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 299 [1/1] (0.00ns)   --->   "%lastRound_7 = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i32.i32.i32.i32, i32 %round_tmp_16, i32 %xor_ln411_7, i32 %xor_ln410_7, i32 %xor_ln409_7" [./aes.hpp:412]   --->   Operation 299 'bitconcatenate' 'lastRound_7' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 300 [1/1] (0.21ns)   --->   "%xor_ln410_8 = xor i32 %xor_ln409_8, i32 %xor_ln410_7" [./aes.hpp:410]   --->   Operation 300 'xor' 'xor_ln410_8' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 301 [1/1] (0.00ns)   --->   "%lastRound_8 = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i32.i32.i32.i32, i32 %round_tmp_18, i32 %xor_ln411_8, i32 %xor_ln410_8, i32 %xor_ln409_8" [./aes.hpp:412]   --->   Operation 301 'bitconcatenate' 'lastRound_8' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 302 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_36 = load i8 %cipher_0_ssbox40_addr_36" [./aes.hpp:404]   --->   Operation 302 'load' 'cipher_0_ssbox40_load_36' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_11 : Operation 303 [1/1] (0.22ns)   --->   "%xor_ln404_9 = xor i8 %cipher_0_ssbox40_load_36, i8 54" [./aes.hpp:404]   --->   Operation 303 'xor' 'xor_ln404_9' <Predicate = true> <Delay = 0.22> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 304 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_37 = load i8 %cipher_0_ssbox40_addr_37" [./aes.hpp:405]   --->   Operation 304 'load' 'cipher_0_ssbox40_load_37' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_11 : Operation 305 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_38 = load i8 %cipher_0_ssbox40_addr_38" [./aes.hpp:406]   --->   Operation 305 'load' 'cipher_0_ssbox40_load_38' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_11 : Operation 306 [1/2] ( I:1.17ns O:1.17ns )   --->   "%cipher_0_ssbox40_load_39 = load i8 %cipher_0_ssbox40_addr_39" [./aes.hpp:407]   --->   Operation 306 'load' 'cipher_0_ssbox40_load_39' <Predicate = true> <Delay = 1.17> <CoreInst = "ROM_nP_BRAM">   --->   Core 108 'ROM_nP_BRAM' <Latency = 1> <II = 1> <Delay = 1.17> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_11 : Operation 307 [1/1] (0.00ns)   --->   "%round_tmp_19 = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8, i8 %cipher_0_ssbox40_load_39, i8 %cipher_0_ssbox40_load_38, i8 %cipher_0_ssbox40_load_37, i8 %xor_ln404_9" [./aes.hpp:407]   --->   Operation 307 'bitconcatenate' 'round_tmp_19' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 308 [1/1] (0.21ns)   --->   "%xor_ln409_9 = xor i32 %round_tmp_19, i32 %xor_ln409_8" [./aes.hpp:409]   --->   Operation 308 'xor' 'xor_ln409_9' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 309 [1/1] (0.21ns)   --->   "%xor_ln410_9 = xor i32 %round_tmp_19, i32 %xor_ln410_7" [./aes.hpp:410]   --->   Operation 309 'xor' 'xor_ln410_9' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 310 [1/1] (0.21ns)   --->   "%xor_ln411_9 = xor i32 %xor_ln410_9, i32 %xor_ln411_8" [./aes.hpp:411]   --->   Operation 310 'xor' 'xor_ln411_9' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 311 [1/1] (0.21ns)   --->   "%xor_ln412 = xor i32 %xor_ln410_9, i32 %round_tmp_16" [./aes.hpp:412]   --->   Operation 311 'xor' 'xor_ln412' <Predicate = true> <Delay = 0.21> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.21> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 312 [1/1] (0.00ns)   --->   "%this_1_s = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i32.i32.i32.i32, i32 %xor_ln412, i32 %xor_ln411_9, i32 %xor_ln410_9, i32 %xor_ln409_9" [./aes.hpp:412]   --->   Operation 312 'bitconcatenate' 'this_1_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 313 [1/1] (0.00ns)   --->   "%mrv = insertvalue i1408 <undef>, i128 %cipherkey_read" [./aes.hpp:416]   --->   Operation 313 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 314 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i1408 %mrv, i128 %lastRound" [./aes.hpp:416]   --->   Operation 314 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 315 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i1408 %mrv_1, i128 %lastRound_1" [./aes.hpp:416]   --->   Operation 315 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 316 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i1408 %mrv_2, i128 %lastRound_2" [./aes.hpp:416]   --->   Operation 316 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 317 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue i1408 %mrv_3, i128 %lastRound_3" [./aes.hpp:416]   --->   Operation 317 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 318 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue i1408 %mrv_4, i128 %lastRound_4" [./aes.hpp:416]   --->   Operation 318 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 319 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue i1408 %mrv_5, i128 %lastRound_5" [./aes.hpp:416]   --->   Operation 319 'insertvalue' 'mrv_6' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 320 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue i1408 %mrv_6, i128 %lastRound_6" [./aes.hpp:416]   --->   Operation 320 'insertvalue' 'mrv_7' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 321 [1/1] (0.00ns)   --->   "%mrv_8 = insertvalue i1408 %mrv_7, i128 %lastRound_7" [./aes.hpp:416]   --->   Operation 321 'insertvalue' 'mrv_8' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 322 [1/1] (0.00ns)   --->   "%mrv_9 = insertvalue i1408 %mrv_8, i128 %lastRound_8" [./aes.hpp:416]   --->   Operation 322 'insertvalue' 'mrv_9' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 323 [1/1] (0.00ns)   --->   "%mrv_s = insertvalue i1408 %mrv_9, i128 %this_1_s" [./aes.hpp:416]   --->   Operation 323 'insertvalue' 'mrv_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 324 [1/1] (0.00ns)   --->   "%ret_ln416 = ret i1408 %mrv_s" [./aes.hpp:416]   --->   Operation 324 'ret' 'ret_ln416' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 0.000ns.
+
+ <State 1>: 1.171ns
+The critical path consists of the following:
+	wire read operation ('cipherkey_read', ./aes.hpp:393) on port 'cipherkey' (./aes.hpp:393) [7]  (0.000 ns)
+	'getelementptr' operation 8 bit ('cipher_0_ssbox40_addr', ./aes.hpp:404) [12]  (0.000 ns)
+	'load' operation 8 bit ('cipher_0_ssbox40_load', ./aes.hpp:404) on array 'cipher_0_ssbox40' [13]  (1.171 ns)
+
+ <State 2>: 3.182ns
+The critical path consists of the following:
+	'load' operation 8 bit ('cipher_0_ssbox40_load', ./aes.hpp:404) on array 'cipher_0_ssbox40' [13]  (1.171 ns)
+	'xor' operation 1 bit ('xor_ln404', ./aes.hpp:404) [15]  (0.000 ns)
+	'xor' operation 32 bit ('xor_ln409', ./aes.hpp:409) [30]  (0.210 ns)
+	'xor' operation 32 bit ('xor_ln410', ./aes.hpp:410) [32]  (0.210 ns)
+	'xor' operation 32 bit ('xor_ln411', ./aes.hpp:411) [34]  (0.210 ns)
+	'xor' operation 32 bit ('round_tmp', ./aes.hpp:412) [35]  (0.210 ns)
+	'getelementptr' operation 8 bit ('cipher_0_ssbox40_addr_4', ./aes.hpp:404) [40]  (0.000 ns)
+	'load' operation 8 bit ('cipher_0_ssbox40_load_4', ./aes.hpp:404) on array 'cipher_0_ssbox40' [41]  (1.171 ns)
+
+ <State 3>: 2.884ns
+The critical path consists of the following:
+	'load' operation 8 bit ('cipher_0_ssbox40_load_4', ./aes.hpp:404) on array 'cipher_0_ssbox40' [41]  (1.171 ns)
+	'xor' operation 1 bit ('xor_ln404_1', ./aes.hpp:404) [43]  (0.122 ns)
+	'xor' operation 32 bit ('xor_ln410_1', ./aes.hpp:410) [59]  (0.210 ns)
+	'xor' operation 32 bit ('round_tmp', ./aes.hpp:412) [61]  (0.210 ns)
+	'getelementptr' operation 8 bit ('cipher_0_ssbox40_addr_8', ./aes.hpp:404) [66]  (0.000 ns)
+	'load' operation 8 bit ('cipher_0_ssbox40_load_8', ./aes.hpp:404) on array 'cipher_0_ssbox40' [67]  (1.171 ns)
+
+ <State 4>: 2.972ns
+The critical path consists of the following:
+	'load' operation 8 bit ('cipher_0_ssbox40_load_8', ./aes.hpp:404) on array 'cipher_0_ssbox40' [67]  (1.171 ns)
+	'xor' operation 32 bit ('xor_ln409_2', ./aes.hpp:409) [84]  (0.210 ns)
+	'xor' operation 32 bit ('xor_ln411_2', ./aes.hpp:411) [86]  (0.210 ns)
+	'xor' operation 32 bit ('round_tmp', ./aes.hpp:412) [87]  (0.210 ns)
+	'getelementptr' operation 8 bit ('cipher_0_ssbox40_addr_12', ./aes.hpp:404) [92]  (0.000 ns)
+	'load' operation 8 bit ('cipher_0_ssbox40_load_12', ./aes.hpp:404) on array 'cipher_0_ssbox40' [93]  (1.171 ns)
+
+ <State 5>: 2.674ns
+The critical path consists of the following:
+	'load' operation 8 bit ('cipher_0_ssbox40_load_12', ./aes.hpp:404) on array 'cipher_0_ssbox40' [93]  (1.171 ns)
+	'xor' operation 1 bit ('xor_ln404_3', ./aes.hpp:404) [95]  (0.122 ns)
+	'xor' operation 32 bit ('round_tmp', ./aes.hpp:412) [113]  (0.210 ns)
+	'getelementptr' operation 8 bit ('cipher_0_ssbox40_addr_16', ./aes.hpp:404) [118]  (0.000 ns)
+	'load' operation 8 bit ('cipher_0_ssbox40_load_16', ./aes.hpp:404) on array 'cipher_0_ssbox40' [119]  (1.171 ns)
+
+ <State 6>: 2.972ns
+The critical path consists of the following:
+	'load' operation 8 bit ('cipher_0_ssbox40_load_16', ./aes.hpp:404) on array 'cipher_0_ssbox40' [119]  (1.171 ns)
+	'xor' operation 1 bit ('xor_ln404_4', ./aes.hpp:404) [121]  (0.000 ns)
+	'xor' operation 32 bit ('xor_ln409_4', ./aes.hpp:409) [136]  (0.210 ns)
+	'xor' operation 32 bit ('xor_ln411_4', ./aes.hpp:411) [138]  (0.210 ns)
+	'xor' operation 32 bit ('round_tmp', ./aes.hpp:412) [139]  (0.210 ns)
+	'getelementptr' operation 8 bit ('cipher_0_ssbox40_addr_20', ./aes.hpp:404) [144]  (0.000 ns)
+	'load' operation 8 bit ('cipher_0_ssbox40_load_20', ./aes.hpp:404) on array 'cipher_0_ssbox40' [145]  (1.171 ns)
+
+ <State 7>: 2.884ns
+The critical path consists of the following:
+	'load' operation 8 bit ('cipher_0_ssbox40_load_20', ./aes.hpp:404) on array 'cipher_0_ssbox40' [145]  (1.171 ns)
+	'xor' operation 1 bit ('xor_ln404_5', ./aes.hpp:404) [147]  (0.122 ns)
+	'xor' operation 32 bit ('xor_ln410_5', ./aes.hpp:410) [163]  (0.210 ns)
+	'xor' operation 32 bit ('round_tmp', ./aes.hpp:412) [165]  (0.210 ns)
+	'getelementptr' operation 8 bit ('cipher_0_ssbox40_addr_24', ./aes.hpp:404) [170]  (0.000 ns)
+	'load' operation 8 bit ('cipher_0_ssbox40_load_24', ./aes.hpp:404) on array 'cipher_0_ssbox40' [171]  (1.171 ns)
+
+ <State 8>: 2.972ns
+The critical path consists of the following:
+	'load' operation 8 bit ('cipher_0_ssbox40_load_24', ./aes.hpp:404) on array 'cipher_0_ssbox40' [171]  (1.171 ns)
+	'xor' operation 1 bit ('xor_ln404_6', ./aes.hpp:404) [173]  (0.000 ns)
+	'xor' operation 32 bit ('xor_ln409_6', ./aes.hpp:409) [188]  (0.210 ns)
+	'xor' operation 32 bit ('xor_ln411_6', ./aes.hpp:411) [190]  (0.210 ns)
+	'xor' operation 32 bit ('round_tmp', ./aes.hpp:412) [191]  (0.210 ns)
+	'getelementptr' operation 8 bit ('cipher_0_ssbox40_addr_28', ./aes.hpp:404) [196]  (0.000 ns)
+	'load' operation 8 bit ('cipher_0_ssbox40_load_28', ./aes.hpp:404) on array 'cipher_0_ssbox40' [197]  (1.171 ns)
+
+ <State 9>: 2.674ns
+The critical path consists of the following:
+	'load' operation 8 bit ('cipher_0_ssbox40_load_28', ./aes.hpp:404) on array 'cipher_0_ssbox40' [197]  (1.171 ns)
+	'xor' operation 1 bit ('xor_ln404_7', ./aes.hpp:404) [199]  (0.122 ns)
+	'xor' operation 32 bit ('round_tmp', ./aes.hpp:412) [216]  (0.210 ns)
+	'getelementptr' operation 8 bit ('cipher_0_ssbox40_addr_32', ./aes.hpp:404) [221]  (0.000 ns)
+	'load' operation 8 bit ('cipher_0_ssbox40_load_32', ./aes.hpp:404) on array 'cipher_0_ssbox40' [222]  (1.171 ns)
+
+ <State 10>: 2.990ns
+The critical path consists of the following:
+	'load' operation 8 bit ('cipher_0_ssbox40_load_32', ./aes.hpp:404) on array 'cipher_0_ssbox40' [222]  (1.171 ns)
+	'xor' operation 8 bit ('xor_ln404_8', ./aes.hpp:404) [223]  (0.000 ns)
+	'xor' operation 32 bit ('xor_ln409_8', ./aes.hpp:409) [236]  (0.228 ns)
+	'xor' operation 32 bit ('xor_ln411_8', ./aes.hpp:411) [238]  (0.210 ns)
+	'xor' operation 32 bit ('round_tmp', ./aes.hpp:412) [239]  (0.210 ns)
+	'getelementptr' operation 8 bit ('cipher_0_ssbox40_addr_36', ./aes.hpp:404) [244]  (0.000 ns)
+	'load' operation 8 bit ('cipher_0_ssbox40_load_36', ./aes.hpp:404) on array 'cipher_0_ssbox40' [245]  (1.171 ns)
+
+ <State 11>: 1.819ns
+The critical path consists of the following:
+	'load' operation 8 bit ('cipher_0_ssbox40_load_36', ./aes.hpp:404) on array 'cipher_0_ssbox40' [245]  (1.171 ns)
+	'xor' operation 8 bit ('xor_ln404_9', ./aes.hpp:404) [246]  (0.228 ns)
+	'xor' operation 32 bit ('xor_ln410_9', ./aes.hpp:410) [260]  (0.210 ns)
+	'xor' operation 32 bit ('xor_ln411_9', ./aes.hpp:411) [261]  (0.210 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

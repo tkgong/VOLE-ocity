@@ -1,0 +1,199 @@
+<design_size title="Design Size Report">
+    <item name="C-Synthesis has not completed!">
+        <item name="Performance"/>
+        <item name="HW Transforms"/>
+    </item>
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">,   134427 *, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll,   351726 *, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,   166023 *, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,   156525 *, user inline pragmas are applied</column>
+            <column name="">(4) simplification,   156503 *, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition, 3768693 *, user array partition pragmas are applied</column>
+            <column name="">(2) simplification, 3768206 *, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate , 3768206 *, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape, 3768206 *, apply array reshape pragmas</column>
+            <column name="">, , </column>
+            <column name="Performance">, pending, After transformations are applied to meet performance pragma targets</column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="5" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct"/>
+            <rows>
+                <row id="0" col0="GenerateProof" col1="endtoend.cpp:7" col2="134427" col2_note="*" col3="156503" col3_note="*" col4="3768206" col4_note="*">
+                    <row id="17" col0="VOLECommit" col1="commit.cpp:7" col2="97955" col3="133652" col4="3746286">
+                        <row id="38" col0="ggm_top" col1="ggm_tree.cpp:246" col2="78276" col3="" col4="">
+                            <row id="9" col0="ggm_tree" col1="ggm_tree.cpp:198" col2="67898" col3="" col4="">
+                                <row id="22" col0="expand_roots" col1="ggm_tree.cpp:162" col2="18933" col3="" col4="">
+                                    <row id="21" col0="PRG" col1="PRG.cpp:6" col2="18758" col3="" col4="">
+                                        <row id="24" col0="encrypt" col1="encrypt.cpp:3" col2="18588" col3="" col4="">
+                                            <row id="30" col0="aesEnc" col1="aes.hpp:388" col2="9741" col3="" col4="">
+                                                <row id="10" col0="aesTable" col1="aes.hpp:14" col2="9735" col3="" col4=""/>
+                                            </row>
+                                            <row id="31" col0="updateKey" col1="aes.hpp:393" col2="1841" col3="" col4=""/>
+                                            <row id="29" col0="process" col1="aes.hpp:431" col2="6988" col3="" col4="">
+                                                <row id="2" col0="GFMul2" col1="aes.hpp:420" col2="2888" col2_disp=" 2,888 (8 calls)" col3="" col4=""/>
+                                            </row>
+                                        </row>
+                                    </row>
+                                </row>
+                                <row id="25" col0="ggm_build" col1="ggm_tree.cpp:178" col2="29016" col3="" col4="">
+                                    <row id="13" col0="ggm_small" col1="ggm_tree.cpp:106" col2="28980" col3="" col4="">
+                                        <row id="21" col0="PRG" col1="PRG.cpp:6" col2="18758" col3="" col4="">
+                                            <row id="24" col0="encrypt" col1="encrypt.cpp:3" col2="18588" col3="" col4="">
+                                                <row id="30" col0="aesEnc" col1="aes.hpp:388" col2="9741" col3="" col4="">
+                                                    <row id="10" col0="aesTable" col1="aes.hpp:14" col2="9735" col3="" col4=""/>
+                                                </row>
+                                                <row id="31" col0="updateKey" col1="aes.hpp:393" col2="1841" col3="" col4=""/>
+                                                <row id="29" col0="process" col1="aes.hpp:431" col2="6988" col3="" col4="">
+                                                    <row id="2" col0="GFMul2" col1="aes.hpp:420" col2="2888" col2_disp=" 2,888 (8 calls)" col3="" col4=""/>
+                                                </row>
+                                            </row>
+                                        </row>
+                                        <row id="11" col0="h0" col1="shake.cpp:7" col2="10132" col3="" col4="">
+                                            <row id="18" col0="shake256" col1="sha3.hpp:717" col2="9637" col3="" col4="">
+                                                <row id="28" col0="shakeXOF&lt;32&gt;" col1="sha3.hpp:402" col2="9635" col3="" col4="">
+                                                    <row id="33" col0="blockType" col1="sha3.hpp:52" col2="4" col3="" col4=""/>
+                                                    <row id="23" col0="KECCAK_f" col1="sha3.hpp:91" col2="6587" col3="" col4="">
+                                                        <row id="3" col0="ROTL&lt;64&gt;" col1="sha3.hpp:70" col2="3200" col2_disp=" 3,200 (25 calls)" col3="" col4=""/>
+                                                    </row>
+                                                </row>
+                                            </row>
+                                        </row>
+                                    </row>
+                                </row>
+                                <row id="19" col0="H" col1="shake.cpp:47" col2="9907" col3="" col4="">
+                                    <row id="18" col0="shake256" col1="sha3.hpp:717" col2="9637" col3="" col4="">
+                                        <row id="28" col0="shakeXOF&lt;32&gt;" col1="sha3.hpp:402" col2="9635" col3="" col4="">
+                                            <row id="33" col0="blockType" col1="sha3.hpp:52" col2="4" col3="" col4=""/>
+                                            <row id="23" col0="KECCAK_f" col1="sha3.hpp:91" col2="6587" col3="" col4="">
+                                                <row id="3" col0="ROTL&lt;64&gt;" col1="sha3.hpp:70" col2="3200" col2_disp=" 3,200 (25 calls)" col3="" col4=""/>
+                                            </row>
+                                        </row>
+                                    </row>
+                                </row>
+                                <row id="20" col0="H_COM" col1="shake.cpp:87" col2="10013" col3="" col4="">
+                                    <row id="18" col0="shake256" col1="sha3.hpp:717" col2="9637" col3="" col4="">
+                                        <row id="28" col0="shakeXOF&lt;32&gt;" col1="sha3.hpp:402" col2="9635" col3="" col4="">
+                                            <row id="33" col0="blockType" col1="sha3.hpp:52" col2="4" col3="" col4=""/>
+                                            <row id="23" col0="KECCAK_f" col1="sha3.hpp:91" col2="6587" col3="" col4="">
+                                                <row id="3" col0="ROTL&lt;64&gt;" col1="sha3.hpp:70" col2="3200" col2_disp=" 3,200 (25 calls)" col3="" col4=""/>
+                                            </row>
+                                        </row>
+                                    </row>
+                                </row>
+                            </row>
+                            <row id="37" col0="chal1" col1="fiat_shamir.cpp:6" col2="10236" col3="" col4="">
+                                <row id="18" col0="shake256" col1="sha3.hpp:717" col2="9637" col3="" col4="">
+                                    <row id="28" col0="shakeXOF&lt;32&gt;" col1="sha3.hpp:402" col2="9635" col3="" col4="">
+                                        <row id="33" col0="blockType" col1="sha3.hpp:52" col2="4" col3="" col4=""/>
+                                        <row id="23" col0="KECCAK_f" col1="sha3.hpp:91" col2="6587" col3="" col4="">
+                                            <row id="3" col0="ROTL&lt;64&gt;" col1="sha3.hpp:70" col2="3200" col2_disp=" 3,200 (25 calls)" col3="" col4=""/>
+                                        </row>
+                                    </row>
+                                </row>
+                            </row>
+                            <row id="35" col0="VC_Open" col1="ggm_tree.cpp:220" col2="115" col3="" col4=""/>
+                        </row>
+                        <row id="36" col0="ConvertToVOLE" col1="vole.cpp:138" col2="19646" col3="42592" col4="43033">
+                            <row id="6" col0="expand_seed" col1="vole.cpp:7" col2="19097" col3="41688" col4="41582">
+                                <row id="21" col0="PRG" col1="PRG.cpp:6" col2="18758" col3="41596" col3_disp="41,596 (4 calls)" col4="41492" col4_disp=" 41,492 (4 calls)">
+                                    <row id="24" col0="encrypt" col1="encrypt.cpp:3" col2="18588" col3="41536" col3_disp="41,536 (8 calls)" col4="41432" col4_disp=" 41,432 (8 calls)">
+                                        <row id="30" col0="aesEnc" col1="aes.hpp:388" col2="9741" col3="" col4="">
+                                            <row id="10" col0="aesTable" col1="aes.hpp:14" col2="9735" col3="" col4=""/>
+                                        </row>
+                                        <row id="31" col0="updateKey" col1="aes.hpp:393" col2="1841" col3="2856" col3_disp=" 2,856 (8 calls)" col4="2768" col4_disp="  2,768 (8 calls)"/>
+                                        <row id="29" col0="process" col1="aes.hpp:431" col2="6988" col3="38624" col3_disp="38,624 (8 calls)" col4="38536" col4_disp=" 38,536 (8 calls)">
+                                            <row id="2" col0="GFMul2" col1="aes.hpp:420" col2="2888" col2_disp=" 2,888 (8 calls)" col3="13824" col3_disp="13,824 (2304 calls)" col4="13824" col4_disp=" 13,824 (2304 calls)"/>
+                                        </row>
+                                    </row>
+                                </row>
+                            </row>
+                            <row id="8" col0="build_VOLE" col1="vole.cpp:40" col2="238" col3="58" col4="218"/>
+                            <row id="7" col0="mem_transfer" col1="vole.cpp:88" col2="254" col3="825" col4="443"/>
+                        </row>
+                        <row id="9" col0="ggm_tree" col1="ggm_tree.cpp:198" col2="" col3="83791" col4="3692516">
+                            <row id="21" col0="PRG" col1="PRG.cpp:6" col2="" col3="10399" col4="10373">
+                                <row id="24" col0="encrypt" col1="encrypt.cpp:3" col2="" col3="10384" col3_disp="10,384 (2 calls)" col4="10358" col4_disp=" 10,358 (2 calls)">
+                                    <row id="31" col0="updateKey" col1="aes.hpp:393" col2="" col3="714" col3_disp="   714 (2 calls)" col4="692" col4_disp="    692 (2 calls)"/>
+                                    <row id="29" col0="process" col1="aes.hpp:431" col2="" col3="9656" col3_disp=" 9,656 (2 calls)" col4="9634" col4_disp="  9,634 (2 calls)">
+                                        <row id="2" col0="GFMul2" col1="aes.hpp:420" col2="" col3="3456" col3_disp=" 3,456 (576 calls)" col4="3456" col4_disp="  3,456 (576 calls)"/>
+                                    </row>
+                                </row>
+                            </row>
+                            <row id="13" col0="ggm_small" col1="ggm_tree.cpp:106" col2="" col3="59301" col4="3668864" col4_disp="3,668,864 (64 calls)">
+                                <row id="21" col0="PRG" col1="PRG.cpp:6" col2="" col3="31197" col3_disp="31,197 (3 calls)" col4="1991616" col4_disp="1,991,616 (192 calls)">
+                                    <row id="24" col0="encrypt" col1="encrypt.cpp:3" col2="" col3="31152" col3_disp="31,152 (6 calls)" col4="1988736" col4_disp="1,988,736 (384 calls)">
+                                        <row id="31" col0="updateKey" col1="aes.hpp:393" col2="" col3="2142" col3_disp=" 2,142 (6 calls)" col4="132864" col4_disp="132,864 (384 calls)"/>
+                                        <row id="29" col0="process" col1="aes.hpp:431" col2="" col3="28968" col3_disp="28,968 (6 calls)" col4="1849728" col4_disp="1,849,728 (384 calls)">
+                                            <row id="2" col0="GFMul2" col1="aes.hpp:420" col2="" col3="10368" col3_disp="10,368 (1728 calls)" col4="663552" col4_disp="663,552 (110592 calls)"/>
+                                        </row>
+                                    </row>
+                                </row>
+                                <row id="28" col0="shakeXOF&lt;32&gt;" col1="sha3.hpp:402" col2="" col3="27872" col3_disp="27,872 (4 calls)" col4="1663488" col4_disp="1,663,488 (256 calls)">
+                                    <row id="23" col0="KECCAK_f" col1="sha3.hpp:91" col2="" col3="22792" col3_disp="22,792 (4 calls)" col4="1321728" col4_disp="1,321,728 (256 calls)"/>
+                                </row>
+                            </row>
+                            <row id="28" col0="shakeXOF&lt;32&gt;" col1="sha3.hpp:402" col2="" col3="13936" col3_disp="13,936 (2 calls)" col4="12996" col4_disp=" 12,996 (2 calls)">
+                                <row id="23" col0="KECCAK_f" col1="sha3.hpp:91" col2="" col3="11396" col3_disp="11,396 (2 calls)" col4="10326" col4_disp=" 10,326 (2 calls)"/>
+                            </row>
+                        </row>
+                        <row id="37" col0="chal1" col1="fiat_shamir.cpp:6" col2="" col3="7197" col4="6664">
+                            <row id="28" col0="shakeXOF&lt;32&gt;" col1="sha3.hpp:402" col2="" col3="6968" col4="6498">
+                                <row id="23" col0="KECCAK_f" col1="sha3.hpp:91" col2="" col3="5698" col4="5163"/>
+                            </row>
+                        </row>
+                    </row>
+                    <row id="15" col0="ProverCircuitEval" col1="gatebygate.cpp:186" col2="36136" col3="22787" col4="21846">
+                        <row id="4" col0="compute_mask" col1="gatebygate.cpp:64" col2="5965" col3="2987" col4="2990">
+                            <row id="34" col0="combineVOLEs" col1="gatebygate.cpp:52" col2="5892" col2_disp=" 5,892 (2 calls)" col3="2964" col3_disp=" 2,964 (2 calls)" col4="2964" col4_disp="  2,964 (2 calls)">
+                                <row id="32" col0="gf128_multiply" col1="gatebygate.cpp:43" col2="5664" col2_disp=" 5,664 (4 calls)" col3="2912" col3_disp=" 2,912 (4 calls)" col4="2912" col4_disp="  2,912 (4 calls)">
+                                    <row id="14" col0="gf128_clmul" col1="gatebygate.cpp:5" col2="628" col2_disp="   628 (4 calls)" col3="2808" col3_disp=" 2,808 (4 calls)" col4="2808" col4_disp="  2,808 (4 calls)"/>
+                                    <row id="16" col0="gf128_reduce" col1="gatebygate.cpp:17" col2="4968" col2_disp=" 4,968 (4 calls)" col3="" col4=""/>
+                                </row>
+                            </row>
+                        </row>
+                        <row id="1" col0="EvalCircuit" col1="gatebygate.cpp:85" col2="1337" col3="782" col4="808">
+                            <row id="14" col0="gf128_clmul" col1="gatebygate.cpp:5" col2="157" col3="702" col4="702"/>
+                        </row>
+                        <row id="12" col0="ToField" col1="gatebygate.cpp:132" col2="1407" col3="30" col4="30">
+                            <row id="16" col0="gf128_reduce" col1="gatebygate.cpp:17" col2="1242" col3="" col4=""/>
+                        </row>
+                        <row id="27" col0="chal2" col1="fiat_shamir.cpp:46" col2="24187" col3="17477" col4="16507">
+                            <row id="5" col0="shake_extensible" col1="sha3.hpp:731" col2="23809" col3="17416" col4="16446">
+                                <row id="33" col0="blockType" col1="sha3.hpp:52" col2="4" col3="" col4=""/>
+                                <row id="23" col0="KECCAK_f" col1="sha3.hpp:91" col2="19761" col2_disp="19,761 (3 calls)" col3="17094" col3_disp="17,094 (3 calls)" col4="15489" col4_disp=" 15,489 (3 calls)">
+                                    <row id="3" col0="ROTL&lt;64&gt;" col1="sha3.hpp:70" col2="9600" col2_disp=" 9,600 (75 calls)" col3="" col4=""/>
+                                </row>
+                            </row>
+                        </row>
+                        <row id="26" col0="aggregate_coef" col1="gatebygate.cpp:149" col2="3187" col3="1493" col4="1493">
+                            <row id="32" col0="gf128_multiply" col1="gatebygate.cpp:43" col2="2832" col2_disp=" 2,832 (2 calls)" col3="1456" col3_disp=" 1,456 (2 calls)" col4="1456" col4_disp="  1,456 (2 calls)">
+                                <row id="14" col0="gf128_clmul" col1="gatebygate.cpp:5" col2="314" col2_disp="   314 (2 calls)" col3="1404" col3_disp=" 1,404 (2 calls)" col4="1404" col4_disp="  1,404 (2 calls)"/>
+                                <row id="16" col0="gf128_reduce" col1="gatebygate.cpp:17" col2="2484" col2_disp=" 2,484 (2 calls)" col3="" col4=""/>
+                            </row>
+                        </row>
+                    </row>
+                </row>
+            </rows>
+            <notes>
+                <note name="*" desc="Exceeded design size warning message threshold"/>
+            </notes>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

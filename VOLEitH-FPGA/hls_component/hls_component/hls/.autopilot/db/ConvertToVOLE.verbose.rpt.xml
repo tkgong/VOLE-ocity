@@ -1,0 +1,294 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'ConvertToVOLE'" level="0">
+<item name = "Date">Mon Nov 17 18:42:06 2025
+</item>
+<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Project">hls_component</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 4.895 ns, 0 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">21046, 21046, 0.105 ms, 0.105 ms, 21016, 21016, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="expand_seed_U0">expand_seed, 12481, 12481, 62.405 us, 62.405 us, 12481, 12481, no</column>
+<column name="build_VOLE_U0">build_VOLE, 10114, 10114, 50.570 us, 50.570 us, 10113, 10113, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="mem_transfer_U0">mem_transfer, 21015, 21015, 0.105 ms, 0.105 ms, 21015, 21015, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
+<column name="FIFO">-, -, 68628, 35112, -</column>
+<column name="Instance">800, -, 103365, 105509, 0</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available SLR">1344, 3072, 864000, 432000, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">59, 0, 19, 32, 0</specialColumn>
+<specialColumn name="Available">5376, 12288, 3456000, 1728000, 1280</specialColumn>
+<specialColumn name="Utilization (%)">14, 0, 4, 8, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="build_VOLE_U0">build_VOLE, 0, 0, 40, 2425, 0</column>
+<column name="expand_seed_U0">expand_seed, 800, 0, 70248, 84075, 0</column>
+<column name="mem_transfer_U0">mem_transfer, 0, 0, 33077, 19009, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="r_strm_1_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="r_strm_2_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="r_strm_3_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="r_strm_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="u_strm_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_100_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_101_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_102_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_103_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_104_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_105_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_106_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_107_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_108_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_109_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_10_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_110_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_111_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_112_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_113_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_114_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_115_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_116_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_117_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_118_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_119_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_11_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_120_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_121_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_122_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_123_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_124_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_125_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_126_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_127_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_12_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_13_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_14_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_15_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_16_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_17_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_18_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_19_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_1_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_20_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_21_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_22_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_23_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_24_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_25_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_26_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_27_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_28_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_29_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_2_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_30_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_31_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_32_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_33_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_34_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_35_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_36_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_37_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_38_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_39_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_3_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_40_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_41_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_42_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_43_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_44_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_45_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_46_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_47_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_48_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_49_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_4_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_50_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_51_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_52_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_53_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_54_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_55_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_56_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_57_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_58_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_59_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_5_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_60_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_61_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_62_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_63_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_64_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_65_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_66_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_67_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_68_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_69_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_6_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_70_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_71_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_72_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_73_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_74_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_75_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_76_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_77_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_78_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_79_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_7_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_80_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_81_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_82_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_83_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_84_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_85_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_86_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_87_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_88_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_89_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_8_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_90_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_91_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_92_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_93_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_94_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_95_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_96_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_97_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_98_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_99_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_9_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="v_strm_U">0, 516, 0, -, 2, 256, 512</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="iv_val1">in, 128, ap_none, iv_val1, scalar</column>
+<column name="iv_val1_ap_vld">in, 1, ap_none, iv_val1, scalar</column>
+<column name="seed_strm_dout">in, 128, ap_fifo, seed_strm, pointer</column>
+<column name="seed_strm_empty_n">in, 1, ap_fifo, seed_strm, pointer</column>
+<column name="seed_strm_read">out, 1, ap_fifo, seed_strm, pointer</column>
+<column name="u_0_address0">out, 18, ap_memory, u_0, array</column>
+<column name="u_0_ce0">out, 1, ap_memory, u_0, array</column>
+<column name="u_0_d0">out, 1, ap_memory, u_0, array</column>
+<column name="u_0_q0">in, 1, ap_memory, u_0, array</column>
+<column name="u_0_we0">out, 1, ap_memory, u_0, array</column>
+<column name="u_0_address1">out, 18, ap_memory, u_0, array</column>
+<column name="u_0_ce1">out, 1, ap_memory, u_0, array</column>
+<column name="u_0_d1">out, 1, ap_memory, u_0, array</column>
+<column name="u_0_q1">in, 1, ap_memory, u_0, array</column>
+<column name="u_0_we1">out, 1, ap_memory, u_0, array</column>
+<column name="u_1_address0">out, 18, ap_memory, u_1, array</column>
+<column name="u_1_ce0">out, 1, ap_memory, u_1, array</column>
+<column name="u_1_d0">out, 1, ap_memory, u_1, array</column>
+<column name="u_1_q0">in, 1, ap_memory, u_1, array</column>
+<column name="u_1_we0">out, 1, ap_memory, u_1, array</column>
+<column name="u_1_address1">out, 18, ap_memory, u_1, array</column>
+<column name="u_1_ce1">out, 1, ap_memory, u_1, array</column>
+<column name="u_1_d1">out, 1, ap_memory, u_1, array</column>
+<column name="u_1_q1">in, 1, ap_memory, u_1, array</column>
+<column name="u_1_we1">out, 1, ap_memory, u_1, array</column>
+<column name="V_0_address0">out, 18, ap_memory, V_0, array</column>
+<column name="V_0_ce0">out, 1, ap_memory, V_0, array</column>
+<column name="V_0_d0">out, 128, ap_memory, V_0, array</column>
+<column name="V_0_q0">in, 128, ap_memory, V_0, array</column>
+<column name="V_0_we0">out, 1, ap_memory, V_0, array</column>
+<column name="V_0_address1">out, 18, ap_memory, V_0, array</column>
+<column name="V_0_ce1">out, 1, ap_memory, V_0, array</column>
+<column name="V_0_d1">out, 128, ap_memory, V_0, array</column>
+<column name="V_0_q1">in, 128, ap_memory, V_0, array</column>
+<column name="V_0_we1">out, 1, ap_memory, V_0, array</column>
+<column name="V_1_address0">out, 18, ap_memory, V_1, array</column>
+<column name="V_1_ce0">out, 1, ap_memory, V_1, array</column>
+<column name="V_1_d0">out, 128, ap_memory, V_1, array</column>
+<column name="V_1_q0">in, 128, ap_memory, V_1, array</column>
+<column name="V_1_we0">out, 1, ap_memory, V_1, array</column>
+<column name="V_1_address1">out, 18, ap_memory, V_1, array</column>
+<column name="V_1_ce1">out, 1, ap_memory, V_1, array</column>
+<column name="V_1_d1">out, 128, ap_memory, V_1, array</column>
+<column name="V_1_q1">in, 128, ap_memory, V_1, array</column>
+<column name="V_1_we1">out, 1, ap_memory, V_1, array</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, ConvertToVOLE, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, ConvertToVOLE, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, ConvertToVOLE, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, ConvertToVOLE, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, ConvertToVOLE, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, ConvertToVOLE, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, ConvertToVOLE, return value</column>
+</table>
+</item>
+</section>
+</profile>

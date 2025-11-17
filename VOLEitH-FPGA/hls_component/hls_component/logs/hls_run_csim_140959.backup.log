@@ -1,0 +1,191 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg
+WARNING: [HLS 200-1921] Skipping unknown config ini [hls] entry 'ldflags=-lstdc++' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(22)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=defs.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/defs.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=aes.hpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/aes.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=encrypt.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/encrypt.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=encrypt.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/encrypt.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=PRG.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/PRG.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=PRG.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/PRG.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ggm_tree.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/ggm_tree.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ggm_tree.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(16)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/ggm_tree.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=sha3.hpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(17)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./shake.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(18)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./shake.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_ggm.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(23)
+INFO: [HLS 200-10] Adding test bench file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/tb_ggm.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=ggm_tree' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcu250-figd2104-2-e' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xcu250-figd2104-2-e'
+INFO: [HLS 200-1465] Applying config ini 'clock=7ns' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+INFO: [HLS 200-1465] Applying config ini 'csim.clean=1' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(21)
+INFO: [HLS 200-1465] Applying config ini 'csim.code_analyzer=0' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(24)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying config ini 'sim.O=1' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(20)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building optimized C Simulation binaries
+   Compiling ../../../../tb_ggm.cpp in release mode
+   Compiling ../../../../shake.cpp in release mode
+   Compiling ../../../../ggm_tree.cpp in release mode
+   Compiling ../../../../PRG.cpp in release mode
+   Compiling ../../../../encrypt.cpp in release mode
+   Generating csim.exe
+============================================
+GGM_TREE + VC_OPEN Comprehensive Testbench
+============================================
+Configuration:
+  K (tree depth):        4
+  TAU (num trees):       32
+  GGM_UNROLL_FAC:        8
+  PATH_LEN:              6 (K+2)
+  Nodes per tree:        31
+  Leaves per tree:       16
+============================================
+
+RANDOM OPEN INDICES:
+--------------------
+  Tree 0: opening leaf 5
+  Tree 1: opening leaf 12
+  Tree 2: opening leaf 15
+  Tree 3: opening leaf 2
+  Tree 4: opening leaf 11
+  Tree 5: opening leaf 12
+  Tree 6: opening leaf 9
+  Tree 7: opening leaf 9
+  Tree 8: opening leaf 2
+  Tree 9: opening leaf 7
+  ...
+
+INPUT PARAMETERS:
+-----------------
+Master Root: 0x01234567_89abcdef_fedcba98_76543210
+IV:          0xffeeddcc_bbaa9988_77665544_33221100
+
+=== PROVER PHASE ===
+Calling ggm_tree() (includes H hashing)...
+✓ ggm_tree() completed.
+
+Reading prover hashes from h_strm:
+  h_prover[0] = 0x6b92e52717644dce9670a635b4391c9b_b0d8724f0983e3d4b71fe2aabb396a28
+  h_prover[1] = 0xbb5d44c5a4c17ebe4aecf9c9d9e28e5d_aa48d21c4b1b2bfad152d2fe084827c6
+  h_prover[2] = 0x55b349bcdca32cf37572cd13d3335185_8c27467fa6f57d9ad3f5bf65185af358
+  h_prover[3] = 0x1c717da699bdac8d43fbbbb2d57abf79_59dff9eaa7b62d6c1f56714f0c405189
+  h_prover[4] = 0xa5f1efc2a3552a5a4d91a6f62956c6a6_5ade7fe7dca099de03a7670a4df7966b
+  ...
+✓ All 32 prover hashes collected.
+
+=== OPENING PHASE ===
+Calling VC_Open()...
+✓ VC_Open() completed.
+  Generated 192 path elements
+  (32 trees × 6 elements per path)
+
+=== VERIFIER PHASE ===
+Calling ggm_reconstruct()...
+✓ ggm_reconstruct() completed.
+
+============================================
+HASH VERIFICATION
+============================================
+
+Comparing prover vs verifier hashes:
+  ✓✓✓ ALL 32 HASHES MATCH! ✓✓✓
+  Verification SUCCESSFUL!
+
+============================================
+DETAILED PATH VERIFICATION (First 3 Trees)
+============================================
+
+--- Tree 0 (Opening leaf 5) ---
+  Authentication Path:
+    [0] Root:        0x4dea6990_73925dc6_92f7b439_c6e2b9f4
+    [1] Sibling L1:   0xc835ead6_75f8d6cf_f0fbd7a6_09d4e693
+    [2] Sibling L2:   0x0eb4bb5e_28b3bd73_8e60bd1c_86e2b86d
+    [3] Sibling L3:   0x2940189e_68a235c8_1d2085b6_1b26374b
+    [4] Sibling L4:   0x3a9985b8_df301fdf_290848ac_c6280882
+    [5] Com at leaf 5: 0x41acbe5b_2b88ab3f_f9d87899_ca854786
+  ✓ Path elements verified
+  Prover hash:     0x6b92e527_17644dce_9670a635_b4391c9b_b0d8724f_0983e3d4_b71fe2aa_bb396a28
+  Verifier hash:   0x6b92e527_17644dce_9670a635_b4391c9b_b0d8724f_0983e3d4_b71fe2aa_bb396a28
+  ✓ Hashes MATCH!
+
+--- Tree 1 (Opening leaf 12) ---
+  Authentication Path:
+    [0] Root:        0x723dffb4_4af06f6b_a536bdc2_e971c383
+    [1] Sibling L1:   0x83122c0d_6e80557c_ef2d5828_c2de0225
+    [2] Sibling L2:   0xede87783_1b76db26_f9855f8a_466f89e7
+    [3] Sibling L3:   0x0b8f3145_aee81713_05185fd5_8499432d
+    [4] Sibling L4:   0x8a48423a_cc958e72_23768266_9bbb51a8
+    [5] Com at leaf 12: 0xde0f1443_57b10f04_8930a3a3_9538d443
+  ✓ Path elements verified
+  Prover hash:     0xbb5d44c5_a4c17ebe_4aecf9c9_d9e28e5d_aa48d21c_4b1b2bfa_d152d2fe_084827c6
+  Verifier hash:   0xbb5d44c5_a4c17ebe_4aecf9c9_d9e28e5d_aa48d21c_4b1b2bfa_d152d2fe_084827c6
+  ✓ Hashes MATCH!
+
+--- Tree 2 (Opening leaf 15) ---
+  Authentication Path:
+    [0] Root:        0x4d5dab85_e3aa1f7f_4766e0dc_bda8ec6d
+    [1] Sibling L1:   0xb7b674f5_5cd48859_1527f57d_9ade7b71
+    [2] Sibling L2:   0x0559b4b0_38f7b0d7_88a30f8a_7fc81207
+    [3] Sibling L3:   0x9e2afef7_7e6074f9_439184b2_0b772af9
+    [4] Sibling L4:   0xc956513e_57530df8_4cdfb53f_a05e7ca4
+    [5] Com at leaf 15: 0x3838dd7c_cd25ee03_a15aeb3a_fbbae79f
+  ✓ Path elements verified
+  Prover hash:     0x55b349bc_dca32cf3_7572cd13_d3335185_8c27467f_a6f57d9a_d3f5bf65_185af358
+  Verifier hash:   0x55b349bc_dca32cf3_7572cd13_d3335185_8c27467f_a6f57d9a_d3f5bf65_185af358
+  ✓ Hashes MATCH!
+
+============================================
+FINAL VERIFICATION SUMMARY
+============================================
+✓✓✓ ALL TESTS PASSED ✓✓✓
+  • All 32 trees generated correctly
+  • All 32 authentication paths valid
+  • All 32 hash verifications successful
+
+🎉 Vector Commitment scheme verified!
+============================================
+
+Statistics:
+  Total PRG calls:       976
+  Total h0 calls:        512 (prover)
+  Total h0 calls:        480 (verifier)
+  Total H (SHAKE256):    32 (prover)
+  Total H (SHAKE256):    32 (verifier)
+  Total path elements:   192
+  Path size per tree:    96 bytes
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<128>, 0>7' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<128>, 0>6' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<128>, 0>5' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<128>, 0>4' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<128>, 0>3' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<128>, 0>2' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<128>, 0>1' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<128>, 0>0' contains leftover data, which may result in RTL simulation hanging.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 192
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 9.06 seconds. Total CPU system time: 0.61 seconds. Total elapsed time: 9.64 seconds; peak allocated memory: 481.840 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 13s

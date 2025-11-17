@@ -1,0 +1,139 @@
+================================================================
+== Design Size Report
+================================================================
+
+* C-Synthesis has not completed!
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             |   134,427 *  | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  |   351,726 *  | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |   166,023 *  | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |   156,525 *  | user inline pragmas are applied                                                        |
+|               | (4) simplification          |   156,503 *  | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         | 3,768,693 *  | user array partition pragmas are applied                                               |
+|               | (2) simplification          | 3,768,206 *  | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  | 3,768,206 *  | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           | 3,768,206 *  | apply array reshape pragmas                                                            |
+|               |                             |              |                                                                                        |
+| Performance   |                             | pending      | After transformations are applied to meet performance pragma targets                   |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+    * - Exceeded design size warning message threshold
+
+* Instructions per Function for each Compilation Phase
++------------------------+--------------------+-------------------+---------------------+------------------------+
+| Function               | Location           | Compile/Link      | Unroll/Inline       | Array/Struct           |
++------------------------+--------------------+-------------------+---------------------+------------------------+
+| + GenerateProof        | endtoend.cpp:7     | 134,427 *         | 156,503 *           | 3,768,206 *            |
+|  + VOLECommit          | commit.cpp:7       | 97,955            | 133,652             | 3,746,286              |
+|   + ggm_top            | ggm_tree.cpp:246   | 78,276            |                     |                        |
+|    + ggm_tree          | ggm_tree.cpp:198   | 67,898            |                     |                        |
+|     + expand_roots     | ggm_tree.cpp:162   | 18,933            |                     |                        |
+|      + PRG             | PRG.cpp:6          | 18,758            |                     |                        |
+|       + encrypt        | encrypt.cpp:3      | 18,588            |                     |                        |
+|        + aesEnc        | aes.hpp:388        |  9,741            |                     |                        |
+|           aesTable     | aes.hpp:14         |  9,735            |                     |                        |
+|          updateKey     | aes.hpp:393        |  1,841            |                     |                        |
+|        + process       | aes.hpp:431        |  6,988            |                     |                        |
+|           GFMul2       | aes.hpp:420        |  2,888 (8 calls)  |                     |                        |
+|     + ggm_build        | ggm_tree.cpp:178   | 29,016            |                     |                        |
+|      + ggm_small       | ggm_tree.cpp:106   | 28,980            |                     |                        |
+|       + PRG            | PRG.cpp:6          | 18,758            |                     |                        |
+|        + encrypt       | encrypt.cpp:3      | 18,588            |                     |                        |
+|         + aesEnc       | aes.hpp:388        |  9,741            |                     |                        |
+|            aesTable    | aes.hpp:14         |  9,735            |                     |                        |
+|           updateKey    | aes.hpp:393        |  1,841            |                     |                        |
+|         + process      | aes.hpp:431        |  6,988            |                     |                        |
+|            GFMul2      | aes.hpp:420        |  2,888 (8 calls)  |                     |                        |
+|       + h0             | shake.cpp:7        | 10,132            |                     |                        |
+|        + shake256      | sha3.hpp:717       |  9,637            |                     |                        |
+|         + shakeXOF<32> | sha3.hpp:402       |  9,635            |                     |                        |
+|            blockType   | sha3.hpp:52        |      4            |                     |                        |
+|          + KECCAK_f    | sha3.hpp:91        |  6,587            |                     |                        |
+|             ROTL<64>   | sha3.hpp:70        |  3,200 (25 calls) |                     |                        |
+|     + H                | shake.cpp:47       |  9,907            |                     |                        |
+|      + shake256        | sha3.hpp:717       |  9,637            |                     |                        |
+|       + shakeXOF<32>   | sha3.hpp:402       |  9,635            |                     |                        |
+|          blockType     | sha3.hpp:52        |      4            |                     |                        |
+|        + KECCAK_f      | sha3.hpp:91        |  6,587            |                     |                        |
+|           ROTL<64>     | sha3.hpp:70        |  3,200 (25 calls) |                     |                        |
+|     + H_COM            | shake.cpp:87       | 10,013            |                     |                        |
+|      + shake256        | sha3.hpp:717       |  9,637            |                     |                        |
+|       + shakeXOF<32>   | sha3.hpp:402       |  9,635            |                     |                        |
+|          blockType     | sha3.hpp:52        |      4            |                     |                        |
+|        + KECCAK_f      | sha3.hpp:91        |  6,587            |                     |                        |
+|           ROTL<64>     | sha3.hpp:70        |  3,200 (25 calls) |                     |                        |
+|    + chal1             | fiat_shamir.cpp:6  | 10,236            |                     |                        |
+|     + shake256         | sha3.hpp:717       |  9,637            |                     |                        |
+|      + shakeXOF<32>    | sha3.hpp:402       |  9,635            |                     |                        |
+|         blockType      | sha3.hpp:52        |      4            |                     |                        |
+|       + KECCAK_f       | sha3.hpp:91        |  6,587            |                     |                        |
+|          ROTL<64>      | sha3.hpp:70        |  3,200 (25 calls) |                     |                        |
+|      VC_Open           | ggm_tree.cpp:220   |    115            |                     |                        |
+|   + ConvertToVOLE      | vole.cpp:138       | 19,646            | 42,592              |  43,033                |
+|    + expand_seed       | vole.cpp:7         | 19,097            | 41,688              |  41,582                |
+|     + PRG              | PRG.cpp:6          | 18,758            | 41,596 (4 calls)    |  41,492 (4 calls)      |
+|      + encrypt         | encrypt.cpp:3      | 18,588            | 41,536 (8 calls)    |  41,432 (8 calls)      |
+|       + aesEnc         | aes.hpp:388        |  9,741            |                     |                        |
+|          aesTable      | aes.hpp:14         |  9,735            |                     |                        |
+|         updateKey      | aes.hpp:393        |  1,841            |  2,856 (8 calls)    |   2,768 (8 calls)      |
+|       + process        | aes.hpp:431        |  6,988            | 38,624 (8 calls)    |  38,536 (8 calls)      |
+|          GFMul2        | aes.hpp:420        |  2,888 (8 calls)  | 13,824 (2304 calls) |  13,824 (2304 calls)   |
+|      build_VOLE        | vole.cpp:40        |    238            |     58              |     218                |
+|      mem_transfer      | vole.cpp:88        |    254            |    825              |     443                |
+|   + ggm_tree           | ggm_tree.cpp:198   |                   | 83,791              | 3,692,516              |
+|    + PRG               | PRG.cpp:6          |                   | 10,399              |  10,373                |
+|     + encrypt          | encrypt.cpp:3      |                   | 10,384 (2 calls)    |  10,358 (2 calls)      |
+|        updateKey       | aes.hpp:393        |                   |    714 (2 calls)    |     692 (2 calls)      |
+|      + process         | aes.hpp:431        |                   |  9,656 (2 calls)    |   9,634 (2 calls)      |
+|         GFMul2         | aes.hpp:420        |                   |  3,456 (576 calls)  |   3,456 (576 calls)    |
+|    + ggm_small         | ggm_tree.cpp:106   |                   | 59,301              | 3,668,864 (64 calls)   |
+|     + PRG              | PRG.cpp:6          |                   | 31,197 (3 calls)    | 1,991,616 (192 calls)  |
+|      + encrypt         | encrypt.cpp:3      |                   | 31,152 (6 calls)    | 1,988,736 (384 calls)  |
+|         updateKey      | aes.hpp:393        |                   |  2,142 (6 calls)    | 132,864 (384 calls)    |
+|       + process        | aes.hpp:431        |                   | 28,968 (6 calls)    | 1,849,728 (384 calls)  |
+|          GFMul2        | aes.hpp:420        |                   | 10,368 (1728 calls) | 663,552 (110592 calls) |
+|     + shakeXOF<32>     | sha3.hpp:402       |                   | 27,872 (4 calls)    | 1,663,488 (256 calls)  |
+|        KECCAK_f        | sha3.hpp:91        |                   | 22,792 (4 calls)    | 1,321,728 (256 calls)  |
+|    + shakeXOF<32>      | sha3.hpp:402       |                   | 13,936 (2 calls)    |  12,996 (2 calls)      |
+|       KECCAK_f         | sha3.hpp:91        |                   | 11,396 (2 calls)    |  10,326 (2 calls)      |
+|   + chal1              | fiat_shamir.cpp:6  |                   |  7,197              |   6,664                |
+|    + shakeXOF<32>      | sha3.hpp:402       |                   |  6,968              |   6,498                |
+|       KECCAK_f         | sha3.hpp:91        |                   |  5,698              |   5,163                |
+|  + ProverCircuitEval   | gatebygate.cpp:186 | 36,136            | 22,787              |  21,846                |
+|   + compute_mask       | gatebygate.cpp:64  |  5,965            |  2,987              |   2,990                |
+|    + combineVOLEs      | gatebygate.cpp:52  |  5,892 (2 calls)  |  2,964 (2 calls)    |   2,964 (2 calls)      |
+|     + gf128_multiply   | gatebygate.cpp:43  |  5,664 (4 calls)  |  2,912 (4 calls)    |   2,912 (4 calls)      |
+|        gf128_clmul     | gatebygate.cpp:5   |    628 (4 calls)  |  2,808 (4 calls)    |   2,808 (4 calls)      |
+|        gf128_reduce    | gatebygate.cpp:17  |  4,968 (4 calls)  |                     |                        |
+|   + EvalCircuit        | gatebygate.cpp:85  |  1,337            |    782              |     808                |
+|      gf128_clmul       | gatebygate.cpp:5   |    157            |    702              |     702                |
+|   + ToField            | gatebygate.cpp:132 |  1,407            |     30              |      30                |
+|      gf128_reduce      | gatebygate.cpp:17  |  1,242            |                     |                        |
+|   + chal2              | fiat_shamir.cpp:46 | 24,187            | 17,477              |  16,507                |
+|    + shake_extensible  | sha3.hpp:731       | 23,809            | 17,416              |  16,446                |
+|       blockType        | sha3.hpp:52        |      4            |                     |                        |
+|     + KECCAK_f         | sha3.hpp:91        | 19,761 (3 calls)  | 17,094 (3 calls)    |  15,489 (3 calls)      |
+|        ROTL<64>        | sha3.hpp:70        |  9,600 (75 calls) |                     |                        |
+|   + aggregate_coef     | gatebygate.cpp:149 |  3,187            |  1,493              |   1,493                |
+|    + gf128_multiply    | gatebygate.cpp:43  |  2,832 (2 calls)  |  1,456 (2 calls)    |   1,456 (2 calls)      |
+|       gf128_clmul      | gatebygate.cpp:5   |    314 (2 calls)  |  1,404 (2 calls)    |   1,404 (2 calls)      |
+|       gf128_reduce     | gatebygate.cpp:17  |  2,484 (2 calls)  |                     |                        |
++------------------------+--------------------+-------------------+---------------------+------------------------+
+    * - Exceeded design size warning message threshold
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

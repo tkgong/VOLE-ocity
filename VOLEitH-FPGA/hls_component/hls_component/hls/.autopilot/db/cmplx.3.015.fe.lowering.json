@@ -1,0 +1,441 @@
+{
+  "0": {
+    "basicblocks": 5,
+    "calls": "22 6",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "endtoend.cpp",
+    "fileloc": 7,
+    "instructions": 93,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 4,
+    "name": "GenerateProof",
+    "total_instructions": 3753919
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "24 9",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "encrypt.cpp",
+    "fileloc": 3,
+    "instructions": 26,
+    "loads": {
+      "L": 11
+    },
+    "memory_accesses": 0,
+    "name": "encrypt",
+    "total_instructions": 5142
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "20",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "fiat_shamir.cpp",
+    "fileloc": 6,
+    "instructions": 169,
+    "memory_accesses": 0,
+    "name": "chal1",
+    "stores": {
+      "L": 65
+    },
+    "total_instructions": 6667
+  },
+  "11": {
+    "basicblocks": 72,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 3,
+    "file": "vole.cpp",
+    "fileloc": 40,
+    "instructions": 218,
+    "memory_accesses": 134,
+    "name": "build_VOLE",
+    "total_instructions": 218
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 289,
+    "file": "sha3.hpp",
+    "fileloc": 91,
+    "instructions": 5163,
+    "loads": {
+      "L": 25
+    },
+    "memory_accesses": 0,
+    "name": "KECCAK_f",
+    "stores": {
+      "L": 25
+    },
+    "total_instructions": 5163
+  },
+  "13": {
+    "basicblocks": 3,
+    "calls": "21 21",
+    "control_depth": 0,
+    "def_use_depth": 6,
+    "file": "gatebygate.cpp",
+    "fileloc": 64,
+    "instructions": 29,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 6,
+    "name": "compute_mask",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 2985
+  },
+  "14": {
+    "basicblocks": 7,
+    "calls": "5",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "fiat_shamir.cpp",
+    "fileloc": 46,
+    "instructions": 66,
+    "memory_accesses": 1,
+    "name": "chal2",
+    "total_instructions": 16512
+  },
+  "15": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 137,
+    "file": "gatebygate.cpp",
+    "fileloc": 5,
+    "instructions": 702,
+    "memory_accesses": 1,
+    "name": "gf128_clmul",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 702
+  },
+  "16": {
+    "basicblocks": 11,
+    "calls": "15",
+    "control_depth": 2,
+    "def_use_depth": 8,
+    "file": "gatebygate.cpp",
+    "fileloc": 85,
+    "instructions": 129,
+    "loads": {
+      "L": 22
+    },
+    "memory_accesses": 39,
+    "name": "EvalCircuit",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 831
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "1 1",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "PRG.cpp",
+    "fileloc": 6,
+    "instructions": 14,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "PRG",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 10298
+  },
+  "18": {
+    "basicblocks": 3,
+    "calls": "8 8",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "gatebygate.cpp",
+    "fileloc": 149,
+    "instructions": 31,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 7,
+    "name": "aggregate_coef",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 1485
+  },
+  "19": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "aes.hpp",
+    "fileloc": 420,
+    "instructions": 6,
+    "memory_accesses": 0,
+    "name": "GFMul2",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 6
+  },
+  "2": {
+    "basicblocks": 15,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 4,
+    "file": "vole.cpp",
+    "fileloc": 88,
+    "instructions": 449,
+    "memory_accesses": 4,
+    "name": "mem_transfer",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 449
+  },
+  "20": {
+    "basicblocks": 341,
+    "calls": "12",
+    "control_depth": 10,
+    "def_use_depth": 5,
+    "file": "sha3.hpp",
+    "fileloc": 402,
+    "instructions": 1335,
+    "loads": {
+      "L": 174
+    },
+    "memory_accesses": 373,
+    "name": "shakeXOF<32>",
+    "stores": {
+      "L": 75
+    },
+    "total_instructions": 6498
+  },
+  "21": {
+    "basicblocks": 3,
+    "calls": "8 8",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "gatebygate.cpp",
+    "fileloc": 52,
+    "instructions": 24,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 0,
+    "name": "combineVOLEs",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 1478
+  },
+  "22": {
+    "basicblocks": 9,
+    "calls": "26 10 7",
+    "control_depth": 2,
+    "def_use_depth": 10,
+    "file": "commit.cpp",
+    "fileloc": 7,
+    "instructions": 4011,
+    "loads": {
+      "L": 769
+    },
+    "memory_accesses": 3,
+    "name": "VOLECommit",
+    "total_instructions": 3731958
+  },
+  "23": {
+    "basicblocks": 3,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 11,
+    "file": "gatebygate.cpp",
+    "fileloc": 132,
+    "instructions": 30,
+    "memory_accesses": 3,
+    "name": "ToField",
+    "total_instructions": 30
+  },
+  "24": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 192,
+    "file": "aes.hpp",
+    "fileloc": 393,
+    "instructions": 346,
+    "loads": {
+      "G": 40
+    },
+    "memory_accesses": 0,
+    "name": "updateKey",
+    "stores": {
+      "L": 11
+    },
+    "total_instructions": 346
+  },
+  "25": {
+    "basicblocks": 7,
+    "calls": "4 4 4 4",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "vole.cpp",
+    "fileloc": 7,
+    "instructions": 75,
+    "loads": {
+      "L": 12
+    },
+    "memory_accesses": 18,
+    "name": "expand_seed",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 41267
+  },
+  "26": {
+    "basicblocks": 76,
+    "calls": "4 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 20 20",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "ggm_tree.cpp",
+    "fileloc": 198,
+    "instructions": 473,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 192,
+    "name": "ggm_tree",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 3678423
+  },
+  "3": {
+    "basicblocks": 25,
+    "calls": "17 17 17 20 20 20 20",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "ggm_tree.cpp",
+    "fileloc": 106,
+    "instructions": 218,
+    "loads": {
+      "L": 6
+    },
+    "memory_accesses": 0,
+    "name": "ggm_small",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 57104
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "1 1",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "PRG.cpp",
+    "fileloc": 6,
+    "instructions": 14,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "PRG",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 10298
+  },
+  "5": {
+    "basicblocks": 253,
+    "calls": "12 12 12",
+    "control_depth": 9,
+    "def_use_depth": 4,
+    "file": "sha3.hpp",
+    "fileloc": 731,
+    "instructions": 957,
+    "loads": {
+      "L": 221
+    },
+    "memory_accesses": 361,
+    "name": "shake_extensible",
+    "stores": {
+      "L": 196
+    },
+    "total_instructions": 16446
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "13 16 23 14 18",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "gatebygate.cpp",
+    "fileloc": 186,
+    "instructions": 25,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "ProverCircuitEval",
+    "total_instructions": 21868
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "25 11 2",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "vole.cpp",
+    "fileloc": 138,
+    "instructions": 923,
+    "memory_accesses": 0,
+    "name": "ConvertToVOLE",
+    "total_instructions": 42857
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "15",
+    "control_depth": 0,
+    "def_use_depth": 11,
+    "file": "gatebygate.cpp",
+    "fileloc": 43,
+    "instructions": 25,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 3,
+    "name": "gf128_multiply",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 727
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19 19",
+    "control_depth": 0,
+    "def_use_depth": 881,
+    "file": "aes.hpp",
+    "fileloc": 431,
+    "instructions": 3042,
+    "loads": {
+      "G": 160,
+      "L": 288
+    },
+    "memory_accesses": 0,
+    "name": "process",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4770
+  }
+}

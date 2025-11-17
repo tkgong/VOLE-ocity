@@ -1,0 +1,86 @@
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:70:46: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl'
+    #pragma HLS BIND_STORAGE variable=u type=ram_2p impl=bram
+                                             ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:71:46: error: Invalid Directive: for current device, ram_2p + uram is invalid combination for BIND_STORAGE's option 'type + impl'
+    #pragma HLS BIND_STORAGE variable=V type=ram_2p impl=uram
+                                             ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:98:44: error: Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE's option 'type + impl'
+  #pragma HLS BIND_STORAGE variable=u type=ram_2p impl=bram
+                                           ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:99:44: error: Invalid Directive: for current device, ram_2p + uram is invalid combination for BIND_STORAGE's option 'type + impl'
+  #pragma HLS BIND_STORAGE variable=V type=ram_2p impl=uram
+                                           ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:200:46: error: Invalid Directive: for current device, ram_2p + BRAM is invalid combination for BIND_STORAGE's option 'type + impl'
+    #pragma HLS BIND_STORAGE variable=u type=ram_2p impl=BRAM
+                                             ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:201:46: error: Invalid Directive: for current device, ram_2p + URAM is invalid combination for BIND_STORAGE's option 'type + impl'
+    #pragma HLS BIND_STORAGE variable=V type=ram_2p impl=URAM
+                                             ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:2:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:98:9: error: use of undeclared identifier '__fpga_fifo_pop'
+        __fpga_fifo_pop(&V, &dout);
+        ^
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:109:9: note: in instantiation of member function 'hls::stream<ap_uint<1>, 0>::read' requested here
+        read(tmp);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:102:35: note: in instantiation of member function 'hls::stream<ap_uint<1>, 0>::read' requested here
+    extended_witness[i] = witness.read();
+                                  ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:2:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:127:9: error: use of undeclared identifier '__fpga_fifo_push'
+        __fpga_fifo_push(&V, &din);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:104:12: note: in instantiation of member function 'hls::stream<ap_uint<1>, 0>::write' requested here
+    d_strm.write(d);
+           ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:2:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:98:9: error: use of undeclared identifier '__fpga_fifo_pop'
+        __fpga_fifo_pop(&V, &dout);
+        ^
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:109:9: note: in instantiation of member function 'hls::stream<GateInfo, 0>::read' requested here
+        read(tmp);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:109:27: note: in instantiation of member function 'hls::stream<GateInfo, 0>::read' requested here
+    GateInfo gate=circuit.read();
+                          ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:2:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:127:9: error: use of undeclared identifier '__fpga_fifo_push'
+        __fpga_fifo_push(&V, &din);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:121:17: note: in instantiation of member function 'hls::stream<ap_uint<256>, 0>::write' requested here
+        a0_strm.write(a0);
+                ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:2:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:127:9: error: use of undeclared identifier '__fpga_fifo_push'
+        __fpga_fifo_push(&V, &din);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:122:17: note: in instantiation of member function 'hls::stream<ap_uint<128>, 0>::write' requested here
+        a1_strm.write(a1); 
+                ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:2:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:98:9: error: use of undeclared identifier '__fpga_fifo_pop'
+        __fpga_fifo_pop(&V, &dout);
+        ^
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:109:9: note: in instantiation of member function 'hls::stream<ap_uint<128>, 0>::read' requested here
+        read(tmp);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:140:33: note: in instantiation of member function 'hls::stream<ap_uint<128>, 0>::read' requested here
+        ap_uint<L> a1 = a1_strm.read();
+                                ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:2:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:98:9: error: use of undeclared identifier '__fpga_fifo_pop'
+        __fpga_fifo_pop(&V, &dout);
+        ^
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:109:9: note: in instantiation of member function 'hls::stream<ap_uint<256>, 0>::read' requested here
+        read(tmp);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp:141:35: note: in instantiation of member function 'hls::stream<ap_uint<256>, 0>::read' requested here
+        ap_uint<2*L> a0 = a0_strm.read();
+                                  ^

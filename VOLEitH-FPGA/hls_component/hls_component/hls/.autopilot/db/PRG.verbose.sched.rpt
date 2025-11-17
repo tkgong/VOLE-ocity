@@ -1,0 +1,348 @@
+
+
+================================================================
+== Vitis HLS Report for 'PRG'
+================================================================
+* Date:           Mon Nov 17 18:41:03 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.290 ns|        0 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       23|       23|  0.115 us|  0.115 us|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 24
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 24
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 24, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.66>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%seed_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %seed" [PRG.cpp:6]   --->   Operation 25 'read' 'seed_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%iv_val_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %iv_val" [PRG.cpp:6]   --->   Operation 26 'read' 'iv_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [24/24] (1.17ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 27 'call' 'out' <Predicate = true> <Delay = 1.17> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 28 [1/1] (1.49ns)   --->   "%cur_iv = add i128 %iv_val_read, i128 1" [PRG.cpp:10]   --->   Operation 28 'add' 'cur_iv' <Predicate = true> <Delay = 1.49> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [24/24] (1.17ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 29 'call' 'out_2' <Predicate = true> <Delay = 1.17> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 3.29>
+ST_2 : Operation 30 [23/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 30 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 31 [23/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 31 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 3.29>
+ST_3 : Operation 32 [22/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 32 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_3 : Operation 33 [22/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 33 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 3.29>
+ST_4 : Operation 34 [21/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 34 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 35 [21/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 35 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 3.29>
+ST_5 : Operation 36 [20/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 36 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_5 : Operation 37 [20/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 37 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 3.29>
+ST_6 : Operation 38 [19/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 38 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_6 : Operation 39 [19/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 39 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 7 <SV = 6> <Delay = 3.29>
+ST_7 : Operation 40 [18/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 40 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_7 : Operation 41 [18/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 41 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 8 <SV = 7> <Delay = 3.29>
+ST_8 : Operation 42 [17/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 42 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_8 : Operation 43 [17/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 43 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 9 <SV = 8> <Delay = 3.29>
+ST_9 : Operation 44 [16/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 44 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_9 : Operation 45 [16/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 45 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 10 <SV = 9> <Delay = 3.29>
+ST_10 : Operation 46 [15/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 46 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_10 : Operation 47 [15/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 47 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 11 <SV = 10> <Delay = 3.29>
+ST_11 : Operation 48 [14/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 48 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_11 : Operation 49 [14/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 49 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 12 <SV = 11> <Delay = 3.29>
+ST_12 : Operation 50 [13/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 50 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_12 : Operation 51 [13/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 51 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 13 <SV = 12> <Delay = 3.29>
+ST_13 : Operation 52 [12/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 52 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_13 : Operation 53 [12/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 53 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 14 <SV = 13> <Delay = 3.29>
+ST_14 : Operation 54 [11/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 54 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_14 : Operation 55 [11/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 55 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 15 <SV = 14> <Delay = 3.29>
+ST_15 : Operation 56 [10/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 56 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_15 : Operation 57 [10/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 57 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 16 <SV = 15> <Delay = 3.29>
+ST_16 : Operation 58 [9/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 58 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_16 : Operation 59 [9/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 59 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 17 <SV = 16> <Delay = 3.29>
+ST_17 : Operation 60 [8/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 60 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_17 : Operation 61 [8/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 61 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 18 <SV = 17> <Delay = 3.29>
+ST_18 : Operation 62 [7/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 62 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_18 : Operation 63 [7/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 63 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 19 <SV = 18> <Delay = 3.29>
+ST_19 : Operation 64 [6/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 64 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_19 : Operation 65 [6/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 65 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 20 <SV = 19> <Delay = 3.29>
+ST_20 : Operation 66 [5/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 66 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_20 : Operation 67 [5/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 67 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 21 <SV = 20> <Delay = 3.29>
+ST_21 : Operation 68 [4/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 68 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_21 : Operation 69 [4/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 69 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 22 <SV = 21> <Delay = 3.29>
+ST_22 : Operation 70 [3/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 70 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_22 : Operation 71 [3/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 71 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 23 <SV = 22> <Delay = 3.29>
+ST_23 : Operation 72 [2/24] (3.29ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 72 'call' 'out' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+ST_23 : Operation 73 [2/24] (3.29ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 73 'call' 'out_2' <Predicate = true> <Delay = 3.29> <CoreType = "Generic">   --->   Generic Core
+
+State 24 <SV = 23> <Delay = 1.47>
+ST_24 : Operation 74 [1/24] (1.47ns)   --->   "%out = call i128 @encrypt, i128 %seed_read, i128 %iv_val_read, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 74 'call' 'out' <Predicate = true> <Delay = 1.47> <CoreType = "Generic">   --->   Generic Core
+ST_24 : Operation 75 [1/24] (1.47ns)   --->   "%out_2 = call i128 @encrypt, i128 %seed_read, i128 %cur_iv, i8 %cipher_0_ssbox40, i8 %cipher_0_ssbox" [PRG.cpp:12]   --->   Operation 75 'call' 'out_2' <Predicate = true> <Delay = 1.47> <CoreType = "Generic">   --->   Generic Core
+ST_24 : Operation 76 [1/1] (0.00ns)   --->   "%mrv = insertvalue i256 <undef>, i128 %out" [PRG.cpp:20]   --->   Operation 76 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 77 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i256 %mrv, i128 %out_2" [PRG.cpp:20]   --->   Operation 77 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 78 [1/1] (0.00ns)   --->   "%ret_ln20 = ret i256 %mrv_1" [PRG.cpp:20]   --->   Operation 78 'ret' 'ret_ln20' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 0.000ns.
+
+ <State 1>: 2.668ns
+The critical path consists of the following:
+	wire read operation ('iv_val_read', PRG.cpp:6) on port 'iv_val' (PRG.cpp:6) [6]  (0.000 ns)
+	'add' operation 128 bit ('cur_iv', PRG.cpp:10) [8]  (1.497 ns)
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [9]  (1.171 ns)
+
+ <State 2>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 3>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 4>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 5>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 6>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 7>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 8>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 9>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 10>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 11>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 12>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 13>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 14>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 15>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 16>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 17>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 18>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 19>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 20>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 21>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 22>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 23>: 3.290ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (3.290 ns)
+
+ <State 24>: 1.471ns
+The critical path consists of the following:
+	'call' operation 128 bit ('out', PRG.cpp:12) to 'encrypt' [7]  (1.471 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,3 @@
+4 errors generated.
+Error while processing /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp.
+clang-tidy applied 10 of 10 suggested fixes.

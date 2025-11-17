@@ -1,0 +1,62 @@
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:2258:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:2258:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:2272:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:2272:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:2286:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:2286:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:4254:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:4254:7: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6383:5: warning: Added loop label VITIS_LOOP_16_1:   [xilinx-label-all-loops]
+    for(int t = 0; t < 64; t++){
+    ^~~
+    VITIS_LOOP_16_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6383:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6393:2: warning: Added loop label VITIS_LOOP_26_2:   [xilinx-label-all-loops]
+ for(int i = 0; i < N; i++){
+ ^~~
+ VITIS_LOOP_26_2: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6393:2: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6463:42: error: Invalid Directive: for current device, ram_2p + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=u type=ram_2p impl=BRAM
+                                         ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6464:42: error: Invalid Directive: for current device, ram_2p + URAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=V type=ram_2p impl=URAM
+                                         ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6467:5: warning: Added loop label VITIS_LOOP_100_1:   [xilinx-label-all-loops]
+    for(int s=0; s< STEP; s++){
+    ^~~
+    VITIS_LOOP_100_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6467:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6481:2: warning: Added loop label VITIS_LOOP_114_2:   [xilinx-label-all-loops]
+ for(int j=0; j<2;j++){
+ ^~~
+ VITIS_LOOP_114_2: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6481:2: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6489:13: warning: Added loop label VITIS_LOOP_122_3:   [xilinx-label-all-loops]
+            for(int i = 0; i<64;i++){
+            ^~~
+            VITIS_LOOP_122_3: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6489:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6491:2: warning: Added loop label VITIS_LOOP_124_4:   [xilinx-label-all-loops]
+ for(int j = 0; j< 2;j++){
+ ^~~
+ VITIS_LOOP_124_4: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6491:2: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6512:42: error: Invalid Directive: for current device, ram_2p + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=u type=ram_2p impl=BRAM
+                                         ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/vole.pp.0.cpp:6513:42: error: Invalid Directive: for current device, ram_2p + URAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=V type=ram_2p impl=URAM
+                                         ^

@@ -1,0 +1,37 @@
+`timescale 1 ns / 1 ps
+
+module GenerateProof_hls_deadlock_idx5_monitor ( // for module GenerateProof_GenerateProof_inst.grp_ProverCircuitEval_fu_148.ProverCircuitEval_Block_entry_u_0_arg_proc_U0.grp_EvalCircuit_fu_60.grp_EvalCircuit_Pipeline_VITIS_LOOP_100_1_fu_56
+    input wire clock,
+    input wire reset,
+    input wire [7:0] axis_block_sigs,
+    input wire [18:0] inst_idle_sigs,
+    input wire [10:0] inst_block_sigs,
+    output wire block
+);
+
+// signal declare
+reg monitor_find_block;
+wire sub_parallel_block;
+wire all_sub_parallel_has_block;
+wire all_sub_single_has_block;
+wire cur_axis_has_block;
+wire seq_is_axis_block;
+
+assign block = monitor_find_block;
+assign all_sub_parallel_has_block = 1'b0;
+assign all_sub_single_has_block = 1'b0;
+assign cur_axis_has_block = 1'b0 | axis_block_sigs[3] | axis_block_sigs[4];
+assign seq_is_axis_block = all_sub_parallel_has_block | all_sub_single_has_block | cur_axis_has_block;
+
+always @(posedge clock) begin
+    if (reset == 1'b1)
+        monitor_find_block <= 1'b0;
+    else if (seq_is_axis_block == 1'b1)
+        monitor_find_block <= 1'b1;
+    else
+        monitor_find_block <= 1'b0;
+end
+
+
+// instant sub module
+endmodule

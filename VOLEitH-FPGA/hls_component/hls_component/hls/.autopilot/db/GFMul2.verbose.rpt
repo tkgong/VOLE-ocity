@@ -1,0 +1,394 @@
+
+
+================================================================
+== Vitis HLS Report for 'GFMul2'
+================================================================
+* Date:           Mon Nov 17 18:41:30 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  0.303 ns|        0 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       16|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        -|        -|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        -|        -|     -|
+|Register             |        -|      -|        -|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|        0|       16|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|        0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|        0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------+----------+----+---+----+------------+------------+
+    | Variable Name| Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------+----------+----+---+----+------------+------------+
+    |ap_return     |    select|   0|  0|   8|           1|           8|
+    |a_1_fu_32_p2  |       xor|   0|  0|   8|           5|           8|
+    +--------------+----------+----+---+----+------------+------------+
+    |Total         |          |   0|  0|  16|           6|          16|
+    +--------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------+-----+-----+------------+--------------+--------------+
+| RTL Ports | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------+-----+-----+------------+--------------+--------------+
+|ap_ready   |  out|    1|  ap_ctrl_hs|        GFMul2|  return value|
+|ap_return  |  out|    8|  ap_ctrl_hs|        GFMul2|  return value|
+|ap_rst     |   in|    1|  ap_ctrl_hs|        GFMul2|  return value|
+|a          |   in|    8|     ap_none|             a|        scalar|
++-----------+-----+-----+------------+--------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 1
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 1
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.30>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%a_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %a" [./aes.hpp:420]   --->   Operation 2 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns) (grouped into LUT with out node a_3)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i8.i32, i8 %a_read, i32 7" [./aes.hpp:422]   --->   Operation 3 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%a_2 = shl i8 %a_read, i8 1" [./aes.hpp:423]   --->   Operation 4 'shl' 'a_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns) (grouped into LUT with out node a_3)   --->   "%a_1 = xor i8 %a_2, i8 27" [./aes.hpp:423]   --->   Operation 5 'xor' 'a_1' <Predicate = (tmp)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 6 [1/1] (0.30ns) (out node of the LUT)   --->   "%a_3 = select i1 %tmp, i8 %a_1, i8 %a_2" [./aes.hpp:422]   --->   Operation 6 'select' 'a_3' <Predicate = true> <Delay = 0.30> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%ret_ln429 = ret i8 %a_3" [./aes.hpp:429]   --->   Operation 7 'ret' 'ret_ln429' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 1
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ a]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+a_read    (read     ) [ 00]
+tmp       (bitselect) [ 01]
+a_2       (shl      ) [ 00]
+a_1       (xor      ) [ 00]
+a_3       (select   ) [ 00]
+ret_ln429 (ret      ) [ 00]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="a">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="a"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1001" name="const_2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i8"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitSelect.i1.i8.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1004" name="a_read_read_fu_12">
+<pin_list>
+<pin id="13" dir="0" index="0" bw="8" slack="0"/>
+<pin id="14" dir="0" index="1" bw="8" slack="0"/>
+<pin id="15" dir="1" index="2" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="a_read/1 "/>
+</bind>
+</comp>
+
+<comp id="18" class="1004" name="tmp_fu_18">
+<pin_list>
+<pin id="19" dir="0" index="0" bw="1" slack="0"/>
+<pin id="20" dir="0" index="1" bw="8" slack="0"/>
+<pin id="21" dir="0" index="2" bw="4" slack="0"/>
+<pin id="22" dir="1" index="3" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitselect(1000) " fcode="bitselect"/>
+<opset="tmp/1 "/>
+</bind>
+</comp>
+
+<comp id="26" class="1004" name="a_2_fu_26">
+<pin_list>
+<pin id="27" dir="0" index="0" bw="8" slack="0"/>
+<pin id="28" dir="0" index="1" bw="1" slack="0"/>
+<pin id="29" dir="1" index="2" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="shl(20) " fcode="shl"/>
+<opset="a_2/1 "/>
+</bind>
+</comp>
+
+<comp id="32" class="1004" name="a_1_fu_32">
+<pin_list>
+<pin id="33" dir="0" index="0" bw="8" slack="0"/>
+<pin id="34" dir="0" index="1" bw="8" slack="0"/>
+<pin id="35" dir="1" index="2" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="xor(25) " fcode="xor"/>
+<opset="a_1/1 "/>
+</bind>
+</comp>
+
+<comp id="38" class="1004" name="a_3_fu_38">
+<pin_list>
+<pin id="39" dir="0" index="0" bw="1" slack="0"/>
+<pin id="40" dir="0" index="1" bw="8" slack="0"/>
+<pin id="41" dir="0" index="2" bw="8" slack="0"/>
+<pin id="42" dir="1" index="3" bw="8" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="select(49) " fcode="select"/>
+<opset="a_3/1 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="16"><net_src comp="2" pin="0"/><net_sink comp="12" pin=0"/></net>
+
+<net id="17"><net_src comp="0" pin="0"/><net_sink comp="12" pin=1"/></net>
+
+<net id="23"><net_src comp="4" pin="0"/><net_sink comp="18" pin=0"/></net>
+
+<net id="24"><net_src comp="12" pin="2"/><net_sink comp="18" pin=1"/></net>
+
+<net id="25"><net_src comp="6" pin="0"/><net_sink comp="18" pin=2"/></net>
+
+<net id="30"><net_src comp="12" pin="2"/><net_sink comp="26" pin=0"/></net>
+
+<net id="31"><net_src comp="8" pin="0"/><net_sink comp="26" pin=1"/></net>
+
+<net id="36"><net_src comp="26" pin="2"/><net_sink comp="32" pin=0"/></net>
+
+<net id="37"><net_src comp="10" pin="0"/><net_sink comp="32" pin=1"/></net>
+
+<net id="43"><net_src comp="18" pin="3"/><net_sink comp="38" pin=0"/></net>
+
+<net id="44"><net_src comp="32" pin="2"/><net_sink comp="38" pin=1"/></net>
+
+<net id="45"><net_src comp="26" pin="2"/><net_sink comp="38" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: GFMul2 : a | {1 }
+  - Chain level:
+	State 1
+		ret_ln429 : 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------|---------|---------|
+| Operation|  Functional Unit  |    FF   |   LUT   |
+|----------|-------------------|---------|---------|
+|    xor   |     a_1_fu_32     |    0    |    8    |
+|----------|-------------------|---------|---------|
+|  select  |     a_3_fu_38     |    0    |    8    |
+|----------|-------------------|---------|---------|
+|   read   | a_read_read_fu_12 |    0    |    0    |
+|----------|-------------------|---------|---------|
+| bitselect|     tmp_fu_18     |    0    |    0    |
+|----------|-------------------|---------|---------|
+|    shl   |     a_2_fu_26     |    0    |    0    |
+|----------|-------------------|---------|---------|
+|   Total  |                   |    0    |    16   |
+|----------|-------------------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+
+|           |   FF   |   LUT  |
++-----------+--------+--------+
+|  Function |    0   |   16   |
+|   Memory  |    -   |    -   |
+|Multiplexer|    -   |    -   |
+|  Register |    -   |    -   |
++-----------+--------+--------+
+|   Total   |    0   |   16   |
++-----------+--------+--------+

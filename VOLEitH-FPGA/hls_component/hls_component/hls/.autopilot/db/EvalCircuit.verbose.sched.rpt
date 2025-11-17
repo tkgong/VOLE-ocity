@@ -1,0 +1,146 @@
+
+
+================================================================
+== Vitis HLS Report for 'EvalCircuit'
+================================================================
+* Date:           Mon Nov 17 18:41:28 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.978 ns|        0 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   577873|   577873|  2.889 ms|  2.889 ms|  577873|  577873|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.62>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%extended_witness = alloca i64 1" [gatebygate.cpp:96]   --->   Operation 5 'alloca' 'extended_witness' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [2/2] (1.62ns)   --->   "%call_ln0 = call void @EvalCircuit_Pipeline_VITIS_LOOP_100_1, i8 %witness, i1 %extended_witness, i1 %u_0, i1 %u_1, i8 %d_strm, i1 %d_strm_cp"   --->   Operation 6 'call' 'call_ln0' <Predicate = true> <Delay = 1.62> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 2.05>
+ST_2 : Operation 7 [1/2] (2.05ns)   --->   "%call_ln0 = call void @EvalCircuit_Pipeline_VITIS_LOOP_100_1, i8 %witness, i1 %extended_witness, i1 %u_0, i1 %u_1, i8 %d_strm, i1 %d_strm_cp"   --->   Operation 7 'call' 'call_ln0' <Predicate = true> <Delay = 2.05> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 2.81>
+ST_3 : Operation 8 [1/1] (0.00ns)   --->   "%fence_ln107 = fence void @_ssdm_op_Fence, i8 %witness, i8 %d_strm, i1 %d_strm_cp, i32 4294967295, i128 %circuit, i8 %d_strm, i1 %d_strm_cp, i256 %a0_strm, i128 %a1_strm, i32 0" [gatebygate.cpp:107]   --->   Operation 8 'fence' 'fence_ln107' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 9 [1/1] (0.00ns)   --->   "%fence_ln107 = fence void @_ssdm_op_Fence, i8 %witness, i8 %d_strm, i1 %d_strm_cp, i32 4294967295, i128 %circuit, i8 %d_strm, i1 %d_strm_cp, i256 %a0_strm, i128 %a1_strm, i32 0" [gatebygate.cpp:107]   --->   Operation 9 'fence' 'fence_ln107' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 10 [2/2] (2.81ns)   --->   "%call_ln0 = call void @EvalCircuit_Pipeline_VITIS_LOOP_107_2, i8 %d_strm, i1 %d_strm_cp, i128 %V_0, i128 %V_1, i256 %a0_strm, i128 %a1_strm, i128 %circuit, i1 %extended_witness, i1 %u_0, i1 %u_1"   --->   Operation 10 'call' 'call_ln0' <Predicate = true> <Delay = 2.81> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 11 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i128 %V_0, i64 666, i64 24, i64 18446744073709551615"   --->   Operation 11 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i128 %V_1, i64 666, i64 24, i64 18446744073709551615"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1 %u_0, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 13 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i1 %u_1, i64 666, i64 22, i64 18446744073709551615"   --->   Operation 14 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %d_strm, void @empty_26, i32 0, i32 0, void @empty_36, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %circuit, void @empty_26, i32 0, i32 0, void @empty_36, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %witness, void @empty_26, i32 0, i32 0, void @empty_36, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %a0_strm, void @empty_46, i32 0, i32 0, void @empty_34, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %a1_strm, void @empty_46, i32 0, i32 0, void @empty_34, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %d_strm_cp, void @empty_46, i32 0, i32 0, void @empty_34, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/2] (0.00ns)   --->   "%call_ln0 = call void @EvalCircuit_Pipeline_VITIS_LOOP_107_2, i8 %d_strm, i1 %d_strm_cp, i128 %V_0, i128 %V_1, i256 %a0_strm, i128 %a1_strm, i128 %circuit, i1 %extended_witness, i1 %u_0, i1 %u_1"   --->   Operation 21 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%ret_ln130 = ret" [gatebygate.cpp:130]   --->   Operation 22 'ret' 'ret_ln130' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 0.000ns.
+
+ <State 1>: 1.629ns
+The critical path consists of the following:
+	'alloca' operation 1 bit ('extended_witness', gatebygate.cpp:96) [21]  (0.000 ns)
+	'call' operation 0 bit ('call_ln0') to 'EvalCircuit_Pipeline_VITIS_LOOP_100_1' [22]  (1.629 ns)
+
+ <State 2>: 2.050ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'EvalCircuit_Pipeline_VITIS_LOOP_100_1' [22]  (2.050 ns)
+
+ <State 3>: 2.817ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'EvalCircuit_Pipeline_VITIS_LOOP_107_2' [25]  (2.817 ns)
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

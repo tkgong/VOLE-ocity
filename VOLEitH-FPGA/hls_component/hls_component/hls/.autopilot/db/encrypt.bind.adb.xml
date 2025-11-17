@@ -1,0 +1,1271 @@
+<stg><name>encrypt</name>
+
+
+<trans_list>
+
+<trans id="86" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="87" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="88" from="3" to="4">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="89" from="4" to="5">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="90" from="5" to="6">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="91" from="6" to="7">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="92" from="7" to="8">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="93" from="8" to="9">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="94" from="9" to="10">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="95" from="10" to="11">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="96" from="11" to="12">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="97" from="12" to="13">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="98" from="13" to="14">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="99" from="14" to="15">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="100" from="15" to="16">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="101" from="16" to="17">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="102" from="17" to="18">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="103" from="18" to="19">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="104" from="19" to="20">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="105" from="20" to="21">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="106" from="21" to="22">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="107" from="22" to="23">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="24" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="128" op_0_bw="128" op_1_bw="128">
+<![CDATA[
+entry:0 %key_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %key
+
+]]></Node>
+<StgValue><ssdm name="key_read"/></StgValue>
+</operation>
+
+<operation id="25" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="128" op_0_bw="128" op_1_bw="128">
+<![CDATA[
+entry:1 %in_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %in_r
+
+]]></Node>
+<StgValue><ssdm name="in_read"/></StgValue>
+</operation>
+
+<operation id="26" st_id="1" stage="12" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="27" st_id="2" stage="11" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="28" st_id="3" stage="10" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="29" st_id="4" stage="9" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="5" st_id="5">
+
+<operation id="30" st_id="5" stage="8" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="6" st_id="6">
+
+<operation id="31" st_id="6" stage="7" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="7" st_id="7">
+
+<operation id="32" st_id="7" stage="6" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="8" st_id="8">
+
+<operation id="33" st_id="8" stage="5" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="9" st_id="9">
+
+<operation id="34" st_id="9" stage="4" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="10" st_id="10">
+
+<operation id="35" st_id="10" stage="3" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="11" st_id="11">
+
+<operation id="36" st_id="11" stage="2" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="12" st_id="12">
+
+<operation id="37" st_id="12" stage="1" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+
+<operation id="38" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:4 %cipher_key_list = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list"/></StgValue>
+</operation>
+
+<operation id="39" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:5 %cipher_key_list_1 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_1"/></StgValue>
+</operation>
+
+<operation id="40" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:6 %cipher_key_list_2 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_2"/></StgValue>
+</operation>
+
+<operation id="41" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:7 %cipher_key_list_3 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_3"/></StgValue>
+</operation>
+
+<operation id="42" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:8 %cipher_key_list_4 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_4"/></StgValue>
+</operation>
+
+<operation id="43" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:9 %cipher_key_list_5 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_5"/></StgValue>
+</operation>
+
+<operation id="44" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:10 %cipher_key_list_6 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_6"/></StgValue>
+</operation>
+
+<operation id="45" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:11 %cipher_key_list_7 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_7"/></StgValue>
+</operation>
+
+<operation id="46" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:12 %cipher_key_list_8 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_8"/></StgValue>
+</operation>
+
+<operation id="47" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:13 %cipher_key_list_9 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_9"/></StgValue>
+</operation>
+
+<operation id="48" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:14 %cipher_key_list_10 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_10"/></StgValue>
+</operation>
+
+<operation id="49" st_id="12" stage="12" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="13" st_id="13">
+
+<operation id="50" st_id="13" stage="11" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="14" st_id="14">
+
+<operation id="51" st_id="14" stage="10" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="15" st_id="15">
+
+<operation id="52" st_id="15" stage="9" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="16" st_id="16">
+
+<operation id="53" st_id="16" stage="8" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="17" st_id="17">
+
+<operation id="54" st_id="17" stage="7" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="18" st_id="18">
+
+<operation id="55" st_id="18" stage="6" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="19" st_id="19">
+
+<operation id="56" st_id="19" stage="5" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="20" st_id="20">
+
+<operation id="57" st_id="20" stage="4" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="21" st_id="21">
+
+<operation id="58" st_id="21" stage="3" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="22" st_id="22">
+
+<operation id="59" st_id="22" stage="2" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="23" st_id="23">
+
+<operation id="60" st_id="23" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="64" op_3_bw="64" op_4_bw="64">
+<![CDATA[
+entry:2 %specmemcore_ln18 = specmemcore void @_ssdm_op_SpecMemCore, i8 %cipher_0_ssbox, i64 666, i64 38, i64 18446744073709551615
+
+]]></Node>
+<StgValue><ssdm name="specmemcore_ln18"/></StgValue>
+</operation>
+
+<operation id="61" st_id="23" stage="1" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+
+<operation id="62" st_id="23" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="0" op_0_bw="128">
+<![CDATA[
+entry:16 %ret_ln8 = ret i128 %out_write_assign
+
+]]></Node>
+<StgValue><ssdm name="ret_ln8"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="108" name="in_r" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="in_r"/></StgValue>
+</port>
+<port id="109" name="key" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="key"/></StgValue>
+</port>
+<port id="110" name="cipher_0_ssbox40" dir="0" iftype="1">
+<core>ROM_nP_BRAM</core><StgValue><ssdm name="cipher_0_ssbox40"/><MemPortTyVec>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="111" name="cipher_0_ssbox" dir="0" iftype="1">
+<core>ROM_nP_BRAM</core><StgValue><ssdm name="cipher_0_ssbox"/><MemPortTyVec>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="113" from="_ssdm_op_Read.ap_auto.i128" to="key_read" fromId="112" toId="24">
+</dataflow>
+<dataflow id="114" from="key" to="key_read" fromId="109" toId="24">
+</dataflow>
+<dataflow id="115" from="_ssdm_op_Read.ap_auto.i128" to="in_read" fromId="112" toId="25">
+</dataflow>
+<dataflow id="116" from="in_r" to="in_read" fromId="108" toId="25">
+</dataflow>
+<dataflow id="118" from="updateKey" to="call_ret" fromId="117" toId="26">
+</dataflow>
+<dataflow id="119" from="key_read" to="call_ret" fromId="24" toId="26">
+</dataflow>
+<dataflow id="120" from="cipher_0_ssbox40" to="call_ret" fromId="110" toId="26">
+</dataflow>
+<dataflow id="121" from="updateKey" to="call_ret" fromId="117" toId="27">
+</dataflow>
+<dataflow id="122" from="key_read" to="call_ret" fromId="24" toId="27">
+</dataflow>
+<dataflow id="123" from="cipher_0_ssbox40" to="call_ret" fromId="110" toId="27">
+</dataflow>
+<dataflow id="124" from="updateKey" to="call_ret" fromId="117" toId="28">
+</dataflow>
+<dataflow id="125" from="key_read" to="call_ret" fromId="24" toId="28">
+</dataflow>
+<dataflow id="126" from="cipher_0_ssbox40" to="call_ret" fromId="110" toId="28">
+</dataflow>
+<dataflow id="127" from="updateKey" to="call_ret" fromId="117" toId="29">
+</dataflow>
+<dataflow id="128" from="key_read" to="call_ret" fromId="24" toId="29">
+</dataflow>
+<dataflow id="129" from="cipher_0_ssbox40" to="call_ret" fromId="110" toId="29">
+</dataflow>
+<dataflow id="130" from="updateKey" to="call_ret" fromId="117" toId="30">
+</dataflow>
+<dataflow id="131" from="key_read" to="call_ret" fromId="24" toId="30">
+</dataflow>
+<dataflow id="132" from="cipher_0_ssbox40" to="call_ret" fromId="110" toId="30">
+</dataflow>
+<dataflow id="133" from="updateKey" to="call_ret" fromId="117" toId="31">
+</dataflow>
+<dataflow id="134" from="key_read" to="call_ret" fromId="24" toId="31">
+</dataflow>
+<dataflow id="135" from="cipher_0_ssbox40" to="call_ret" fromId="110" toId="31">
+</dataflow>
+<dataflow id="136" from="updateKey" to="call_ret" fromId="117" toId="32">
+</dataflow>
+<dataflow id="137" from="key_read" to="call_ret" fromId="24" toId="32">
+</dataflow>
+<dataflow id="138" from="cipher_0_ssbox40" to="call_ret" fromId="110" toId="32">
+</dataflow>
+<dataflow id="139" from="updateKey" to="call_ret" fromId="117" toId="33">
+</dataflow>
+<dataflow id="140" from="key_read" to="call_ret" fromId="24" toId="33">
+</dataflow>
+<dataflow id="141" from="cipher_0_ssbox40" to="call_ret" fromId="110" toId="33">
+</dataflow>
+<dataflow id="142" from="updateKey" to="call_ret" fromId="117" toId="34">
+</dataflow>
+<dataflow id="143" from="key_read" to="call_ret" fromId="24" toId="34">
+</dataflow>
+<dataflow id="144" from="cipher_0_ssbox40" to="call_ret" fromId="110" toId="34">
+</dataflow>
+<dataflow id="145" from="updateKey" to="call_ret" fromId="117" toId="35">
+</dataflow>
+<dataflow id="146" from="key_read" to="call_ret" fromId="24" toId="35">
+</dataflow>
+<dataflow id="147" from="cipher_0_ssbox40" to="call_ret" fromId="110" toId="35">
+</dataflow>
+<dataflow id="148" from="updateKey" to="call_ret" fromId="117" toId="36">
+</dataflow>
+<dataflow id="149" from="key_read" to="call_ret" fromId="24" toId="36">
+</dataflow>
+<dataflow id="150" from="cipher_0_ssbox40" to="call_ret" fromId="110" toId="36">
+</dataflow>
+<dataflow id="151" from="updateKey" to="call_ret" fromId="117" toId="37">
+</dataflow>
+<dataflow id="152" from="key_read" to="call_ret" fromId="24" toId="37">
+</dataflow>
+<dataflow id="153" from="cipher_0_ssbox40" to="call_ret" fromId="110" toId="37">
+</dataflow>
+<dataflow id="154" from="call_ret" to="cipher_key_list" fromId="37" toId="38">
+</dataflow>
+<dataflow id="155" from="call_ret" to="cipher_key_list_1" fromId="37" toId="39">
+</dataflow>
+<dataflow id="156" from="call_ret" to="cipher_key_list_2" fromId="37" toId="40">
+</dataflow>
+<dataflow id="157" from="call_ret" to="cipher_key_list_3" fromId="37" toId="41">
+</dataflow>
+<dataflow id="158" from="call_ret" to="cipher_key_list_4" fromId="37" toId="42">
+</dataflow>
+<dataflow id="159" from="call_ret" to="cipher_key_list_5" fromId="37" toId="43">
+</dataflow>
+<dataflow id="160" from="call_ret" to="cipher_key_list_6" fromId="37" toId="44">
+</dataflow>
+<dataflow id="161" from="call_ret" to="cipher_key_list_7" fromId="37" toId="45">
+</dataflow>
+<dataflow id="162" from="call_ret" to="cipher_key_list_8" fromId="37" toId="46">
+</dataflow>
+<dataflow id="163" from="call_ret" to="cipher_key_list_9" fromId="37" toId="47">
+</dataflow>
+<dataflow id="164" from="call_ret" to="cipher_key_list_10" fromId="37" toId="48">
+</dataflow>
+<dataflow id="166" from="process" to="out_write_assign" fromId="165" toId="49">
+</dataflow>
+<dataflow id="167" from="cipher_key_list" to="out_write_assign" fromId="38" toId="49">
+</dataflow>
+<dataflow id="168" from="cipher_key_list_1" to="out_write_assign" fromId="39" toId="49">
+</dataflow>
+<dataflow id="169" from="cipher_key_list_2" to="out_write_assign" fromId="40" toId="49">
+</dataflow>
+<dataflow id="170" from="cipher_key_list_3" to="out_write_assign" fromId="41" toId="49">
+</dataflow>
+<dataflow id="171" from="cipher_key_list_4" to="out_write_assign" fromId="42" toId="49">
+</dataflow>
+<dataflow id="172" from="cipher_key_list_5" to="out_write_assign" fromId="43" toId="49">
+</dataflow>
+<dataflow id="173" from="cipher_key_list_6" to="out_write_assign" fromId="44" toId="49">
+</dataflow>
+<dataflow id="174" from="cipher_key_list_7" to="out_write_assign" fromId="45" toId="49">
+</dataflow>
+<dataflow id="175" from="cipher_key_list_8" to="out_write_assign" fromId="46" toId="49">
+</dataflow>
+<dataflow id="176" from="cipher_key_list_9" to="out_write_assign" fromId="47" toId="49">
+</dataflow>
+<dataflow id="177" from="cipher_key_list_10" to="out_write_assign" fromId="48" toId="49">
+</dataflow>
+<dataflow id="178" from="in_read" to="out_write_assign" fromId="25" toId="49">
+</dataflow>
+<dataflow id="179" from="cipher_0_ssbox" to="out_write_assign" fromId="111" toId="49">
+</dataflow>
+<dataflow id="180" from="process" to="out_write_assign" fromId="165" toId="50">
+</dataflow>
+<dataflow id="181" from="cipher_key_list" to="out_write_assign" fromId="38" toId="50">
+</dataflow>
+<dataflow id="182" from="cipher_key_list_1" to="out_write_assign" fromId="39" toId="50">
+</dataflow>
+<dataflow id="183" from="cipher_key_list_2" to="out_write_assign" fromId="40" toId="50">
+</dataflow>
+<dataflow id="184" from="cipher_key_list_3" to="out_write_assign" fromId="41" toId="50">
+</dataflow>
+<dataflow id="185" from="cipher_key_list_4" to="out_write_assign" fromId="42" toId="50">
+</dataflow>
+<dataflow id="186" from="cipher_key_list_5" to="out_write_assign" fromId="43" toId="50">
+</dataflow>
+<dataflow id="187" from="cipher_key_list_6" to="out_write_assign" fromId="44" toId="50">
+</dataflow>
+<dataflow id="188" from="cipher_key_list_7" to="out_write_assign" fromId="45" toId="50">
+</dataflow>
+<dataflow id="189" from="cipher_key_list_8" to="out_write_assign" fromId="46" toId="50">
+</dataflow>
+<dataflow id="190" from="cipher_key_list_9" to="out_write_assign" fromId="47" toId="50">
+</dataflow>
+<dataflow id="191" from="cipher_key_list_10" to="out_write_assign" fromId="48" toId="50">
+</dataflow>
+<dataflow id="192" from="in_read" to="out_write_assign" fromId="25" toId="50">
+</dataflow>
+<dataflow id="193" from="cipher_0_ssbox" to="out_write_assign" fromId="111" toId="50">
+</dataflow>
+<dataflow id="194" from="process" to="out_write_assign" fromId="165" toId="51">
+</dataflow>
+<dataflow id="195" from="cipher_key_list" to="out_write_assign" fromId="38" toId="51">
+</dataflow>
+<dataflow id="196" from="cipher_key_list_1" to="out_write_assign" fromId="39" toId="51">
+</dataflow>
+<dataflow id="197" from="cipher_key_list_2" to="out_write_assign" fromId="40" toId="51">
+</dataflow>
+<dataflow id="198" from="cipher_key_list_3" to="out_write_assign" fromId="41" toId="51">
+</dataflow>
+<dataflow id="199" from="cipher_key_list_4" to="out_write_assign" fromId="42" toId="51">
+</dataflow>
+<dataflow id="200" from="cipher_key_list_5" to="out_write_assign" fromId="43" toId="51">
+</dataflow>
+<dataflow id="201" from="cipher_key_list_6" to="out_write_assign" fromId="44" toId="51">
+</dataflow>
+<dataflow id="202" from="cipher_key_list_7" to="out_write_assign" fromId="45" toId="51">
+</dataflow>
+<dataflow id="203" from="cipher_key_list_8" to="out_write_assign" fromId="46" toId="51">
+</dataflow>
+<dataflow id="204" from="cipher_key_list_9" to="out_write_assign" fromId="47" toId="51">
+</dataflow>
+<dataflow id="205" from="cipher_key_list_10" to="out_write_assign" fromId="48" toId="51">
+</dataflow>
+<dataflow id="206" from="in_read" to="out_write_assign" fromId="25" toId="51">
+</dataflow>
+<dataflow id="207" from="cipher_0_ssbox" to="out_write_assign" fromId="111" toId="51">
+</dataflow>
+<dataflow id="208" from="process" to="out_write_assign" fromId="165" toId="52">
+</dataflow>
+<dataflow id="209" from="cipher_key_list" to="out_write_assign" fromId="38" toId="52">
+</dataflow>
+<dataflow id="210" from="cipher_key_list_1" to="out_write_assign" fromId="39" toId="52">
+</dataflow>
+<dataflow id="211" from="cipher_key_list_2" to="out_write_assign" fromId="40" toId="52">
+</dataflow>
+<dataflow id="212" from="cipher_key_list_3" to="out_write_assign" fromId="41" toId="52">
+</dataflow>
+<dataflow id="213" from="cipher_key_list_4" to="out_write_assign" fromId="42" toId="52">
+</dataflow>
+<dataflow id="214" from="cipher_key_list_5" to="out_write_assign" fromId="43" toId="52">
+</dataflow>
+<dataflow id="215" from="cipher_key_list_6" to="out_write_assign" fromId="44" toId="52">
+</dataflow>
+<dataflow id="216" from="cipher_key_list_7" to="out_write_assign" fromId="45" toId="52">
+</dataflow>
+<dataflow id="217" from="cipher_key_list_8" to="out_write_assign" fromId="46" toId="52">
+</dataflow>
+<dataflow id="218" from="cipher_key_list_9" to="out_write_assign" fromId="47" toId="52">
+</dataflow>
+<dataflow id="219" from="cipher_key_list_10" to="out_write_assign" fromId="48" toId="52">
+</dataflow>
+<dataflow id="220" from="in_read" to="out_write_assign" fromId="25" toId="52">
+</dataflow>
+<dataflow id="221" from="cipher_0_ssbox" to="out_write_assign" fromId="111" toId="52">
+</dataflow>
+<dataflow id="222" from="process" to="out_write_assign" fromId="165" toId="53">
+</dataflow>
+<dataflow id="223" from="cipher_key_list" to="out_write_assign" fromId="38" toId="53">
+</dataflow>
+<dataflow id="224" from="cipher_key_list_1" to="out_write_assign" fromId="39" toId="53">
+</dataflow>
+<dataflow id="225" from="cipher_key_list_2" to="out_write_assign" fromId="40" toId="53">
+</dataflow>
+<dataflow id="226" from="cipher_key_list_3" to="out_write_assign" fromId="41" toId="53">
+</dataflow>
+<dataflow id="227" from="cipher_key_list_4" to="out_write_assign" fromId="42" toId="53">
+</dataflow>
+<dataflow id="228" from="cipher_key_list_5" to="out_write_assign" fromId="43" toId="53">
+</dataflow>
+<dataflow id="229" from="cipher_key_list_6" to="out_write_assign" fromId="44" toId="53">
+</dataflow>
+<dataflow id="230" from="cipher_key_list_7" to="out_write_assign" fromId="45" toId="53">
+</dataflow>
+<dataflow id="231" from="cipher_key_list_8" to="out_write_assign" fromId="46" toId="53">
+</dataflow>
+<dataflow id="232" from="cipher_key_list_9" to="out_write_assign" fromId="47" toId="53">
+</dataflow>
+<dataflow id="233" from="cipher_key_list_10" to="out_write_assign" fromId="48" toId="53">
+</dataflow>
+<dataflow id="234" from="in_read" to="out_write_assign" fromId="25" toId="53">
+</dataflow>
+<dataflow id="235" from="cipher_0_ssbox" to="out_write_assign" fromId="111" toId="53">
+</dataflow>
+<dataflow id="236" from="process" to="out_write_assign" fromId="165" toId="54">
+</dataflow>
+<dataflow id="237" from="cipher_key_list" to="out_write_assign" fromId="38" toId="54">
+</dataflow>
+<dataflow id="238" from="cipher_key_list_1" to="out_write_assign" fromId="39" toId="54">
+</dataflow>
+<dataflow id="239" from="cipher_key_list_2" to="out_write_assign" fromId="40" toId="54">
+</dataflow>
+<dataflow id="240" from="cipher_key_list_3" to="out_write_assign" fromId="41" toId="54">
+</dataflow>
+<dataflow id="241" from="cipher_key_list_4" to="out_write_assign" fromId="42" toId="54">
+</dataflow>
+<dataflow id="242" from="cipher_key_list_5" to="out_write_assign" fromId="43" toId="54">
+</dataflow>
+<dataflow id="243" from="cipher_key_list_6" to="out_write_assign" fromId="44" toId="54">
+</dataflow>
+<dataflow id="244" from="cipher_key_list_7" to="out_write_assign" fromId="45" toId="54">
+</dataflow>
+<dataflow id="245" from="cipher_key_list_8" to="out_write_assign" fromId="46" toId="54">
+</dataflow>
+<dataflow id="246" from="cipher_key_list_9" to="out_write_assign" fromId="47" toId="54">
+</dataflow>
+<dataflow id="247" from="cipher_key_list_10" to="out_write_assign" fromId="48" toId="54">
+</dataflow>
+<dataflow id="248" from="in_read" to="out_write_assign" fromId="25" toId="54">
+</dataflow>
+<dataflow id="249" from="cipher_0_ssbox" to="out_write_assign" fromId="111" toId="54">
+</dataflow>
+<dataflow id="250" from="process" to="out_write_assign" fromId="165" toId="55">
+</dataflow>
+<dataflow id="251" from="cipher_key_list" to="out_write_assign" fromId="38" toId="55">
+</dataflow>
+<dataflow id="252" from="cipher_key_list_1" to="out_write_assign" fromId="39" toId="55">
+</dataflow>
+<dataflow id="253" from="cipher_key_list_2" to="out_write_assign" fromId="40" toId="55">
+</dataflow>
+<dataflow id="254" from="cipher_key_list_3" to="out_write_assign" fromId="41" toId="55">
+</dataflow>
+<dataflow id="255" from="cipher_key_list_4" to="out_write_assign" fromId="42" toId="55">
+</dataflow>
+<dataflow id="256" from="cipher_key_list_5" to="out_write_assign" fromId="43" toId="55">
+</dataflow>
+<dataflow id="257" from="cipher_key_list_6" to="out_write_assign" fromId="44" toId="55">
+</dataflow>
+<dataflow id="258" from="cipher_key_list_7" to="out_write_assign" fromId="45" toId="55">
+</dataflow>
+<dataflow id="259" from="cipher_key_list_8" to="out_write_assign" fromId="46" toId="55">
+</dataflow>
+<dataflow id="260" from="cipher_key_list_9" to="out_write_assign" fromId="47" toId="55">
+</dataflow>
+<dataflow id="261" from="cipher_key_list_10" to="out_write_assign" fromId="48" toId="55">
+</dataflow>
+<dataflow id="262" from="in_read" to="out_write_assign" fromId="25" toId="55">
+</dataflow>
+<dataflow id="263" from="cipher_0_ssbox" to="out_write_assign" fromId="111" toId="55">
+</dataflow>
+<dataflow id="264" from="process" to="out_write_assign" fromId="165" toId="56">
+</dataflow>
+<dataflow id="265" from="cipher_key_list" to="out_write_assign" fromId="38" toId="56">
+</dataflow>
+<dataflow id="266" from="cipher_key_list_1" to="out_write_assign" fromId="39" toId="56">
+</dataflow>
+<dataflow id="267" from="cipher_key_list_2" to="out_write_assign" fromId="40" toId="56">
+</dataflow>
+<dataflow id="268" from="cipher_key_list_3" to="out_write_assign" fromId="41" toId="56">
+</dataflow>
+<dataflow id="269" from="cipher_key_list_4" to="out_write_assign" fromId="42" toId="56">
+</dataflow>
+<dataflow id="270" from="cipher_key_list_5" to="out_write_assign" fromId="43" toId="56">
+</dataflow>
+<dataflow id="271" from="cipher_key_list_6" to="out_write_assign" fromId="44" toId="56">
+</dataflow>
+<dataflow id="272" from="cipher_key_list_7" to="out_write_assign" fromId="45" toId="56">
+</dataflow>
+<dataflow id="273" from="cipher_key_list_8" to="out_write_assign" fromId="46" toId="56">
+</dataflow>
+<dataflow id="274" from="cipher_key_list_9" to="out_write_assign" fromId="47" toId="56">
+</dataflow>
+<dataflow id="275" from="cipher_key_list_10" to="out_write_assign" fromId="48" toId="56">
+</dataflow>
+<dataflow id="276" from="in_read" to="out_write_assign" fromId="25" toId="56">
+</dataflow>
+<dataflow id="277" from="cipher_0_ssbox" to="out_write_assign" fromId="111" toId="56">
+</dataflow>
+<dataflow id="278" from="process" to="out_write_assign" fromId="165" toId="57">
+</dataflow>
+<dataflow id="279" from="cipher_key_list" to="out_write_assign" fromId="38" toId="57">
+</dataflow>
+<dataflow id="280" from="cipher_key_list_1" to="out_write_assign" fromId="39" toId="57">
+</dataflow>
+<dataflow id="281" from="cipher_key_list_2" to="out_write_assign" fromId="40" toId="57">
+</dataflow>
+<dataflow id="282" from="cipher_key_list_3" to="out_write_assign" fromId="41" toId="57">
+</dataflow>
+<dataflow id="283" from="cipher_key_list_4" to="out_write_assign" fromId="42" toId="57">
+</dataflow>
+<dataflow id="284" from="cipher_key_list_5" to="out_write_assign" fromId="43" toId="57">
+</dataflow>
+<dataflow id="285" from="cipher_key_list_6" to="out_write_assign" fromId="44" toId="57">
+</dataflow>
+<dataflow id="286" from="cipher_key_list_7" to="out_write_assign" fromId="45" toId="57">
+</dataflow>
+<dataflow id="287" from="cipher_key_list_8" to="out_write_assign" fromId="46" toId="57">
+</dataflow>
+<dataflow id="288" from="cipher_key_list_9" to="out_write_assign" fromId="47" toId="57">
+</dataflow>
+<dataflow id="289" from="cipher_key_list_10" to="out_write_assign" fromId="48" toId="57">
+</dataflow>
+<dataflow id="290" from="in_read" to="out_write_assign" fromId="25" toId="57">
+</dataflow>
+<dataflow id="291" from="cipher_0_ssbox" to="out_write_assign" fromId="111" toId="57">
+</dataflow>
+<dataflow id="292" from="process" to="out_write_assign" fromId="165" toId="58">
+</dataflow>
+<dataflow id="293" from="cipher_key_list" to="out_write_assign" fromId="38" toId="58">
+</dataflow>
+<dataflow id="294" from="cipher_key_list_1" to="out_write_assign" fromId="39" toId="58">
+</dataflow>
+<dataflow id="295" from="cipher_key_list_2" to="out_write_assign" fromId="40" toId="58">
+</dataflow>
+<dataflow id="296" from="cipher_key_list_3" to="out_write_assign" fromId="41" toId="58">
+</dataflow>
+<dataflow id="297" from="cipher_key_list_4" to="out_write_assign" fromId="42" toId="58">
+</dataflow>
+<dataflow id="298" from="cipher_key_list_5" to="out_write_assign" fromId="43" toId="58">
+</dataflow>
+<dataflow id="299" from="cipher_key_list_6" to="out_write_assign" fromId="44" toId="58">
+</dataflow>
+<dataflow id="300" from="cipher_key_list_7" to="out_write_assign" fromId="45" toId="58">
+</dataflow>
+<dataflow id="301" from="cipher_key_list_8" to="out_write_assign" fromId="46" toId="58">
+</dataflow>
+<dataflow id="302" from="cipher_key_list_9" to="out_write_assign" fromId="47" toId="58">
+</dataflow>
+<dataflow id="303" from="cipher_key_list_10" to="out_write_assign" fromId="48" toId="58">
+</dataflow>
+<dataflow id="304" from="in_read" to="out_write_assign" fromId="25" toId="58">
+</dataflow>
+<dataflow id="305" from="cipher_0_ssbox" to="out_write_assign" fromId="111" toId="58">
+</dataflow>
+<dataflow id="306" from="process" to="out_write_assign" fromId="165" toId="59">
+</dataflow>
+<dataflow id="307" from="cipher_key_list" to="out_write_assign" fromId="38" toId="59">
+</dataflow>
+<dataflow id="308" from="cipher_key_list_1" to="out_write_assign" fromId="39" toId="59">
+</dataflow>
+<dataflow id="309" from="cipher_key_list_2" to="out_write_assign" fromId="40" toId="59">
+</dataflow>
+<dataflow id="310" from="cipher_key_list_3" to="out_write_assign" fromId="41" toId="59">
+</dataflow>
+<dataflow id="311" from="cipher_key_list_4" to="out_write_assign" fromId="42" toId="59">
+</dataflow>
+<dataflow id="312" from="cipher_key_list_5" to="out_write_assign" fromId="43" toId="59">
+</dataflow>
+<dataflow id="313" from="cipher_key_list_6" to="out_write_assign" fromId="44" toId="59">
+</dataflow>
+<dataflow id="314" from="cipher_key_list_7" to="out_write_assign" fromId="45" toId="59">
+</dataflow>
+<dataflow id="315" from="cipher_key_list_8" to="out_write_assign" fromId="46" toId="59">
+</dataflow>
+<dataflow id="316" from="cipher_key_list_9" to="out_write_assign" fromId="47" toId="59">
+</dataflow>
+<dataflow id="317" from="cipher_key_list_10" to="out_write_assign" fromId="48" toId="59">
+</dataflow>
+<dataflow id="318" from="in_read" to="out_write_assign" fromId="25" toId="59">
+</dataflow>
+<dataflow id="319" from="cipher_0_ssbox" to="out_write_assign" fromId="111" toId="59">
+</dataflow>
+<dataflow id="321" from="_ssdm_op_SpecMemCore" to="specmemcore_ln18" fromId="320" toId="60">
+</dataflow>
+<dataflow id="322" from="cipher_0_ssbox" to="specmemcore_ln18" fromId="111" toId="60">
+</dataflow>
+<dataflow id="324" from="StgValue_323" to="specmemcore_ln18" fromId="323" toId="60">
+</dataflow>
+<dataflow id="326" from="StgValue_325" to="specmemcore_ln18" fromId="325" toId="60">
+</dataflow>
+<dataflow id="328" from="StgValue_327" to="specmemcore_ln18" fromId="327" toId="60">
+</dataflow>
+<dataflow id="329" from="process" to="out_write_assign" fromId="165" toId="61">
+</dataflow>
+<dataflow id="330" from="cipher_key_list" to="out_write_assign" fromId="38" toId="61">
+</dataflow>
+<dataflow id="331" from="cipher_key_list_1" to="out_write_assign" fromId="39" toId="61">
+</dataflow>
+<dataflow id="332" from="cipher_key_list_2" to="out_write_assign" fromId="40" toId="61">
+</dataflow>
+<dataflow id="333" from="cipher_key_list_3" to="out_write_assign" fromId="41" toId="61">
+</dataflow>
+<dataflow id="334" from="cipher_key_list_4" to="out_write_assign" fromId="42" toId="61">
+</dataflow>
+<dataflow id="335" from="cipher_key_list_5" to="out_write_assign" fromId="43" toId="61">
+</dataflow>
+<dataflow id="336" from="cipher_key_list_6" to="out_write_assign" fromId="44" toId="61">
+</dataflow>
+<dataflow id="337" from="cipher_key_list_7" to="out_write_assign" fromId="45" toId="61">
+</dataflow>
+<dataflow id="338" from="cipher_key_list_8" to="out_write_assign" fromId="46" toId="61">
+</dataflow>
+<dataflow id="339" from="cipher_key_list_9" to="out_write_assign" fromId="47" toId="61">
+</dataflow>
+<dataflow id="340" from="cipher_key_list_10" to="out_write_assign" fromId="48" toId="61">
+</dataflow>
+<dataflow id="341" from="in_read" to="out_write_assign" fromId="25" toId="61">
+</dataflow>
+<dataflow id="342" from="cipher_0_ssbox" to="out_write_assign" fromId="111" toId="61">
+</dataflow>
+<dataflow id="343" from="out_write_assign" to="ret_ln8" fromId="61" toId="62">
+</dataflow>
+</dataflows>
+
+
+</stg>

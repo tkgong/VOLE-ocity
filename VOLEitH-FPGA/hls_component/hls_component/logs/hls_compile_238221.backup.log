@@ -1,0 +1,1757 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg
+WARNING: [HLS 200-1921] Skipping unknown config ini [hls] entry 'ldflags=-lstdc++' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=defs.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/defs.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=aes.hpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/aes.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=encrypt.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/encrypt.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=encrypt.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(16)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/encrypt.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=PRG.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(17)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/PRG.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=PRG.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(18)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/PRG.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ggm_tree.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/ggm_tree.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ggm_tree.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(20)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/ggm_tree.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=sha3.hpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(21)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./shake.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(22)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./shake.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(23)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=vole.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(24)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/vole.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=vole.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(25)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/vole.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=commit.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(26)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/commit.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=commit.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(27)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/commit.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=gatebygate.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(28)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=gatebygate.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(29)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=fiat_shamir.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(30)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/fiat_shamir.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=fiat_shamir.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(31)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/fiat_shamir.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=endtoend.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(32)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/endtoend.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=endtoend.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(33)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/endtoend.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=./tb_vole.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(34)
+INFO: [HLS 200-10] Adding test bench file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/tb_vole.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=GenerateProof' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(35)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcu250-figd2104-2-e' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xcu250-figd2104-2-e'
+INFO: [HLS 200-1465] Applying config ini 'clock=7ns' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+INFO: [HLS 200-1465] Applying config ini 'clock_uncertainty=0ns' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+INFO: [HLS 200-1465] Applying config ini 'csim.clean=1' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying config ini 'csim.code_analyzer=0' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying config ini 'sim.O=1' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3.47 seconds. CPU system time: 0.44 seconds. Elapsed time: 3.92 seconds; current allocated memory: 482.031 MB.
+INFO: [HLS 200-10] Analyzing design file 'endtoend.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'fiat_shamir.cpp' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:101:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:251:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:426:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:756:9)
+INFO: [HLS 200-10] Analyzing design file 'gatebygate.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'commit.cpp' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:101:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:251:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:426:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:756:9)
+INFO: [HLS 200-10] Analyzing design file 'vole.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'shake.cpp' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:101:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:251:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:426:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:756:9)
+INFO: [HLS 200-10] Analyzing design file 'ggm_tree.cpp' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:101:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:251:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:426:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:756:9)
+INFO: [HLS 200-10] Analyzing design file 'PRG.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'encrypt.cpp' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./aes.hpp:16:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./aes.hpp:17:9)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:57:31)
+WARNING: [HLS 207-5292] unused parameter 'plaintext' (./aes.hpp:58:31)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:58:53)
+WARNING: [HLS 207-5292] unused parameter 'ciphertext' (./aes.hpp:58:78)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:126:55)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:303:55)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:429:55)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:523:31)
+WARNING: [HLS 207-5292] unused parameter 'ciphertext' (./aes.hpp:531:31)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:531:54)
+WARNING: [HLS 207-5292] unused parameter 'plaintext' (./aes.hpp:531:79)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:624:56)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:786:56)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:935:56)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 15.27 seconds. CPU system time: 2.67 seconds. Elapsed time: 17.96 seconds; current allocated memory: 489.926 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+WARNING: [HLS 200-1995] There were 190,358 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 323,588 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 146,294 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 138,777 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 138,763 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 149,179 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 149,040 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 149,041 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 149,064 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 149,081 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 149,024 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 148,442 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 148,491 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 148,441 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 148,643 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 139,637 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function 'xf::security::aesTable::aesTable()' into 'xf::security::aesEnc<128>::aesEnc()' (./aes.hpp:386:5)
+INFO: [HLS 214-131] Inlining function 'xf::security::aesEnc<128>::aesEnc()' into 'encrypt(ap_uint<128>, ap_uint<128>, ap_uint<128>&)' (encrypt.cpp:5:28)
+INFO: [HLS 214-131] Inlining function 'ap_uint<64u> xf::security::internal::ROTL<64u>(ap_uint<64u>, unsigned int)' into 'xf::security::internal::KECCAK_f(ap_uint<64>*)' (./sha3.hpp:154:33)
+INFO: [HLS 214-131] Inlining function 'gf128_reduce(ap_uint<256>)' into 'gf128_multiply(ap_uint<128>, ap_uint<128>)' (gatebygate.cpp:49:12)
+INFO: [HLS 214-131] Inlining function 'gf128_reduce(ap_uint<256>)' into 'ToField(hls::stream<ap_uint<256>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256>, 0>&)' (gatebygate.cpp:151:26)
+INFO: [HLS 214-377] Adding 'stateArray' into disaggregation list because there's array-partition pragma applied on the struct field (./sha3.hpp:758:12)
+INFO: [HLS 214-377] Adding 'stateArray' into disaggregation list because there's array-partition pragma applied on the struct field (./sha3.hpp:432:12)
+INFO: [HLS 214-377] Adding 'cipher' into disaggregation list because there's array-partition pragma applied on the struct field (./aes.hpp:388:9)
+INFO: [HLS 214-377] Adding 'stateArray' into disaggregation list because there's array-partition pragma applied on the struct field (./sha3.hpp:433:9)
+INFO: [HLS 214-377] Adding 'stateArray' into disaggregation list because there's array-partition pragma applied on the struct field (./sha3.hpp:759:9)
+INFO: [HLS 214-210] Disaggregating variable 'cipher' (encrypt.cpp:5:28)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'stateArray' (./sha3.hpp:432:12)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'stateArray' (./sha3.hpp:758:12)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_70_2' is marked as complete unroll implied by the pipeline pragma (fiat_shamir.cpp:70:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_835_6' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:835:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_10_1' is marked as complete unroll implied by the pipeline pragma (gatebygate.cpp:10:22)
+INFO: [HLS 214-291] Loop 'INIT_V' is marked as complete unroll implied by the pipeline pragma (vole.cpp:57:10)
+INFO: [HLS 214-291] Loop 'READ_LEAVES' is marked as complete unroll implied by the pipeline pragma (vole.cpp:62:26)
+INFO: [HLS 214-291] Loop 'BUILD_LEVELS' is marked as complete unroll implied by the pipeline pragma (vole.cpp:67:27)
+INFO: [HLS 214-291] Loop 'PROCESS_NODES' is marked as complete unroll implied by the pipeline pragma (vole.cpp:70:32)
+INFO: [HLS 214-291] Loop 'WRITE_V' is marked as complete unroll implied by the pipeline pragma (vole.cpp:76:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_26_2' is marked as complete unroll implied by the pipeline pragma (vole.cpp:26:19)
+INFO: [HLS 214-291] Loop 'LOOP_5_STEP_MAPPING' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:104:5)
+INFO: [HLS 214-291] Loop 'LOOP_THETA_1' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:110:9)
+INFO: [HLS 214-291] Loop 'LOOP_THETA_2' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:117:9)
+INFO: [HLS 214-291] Loop 'LOOP_CALCULATE_THETA' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:121:13)
+INFO: [HLS 214-291] Loop 'LOOP_CHI' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:186:9)
+INFO: [HLS 214-291] Loop 'LOOP_INIT_STATEREG' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:191:13)
+INFO: [HLS 214-291] Loop 'LOOP_CALCULATE_CHI' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:196:13)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_439_1' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:439:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_441_2' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:441:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_469_3' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:469:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_476_4' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:476:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_396_1' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:396:27)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_70_2' (fiat_shamir.cpp:70:26) in function 'chal2' completely with a factor of 64 (fiat_shamir.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_761_1' (./sha3.hpp:761:20) in function 'xf::security::shake_extensible' completely with a factor of 25 (./sha3.hpp:737:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_835_6' (./sha3.hpp:835:35) in function 'xf::security::shake_extensible' completely with a factor of 16 (./sha3.hpp:737:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_10_1' (gatebygate.cpp:10:22) in function 'gf128_clmul' completely with a factor of 128 (gatebygate.cpp:5:0)
+INFO: [HLS 214-188] Unrolling loop 'UNPACK_U' (vole.cpp:103:12) in function 'mem_transfer' partially with a factor of 2 (vole.cpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'READ_V' (vole.cpp:112:9) in function 'mem_transfer' completely with a factor of 64 (vole.cpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_114_2' (vole.cpp:114:20) in function 'mem_transfer' completely with a factor of 2 (vole.cpp:93:0)
+INFO: [HLS 214-188] Unrolling loop 'WRITE_V' (vole.cpp:119:18) in function 'mem_transfer' partially with a factor of 2 (vole.cpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_122_3' (vole.cpp:122:31) in function 'mem_transfer' completely with a factor of 64 (vole.cpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_124_4' (vole.cpp:124:20) in function 'mem_transfer' completely with a factor of 2 (vole.cpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'INIT_V' (vole.cpp:57:10) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:44:0)
+INFO: [HLS 214-186] Unrolling loop 'READ_LEAVES' (vole.cpp:62:26) in function 'build_VOLE' completely with a factor of 4 (vole.cpp:44:0)
+INFO: [HLS 214-186] Unrolling loop 'BUILD_LEVELS' (vole.cpp:67:27) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:44:0)
+INFO: [HLS 214-186] Unrolling loop 'PROCESS_NODES' (vole.cpp:70:32) in function 'build_VOLE' completely with a factor of 1 (vole.cpp:44:0)
+INFO: [HLS 214-186] Unrolling loop 'PROCESS_NODES' (vole.cpp:70:32) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:44:0)
+INFO: [HLS 214-186] Unrolling loop 'WRITE_V' (vole.cpp:76:22) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:44:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_26_2' (vole.cpp:26:19) in function 'expand_seed' completely with a factor of 4 (vole.cpp:11:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_41_1' (fiat_shamir.cpp:41:22) in function 'chal1' completely with a factor of 64 (fiat_shamir.cpp:6:0)
+INFO: [HLS 214-186] Unrolling loop 'HASH_LOOP' (ggm_tree.cpp:143:5) in function 'ggm_small' completely with a factor of 4 (ggm_tree.cpp:109:0)
+INFO: [HLS 214-186] Unrolling loop 'LEVEL_LOOP' (ggm_tree.cpp:124:5) in function 'ggm_small' completely with a factor of 2 (ggm_tree.cpp:109:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_INIT_STATE_ARRAYS' (./sha3.hpp:435:9) in function 'xf::security::internal::shakeXOF<32u>' completely with a factor of 25 (./sha3.hpp:408:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_SHA3_EMIT' (./sha3.hpp:541:9) in function 'xf::security::internal::shakeXOF<32u>' completely with a factor of 4 (./sha3.hpp:408:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_5_STEP_MAPPING' (./sha3.hpp:104:5) in function 'xf::security::internal::KECCAK_f' completely with a factor of 24 (./sha3.hpp:93:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'LOOP_5_STEP_MAPPING' (./sha3.hpp:104:5) in function 'xf::security::internal::KECCAK_f' has been removed because the loop is unrolled completely (./sha3.hpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_CHI' (./sha3.hpp:186:9) in function 'xf::security::internal::KECCAK_f' completely with a factor of 5 (./sha3.hpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_CALCULATE_CHI' (./sha3.hpp:196:13) in function 'xf::security::internal::KECCAK_f' completely with a factor of 5 (./sha3.hpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_INIT_STATEREG' (./sha3.hpp:191:13) in function 'xf::security::internal::KECCAK_f' completely with a factor of 5 (./sha3.hpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_THETA_2' (./sha3.hpp:117:9) in function 'xf::security::internal::KECCAK_f' completely with a factor of 5 (./sha3.hpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_CALCULATE_THETA' (./sha3.hpp:121:13) in function 'xf::security::internal::KECCAK_f' completely with a factor of 5 (./sha3.hpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_THETA_1' (./sha3.hpp:110:9) in function 'xf::security::internal::KECCAK_f' completely with a factor of 5 (./sha3.hpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_439_1' (./aes.hpp:439:27) in function 'xf::security::aesEnc<128>::process' completely with a factor of 10 (./aes.hpp:429:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_476_4' (./aes.hpp:476:35) in function 'xf::security::aesEnc<128>::process' completely with a factor of 4 (./aes.hpp:429:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_469_3' (./aes.hpp:469:31) in function 'xf::security::aesEnc<128>::process' completely with a factor of 16 (./aes.hpp:429:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_441_2' (./aes.hpp:441:31) in function 'xf::security::aesEnc<128>::process' completely with a factor of 16 (./aes.hpp:429:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_396_1' (./aes.hpp:396:27) in function 'xf::security::aesEnc<128>::updateKey' completely with a factor of 10 (./aes.hpp:391:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'VITIS_LOOP_396_1' (./aes.hpp:396:27) in function 'xf::security::aesEnc<128>::updateKey' has been removed because the loop is unrolled completely (./aes.hpp:391:0)
+WARNING: [HLS 214-366] Duplicating function 'PRG(ap_uint<128>&, ap_uint<128>, ap_uint<128>&, ap_uint<128>&) (.54.57)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (vole.cpp:29:17)
+WARNING: [HLS 214-366] Duplicating function 'PRG(ap_uint<128>&, ap_uint<128>, ap_uint<128>&, ap_uint<128>&) (.54.57)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (ggm_tree.cpp:163:13)
+WARNING: [HLS 214-366] Duplicating function 'encrypt(ap_uint<128>, ap_uint<128>, ap_uint<128>&) (.63)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (PRG.cpp:9:3)
+WARNING: [HLS 214-366] Duplicating function 'encrypt(ap_uint<128>, ap_uint<128>, ap_uint<128>&) (.63)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (PRG.cpp:8:2)
+WARNING: [HLS 214-366] Duplicating function 'xf::security::aesEnc<128>::process(ap_uint<128>, ap_uint<128>, ap_uint<128>&) (.66)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (encrypt.cpp:7:12)
+INFO: [HLS 214-178] Inlining function 'xf::security::shake256(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.7)' into 'h0(ap_uint<128>&, ap_uint<128>&, ap_uint<128>&, ap_uint<128>&)' (shake.cpp:10:0)
+INFO: [HLS 214-178] Inlining function 'xf::security::shake256(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.7)' into 'H(hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<256>, 0>&)' (shake.cpp:54:0)
+INFO: [HLS 214-178] Inlining function 'xf::security::shake256(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.7)' into 'H_COM(hls::stream<ap_uint<256>, 0>&, ap_uint<256>&)' (shake.cpp:88:0)
+INFO: [HLS 214-178] Inlining function 'xf::security::shake256(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)' into 'chal1(ap_uint<256>&, ap_uint<128>&, ap_uint<2>*, ap_uint<128>&)' (fiat_shamir.cpp:6:0)
+INFO: [HLS 214-178] Inlining function 'VC_Open(ap_uint<2>*, ap_uint<128> (*) [7], ap_uint<128> (*) [4], hls::stream<ap_uint<128>, 0>&)' into 'ggm_top(ap_uint<128>&, ap_uint<128>&, hls::stream<ap_uint<128>, 0>&, ap_uint<256>&, hls::stream<ap_uint<128>, 0>&, ap_uint<128>&)' (ggm_tree.cpp:245:0)
+INFO: [HLS 214-248] Applying array_partition to 'cipher.1': Complete partitioning on dimension 1. (encrypt.cpp:5:28)
+INFO: [HLS 214-248] Applying array_partition to 'stateArray': Complete partitioning on dimension 1. (./sha3.hpp:432:12)
+INFO: [HLS 214-248] Applying array_partition to 'seeds': Complete partitioning on dimension 1. (ggm_tree.cpp:110:18)
+INFO: [HLS 214-248] Applying array_partition to 'level': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (ggm_tree.cpp:116:15)
+INFO: [HLS 214-248] Applying array_partition to 'ggm_keys': Complete partitioning on dimension 2. (ggm_tree.cpp:246:18)
+INFO: [HLS 214-248] Applying array_partition to 'coms': Complete partitioning on dimension 2. (ggm_tree.cpp:247:18)
+INFO: [HLS 214-248] Applying array_partition to 'chal': Complete partitioning on dimension 1. (ggm_tree.cpp:248:16)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (ggm_tree.cpp:232:29)
+INFO: [HLS 214-248] Applying array_partition to 'r_strm': Complete partitioning on dimension 1. (vole.cpp:149:31)
+INFO: [HLS 214-248] Applying array_partition to 'v_strm': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (vole.cpp:153:31)
+INFO: [HLS 214-248] Applying array_partition to 'stateArray': Complete partitioning on dimension 1. (./sha3.hpp:758:12)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (./sha3.hpp:821:33)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (./sha3.hpp:829:35)
+INFO: [HLS 214-248] Applying array_partition to 'u': Cyclic partitioning with factor 2 on dimension 1. (endtoend.cpp:17:16)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'circuit' with compact=bit mode in 58-bits (endtoend.cpp:14:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< WRITE_V> at vole.cpp:119:18 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< UNPACK_U> at vole.cpp:103:12 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< READ_SEEDS> at vole.cpp:19:21 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< DRAIN_ENDMSGLEN> at shake.cpp:41:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< EXPAND_LOOP> at ggm_tree.cpp:132:9 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< ROOT_GEN> at ggm_tree.cpp:160:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< TRANSFER_STREAM> at endtoend.cpp:35:22 
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=2 dim=1' for array 'V' due to pipeline pragma (endtoend.cpp:18:18)
+INFO: [HLS 214-248] Applying array_partition to 'V': Cyclic partitioning with factor 2 on dimension 1. (endtoend.cpp:18:18)
+INFO: [HLS 214-480] Find two read processes sharing ports on memory 'u_0' in dataflow function 'ProverCircuitEval' (gatebygate.cpp:203:0)
+INFO: [HLS 214-480] Find two read processes sharing ports on memory 'u_1' in dataflow function 'ProverCircuitEval' (gatebygate.cpp:203:0)
+INFO: [HLS 214-480] Find two read processes sharing ports on memory 'V_0' in dataflow function 'ProverCircuitEval' (gatebygate.cpp:203:0)
+INFO: [HLS 214-480] Find two read processes sharing ports on memory 'V_1' in dataflow function 'ProverCircuitEval' (gatebygate.cpp:203:0)
+WARNING: [HLS 214-373] Impl=auto in bind_op is deprecated. Consider using a different operation implementation. (./sha3.hpp:756:9)
+WARNING: [HLS 214-373] Impl=auto in bind_op is deprecated. Consider using a different operation implementation. (./sha3.hpp:426:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 14.33 seconds. CPU system time: 0.6 seconds. Elapsed time: 16.09 seconds; current allocated memory: 506.344 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 506.344 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.68 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.69 seconds; current allocated memory: 522.008 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] vole.cpp:107: variable-indexed range selection may cause suboptimal QoR.
+WARNING: [SYNCHK 200-24] fiat_shamir.cpp:83: Index for bit vector operation is out of bound.
+INFO: [SYNCHK 200-10] 0 error(s), 2 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.82 seconds. CPU system time: 0 seconds. Elapsed time: 0.82 seconds; current allocated memory: 535.316 MB.
+WARNING: [HLS 200-805] An internal stream 'msgStrm' (fiat_shamir.cpp:55) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'msgLenStrm' (fiat_shamir.cpp:89) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'endMsgLenStrm' (fiat_shamir.cpp:90) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'outLenStrm' (fiat_shamir.cpp:91) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'endOutLenStrm' (fiat_shamir.cpp:92) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'endDigestStrm_internal' (fiat_shamir.cpp:95) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'a0_strm' (gatebygate.cpp:209) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'a1_strm' (gatebygate.cpp:210) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'd_strm_cp' (gatebygate.cpp:211) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'ch2_strm' (gatebygate.cpp:212) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'a_strm' (gatebygate.cpp:213) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'path_strm' (endtoend.cpp:21) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+INFO: [HLS 200-1947] Automatically inferred stable function argument 'root.val1' of dataflow function 'VOLECommit' (commit.cpp:18:1).
+INFO: [HLS 200-1947] Automatically inferred stable function argument 'iv.val3' of dataflow function 'VOLECommit' (commit.cpp:18:1).
+INFO: [HLS 200-1947] Automatically inferred stable function argument 'root.val1' of dataflow function 'ggm_tree' (ggm_tree.cpp:200:1).
+INFO: [HLS 200-1947] Automatically inferred stable function argument 'iv.val3' of dataflow function 'ggm_tree' (ggm_tree.cpp:200:1).
+INFO: [HLS 200-1947] Automatically inferred stable function argument 'iv.val1' of dataflow function 'ConvertToVOLE' (vole.cpp:149:1).
+INFO: [HLS 200-1947] Automatically inferred stable function argument 'ch1.val1' of dataflow function 'ProverCircuitEval' (gatebygate.cpp:209:1).
+INFO: [HLS 200-1947] Automatically inferred stable function argument 'u_0' of dataflow function 'ProverCircuitEval' (gatebygate.cpp:209:1).
+INFO: [HLS 200-1947] Automatically inferred stable function argument 'u_1' of dataflow function 'ProverCircuitEval' (gatebygate.cpp:209:1).
+INFO: [HLS 200-1947] Automatically inferred stable function argument 'V_0' of dataflow function 'ProverCircuitEval' (gatebygate.cpp:209:1).
+INFO: [HLS 200-1947] Automatically inferred stable function argument 'V_1' of dataflow function 'ProverCircuitEval' (gatebygate.cpp:209:1).
+INFO: [HLS 200-778] Automatically marking array 'u_0' as shared between two reader processes.
+INFO: [HLS 200-755] Binding port 0 of memory 'u_0' to function 'compute_mask' (gatebygate.cpp:70:22) 
+INFO: [HLS 200-755] Binding port 1 of memory 'u_0' to function 'EvalCircuit' (gatebygate.cpp:92:21) 
+INFO: [HLS 200-778] Automatically marking array 'u_1' as shared between two reader processes.
+INFO: [HLS 200-755] Binding port 0 of memory 'u_1' to function 'compute_mask' (gatebygate.cpp:70:22) 
+INFO: [HLS 200-755] Binding port 1 of memory 'u_1' to function 'EvalCircuit' (gatebygate.cpp:92:21) 
+INFO: [HLS 200-778] Automatically marking array 'V_0' as shared between two reader processes.
+INFO: [HLS 200-755] Binding port 0 of memory 'V_0' to function 'compute_mask' (gatebygate.cpp:70:22) 
+INFO: [HLS 200-755] Binding port 1 of memory 'V_0' to function 'EvalCircuit' (gatebygate.cpp:92:21) 
+INFO: [HLS 200-778] Automatically marking array 'V_1' as shared between two reader processes.
+INFO: [HLS 200-755] Binding port 0 of memory 'V_1' to function 'compute_mask' (gatebygate.cpp:70:22) 
+INFO: [HLS 200-755] Binding port 1 of memory 'V_1' to function 'EvalCircuit' (gatebygate.cpp:92:21) 
+INFO: [XFORM 203-712] Applying dataflow to function 'ggm_tree' (ggm_tree.cpp:200:1), detected/extracted 4 process function(s): 
+	 'expand_roots'
+	 'ggm_build'
+	 'H'
+	 'H_COM'.
+INFO: [XFORM 203-712] Applying dataflow to function 'ConvertToVOLE' (vole.cpp:149:1), detected/extracted 3 process function(s): 
+	 'expand_seed'
+	 'build_VOLE'
+	 'mem_transfer'.
+INFO: [XFORM 203-712] Applying dataflow to function 'VOLECommit' (commit.cpp:18:1), detected/extracted 2 process function(s): 
+	 'ggm_top'
+	 'ConvertToVOLE'.
+INFO: [XFORM 203-712] Applying dataflow to function 'ProverCircuitEval' (gatebygate.cpp:209:1), detected/extracted 5 process function(s): 
+	 'compute_mask'
+	 'EvalCircuit'
+	 'ToField'
+	 'chal2'
+	 'aggregate_coef'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./sha3.hpp:807:20) to (./sha3.hpp:809:27) in function 'xf::security::shake_extensible'... converting 33 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'xf::security::internal::KECCAK_f' (./sha3.hpp:76:93)...840 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'xf::security::aesEnc<128>::process.355' (./aes.hpp:16:97)...450 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'xf::security::aesEnc<128>::process.3' (./aes.hpp:16:97)...450 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'xf::security::aesEnc<128>::process' (./aes.hpp:435:97)...450 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'gf128_multiply' (gatebygate.cpp:20:1)...5 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'gf128_clmul' (gatebygate.cpp:7:5)...75 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'ToField' (gatebygate.cpp:20:20)...5 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.35 seconds; current allocated memory: 571.941 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'PROCESS_BATCHES'(vole.cpp:48:19) and 'PROCESS_CHUNKS'(vole.cpp:49:25) in function 'build_VOLE' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'PROCESS_BATCHES' (vole.cpp:48:19) in function 'build_VOLE'.
+WARNING: [HLS 200-1450] Process ggm_build has both a successor and writes an output to its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this output via a successor process.
+Resolution: For help on HLS 200-1450 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1450.html
+WARNING: [HLS 200-1450] Process ggm_top has both a successor and writes an output to its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this output via a successor process.
+Resolution: For help on HLS 200-1450 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1450.html
+INFO: [HLS 200-634] Sharing array u_0 among processes compute_mask and EvalCircuit
+INFO: [HLS 200-634] Sharing array u_1 among processes compute_mask and EvalCircuit
+INFO: [HLS 200-634] Sharing array V_0 among processes compute_mask and EvalCircuit
+INFO: [HLS 200-634] Sharing array V_1 among processes compute_mask and EvalCircuit
+WARNING: [HLS 200-765] Process EvalCircuit is made part of the output synchronization in its dataflow region, because it has an external FIFO output and no PIPO output
+Resolution: For help on HLS 200-765 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-765.html
+WARNING: [HLS 200-1450] Process EvalCircuit has both a successor and writes an output to its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this output via a successor process.
+Resolution: For help on HLS 200-1450 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1450.html
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 3.35 seconds. CPU system time: 0.14 seconds. Elapsed time: 3.49 seconds; current allocated memory: 1.154 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'GenerateProof' ...
+WARNING: [SYN 201-103] Legalizing function name 'process' to 'process_r'.
+WARNING: [SYN 201-103] Legalizing function name 'PRG.147' to 'PRG_147'.
+WARNING: [SYN 201-103] Legalizing function name 'process.355' to 'process_355'.
+WARNING: [SYN 201-103] Legalizing function name 'encrypt.254' to 'encrypt_254'.
+WARNING: [SYN 201-103] Legalizing function name 'process.3' to 'process_3'.
+WARNING: [SYN 201-103] Legalizing function name 'encrypt.2' to 'encrypt_2'.
+WARNING: [SYN 201-103] Legalizing function name 'shakeXOF<32u>_Pipeline_LOOP_GEN_LAST_BLK' to 'shakeXOF_32u_Pipeline_LOOP_GEN_LAST_BLK'.
+WARNING: [SYN 201-103] Legalizing function name 'shakeXOF<32u>_Pipeline_LOOP_GEN_FULL_MESSAGE_BLK' to 'shakeXOF_32u_Pipeline_LOOP_GEN_FULL_MESSAGE_BLK'.
+WARNING: [SYN 201-103] Legalizing function name 'shakeXOF<32u>' to 'shakeXOF_32u_s'.
+WARNING: [SYN 201-103] Legalizing function name 'PRG.1' to 'PRG_1'.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'ROM_nP_LUTRAM': 'cipher_0_ssbox' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'ROM_nP_LUTRAM': 'cipher_0_ssbox' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'ROM_nP_LUTRAM': 'cipher_0_ssbox' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'ROM_nP_LUTRAM' (./aes.hpp:16->./aes.hpp:386->encrypt.cpp:5): 'cipher_0_ssbox' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'ROM_nP_LUTRAM': 'cipher_0_ssbox' does not exist or is optimized away.
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'ROM_nP_LUTRAM' (./aes.hpp:16->./aes.hpp:386->encrypt.cpp:5): 'cipher_0_ssbox' does not exist or is optimized away.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'GenerateProof_Pipeline_INPUT_STREAM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'INPUT_STREAM'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'INPUT_STREAM'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.159 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.159 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'updateKey49' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'updateKey49'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, function 'updateKey49'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.162 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.162 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'GFMul2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'GFMul2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, function 'GFMul2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.162 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.162 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'process_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'process'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 11, function 'process'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.48 seconds; current allocated memory: 1.174 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.174 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'encrypt48' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'encrypt48'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 23, function 'encrypt48'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.174 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.174 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PRG_147' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'PRG.147'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 24, function 'PRG.147'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.174 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.174 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'expand_roots' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'ROOT_GEN'.
+WARNING: [HLS 200-880] The II Violation in module 'expand_roots' (loop 'ROOT_GEN'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo write operation ('root_strm_write_ln165', ggm_tree.cpp:165) on port 'root_strm' (ggm_tree.cpp:165) and fifo write operation ('root_strm_write_ln164', ggm_tree.cpp:164) on port 'root_strm' (ggm_tree.cpp:164).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 26, loop 'ROOT_GEN'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.174 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.174 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'updateKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'updateKey'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 11, function 'updateKey'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.174 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.174 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'process_355' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'process.355'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, function 'process.355'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.48 seconds. CPU system time: 0 seconds. Elapsed time: 0.48 seconds; current allocated memory: 1.186 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.186 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'encrypt_254' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'encrypt.254'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 23, function 'encrypt.254'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.186 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.186 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'process_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'process.3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 11, function 'process.3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.47 seconds; current allocated memory: 1.196 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.196 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'encrypt_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'encrypt.2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 23, function 'encrypt.2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.196 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.196 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PRG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'PRG'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 24, function 'PRG'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.196 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.196 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ggm_small_Pipeline_EXPAND_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'EXPAND_LOOP'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 25, loop 'EXPAND_LOOP'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.196 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.196 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shakeXOF_32u_Pipeline_LOOP_GEN_LAST_BLK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_GEN_LAST_BLK'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'LOOP_GEN_LAST_BLK'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.36 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 1.205 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.205 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shakeXOF_32u_Pipeline_LOOP_GEN_FULL_MESSAGE_BLK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOOP_GEN_FULL_MESSAGE_BLK'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'LOOP_GEN_FULL_MESSAGE_BLK'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.205 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.205 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KECCAK_f' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'KECCAK_f'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, function 'KECCAK_f'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 17.03 seconds. CPU system time: 0.18 seconds. Elapsed time: 17.22 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.64 seconds. CPU system time: 0 seconds. Elapsed time: 0.64 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shakeXOF_32u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'h0_Pipeline_DRAIN_ENDMSGLEN' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'DRAIN_ENDMSGLEN'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'DRAIN_ENDMSGLEN'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'h0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ggm_small_Pipeline_VITIS_LOOP_147_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_147_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_147_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ggm_small' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ggm_build' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'H' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'H_COM_Pipeline_VITIS_LOOP_108_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_108_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 4, Final II = 4, Depth = 5, loop 'VITIS_LOOP_108_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'H_COM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ggm_tree' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'chal1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ggm_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_218_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_218_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'ggm_keys' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'ggm_keys_1' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'ggm_keys_2' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'ggm_keys_3' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'ggm_keys_4' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'ggm_keys_5' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'ggm_keys_6' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'coms' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'coms_1' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'coms_2' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'coms_3' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'expand_seed_Pipeline_READ_SEEDS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'READ_SEEDS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'READ_SEEDS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'encrypt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'encrypt'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 23, function 'encrypt'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'PRG_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'PRG.1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 24, function 'PRG.1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'expand_seed_Pipeline_PROCESS_CHUNKS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PROCESS_CHUNKS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 25, loop 'PROCESS_CHUNKS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'expand_seed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'build_VOLE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PROCESS_BATCHES_PROCESS_CHUNKS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'PROCESS_BATCHES_PROCESS_CHUNKS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mem_transfer_Pipeline_UNPACK_U' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'UNPACK_U'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'UNPACK_U'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mem_transfer_Pipeline_WRITE_V' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+INFO: [SCHED 204-61] Pipelining loop 'WRITE_V'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'WRITE_V'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mem_transfer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ConvertToVOLE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'VOLECommit' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gf128_clmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'gf128_clmul'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 3, Final II = 1, Depth = 5, function 'gf128_clmul'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.72 seconds. CPU system time: 0 seconds. Elapsed time: 0.71 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gf128_multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'gf128_multiply'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 7, function 'gf128_multiply'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'combineVOLEs' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_57_1'.
+WARNING: [HLS 200-880] The II Violation in module 'combineVOLEs' (loop 'VITIS_LOOP_57_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation 0 bit ('power_write_ln55', gatebygate.cpp:55) of variable 'power', gatebygate.cpp:60 on local variable 'power', gatebygate.cpp:55 and 'load' operation 128 bit ('power_load', gatebygate.cpp:60) on local variable 'power', gatebygate.cpp:55.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'combineVOLEs' (loop 'VITIS_LOOP_57_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation 0 bit ('power_write_ln55', gatebygate.cpp:55) of variable 'power', gatebygate.cpp:60 on local variable 'power', gatebygate.cpp:55 and 'load' operation 128 bit ('power_load', gatebygate.cpp:60) on local variable 'power', gatebygate.cpp:55.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'combineVOLEs' (loop 'VITIS_LOOP_57_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation 0 bit ('power_write_ln55', gatebygate.cpp:55) of variable 'power', gatebygate.cpp:60 on local variable 'power', gatebygate.cpp:55 and 'load' operation 128 bit ('power_load', gatebygate.cpp:60) on local variable 'power', gatebygate.cpp:55.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'combineVOLEs' (loop 'VITIS_LOOP_57_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation 0 bit ('power_write_ln55', gatebygate.cpp:55) of variable 'power', gatebygate.cpp:60 on local variable 'power', gatebygate.cpp:55 and 'load' operation 128 bit ('power_load', gatebygate.cpp:60) on local variable 'power', gatebygate.cpp:55.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'combineVOLEs' (loop 'VITIS_LOOP_57_1'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation 0 bit ('power_write_ln55', gatebygate.cpp:55) of variable 'power', gatebygate.cpp:60 on local variable 'power', gatebygate.cpp:55 and 'load' operation 128 bit ('power_load', gatebygate.cpp:60) on local variable 'power', gatebygate.cpp:55.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 6, Depth = 8, loop 'VITIS_LOOP_57_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute_mask' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_73_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_73_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'EvalCircuit_Pipeline_VITIS_LOOP_99_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'extended_witness'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_99_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_99_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'EvalCircuit_Pipeline_VITIS_LOOP_110_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'extended_witness'. Use bind_storage pragma to override this type.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+WARNING: [HLS 200-2042] Usage of URAM can potentially cause worse II as Vitis HLS does not exploit read-first mode for URAMs. Consider using BRAMs instead.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_110_2'.
+INFO: [SCHED 204-61] Discarding stage scheduling solution.
+INFO: [HLS 200-1470] Pipelining result : Target II = 3, Final II = 3, Depth = 11, loop 'VITIS_LOOP_110_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'EvalCircuit' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ToField' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_146_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_146_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'chal2_Pipeline_VITIS_LOOP_67_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_67_1'.
+WARNING: [HLS 200-880] The II Violation in module 'chal2_Pipeline_VITIS_LOOP_67_1' (loop 'VITIS_LOOP_67_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between fifo read operation ('d_strm_cp_read_1', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74) and fifo read operation ('d_strm_cp_read', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'chal2_Pipeline_VITIS_LOOP_67_1' (loop 'VITIS_LOOP_67_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between fifo read operation ('d_strm_cp_read_2', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74) and fifo read operation ('d_strm_cp_read', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'chal2_Pipeline_VITIS_LOOP_67_1' (loop 'VITIS_LOOP_67_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between fifo read operation ('d_strm_cp_read_3', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74) and fifo read operation ('d_strm_cp_read', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'chal2_Pipeline_VITIS_LOOP_67_1' (loop 'VITIS_LOOP_67_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between fifo read operation ('d_strm_cp_read_4', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74) and fifo read operation ('d_strm_cp_read', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'chal2_Pipeline_VITIS_LOOP_67_1' (loop 'VITIS_LOOP_67_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between fifo read operation ('d_strm_cp_read_35', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74) and fifo read operation ('d_strm_cp_read', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'chal2_Pipeline_VITIS_LOOP_67_1' (loop 'VITIS_LOOP_67_1'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1) between fifo read operation ('d_strm_cp_read_51', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74) and fifo read operation ('d_strm_cp_read', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'chal2_Pipeline_VITIS_LOOP_67_1' (loop 'VITIS_LOOP_67_1'): Unable to enforce a carried dependence constraint (II = 59, distance = 1, offset = 1) between fifo read operation ('d_strm_cp_read_59', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74) and fifo read operation ('d_strm_cp_read', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'chal2_Pipeline_VITIS_LOOP_67_1' (loop 'VITIS_LOOP_67_1'): Unable to enforce a carried dependence constraint (II = 63, distance = 1, offset = 1) between fifo read operation ('d_strm_cp_read_63', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74) and fifo read operation ('d_strm_cp_read', fiat_shamir.cpp:74) on port 'd_strm_cp' (fiat_shamir.cpp:74).
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 64, Depth = 65, loop 'VITIS_LOOP_67_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.41 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shake_extensible_Pipeline_VITIS_LOOP_780_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_780_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_780_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.34 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shake_extensible_Pipeline_VITIS_LOOP_772_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_772_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_772_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shake_extensible_Pipeline_VITIS_LOOP_809_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_809_5'.
+WARNING: [HLS 200-880] The II Violation in module 'shake_extensible_Pipeline_VITIS_LOOP_809_5' (loop 'VITIS_LOOP_809_5'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'br' operation 0 bit ('br_ln820', ./sha3.hpp:820) and 'call' operation 1600 bit ('call_ret1', ./sha3.hpp:818) to 'KECCAK_f'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'shake_extensible_Pipeline_VITIS_LOOP_809_5' (loop 'VITIS_LOOP_809_5'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'br' operation 0 bit ('br_ln820', ./sha3.hpp:820) and 'call' operation 1600 bit ('call_ret1', ./sha3.hpp:818) to 'KECCAK_f'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'shake_extensible_Pipeline_VITIS_LOOP_809_5' (loop 'VITIS_LOOP_809_5'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'br' operation 0 bit ('br_ln820', ./sha3.hpp:820) and 'call' operation 1600 bit ('call_ret1', ./sha3.hpp:818) to 'KECCAK_f'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'shake_extensible_Pipeline_VITIS_LOOP_809_5' (loop 'VITIS_LOOP_809_5'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'br' operation 0 bit ('br_ln820', ./sha3.hpp:820) and 'call' operation 1600 bit ('call_ret1', ./sha3.hpp:818) to 'KECCAK_f'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'shake_extensible_Pipeline_VITIS_LOOP_809_5' (loop 'VITIS_LOOP_809_5'): Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1) between 'br' operation 0 bit ('br_ln828', ./sha3.hpp:828) and 'call' operation 1600 bit ('call_ret1', ./sha3.hpp:818) to 'KECCAK_f'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 12, Depth = 15, loop 'VITIS_LOOP_809_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'shake_extensible' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'chal2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aggregate_coef' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_170_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 5, Final II = 5, Depth = 9, loop 'VITIS_LOOP_170_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.746 GB.
+INFO: [#UNDEF] Rewind delay = 7 for the pipelined loop 'VITIS_LOOP_170_1' due to a write-after-read dependence on variable 'agg_a1'.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ProverCircuitEval' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+WARNING: [HLS 200-1020] Increasing the depth of FIFO u_mask (from compute_mask_U0 to aggregate_coef_U0) to 3 to improve performance and/or avoid deadlocks.
+WARNING: [HLS 200-1020] Increasing the depth of FIFO v_mask (from compute_mask_U0 to aggregate_coef_U0) to 3 to improve performance and/or avoid deadlocks.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'GenerateProof_Pipeline_TRANSFER_STREAM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'TRANSFER_STREAM'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'TRANSFER_STREAM'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'GenerateProof' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.746 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'GenerateProof_Pipeline_INPUT_STREAM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'GenerateProof_Pipeline_INPUT_STREAM' pipeline 'INPUT_STREAM' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'bitset_128ns_128ns_7ns_1ns_128_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'GenerateProof_Pipeline_INPUT_STREAM'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.43 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'updateKey49' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'updateKey49' is 6088 from HDL expression: ((1'b1 == ap_ce_reg) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'updateKey49'.
+INFO: [HLS 200-2168] Implementing memory 'GenerateProof_updateKey49_cipher_0_ssbox38_ROM_NP_LUTRAM_1R' using distributed ROMs with 40 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'GFMul2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'GFMul2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'process_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'process_r' is 7200 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_ce_reg))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'process_r'.
+INFO: [HLS 200-2168] Implementing memory 'GenerateProof_process_r_cipher_0_ssbox_ROM_NP_LUTRAM_1R' using distributed ROMs with 160 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.24 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'encrypt48' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'encrypt48' is 10440 from HDL expression: ((1'b1 == ap_ce) & (1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp26))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'encrypt48'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PRG_147' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'PRG_147' is 21352, found 2 HDL expressions with this fanout: ((1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp27) & (1'b1 == ap_ce_reg)), ((1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp29) & (1'b1 == ap_ce_reg))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PRG_147'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'expand_roots' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'expand_roots' pipeline 'ROOT_GEN' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'expand_roots' is 43728 from HDL expression: (((1'b0 == ap_block_pp0_stage1_subdone_grp0_done_reg) & (1'b0 == ap_block_pp0_stage1_11001_ignoreCallOp46_grp0) & (1'b1 == ap_CS_fsm_pp0_stage1)) | ((1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp43) & (1'b1 == ap_CS_fsm_pp0_stage0)))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'expand_roots'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'updateKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'updateKey' is 6088 from HDL expression: ((1'b1 == ap_ce_reg) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'updateKey'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'process_355' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'process_355' is 7328 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_ce))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'process_355'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'encrypt_254' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'encrypt_254' is 10440 from HDL expression: ((1'b1 == ap_ce_reg) & (1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp25))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'encrypt_254'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'process_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'process_3' is 7328 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_ce))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'process_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'encrypt_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'encrypt_2' is 10440 from HDL expression: ((1'b1 == ap_ce_reg) & (1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp25))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'encrypt_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PRG' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'PRG' is 20072, found 2 HDL expressions with this fanout: (1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp29), (1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp27)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PRG'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ggm_small_Pipeline_EXPAND_LOOP' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ggm_small_Pipeline_EXPAND_LOOP' pipeline 'EXPAND_LOOP' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ggm_small_Pipeline_EXPAND_LOOP'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shakeXOF_32u_Pipeline_LOOP_GEN_LAST_BLK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'shakeXOF_32u_Pipeline_LOOP_GEN_LAST_BLK' pipeline 'LOOP_GEN_LAST_BLK' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_35_5_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shakeXOF_32u_Pipeline_LOOP_GEN_LAST_BLK'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shakeXOF_32u_Pipeline_LOOP_GEN_FULL_MESSAGE_BLK' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'shakeXOF_32u_Pipeline_LOOP_GEN_FULL_MESSAGE_BLK' pipeline 'LOOP_GEN_FULL_MESSAGE_BLK' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_35_5_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shakeXOF_32u_Pipeline_LOOP_GEN_FULL_MESSAGE_BLK'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KECCAK_f' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'KECCAK_f' pipeline 'KECCAK_f' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KECCAK_f'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.59 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.59 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shakeXOF_32u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'udiv_128ns_9ns_128_132_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shakeXOF_32u_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.1 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.14 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'h0_Pipeline_DRAIN_ENDMSGLEN' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'h0_Pipeline_DRAIN_ENDMSGLEN'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'h0' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'h0'.
+INFO: [RTMG 210-285] Implementing FIFO 'msgStrm_U(GenerateProof_fifo_w64_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'msgLenStrm_U(GenerateProof_fifo_w128_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'endMsgLenStrm_U(GenerateProof_fifo_w1_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'digestStrm_U(GenerateProof_fifo_w256_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'endDigestStrm_U(GenerateProof_fifo_w1_d2_S)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ggm_small_Pipeline_VITIS_LOOP_147_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ggm_small_Pipeline_VITIS_LOOP_147_1' pipeline 'VITIS_LOOP_147_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_2_128_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ggm_small_Pipeline_VITIS_LOOP_147_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ggm_small' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ggm_small'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ggm_build' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ggm_build'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'H' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'fifo_w64_d4_S' is changed to 'fifo_w64_d4_S_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w128_d2_S' is changed to 'fifo_w128_d2_S_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w1_d2_S' is changed to 'fifo_w1_d2_S_x' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w256_d2_S' is changed to 'fifo_w256_d2_S_x' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'H'.
+INFO: [RTMG 210-285] Implementing FIFO 'msgStrm_U(GenerateProof_fifo_w64_d4_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'msgLenStrm_U(GenerateProof_fifo_w128_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'endMsgLenStrm_U(GenerateProof_fifo_w1_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'digestStrm_U(GenerateProof_fifo_w256_d2_S_x)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'endDigestStrm_U(GenerateProof_fifo_w1_d2_S_x)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'H_COM_Pipeline_VITIS_LOOP_108_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'H_COM_Pipeline_VITIS_LOOP_108_1' pipeline 'VITIS_LOOP_108_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'H_COM_Pipeline_VITIS_LOOP_108_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'H_COM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'fifo_w128_d2_S' is changed to 'fifo_w128_d2_S_x0' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w1_d2_S' is changed to 'fifo_w1_d2_S_x0' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w256_d2_S' is changed to 'fifo_w256_d2_S_x0' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'H_COM'.
+INFO: [RTMG 210-285] Implementing FIFO 'msgStrm_U(GenerateProof_fifo_w64_d8_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'msgLenStrm_U(GenerateProof_fifo_w128_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'endMsgLenStrm_U(GenerateProof_fifo_w1_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'digestStrm_U(GenerateProof_fifo_w256_d2_S_x0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'endDigestStrm_U(GenerateProof_fifo_w1_d2_S_x0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ggm_tree' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'ggm_tree/seed_strm_read' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ggm_tree'.
+INFO: [RTMG 210-285] Implementing FIFO 'root_strm_U(GenerateProof_fifo_w128_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'com_strm_U(GenerateProof_fifo_w128_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'h_strm_U(GenerateProof_fifo_w256_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_ggm_build_U0_U(GenerateProof_start_for_ggm_build_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_H_U0_U(GenerateProof_start_for_H_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_H_COM_U0_U(GenerateProof_start_for_H_COM_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'chal1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'fifo_w128_d2_S' is changed to 'fifo_w128_d2_S_x1' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w1_d2_S' is changed to 'fifo_w1_d2_S_x1' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w256_d2_S' is changed to 'fifo_w256_d2_S_x1' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'chal1'.
+INFO: [RTMG 210-285] Implementing FIFO 'msgStrm_U(GenerateProof_fifo_w64_d16_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'msgLenStrm_U(GenerateProof_fifo_w128_d2_S_x1)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'endMsgLenStrm_U(GenerateProof_fifo_w1_d2_S_x1)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'digestStrm_U(GenerateProof_fifo_w256_d2_S_x1)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'endDigestStrm_U(GenerateProof_fifo_w1_d2_S_x1)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ggm_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_129_6_2_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_13_3_128_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_2_128_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ggm_top'.
+INFO: [RTMG 210-278] Implementing memory 'GenerateProof_ggm_top_ggm_keys_RAM_2P_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'expand_seed_Pipeline_READ_SEEDS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'expand_seed_Pipeline_READ_SEEDS' pipeline 'READ_SEEDS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'expand_seed_Pipeline_READ_SEEDS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.35 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'encrypt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'encrypt' is 10440 from HDL expression: ((1'b1 == ap_ce) & (1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp26))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'encrypt'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'PRG_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'PRG_1' is 21352, found 2 HDL expressions with this fanout: ((1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp27) & (1'b1 == ap_ce_reg)), ((1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp29) & (1'b1 == ap_ce_reg))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'PRG_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'expand_seed_Pipeline_PROCESS_CHUNKS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'expand_seed_Pipeline_PROCESS_CHUNKS' pipeline 'PROCESS_CHUNKS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'expand_seed_Pipeline_PROCESS_CHUNKS' is 43728, found 4 HDL expressions with this fanout: ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp50)), ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp48)), ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp49)), ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001_ignoreCallOp51))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'expand_seed_Pipeline_PROCESS_CHUNKS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'expand_seed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'expand_seed'.
+INFO: [RTMG 210-278] Implementing memory 'GenerateProof_expand_seed_sd_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'build_VOLE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'build_VOLE' pipeline 'PROCESS_BATCHES_PROCESS_CHUNKS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'build_VOLE'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mem_transfer_Pipeline_UNPACK_U' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'bitselect_1ns_256ns_8ns_1_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mem_transfer_Pipeline_UNPACK_U'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mem_transfer_Pipeline_WRITE_V' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'bitselect_1ns_256ns_8ns_1_1_1': 256 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mem_transfer_Pipeline_WRITE_V'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mem_transfer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'mem_transfer' is 33047 from HDL expression: ((1'b1 == ap_CS_fsm_state2) & (1'b0 == ap_block_state2))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mem_transfer'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ConvertToVOLE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'fifo_w256_d2_S' is changed to 'fifo_w256_d2_S_x2' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ConvertToVOLE'.
+INFO: [RTMG 210-285] Implementing FIFO 'r_strm_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'r_strm_1_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'r_strm_2_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'r_strm_3_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'u_strm_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_1_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_2_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_3_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_4_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_5_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_6_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_7_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_8_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_9_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_10_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_11_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_12_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_13_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_14_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_15_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_16_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_17_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_18_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_19_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_20_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_21_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_22_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_23_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_24_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_25_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_26_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_27_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_28_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_29_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_30_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_31_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_32_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_33_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_34_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_35_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_36_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_37_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_38_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_39_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_40_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_41_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_42_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_43_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_44_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_45_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_46_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_47_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_48_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_49_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_50_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_51_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_52_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_53_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_54_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_55_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_56_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_57_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_58_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_59_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_60_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_61_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_62_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_63_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_64_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_65_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_66_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_67_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_68_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_69_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_70_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_71_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_72_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_73_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_74_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_75_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_76_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_77_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_78_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_79_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_80_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_81_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_82_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_83_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_84_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_85_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_86_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_87_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_88_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_89_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_90_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_91_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_92_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_93_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_94_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_95_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_96_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_97_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_98_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_99_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_100_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_101_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_102_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_103_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_104_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_105_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_106_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_107_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_108_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_109_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_110_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_111_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_112_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_113_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_114_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_115_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_116_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_117_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_118_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_119_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_120_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_121_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_122_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_123_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_124_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_125_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_126_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_127_U(GenerateProof_fifo_w256_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_build_VOLE_U0_U(GenerateProof_start_for_build_VOLE_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_mem_transfer_U0_U(GenerateProof_start_for_mem_transfer_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'VOLECommit' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'fifo_w128_d2_S' is changed to 'fifo_w128_d2_S_x2' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'VOLECommit'.
+INFO: [RTMG 210-285] Implementing FIFO 'seed_strm_U(GenerateProof_fifo_w128_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_ConvertToVOLE_U0_U(GenerateProof_start_for_ConvertToVOLE_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gf128_clmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gf128_clmul'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.5 seconds. CPU system time: 0 seconds. Elapsed time: 0.5 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gf128_multiply' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gf128_multiply' pipeline 'gf128_multiply' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gf128_multiply'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'combineVOLEs' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'combineVOLEs' pipeline 'VITIS_LOOP_57_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'combineVOLEs'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute_mask' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute_mask'.
+INFO: [RTMG 210-278] Implementing memory 'GenerateProof_compute_mask_ur_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'EvalCircuit_Pipeline_VITIS_LOOP_99_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'EvalCircuit_Pipeline_VITIS_LOOP_99_1' pipeline 'VITIS_LOOP_99_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'EvalCircuit_Pipeline_VITIS_LOOP_99_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'EvalCircuit_Pipeline_VITIS_LOOP_110_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'EvalCircuit_Pipeline_VITIS_LOOP_110_2' pipeline 'VITIS_LOOP_110_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'EvalCircuit_Pipeline_VITIS_LOOP_110_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'EvalCircuit' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'EvalCircuit'.
+INFO: [RTMG 210-278] Implementing memory 'GenerateProof_EvalCircuit_extended_witness_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'GenerateProof_EvalCircuit_extended_u_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'GenerateProof_EvalCircuit_extended_V_RAM_2P_URAM_1R1W' using ultra RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ToField' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ToField' pipeline 'VITIS_LOOP_146_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ToField'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'chal2_Pipeline_VITIS_LOOP_67_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'chal2_Pipeline_VITIS_LOOP_67_1' pipeline 'VITIS_LOOP_67_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'chal2_Pipeline_VITIS_LOOP_67_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shake_extensible_Pipeline_VITIS_LOOP_780_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'shake_extensible_Pipeline_VITIS_LOOP_780_4' pipeline 'VITIS_LOOP_780_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_35_5_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shake_extensible_Pipeline_VITIS_LOOP_780_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shake_extensible_Pipeline_VITIS_LOOP_772_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'shake_extensible_Pipeline_VITIS_LOOP_772_3' pipeline 'VITIS_LOOP_772_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_35_5_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shake_extensible_Pipeline_VITIS_LOOP_772_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shake_extensible_Pipeline_VITIS_LOOP_809_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'shake_extensible_Pipeline_VITIS_LOOP_809_5' pipeline 'VITIS_LOOP_809_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_35_5_64_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shake_extensible_Pipeline_VITIS_LOOP_809_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'shake_extensible' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'shake_extensible' is 9601 from HDL expression: ((1'b1 == ap_CS_fsm_state144) | (1'b1 == ap_CS_fsm_state134))
+INFO: [RTGEN 206-100] Generating core module 'udiv_128ns_9ns_128_132_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'shake_extensible'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'chal2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'fifo_w128_d2_S' is changed to 'fifo_w128_d2_S_x3' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w1_d2_S' is changed to 'fifo_w1_d2_S_x2' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'chal2'.
+INFO: [RTMG 210-285] Implementing FIFO 'msgStrm_U(GenerateProof_fifo_w64_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'msgLenStrm_U(GenerateProof_fifo_w128_d2_S_x3)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'endMsgLenStrm_U(GenerateProof_fifo_w1_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'outLenStrm_U(GenerateProof_fifo_w128_d2_S_x3)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'endOutLenStrm_U(GenerateProof_fifo_w1_d2_S_x2)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'endDigestStrm_internal_U(GenerateProof_fifo_w1_d2_S_x2)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aggregate_coef' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'aggregate_coef' pipeline 'VITIS_LOOP_170_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aggregate_coef'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ProverCircuitEval' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] RTL name 'fifo_w1_d2_S' is changed to 'fifo_w1_d2_S_x3' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w256_d2_S' is changed to 'fifo_w256_d2_S_x3' due to conflict.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w128_d2_S' is changed to 'fifo_w128_d2_S_x4' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ProverCircuitEval'.
+INFO: [RTMG 210-285] Implementing FIFO 'u_mask_U(GenerateProof_fifo_w128_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'v_mask_U(GenerateProof_fifo_w128_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'd_strm_cp_U(GenerateProof_fifo_w1_d2_S_x3)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_strm_U(GenerateProof_fifo_w256_d2_S_x3)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a1_strm_U(GenerateProof_fifo_w128_d2_S_x4)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a_strm_U(GenerateProof_fifo_w256_d2_S_x3)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'ch2_strm_U(GenerateProof_fifo_w128_d2_S_x4)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_ToField_U0_U(GenerateProof_start_for_ToField_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_chal2_U0_U(GenerateProof_start_for_chal2_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'GenerateProof_Pipeline_TRANSFER_STREAM' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'GenerateProof_Pipeline_TRANSFER_STREAM' pipeline 'TRANSFER_STREAM' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'GenerateProof_Pipeline_TRANSFER_STREAM'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'GenerateProof' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'GenerateProof/root_strm' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'GenerateProof/iv_strm' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'GenerateProof/witness' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'GenerateProof/circuit' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'GenerateProof/d_strm' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'GenerateProof/proof_strm' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'GenerateProof' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w128_d2_S' is changed to 'fifo_w128_d2_S_x5' due to conflict.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'GenerateProof'.
+INFO: [RTMG 210-278] Implementing memory 'GenerateProof_u_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'GenerateProof_V_RAM_2P_URAM_1R1W' using ultra RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'path_strm_U(GenerateProof_fifo_w128_d2_S_x5)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.05 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.09 seconds; current allocated memory: 1.746 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 7.45 seconds. CPU system time: 0.09 seconds. Elapsed time: 7.55 seconds; current allocated memory: 1.861 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for GenerateProof.
+INFO: [VLOG 209-307] Generating Verilog RTL for GenerateProof.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 144.18 MHz
+INFO: [HLS 200-112] Total CPU user time: 87.79 seconds. Total CPU system time: 4.68 seconds. Total elapsed time: 93.71 seconds; peak allocated memory: 1.861 GB.
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 37s

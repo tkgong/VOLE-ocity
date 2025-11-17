@@ -1,0 +1,311 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg
+WARNING: [HLS 200-1921] Skipping unknown config ini [hls] entry 'ldflags=-lstdc++' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=defs.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/defs.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=aes.hpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/aes.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=encrypt.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(16)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/encrypt.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=encrypt.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(17)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/encrypt.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=PRG.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(18)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/PRG.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=PRG.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/PRG.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ggm_tree.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(20)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/ggm_tree.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ggm_tree.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(21)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/ggm_tree.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=sha3.hpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(22)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./shake.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(23)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./shake.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(24)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=vole.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(25)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/vole.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=vole.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(26)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/vole.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=Commit.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(27)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/Commit.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=Commit.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(28)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/Commit.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=gatebygate.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(29)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=gatebygate.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(30)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/gatebygate.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=fiat_shamir.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(31)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/fiat_shamir.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=fiat_shamir.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(32)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/fiat_shamir.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_vole.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding test bench file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/tb_vole.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=VOLECommit' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcu250-figd2104-2-e' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xcu250-figd2104-2-e'
+INFO: [HLS 200-1465] Applying config ini 'clock=7ns' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+INFO: [HLS 200-1465] Applying config ini 'csim.clean=1' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying config ini 'csim.code_analyzer=0' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(12)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying config ini 'sim.O=1' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3.26 seconds. CPU system time: 0.42 seconds. Elapsed time: 3.68 seconds; current allocated memory: 482.004 MB.
+INFO: [HLS 200-10] Analyzing design file 'fiat_shamir.cpp' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:101:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:251:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:426:9)
+INFO: [HLS 200-10] Analyzing design file 'gatebygate.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'a0_strm' (gatebygate.cpp:59:34)
+WARNING: [HLS 207-5292] unused parameter 'a1_strm' (gatebygate.cpp:60:32)
+WARNING: [HLS 207-5292] unused parameter 'a_strm' (gatebygate.cpp:61:34)
+WARNING: [HLS 207-5292] unused parameter 'u' (gatebygate.cpp:67:16)
+WARNING: [HLS 207-5292] unused parameter 'V' (gatebygate.cpp:68:18)
+WARNING: [HLS 207-5292] unused parameter 'witness' (gatebygate.cpp:69:30)
+WARNING: [HLS 207-5292] unused parameter 'circuit' (gatebygate.cpp:70:28)
+WARNING: [HLS 207-5292] unused parameter 'd_strm' (gatebygate.cpp:71:30)
+WARNING: [HLS 207-5292] unused parameter 'a_strm' (gatebygate.cpp:72:34)
+INFO: [HLS 200-10] Analyzing design file 'Commit.cpp' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:101:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:251:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:426:9)
+INFO: [HLS 200-10] Analyzing design file 'vole.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'shake.cpp' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:101:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:251:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:426:9)
+INFO: [HLS 200-10] Analyzing design file 'ggm_tree.cpp' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:101:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:251:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:426:9)
+WARNING: [HLS 207-5570] unexpected pragma parameter 'depth' (ggm_tree.cpp:239:36)
+INFO: [HLS 200-10] Analyzing design file 'PRG.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'encrypt.cpp' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./aes.hpp:16:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./aes.hpp:17:9)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:57:31)
+WARNING: [HLS 207-5292] unused parameter 'plaintext' (./aes.hpp:58:31)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:58:53)
+WARNING: [HLS 207-5292] unused parameter 'ciphertext' (./aes.hpp:58:78)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:126:55)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:303:55)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:429:55)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:523:31)
+WARNING: [HLS 207-5292] unused parameter 'ciphertext' (./aes.hpp:531:31)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:531:54)
+WARNING: [HLS 207-5292] unused parameter 'plaintext' (./aes.hpp:531:79)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:624:56)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:786:56)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:935:56)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 13.51 seconds. CPU system time: 2.38 seconds. Elapsed time: 15.9 seconds; current allocated memory: 488.859 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+WARNING: [HLS 200-1995] There were 154,084 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 1,188,779 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 748,112 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 693,604 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 693,546 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 717,021 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 716,466 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 716,466 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 716,466 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 717,558 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 717,469 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 619,138 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 563,190 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 562,932 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 563,310 instructions in the design after the 'HW Transforms' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 523,400 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function 'xf::security::aesTable::aesTable()' into 'xf::security::aesEnc<128>::aesEnc()' (./aes.hpp:386:5)
+INFO: [HLS 214-131] Inlining function 'xf::security::aesEnc<128>::aesEnc()' into 'encrypt(ap_uint<128>, ap_uint<128>, ap_uint<128>&)' (encrypt.cpp:4:31)
+INFO: [HLS 214-131] Inlining function 'PRG(ap_uint<128>&, ap_uint<128>, ap_uint<128>&, ap_uint<128>&)' into 'expand_roots(ap_uint<128>&, ap_uint<128>&, hls::stream<ap_uint<128>, 0>*)' (ggm_tree.cpp:178:13)
+INFO: [HLS 214-131] Inlining function 'ap_uint<64u> xf::security::internal::ROTL<64u>(ap_uint<64u>, unsigned int)' into 'xf::security::internal::KECCAK_f(ap_uint<64>*)' (./sha3.hpp:154:33)
+INFO: [HLS 214-131] Inlining function 'PRG(ap_uint<128>&, ap_uint<128>, ap_uint<128>&, ap_uint<128>&)' into 'ggm_small(ap_uint<128>&, ap_uint<128>&, ap_uint<128>*, ap_uint<128>*, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<128>, 0>&)' (ggm_tree.cpp:145:13)
+INFO: [HLS 214-131] Inlining function 'PRG(ap_uint<128>&, ap_uint<128>, ap_uint<128>&, ap_uint<128>&)' into 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4])' (vole.cpp:34:21)
+WARNING: [HLS 214-340] The resource pragma (bind_storage) on top-level function argument, in 'call' is unsupported, please use INTERFACE pragma instead (Commit.cpp:21:5)
+INFO: [HLS 214-377] Adding 'stateArray' into disaggregation list because there's array-partition pragma applied on the struct field (./sha3.hpp:432:12)
+INFO: [HLS 214-377] Adding 'cipher' into disaggregation list because there's array-partition pragma applied on the struct field (./aes.hpp:388:9)
+INFO: [HLS 214-377] Adding 'stateArray' into disaggregation list because there's array-partition pragma applied on the struct field (./sha3.hpp:433:9)
+INFO: [HLS 214-210] Disaggregating variable 'cipher' (encrypt.cpp:4:31)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-210] Disaggregating variable 'stateArray' (./sha3.hpp:432:12)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-291] Loop 'INIT_V' is marked as complete unroll implied by the pipeline pragma (vole.cpp:63:10)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_65_1' is marked as complete unroll implied by the pipeline pragma (vole.cpp:65:19)
+INFO: [HLS 214-291] Loop 'READ_LEAVES' is marked as complete unroll implied by the pipeline pragma (vole.cpp:71:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_73_2' is marked as complete unroll implied by the pipeline pragma (vole.cpp:73:19)
+INFO: [HLS 214-291] Loop 'BUILD_LEVELS' is marked as complete unroll implied by the pipeline pragma (vole.cpp:80:27)
+INFO: [HLS 214-291] Loop 'PROCESS_NODES' is marked as complete unroll implied by the pipeline pragma (vole.cpp:85:32)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_86_3' is marked as complete unroll implied by the pipeline pragma (vole.cpp:86:38)
+INFO: [HLS 214-291] Loop 'WRITE_V' is marked as complete unroll implied by the pipeline pragma (vole.cpp:94:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_96_4' is marked as complete unroll implied by the pipeline pragma (vole.cpp:96:19)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_29_3' is marked as complete unroll implied by the pipeline pragma (vole.cpp:29:19)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_30_4' is marked as complete unroll implied by the pipeline pragma (vole.cpp:30:34)
+INFO: [HLS 214-291] Loop 'LOOP_THETA_1' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:110:9)
+INFO: [HLS 214-291] Loop 'LOOP_THETA_2' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:117:9)
+INFO: [HLS 214-291] Loop 'LOOP_CALCULATE_THETA' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:121:13)
+INFO: [HLS 214-291] Loop 'LOOP_CHI' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:186:9)
+INFO: [HLS 214-291] Loop 'LOOP_INIT_STATEREG' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:191:13)
+INFO: [HLS 214-291] Loop 'LOOP_CALCULATE_CHI' is marked as complete unroll implied by the pipeline pragma (./sha3.hpp:196:13)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_439_1' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:439:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_441_2' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:441:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_469_3' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:469:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_476_4' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:476:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_396_1' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:396:27)
+INFO: [HLS 214-188] Unrolling loop 'UNPACK_U' (vole.cpp:123:12) in function 'mem_transfer' partially with a factor of 2 (vole.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'READ_V' (vole.cpp:132:9) in function 'mem_transfer' completely with a factor of 64 (vole.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_134_2' (vole.cpp:134:20) in function 'mem_transfer' completely with a factor of 2 (vole.cpp:115:0)
+INFO: [HLS 214-188] Unrolling loop 'WRITE_V' (vole.cpp:139:18) in function 'mem_transfer' partially with a factor of 2 (vole.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_142_3' (vole.cpp:142:31) in function 'mem_transfer' completely with a factor of 64 (vole.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_144_4' (vole.cpp:144:20) in function 'mem_transfer' completely with a factor of 2 (vole.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'INIT_V' (vole.cpp:63:10) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_65_1' (vole.cpp:65:19) in function 'build_VOLE' completely with a factor of 8 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'READ_LEAVES' (vole.cpp:71:26) in function 'build_VOLE' completely with a factor of 4 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_73_2' (vole.cpp:73:19) in function 'build_VOLE' completely with a factor of 8 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'BUILD_LEVELS' (vole.cpp:80:27) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'PROCESS_NODES' (vole.cpp:85:32) in function 'build_VOLE' completely with a factor of 1 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_86_3' (vole.cpp:86:38) in function 'build_VOLE' completely with a factor of 8 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'PROCESS_NODES' (vole.cpp:85:32) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'WRITE_V' (vole.cpp:94:22) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_96_4' (vole.cpp:96:19) in function 'build_VOLE' completely with a factor of 8 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_20_2' (vole.cpp:20:30) in function 'expand_seed' completely with a factor of 8 (vole.cpp:10:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_29_3' (vole.cpp:29:19) in function 'expand_seed' completely with a factor of 4 (vole.cpp:10:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_30_4' (vole.cpp:30:34) in function 'expand_seed' completely with a factor of 8 (vole.cpp:10:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_30_1' (fiat_shamir.cpp:30:22) in function 'chal1' completely with a factor of 64 (fiat_shamir.cpp:5:0)
+INFO: [HLS 214-186] Unrolling loop 'PARALLEL_HASH' (shake.cpp:92:9) in function 'H' completely with a factor of 8 (shake.cpp:81:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_206_2' (ggm_tree.cpp:206:20) in function 'ggm_build' completely with a factor of 8 (ggm_tree.cpp:197:0)
+INFO: [HLS 214-186] Unrolling loop 'PARALLEL_TREES' (ggm_tree.cpp:212:9) in function 'ggm_build' completely with a factor of 8 (ggm_tree.cpp:197:0)
+INFO: [HLS 214-186] Unrolling loop 'HASH_LOOP' (ggm_tree.cpp:151:5) in function 'ggm_small' completely with a factor of 4 (ggm_tree.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'LEVEL_LOOP' (ggm_tree.cpp:130:5) in function 'ggm_small' completely with a factor of 2 (ggm_tree.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'EXPAND_LOOP' (ggm_tree.cpp:138:9) in function 'ggm_small' completely with a factor of 2 (ggm_tree.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'EXPAND_LOOP' (ggm_tree.cpp:138:9) in function 'ggm_small' completely with a factor of 1 (ggm_tree.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_INIT_STATE_ARRAYS' (./sha3.hpp:435:9) in function 'xf::security::internal::shakeXOF<32u>' completely with a factor of 25 (./sha3.hpp:408:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_SHA3_EMIT' (./sha3.hpp:541:9) in function 'xf::security::internal::shakeXOF<32u>' completely with a factor of 4 (./sha3.hpp:408:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_THETA_1' (./sha3.hpp:110:9) in function 'xf::security::internal::KECCAK_f' completely with a factor of 5 (./sha3.hpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_THETA_2' (./sha3.hpp:117:9) in function 'xf::security::internal::KECCAK_f' completely with a factor of 5 (./sha3.hpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_CALCULATE_THETA' (./sha3.hpp:121:13) in function 'xf::security::internal::KECCAK_f' completely with a factor of 5 (./sha3.hpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_CHI' (./sha3.hpp:186:9) in function 'xf::security::internal::KECCAK_f' completely with a factor of 5 (./sha3.hpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_CALCULATE_CHI' (./sha3.hpp:196:13) in function 'xf::security::internal::KECCAK_f' completely with a factor of 5 (./sha3.hpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'LOOP_INIT_STATEREG' (./sha3.hpp:191:13) in function 'xf::security::internal::KECCAK_f' completely with a factor of 5 (./sha3.hpp:93:0)
+INFO: [HLS 214-186] Unrolling loop 'PARALLEL_GEN' (ggm_tree.cpp:174:9) in function 'expand_roots' completely with a factor of 8 (ggm_tree.cpp:166:0)
+INFO: [HLS 214-186] Unrolling loop 'WRITE_STREAM' (ggm_tree.cpp:182:9) in function 'expand_roots' completely with a factor of 8 (ggm_tree.cpp:166:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_439_1' (./aes.hpp:439:27) in function 'xf::security::aesEnc<128>::process' completely with a factor of 10 (./aes.hpp:429:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_476_4' (./aes.hpp:476:35) in function 'xf::security::aesEnc<128>::process' completely with a factor of 4 (./aes.hpp:429:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_469_3' (./aes.hpp:469:31) in function 'xf::security::aesEnc<128>::process' completely with a factor of 16 (./aes.hpp:429:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_441_2' (./aes.hpp:441:31) in function 'xf::security::aesEnc<128>::process' completely with a factor of 16 (./aes.hpp:429:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_396_1' (./aes.hpp:396:27) in function 'xf::security::aesEnc<128>::updateKey' completely with a factor of 10 (./aes.hpp:391:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'VITIS_LOOP_396_1' (./aes.hpp:396:27) in function 'xf::security::aesEnc<128>::updateKey' has been removed because the loop is unrolled completely (./aes.hpp:391:0)
+WARNING: [HLS 214-366] Duplicating function 'encrypt(ap_uint<128>, ap_uint<128>, ap_uint<128>&)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (PRG.cpp:9:3)
+WARNING: [HLS 214-366] Duplicating function 'encrypt(ap_uint<128>, ap_uint<128>, ap_uint<128>&)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (PRG.cpp:8:2)
+WARNING: [HLS 214-366] Duplicating function 'xf::security::aesEnc<128>::process(ap_uint<128>, ap_uint<128>, ap_uint<128>&) (.39)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (encrypt.cpp:6:12)
+INFO: [HLS 214-178] Inlining function 'xf::security::shake256(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.3)' into 'h0(ap_uint<128>&, ap_uint<128>&, ap_uint<128>&, ap_uint<128>&)' (shake.cpp:10:0)
+INFO: [HLS 214-178] Inlining function 'encrypt(ap_uint<128>, ap_uint<128>, ap_uint<128>&)' into 'ggm_small(ap_uint<128>&, ap_uint<128>&, ap_uint<128>*, ap_uint<128>*, hls::stream<ap_uint<128>, 0>&, hls::stream<ap_uint<128>, 0>&)' (ggm_tree.cpp:115:0)
+INFO: [HLS 214-178] Inlining function 'xf::security::shake256(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.3)' into 'H(hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0>&)' (shake.cpp:81:0)
+INFO: [HLS 214-178] Inlining function 'xf::security::shake256(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&) (.3)' into 'H_COM(hls::stream<ap_uint<256>, 0>&, ap_uint<256>&)' (shake.cpp:174:0)
+INFO: [HLS 214-178] Inlining function 'xf::security::shake256(hls::stream<ap_uint<64>, 0>&, hls::stream<ap_uint<128>, 0>&, hls::stream<bool, 0>&, hls::stream<ap_uint<256>, 0>&, hls::stream<bool, 0>&)' into 'chal1(ap_uint<256>&, ap_uint<128>&, ap_uint<2>*)' (fiat_shamir.cpp:5:0)
+INFO: [HLS 214-178] Inlining function 'VC_Open(ap_uint<2>*, ap_uint<128> (*) [7], ap_uint<128> (*) [4], hls::stream<ap_uint<128>, 0>&)' into 'ggm_top(ap_uint<128>&, ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, ap_uint<256>&, hls::stream<ap_uint<128>, 0>&)' (ggm_tree.cpp:278:0)
+INFO: [HLS 214-248] Applying array_partition to 'cipher.1': Complete partitioning on dimension 1. (encrypt.cpp:4:31)
+INFO: [HLS 214-248] Applying array_partition to 'left': Complete partitioning on dimension 1. (ggm_tree.cpp:169:22)
+INFO: [HLS 214-248] Applying array_partition to 'right': Complete partitioning on dimension 1. (ggm_tree.cpp:169:31)
+INFO: [HLS 214-248] Applying array_partition to 'stateArray': Complete partitioning on dimension 1. (./sha3.hpp:432:12)
+INFO: [HLS 214-248] Applying array_partition to 'cipher.1.i10': Complete partitioning on dimension 1. (encrypt.cpp:4:31)
+INFO: [HLS 214-248] Applying array_partition to 'cipher.1.i9': Complete partitioning on dimension 1. (encrypt.cpp:4:31)
+INFO: [HLS 214-248] Applying array_partition to 'cipher.1.i8': Complete partitioning on dimension 1. (encrypt.cpp:4:31)
+INFO: [HLS 214-248] Applying array_partition to 'cipher.1.i7': Complete partitioning on dimension 1. (encrypt.cpp:4:31)
+INFO: [HLS 214-248] Applying array_partition to 'cipher.1.i6': Complete partitioning on dimension 1. (encrypt.cpp:4:31)
+INFO: [HLS 214-248] Applying array_partition to 'cipher.1.i': Complete partitioning on dimension 1. (encrypt.cpp:4:31)
+INFO: [HLS 214-248] Applying array_partition to 'seeds': Complete partitioning on dimension 1. (ggm_tree.cpp:116:18)
+INFO: [HLS 214-248] Applying array_partition to 'level': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (ggm_tree.cpp:122:15)
+INFO: [HLS 214-248] Applying array_partition to 'roots': Complete partitioning on dimension 1. (ggm_tree.cpp:203:22)
+INFO: [HLS 214-248] Applying array_partition to 'root_strm': Complete partitioning on dimension 1. (ggm_tree.cpp:234:28)
+INFO: [HLS 214-248] Applying array_partition to 'com_strm': Complete partitioning on dimension 1. (ggm_tree.cpp:236:28)
+INFO: [HLS 214-248] Applying array_partition to 'ggm_keys': Complete partitioning on dimension 2. (ggm_tree.cpp:279:18)
+INFO: [HLS 214-248] Applying array_partition to 'coms': Complete partitioning on dimension 2. (ggm_tree.cpp:280:18)
+INFO: [HLS 214-248] Applying array_partition to 'chal': Complete partitioning on dimension 1. (ggm_tree.cpp:282:16)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (ggm_tree.cpp:266:25)
+INFO: [HLS 214-248] Applying array_partition to 'sd': Complete partitioning on dimension 2. (vole.cpp:15:22)
+INFO: [HLS 214-248] Applying array_partition to 'r_strm': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (vole.cpp:168:31)
+INFO: [HLS 214-248] Applying array_partition to 'v_strm': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (vole.cpp:172:31)
+INFO: [HLS 214-248] Applying array_partition to 'seed_strm': Complete partitioning on dimension 1. (Commit.cpp:16:28)
+INFO: [HLS 214-248] Applying array_partition to 'u': Cyclic partitioning with factor 2 on dimension 1. (Commit.cpp:14:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< WRITE_V> at vole.cpp:139:18 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< UNPACK_U> at vole.cpp:123:12 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< READ_SEEDS> at vole.cpp:19:14 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< DRAIN_ENDMSGLEN> at shake.cpp:161:13 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< DRAIN_MSGLEN> at shake.cpp:154:13 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< DRAIN_MSG> at shake.cpp:147:13 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< DRAIN_END> at shake.cpp:140:13 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< DRAIN_DIGEST> at shake.cpp:133:13 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< DRAIN_DIGEST> at shake.cpp:39:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< DRAIN_END> at shake.cpp:46:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< DRAIN_MSG> at shake.cpp:53:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< DRAIN_MSGLEN> at shake.cpp:60:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< DRAIN_ENDMSGLEN> at shake.cpp:67:5 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< ROOT_GEN> at ggm_tree.cpp:168:5 
+INFO: [HLS 214-364] Automatically inlining function 'encrypt(ap_uint<128>, ap_uint<128>, ap_uint<128>&) (.210)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.264.265)' (PRG.cpp:8:2)
+INFO: [HLS 214-364] Automatically inlining function 'encrypt(ap_uint<128>, ap_uint<128>, ap_uint<128>&) (.210)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.264.265)' (PRG.cpp:9:3)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::process(ap_uint<128>, ap_uint<128>, ap_uint<128>&) (.39)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.264.265)' (encrypt.cpp:6:12)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.264.265)' (./aes.hpp:479:29)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.264.265)' (./aes.hpp:480:48)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.264.265)' (./aes.hpp:485:54)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.264.265)' (./aes.hpp:486:54)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.264.265)' (./aes.hpp:491:55)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.264.265)' (./aes.hpp:492:55)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.264.265)' (./aes.hpp:494:55)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.264.265)' (./aes.hpp:498:55)
+WARNING: [HLS 214-373] Impl=auto in bind_op is deprecated. Consider using a different operation implementation. (./sha3.hpp:426:9)
+WARNING: [HLS 214-287] Basic block in function expand_seed has more than 200000 instructions. (vole.cpp:28:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 538.54 seconds. CPU system time: 1.63 seconds. Elapsed time: 531.69 seconds; current allocated memory: 813.109 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 813.109 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 14.59 seconds. CPU system time: 0.1 seconds. Elapsed time: 14.68 seconds; current allocated memory: 1.097 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] vole.cpp:127: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 115.93 seconds. CPU system time: 0.02 seconds. Elapsed time: 115.96 seconds; current allocated memory: 1.064 GB.
+WARNING: [HLS 200-805] An internal stream 'h_strm' (ggm_tree.cpp:238) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'seed_strm' (Commit.cpp:16) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'seed_strm.1' (Commit.cpp:16) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'seed_strm.2' (Commit.cpp:16) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'seed_strm.3' (Commit.cpp:16) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'seed_strm.4' (Commit.cpp:16) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'seed_strm.5' (Commit.cpp:16) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'seed_strm.6' (Commit.cpp:16) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'seed_strm.7' (Commit.cpp:16) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'msgStrm' (shake.cpp:176) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'msgLenStrm' (shake.cpp:177) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'endMsgLenStrm' (shake.cpp:178) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'digestStrm' (shake.cpp:179) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-805] An internal stream 'endDigestStrm' (shake.cpp:180) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+INFO: [HLS 200-1947] Automatically inferred stable function argument 'root.val1' of dataflow function 'ggm_tree' (ggm_tree.cpp:234:1).
+INFO: [HLS 200-1947] Automatically inferred stable function argument 'iv.val3' of dataflow function 'ggm_tree' (ggm_tree.cpp:234:1).
+INFO: [XFORM 203-712] Applying dataflow to function 'ggm_tree' (ggm_tree.cpp:234:1), detected/extracted 4 process function(s): 
+	 'expand_roots'
+	 'ggm_build'
+	 'H'
+	 'H_COM'.
+INFO: [XFORM 203-712] Applying dataflow to function 'ConvertToVOLE' (vole.cpp:168:5), detected/extracted 3 process function(s): 
+	 'expand_seed'
+	 'build_VOLE'
+	 'mem_transfer'.
+INFO: [XFORM 203-712] Applying dataflow to function 'VOLECommit' (Commit.cpp:7:1), detected/extracted 2 process function(s): 
+	 'ggm_top'
+	 'ConvertToVOLE'.
+INFO: [XFORM 203-11] Balancing expressions in function 'xf::security::internal::KECCAK_f' (./sha3.hpp:76:5)...35 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'xf::security::aesEnc<128>::process.133' (./aes.hpp:16:48)...450 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'xf::security::aesEnc<128>::process.1' (./aes.hpp:16:48)...450 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'xf::security::aesEnc<128>::process' (./aes.hpp:16:48)...450 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'expand_seed' (./aes.hpp:5:20)...14976 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 71.93 seconds. CPU system time: 0.14 seconds. Elapsed time: 72.07 seconds; current allocated memory: 1.235 GB.
+INFO: [HLS 200-869] Encountered 10240 load/store instructions on 'cipher.0.ssbox' in function 'expand_seed' may result in long runtime.
+Resolution: For help on HLS 200-869 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-869.html
+INFO: [HLS 200-2061] Successfully converted nested loops 'PROCESS_BATCHES'(vole.cpp:54:22) and 'PROCESS_CHUNKS'(vole.cpp:55:25) in function 'build_VOLE' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'PROCESS_BATCHES' (vole.cpp:54:22) in function 'build_VOLE'.

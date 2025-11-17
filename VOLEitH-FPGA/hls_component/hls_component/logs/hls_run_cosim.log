@@ -1,0 +1,856 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component'.
+INFO: [HLS 200-1611] Setting target device to 'xcu250-figd2104-2-e'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg
+WARNING: [HLS 200-1921] Skipping unknown config ini [hls] entry 'ldflags=-lstdc++' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(22)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=defs.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/defs.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=aes.hpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/aes.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=encrypt.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/encrypt.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=encrypt.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/encrypt.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=PRG.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/PRG.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=PRG.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/PRG.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ggm_tree.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/ggm_tree.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ggm_tree.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(16)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/ggm_tree.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=sha3.hpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(17)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./shake.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(18)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./shake.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_ggm.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(23)
+INFO: [HLS 200-10] Adding test bench file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/tb_ggm.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=ggm_tree' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcu250-figd2104-2-e' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying config ini 'clock=7ns' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+INFO: [HLS 200-1465] Applying config ini 'csim.clean=1' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(21)
+INFO: [HLS 200-1465] Applying config ini 'csim.code_analyzer=0' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(24)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying config ini 'sim.O=1' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(20)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/vitis-comp.json
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/opt/Xillinx/2025.1/Vitis/lnx64/tools/vcxx/libexec//clang++"
+   Compiling apatb_ggm_tree.cpp
+   Compiling apatb_ggm_tree_util.cpp
+   Compiling encrypt.cpp_pre.cpp.tb.cpp
+   Compiling ggm_tree.cpp_pre.cpp.tb.cpp
+   Compiling PRG.cpp_pre.cpp.tb.cpp
+   Compiling shake.cpp_pre.cpp.tb.cpp
+   Compiling tb_ggm.cpp_pre.cpp.tb.cpp
+   Compiling apatb_ggm_tree_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+============================================
+GGM_TREE + VC_OPEN Comprehensive Testbench
+============================================
+Configuration:
+  K (tree depth):        2
+  TAU (num trees):       64
+  GGM_UNROLL_FAC:        2
+  PATH_LEN:              4 (K+2)
+  Nodes per tree:        7
+  Leaves per tree:       4
+============================================
+
+RANDOM OPEN INDICES:
+--------------------
+  Tree 0: opening leaf 1
+  Tree 1: opening leaf 3
+  Tree 2: opening leaf 3
+  Tree 3: opening leaf 0
+  Tree 4: opening leaf 2
+  Tree 5: opening leaf 3
+  Tree 6: opening leaf 2
+  Tree 7: opening leaf 2
+  Tree 8: opening leaf 0
+  Tree 9: opening leaf 1
+  ...
+
+INPUT PARAMETERS:
+-----------------
+Master Root: 0x01234567_89abcdef_fedcba98_76543210
+IV:          0xffeeddcc_bbaa9988_77665544_33221100
+
+=== PROVER PHASE ===
+Calling ggm_tree() (includes H hashing)...
+✓ ggm_tree() completed.
+
+Reading prover hashes from h_strm:
+  h_prover[0] = 0xde786ebb56f8c00bafb0c64c42cdf6df_d188422ed598ca5250cd41e4dba584a7
+  h_prover[1] = 0x0fc773ef44ec5273411bc68c3429c2b6_826f032b3d73baf95f550df7e900a1fe
+  h_prover[2] = 0xd33f202e5bae771763e040e3c313ee00_7078735833bbd4e1ff28586f02afc0cd
+  h_prover[3] = 0xc320c5aa4533030a60bbc7f412fabead_101d2d5bd8b904ccf9ac20fbae9fa4b3
+  h_prover[4] = 0x68f1f819b80af0164c61a32ffb11e628_1d4a34fb1ecdbdbd50978a71104aea8e
+  ...
+✓ All 64 prover hashes collected.
+
+=== OPENING PHASE ===
+Calling VC_Open()...
+✓ VC_Open() completed.
+  Generated 256 path elements
+  (64 trees × 4 elements per path)
+
+=== VERIFIER PHASE ===
+Calling ggm_reconstruct()...
+✓ ggm_reconstruct() completed.
+
+============================================
+HASH VERIFICATION
+============================================
+
+Comparing prover vs verifier hashes:
+  ✓✓✓ ALL 64 HASHES MATCH! ✓✓✓
+  Verification SUCCESSFUL!
+
+============================================
+DETAILED PATH VERIFICATION (First 3 Trees)
+============================================
+
+--- Tree 0 (Opening leaf 1) ---
+  Authentication Path:
+    [0] Root:        0x4dea6990_73925dc6_92f7b439_c6e2b9f4
+    [1] Sibling L1:   0xc835ead6_75f8d6cf_f0fbd7a6_09d4e693
+    [2] Sibling L2:   0x0eb4bb5e_28b3bd73_8e60bd1c_86e2b86d
+    [3] Com at leaf 1: 0x606b0d88_75436764_4053c1c2_8a861fe0
+  ✓ Path elements verified
+  Prover hash:     0xde786ebb_56f8c00b_afb0c64c_42cdf6df_d188422e_d598ca52_50cd41e4_dba584a7
+  Verifier hash:   0xde786ebb_56f8c00b_afb0c64c_42cdf6df_d188422e_d598ca52_50cd41e4_dba584a7
+  ✓ Hashes MATCH!
+
+--- Tree 1 (Opening leaf 3) ---
+  Authentication Path:
+    [0] Root:        0x723dffb4_4af06f6b_a536bdc2_e971c383
+    [1] Sibling L1:   0x83122c0d_6e80557c_ef2d5828_c2de0225
+    [2] Sibling L2:   0xede87783_1b76db26_f9855f8a_466f89e7
+    [3] Com at leaf 3: 0xb00bb456_39504e8d_4a53f5e4_4a57a176
+  ✓ Path elements verified
+  Prover hash:     0x0fc773ef_44ec5273_411bc68c_3429c2b6_826f032b_3d73baf9_5f550df7_e900a1fe
+  Verifier hash:   0x0fc773ef_44ec5273_411bc68c_3429c2b6_826f032b_3d73baf9_5f550df7_e900a1fe
+  ✓ Hashes MATCH!
+
+--- Tree 2 (Opening leaf 3) ---
+  Authentication Path:
+    [0] Root:        0x7a040796_be7b4376_26364a12_310ad4b8
+    [1] Sibling L1:   0xa6bb884d_ebbc72e4_66adf281_a90188ee
+    [2] Sibling L2:   0x87514930_b0ebe9d5_7aaf495a_24c023f8
+    [3] Com at leaf 3: 0x189f63d8_af6bad65_f76aeb25_ce762b4a
+  ✓ Path elements verified
+  Prover hash:     0xd33f202e_5bae7717_63e040e3_c313ee00_70787358_33bbd4e1_ff28586f_02afc0cd
+  Verifier hash:   0xd33f202e_5bae7717_63e040e3_c313ee00_70787358_33bbd4e1_ff28586f_02afc0cd
+  ✓ Hashes MATCH!
+
+============================================
+FINAL VERIFICATION SUMMARY
+============================================
+✓✓✓ ALL TESTS PASSED ✓✓✓
+  • All 64 trees generated correctly
+  • All 64 authentication paths valid
+  • All 64 hash verifications successful
+
+🎉 Vector Commitment scheme verified!
+============================================
+
+Statistics:
+  Total PRG calls:       416
+  Total h0 calls:        256 (prover)
+  Total h0 calls:        192 (verifier)
+  Total H (SHAKE256):    64 (prover)
+  Total H (SHAKE256):    64 (verifier)
+  Total path elements:   256
+  Path size per tree:    64 bytes
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<128>, 0>1' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<128>, 0>0' contains leftover data, which may result in RTL simulation hanging.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 256
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+pdir_merged writeonly
+pdir_merged writeonly
+pdir_merged writeonly
+pdir_merged writeonly
+pdir_merged writeonly
+pdir_merged writeonly
+pdir_merged writeonly
+pdir_merged readwrite
+pdir_merged readwrite
+pdir_merged readwrite
+pdir_merged readwrite
+WARNING: [HLS 200-1008] Pipeline design with bram interface. Bram data may be overwritten, which lead to cosim failure
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /opt/Xillinx/2025.1/Vivado/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_ggm_tree_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj ggm_tree.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_20 -L floating_point_v7_0_25 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./svtb -i ./file_agent -i ./ggm_tree_subsystem -s ggm_tree 
+Multi-threading is on. Using 18 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_KECCAK_f_roundIndex_ROM_2P_LUTRAM_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_KECCAK_f_roundIndex_ROM_2P_LUTRAM_1R
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_shakeXOF_32u_Pipeline_LOOP_GEN_LAST_BLK.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_shakeXOF_32u_Pipeline_LOOP_GEN_LAST_BLK
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_automem_ggm_keys_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ggm_keys_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_H_Pipeline_DRAIN_ENDMSGLEN6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_H_Pipeline_DRAIN_ENDMSGLEN6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_fifo_w64_d32_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w64_d32_A
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w64_d32_A_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_automem_coms_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_coms_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_H_Pipeline_DRAIN_MSG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_H_Pipeline_DRAIN_MSG
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_H_Pipeline_DRAIN_DIGEST2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_H_Pipeline_DRAIN_DIGEST2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_automem_ggm_keys_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ggm_keys_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_H_Pipeline_DRAIN_ENDMSGLEN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_H_Pipeline_DRAIN_ENDMSGLEN
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_h0_Pipeline_DRAIN_END.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_h0_Pipeline_DRAIN_END
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_H.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_H
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_deadlock_detection_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detect_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_automem_coms_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_coms_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_h0_Pipeline_DRAIN_MSGLEN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_h0_Pipeline_DRAIN_MSGLEN
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_updateKey_cipher_0_ssbox10_ROM_NP_LUTRAM_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_updateKey_cipher_0_ssbox10_ROM_NP_LUTRAM_1R
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_deadlock_report_unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_report_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_H_Pipeline_READ_COMS1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_H_Pipeline_READ_COMS1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_h0_Pipeline_DRAIN_DIGEST.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_h0_Pipeline_DRAIN_DIGEST
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_updateKey_Rcon_ROM_AUTO_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_updateKey_Rcon_ROM_AUTO_1R
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_fifo_w1_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w1_d2_S
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w1_d2_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_h0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_h0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_automem_ggm_keys_5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ggm_keys_5
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_fifo_w128_d2_S_x0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w128_d2_S_x0
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w128_d2_S_x0_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_expand_roots.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_expand_roots
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_automem_ggm_keys_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ggm_keys_4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_fifo_w64_d8_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w64_d8_S
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w64_d8_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_sparsemux_9_2_128_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_sparsemux_9_2_128_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_udiv_128ns_9ns_128_132_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_udiv_128ns_9ns_128_132_1_divider
+INFO: [VRFC 10-311] analyzing module ggm_tree_udiv_128ns_9ns_128_132_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_fifo_w128_d32_A.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w128_d32_A
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w128_d32_A_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_ggm_small.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_ggm_small
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_updateKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_updateKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_start_for_H_U0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_start_for_H_U0
+INFO: [VRFC 10-311] analyzing module ggm_tree_start_for_H_U0_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_ggm_tree_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_KECCAK_f.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_KECCAK_f
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_fifo_w1_d4_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w1_d4_S
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w1_d4_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_process_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_process_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_sparsemux_21_4_128_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_sparsemux_21_4_128_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_automem_coms_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_coms_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_H_Pipeline_DRAIN_END3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_H_Pipeline_DRAIN_END3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_fifo_w256_d4_S_x.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w256_d4_S_x
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w256_d4_S_x_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_H_Pipeline_DRAIN_DIGEST.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_H_Pipeline_DRAIN_DIGEST
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_H_Pipeline_DRAIN_MSG4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_H_Pipeline_DRAIN_MSG4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_automem_ggm_keys_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ggm_keys_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_fifo_w1_d4_S_x.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w1_d4_S_x
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w1_d4_S_x_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_h0_Pipeline_DRAIN_MSG.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_h0_Pipeline_DRAIN_MSG
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_ggm_small_Pipeline_VITIS_LOOP_154_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_ggm_small_Pipeline_VITIS_LOOP_154_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_H_Pipeline_READ_COMS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_H_Pipeline_READ_COMS
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_process_r_cipher_0_ssbox_ROM_NP_LUTRAM_1R.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_process_r_cipher_0_ssbox_ROM_NP_LUTRAM_1R
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_automem_ggm_keys_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ggm_keys_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_H_Pipeline_DRAIN_MSGLEN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_H_Pipeline_DRAIN_MSGLEN
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_ggm_build.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_ggm_build
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_shakeXOF_32u_Pipeline_LOOP_GEN_FULL_MESSAGE_BLK.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_shakeXOF_32u_Pipeline_LOOP_GEN_FULL_MESSAGE_BLK
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_fifo_w1_d2_S_x.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w1_d2_S_x
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w1_d2_S_x_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_automem_ggm_keys_6.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_ggm_keys_6
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_deadlock_detector.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_detector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_shakeXOF_32u_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_shakeXOF_32u_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_h0_Pipeline_DRAIN_ENDMSGLEN.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_h0_Pipeline_DRAIN_ENDMSGLEN
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_fifo_w256_d4_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w256_d4_S
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w256_d4_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_H_Pipeline_DRAIN_END.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_H_Pipeline_DRAIN_END
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_sparsemux_35_5_64_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_sparsemux_35_5_64_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/AESL_automem_coms_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_coms_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_fifo_w128_d2_S_x.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w128_d2_S_x
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w128_d2_S_x_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_fifo_w128_d2_S.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w128_d2_S
+INFO: [VRFC 10-311] analyzing module ggm_tree_fifo_w128_d2_S_ShiftReg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_H_Pipeline_DRAIN_MSGLEN5.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ggm_tree_H_Pipeline_DRAIN_MSGLEN5
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/svr/svr_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/svr/svr_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/ggm_tree_subsystem/ggm_tree_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/sim/verilog/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4468] File : /proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv, Line : 25994, RANDC variable size more than 8 bits. This will be treated as a RAND variable instead.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.svr_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.ggm_tree_subsystem_pkg
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.ggm_tree_updateKey_cipher_0_ssbo...
+Compiling module xil_defaultlib.ggm_tree_updateKey_Rcon_ROM_AUTO...
+Compiling module xil_defaultlib.ggm_tree_flow_control_loop_pipe_...
+Compiling module xil_defaultlib.ggm_tree_updateKey
+Compiling module xil_defaultlib.ggm_tree_process_r_cipher_0_ssbo...
+Compiling module xil_defaultlib.ggm_tree_sparsemux_21_4_128_1_1(...
+Compiling module xil_defaultlib.ggm_tree_process_r
+Compiling module xil_defaultlib.ggm_tree_expand_roots
+Compiling module xil_defaultlib.ggm_tree_sparsemux_35_5_64_1_1(d...
+Compiling module xil_defaultlib.ggm_tree_shakeXOF_32u_Pipeline_L...
+Compiling module xil_defaultlib.ggm_tree_shakeXOF_32u_Pipeline_L...
+Compiling module xil_defaultlib.ggm_tree_KECCAK_f_roundIndex_ROM...
+Compiling module xil_defaultlib.ggm_tree_KECCAK_f
+Compiling module xil_defaultlib.ggm_tree_udiv_128ns_9ns_128_132_...
+Compiling module xil_defaultlib.ggm_tree_udiv_128ns_9ns_128_132_...
+Compiling module xil_defaultlib.ggm_tree_shakeXOF_32u_s
+Compiling module xil_defaultlib.ggm_tree_h0_Pipeline_DRAIN_DIGES...
+Compiling module xil_defaultlib.ggm_tree_h0_Pipeline_DRAIN_END
+Compiling module xil_defaultlib.ggm_tree_h0_Pipeline_DRAIN_MSG
+Compiling module xil_defaultlib.ggm_tree_h0_Pipeline_DRAIN_MSGLE...
+Compiling module xil_defaultlib.ggm_tree_h0_Pipeline_DRAIN_ENDMS...
+Compiling module xil_defaultlib.ggm_tree_fifo_w64_d8_S_ShiftReg
+Compiling module xil_defaultlib.ggm_tree_fifo_w64_d8_S_default
+Compiling module xil_defaultlib.ggm_tree_fifo_w128_d2_S_ShiftReg
+Compiling module xil_defaultlib.ggm_tree_fifo_w128_d2_S_default
+Compiling module xil_defaultlib.ggm_tree_fifo_w1_d2_S_ShiftReg
+Compiling module xil_defaultlib.ggm_tree_fifo_w1_d2_S_default
+Compiling module xil_defaultlib.ggm_tree_fifo_w256_d4_S_ShiftReg
+Compiling module xil_defaultlib.ggm_tree_fifo_w256_d4_S_default
+Compiling module xil_defaultlib.ggm_tree_fifo_w1_d4_S_ShiftReg
+Compiling module xil_defaultlib.ggm_tree_fifo_w1_d4_S_default
+Compiling module xil_defaultlib.ggm_tree_h0
+Compiling module xil_defaultlib.ggm_tree_sparsemux_9_2_128_1_1(d...
+Compiling module xil_defaultlib.ggm_tree_ggm_small_Pipeline_VITI...
+Compiling module xil_defaultlib.ggm_tree_ggm_small
+Compiling module xil_defaultlib.ggm_tree_ggm_build
+Compiling module xil_defaultlib.ggm_tree_H_Pipeline_READ_COMS
+Compiling module xil_defaultlib.ggm_tree_H_Pipeline_DRAIN_DIGEST
+Compiling module xil_defaultlib.ggm_tree_H_Pipeline_DRAIN_END
+Compiling module xil_defaultlib.ggm_tree_H_Pipeline_DRAIN_MSG
+Compiling module xil_defaultlib.ggm_tree_H_Pipeline_DRAIN_MSGLEN
+Compiling module xil_defaultlib.ggm_tree_H_Pipeline_DRAIN_ENDMSG...
+Compiling module xil_defaultlib.ggm_tree_H_Pipeline_READ_COMS1
+Compiling module xil_defaultlib.ggm_tree_H_Pipeline_DRAIN_DIGEST...
+Compiling module xil_defaultlib.ggm_tree_H_Pipeline_DRAIN_END3
+Compiling module xil_defaultlib.ggm_tree_H_Pipeline_DRAIN_MSG4
+Compiling module xil_defaultlib.ggm_tree_H_Pipeline_DRAIN_MSGLEN...
+Compiling module xil_defaultlib.ggm_tree_H_Pipeline_DRAIN_ENDMSG...
+Compiling module xil_defaultlib.ggm_tree_fifo_w64_d32_A_ram(DEPT...
+Compiling module xil_defaultlib.ggm_tree_fifo_w64_d32_A_default
+Compiling module xil_defaultlib.ggm_tree_fifo_w128_d2_S_x_ShiftR...
+Compiling module xil_defaultlib.ggm_tree_fifo_w128_d2_S_x_defaul...
+Compiling module xil_defaultlib.ggm_tree_fifo_w1_d2_S_x_ShiftReg
+Compiling module xil_defaultlib.ggm_tree_fifo_w1_d2_S_x_default
+Compiling module xil_defaultlib.ggm_tree_fifo_w256_d4_S_x_ShiftR...
+Compiling module xil_defaultlib.ggm_tree_fifo_w256_d4_S_x_defaul...
+Compiling module xil_defaultlib.ggm_tree_fifo_w1_d4_S_x_ShiftReg
+Compiling module xil_defaultlib.ggm_tree_fifo_w1_d4_S_x_default
+Compiling module xil_defaultlib.ggm_tree_H
+Compiling module xil_defaultlib.ggm_tree_fifo_w128_d32_A_ram(DEP...
+Compiling module xil_defaultlib.ggm_tree_fifo_w128_d32_A_default
+Compiling module xil_defaultlib.ggm_tree_fifo_w128_d2_S_x0_Shift...
+Compiling module xil_defaultlib.ggm_tree_fifo_w128_d2_S_x0_defau...
+Compiling module xil_defaultlib.ggm_tree_start_for_H_U0_ShiftReg
+Compiling module xil_defaultlib.ggm_tree_start_for_H_U0_default
+Compiling module xil_defaultlib.ggm_tree
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=128)
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=256)
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.AESL_automem_ggm_keys_0
+Compiling module xil_defaultlib.AESL_automem_ggm_keys_1
+Compiling module xil_defaultlib.AESL_automem_ggm_keys_2
+Compiling module xil_defaultlib.AESL_automem_ggm_keys_3
+Compiling module xil_defaultlib.AESL_automem_ggm_keys_4
+Compiling module xil_defaultlib.AESL_automem_ggm_keys_5
+Compiling module xil_defaultlib.AESL_automem_ggm_keys_6
+Compiling module xil_defaultlib.AESL_automem_coms_0
+Compiling module xil_defaultlib.AESL_automem_coms_1
+Compiling module xil_defaultlib.AESL_automem_coms_2
+Compiling module xil_defaultlib.AESL_automem_coms_3
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detect_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_report_unit(PROC_N...
+Compiling module xil_defaultlib.AESL_deadlock_detector_2
+Compiling module xil_defaultlib.df_fifo_intf_default
+Compiling module xil_defaultlib.df_process_intf_default
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=11)
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=5)
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=138)
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=16)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.upc_loop_intf_default
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_ggm_tree_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ggm_tree
+
+****** xsim v2025.1 (64-bit)
+  **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Fri Oct 31 16:28:56 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/ggm_tree/xsim_script.tcl
+# xsim {ggm_tree} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=ggm_tree_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -autoloadwcfg -tclbatch {ggm_tree.tcl}
+Time resolution is 1 ps
+source ggm_tree.tcl
+## run all
+UVM_INFO /opt/Xillinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO /opt/Xillinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO /opt/Xillinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+----------------------------------------------------------------------------------------------------------------------
+Name                                                    Type                                    Size  Value           
+----------------------------------------------------------------------------------------------------------------------
+uvm_test_top                                            ggm_tree_test_lib                       -     @355            
+  top_env                                               ggm_tree_env                            -     @366            
+    env_master_svr_iv                                   uvm_env                                 -     @404            
+      m_agt                                             uvm_agent                               -     @654            
+        drv                                             uvm_driver #(REQ,RSP)                   -     @802            
+          rsp_port                                      uvm_analysis_port                       -     @821            
+          seq_item_port                                 uvm_seq_item_pull_port                  -     @811            
+        mon                                             uvm_monitor                             -     @831            
+          item_collect_port                             uvm_analysis_port                       -     @842            
+        sqr                                             uvm_sequencer                           -     @665            
+          rsp_export                                    uvm_analysis_export                     -     @674            
+          seq_item_export                               uvm_seq_item_pull_imp                   -     @792            
+          arbitration_queue                             array                                   0     -               
+          lock_queue                                    array                                   0     -               
+          num_last_reqs                                 integral                                32    'd1             
+          num_last_rsps                                 integral                                32    'd1             
+    env_master_svr_root                                 uvm_env                                 -     @391            
+      m_agt                                             uvm_agent                               -     @860            
+        drv                                             uvm_driver #(REQ,RSP)                   -     @1008           
+          rsp_port                                      uvm_analysis_port                       -     @1027           
+          seq_item_port                                 uvm_seq_item_pull_port                  -     @1017           
+        mon                                             uvm_monitor                             -     @1037           
+          item_collect_port                             uvm_analysis_port                       -     @1048           
+        sqr                                             uvm_sequencer                           -     @871            
+          rsp_export                                    uvm_analysis_export                     -     @880            
+          seq_item_export                               uvm_seq_item_pull_imp                   -     @998            
+          arbitration_queue                             array                                   0     -               
+          lock_queue                                    array                                   0     -               
+          num_last_reqs                                 integral                                32    'd1             
+          num_last_rsps                                 integral                                32    'd1             
+    env_slave_svr_h_strm                                uvm_env                                 -     @434            
+      s_agt                                             uvm_agent                               -     @1066           
+        drv                                             uvm_driver #(REQ,RSP)                   -     @1214           
+          rsp_port                                      uvm_analysis_port                       -     @1233           
+          seq_item_port                                 uvm_seq_item_pull_port                  -     @1223           
+        mon                                             uvm_monitor                             -     @1243           
+          item_collect_port                             uvm_analysis_port                       -     @1254           
+        sqr                                             uvm_sequencer                           -     @1077           
+          rsp_export                                    uvm_analysis_export                     -     @1086           
+          seq_item_export                               uvm_seq_item_pull_imp                   -     @1204           
+          arbitration_queue                             array                                   0     -               
+          lock_queue                                    array                                   0     -               
+          num_last_reqs                                 integral                                32    'd1             
+          num_last_rsps                                 integral                                32    'd1             
+    env_slave_svr_seed_strm_0                           uvm_env                                 -     @414            
+      s_agt                                             uvm_agent                               -     @1272           
+        drv                                             uvm_driver #(REQ,RSP)                   -     @1420           
+          rsp_port                                      uvm_analysis_port                       -     @1439           
+          seq_item_port                                 uvm_seq_item_pull_port                  -     @1429           
+        mon                                             uvm_monitor                             -     @1449           
+          item_collect_port                             uvm_analysis_port                       -     @1460           
+        sqr                                             uvm_sequencer                           -     @1283           
+          rsp_export                                    uvm_analysis_export                     -     @1292           
+          seq_item_export                               uvm_seq_item_pull_imp                   -     @1410           
+          arbitration_queue                             array                                   0     -               
+          lock_queue                                    array                                   0     -               
+          num_last_reqs                                 integral                                32    'd1             
+          num_last_rsps                                 integral                                32    'd1             
+    env_slave_svr_seed_strm_1                           uvm_env                                 -     @424            
+      s_agt                                             uvm_agent                               -     @1478           
+        drv                                             uvm_driver #(REQ,RSP)                   -     @1626           
+          rsp_port                                      uvm_analysis_port                       -     @1645           
+          seq_item_port                                 uvm_seq_item_pull_port                  -     @1635           
+        mon                                             uvm_monitor                             -     @1655           
+          item_collect_port                             uvm_analysis_port                       -     @1666           
+        sqr                                             uvm_sequencer                           -     @1489           
+          rsp_export                                    uvm_analysis_export                     -     @1498           
+          seq_item_export                               uvm_seq_item_pull_imp                   -     @1616           
+          arbitration_queue                             array                                   0     -               
+          lock_queue                                    array                                   0     -               
+          num_last_reqs                                 integral                                32    'd1             
+          num_last_rsps                                 integral                                32    'd1             
+    ggm_tree_virtual_sqr                                ggm_tree_virtual_sequencer              -     @516            
+      rsp_export                                        uvm_analysis_export                     -     @525            
+      seq_item_export                                   uvm_seq_item_pull_imp                   -     @643            
+      arbitration_queue                                 array                                   0     -               
+      lock_queue                                        array                                   0     -               
+      num_last_reqs                                     integral                                32    'd1             
+      num_last_rsps                                     integral                                32    'd1             
+    refm                                                ggm_tree_reference_model                -     @444            
+      trans_num_idx                                     integral                                32    'h0             
+    subsys_mon                                          ggm_tree_subsystem_monitor              -     @457            
+      scbd                                              ggm_tree_scoreboard                     -     @1693           
+        refm                                            ggm_tree_reference_model                -     @444            
+          trans_num_idx                                 integral                                32    'h0             
+        file_rd_TVOUT_transaction_size                  <unknown>                               -     @1703           
+          TV_FILE                                       string                                  0     ""              
+          fp                                            integral                                32    'hxxxxxxxx      
+          TV_FILE_num                                   integral                                32    'h0             
+          HEX_read                                      integral                                32    'h0             
+          DEC_read                                      integral                                32    'h0             
+          is_binary                                     integral                                32    'h0             
+          TV_FILE_COMPARE                               string                                  0     ""              
+          fp_compare                                    integral                                32    'hxxxxxxxx      
+        TVOUT_transaction_size_queue                    da(integral)                            0     -               
+        file_wr_port_seed_strm_0_seed_strm_0_din        <unknown>                               -     @1704           
+          TV_FILE                                       string                                  0     ""              
+          fp                                            integral                                32    'hxxxxxxxx      
+          file_open                                     integral                                32    'h0             
+          write_file_done                               integral                                32    'h0             
+          write_section_done                            integral                                32    'h0             
+          TRANSACTION_NUM                               integral                                32    'h0             
+          transaction_num_idx                           integral                                32    'h0             
+          TRANSACTION_DEPTH                             integral                                32    'h0             
+          TRANSACTION_DEPTH_queue                       da(integral)                            0     -               
+          TRANSACTION_DEPTH_queue_for_depth_check       da(integral)                            0     -               
+          transaction_depth_idx                         integral                                32    'h0             
+          ap_done_num_idx                               integral                                32    'h0             
+          is_binary                                     integral                                32    'h0             
+        write_file_done_seed_strm_0_seed_strm_0_din     integral                                32    'h0             
+        write_section_done_seed_strm_0_seed_strm_0_din  integral                                32    'h0             
+        file_wr_port_seed_strm_1_seed_strm_1_din        <unknown>                               -     @1705           
+          TV_FILE                                       string                                  0     ""              
+          fp                                            integral                                32    'hxxxxxxxx      
+          file_open                                     integral                                32    'h0             
+          write_file_done                               integral                                32    'h0             
+          write_section_done                            integral                                32    'h0             
+          TRANSACTION_NUM                               integral                                32    'h0             
+          transaction_num_idx                           integral                                32    'h0             
+          TRANSACTION_DEPTH                             integral                                32    'h0             
+          TRANSACTION_DEPTH_queue                       da(integral)                            0     -               
+          TRANSACTION_DEPTH_queue_for_depth_check       da(integral)                            0     -               
+          transaction_depth_idx                         integral                                32    'h0             
+          ap_done_num_idx                               integral                                32    'h0             
+          is_binary                                     integral                                32    'h0             
+        write_file_done_seed_strm_1_seed_strm_1_din     integral                                32    'h0             
+        write_section_done_seed_strm_1_seed_strm_1_din  integral                                32    'h0             
+        file_wr_port_h_strm_h_strm_din                  <unknown>                               -     @1706           
+          TV_FILE                                       string                                  0     ""              
+          fp                                            integral                                32    'hxxxxxxxx      
+          file_open                                     integral                                32    'h0             
+          write_file_done                               integral                                32    'h0             
+          write_section_done                            integral                                32    'h0             
+          TRANSACTION_NUM                               integral                                32    'h0             
+          transaction_num_idx                           integral                                32    'h0             
+          TRANSACTION_DEPTH                             integral                                32    'h0             
+          TRANSACTION_DEPTH_queue                       da(integral)                            0     -               
+          TRANSACTION_DEPTH_queue_for_depth_check       da(integral)                            0     -               
+          transaction_depth_idx                         integral                                32    'h0             
+          ap_done_num_idx                               integral                                32    'h0             
+          is_binary                                     integral                                32    'h0             
+        write_file_done_h_strm_h_strm_din               integral                                32    'h0             
+        write_section_done_h_strm_h_strm_din            integral                                32    'h0             
+      svr_master_iv_imp                                 uvm_analysis_imp_svr_master_iv          -     @476            
+      svr_master_root_imp                               uvm_analysis_imp_svr_master_root        -     @466            
+      svr_slave_h_strm_imp                              uvm_analysis_imp_svr_slave_h_strm       -     @506            
+      svr_slave_seed_strm_0_imp                         uvm_analysis_imp_svr_slave_seed_strm_0  -     @486            
+      svr_slave_seed_strm_1_imp                         uvm_analysis_imp_svr_slave_seed_strm_1  -     @496            
+    env_master_svr_root                                 uvm_env                                 -     @391            
+    env_master_svr_iv                                   uvm_env                                 -     @404            
+    env_slave_svr_seed_strm_0                           uvm_env                                 -     @414            
+    env_slave_svr_seed_strm_1                           uvm_env                                 -     @424            
+    env_slave_svr_h_strm                                uvm_env                                 -     @434            
+    refm                                                ggm_tree_reference_model                -     @444            
+    ggm_tree_virtual_sqr                                ggm_tree_virtual_sequencer              -     @516            
+    ggm_tree_cfg                                        ggm_tree_config                         -     @380            
+      port_root_cfg                                     svr_config                              -     @381            
+        svr_type                                        svr_inst_type                           32    SVR_MASTER      
+        prt_type                                        svr_protocol_type                       32    AP_NONE         
+        is_active                                       svr_active_passive_enum                 1     SVR_ACTIVE      
+        reset_level                                     svr_reset_level_enum                    1     RESET_LEVEL_HIGH
+        spec_cfg                                        svr_spec_cfg_enum                       32    NORMAL          
+        clatency                                        svr_latency                             -     @382            
+          transfer_latency                              integral                                32    'h0             
+      port_iv_cfg                                       svr_config                              -     @383            
+        svr_type                                        svr_inst_type                           32    SVR_MASTER      
+        prt_type                                        svr_protocol_type                       32    AP_NONE         
+        is_active                                       svr_active_passive_enum                 1     SVR_ACTIVE      
+        reset_level                                     svr_reset_level_enum                    1     RESET_LEVEL_HIGH
+        spec_cfg                                        svr_spec_cfg_enum                       32    NORMAL          
+        clatency                                        svr_latency                             -     @384            
+          transfer_latency                              integral                                32    'h0             
+      port_seed_strm_0_cfg                              svr_config                              -     @385            
+        svr_type                                        svr_inst_type                           32    SVR_SLAVE       
+        prt_type                                        svr_protocol_type                       32    AP_FIFO         
+        is_active                                       svr_active_passive_enum                 1     SVR_ACTIVE      
+        reset_level                                     svr_reset_level_enum                    1     RESET_LEVEL_HIGH
+        spec_cfg                                        svr_spec_cfg_enum                       32    NORMAL          
+        clatency                                        svr_latency                             -     @386            
+          transfer_latency                              integral                                32    'h0             
+      port_seed_strm_1_cfg                              svr_config                              -     @387            
+        svr_type                                        svr_inst_type                           32    SVR_SLAVE       
+        prt_type                                        svr_protocol_type                       32    AP_FIFO         
+        is_active                                       svr_active_passive_enum                 1     SVR_ACTIVE      
+        reset_level                                     svr_reset_level_enum                    1     RESET_LEVEL_HIGH
+        spec_cfg                                        svr_spec_cfg_enum                       32    NORMAL          
+        clatency                                        svr_latency                             -     @388            
+          transfer_latency                              integral                                32    'h0             
+      port_h_strm_cfg                                   svr_config                              -     @389            
+        svr_type                                        svr_inst_type                           32    SVR_SLAVE       
+        prt_type                                        svr_protocol_type                       32    AP_FIFO         
+        is_active                                       svr_active_passive_enum                 1     SVR_ACTIVE      
+        reset_level                                     svr_reset_level_enum                    1     RESET_LEVEL_HIGH
+        spec_cfg                                        svr_spec_cfg_enum                       32    NORMAL          
+        clatency                                        svr_latency                             -     @390            
+          transfer_latency                              integral                                32    'h0             
+      check_ena                                         integral                                32    'h0             
+      cover_ena                                         integral                                32    'h0             
+----------------------------------------------------------------------------------------------------------------------
+
+UVM_INFO /opt/Xillinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "116000"
+// RTL Simulation : 1 / 1 [100.00%] @ "370570000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 370618500 ps : File "/opt/Xillinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1317.109 ; gain = 0.000 ; free physical = 51408 ; free virtual = 59693
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Oct 31 16:29:07 2025...
+INFO: [COSIM 212-316] Starting C post checking ...
+============================================
+GGM_TREE + VC_OPEN Comprehensive Testbench
+============================================
+Configuration:
+  K (tree depth):        2
+  TAU (num trees):       64
+  GGM_UNROLL_FAC:        2
+  PATH_LEN:              4 (K+2)
+  Nodes per tree:        7
+  Leaves per tree:       4
+============================================
+
+RANDOM OPEN INDICES:
+--------------------
+  Tree 0: opening leaf 1
+  Tree 1: opening leaf 3
+  Tree 2: opening leaf 3
+  Tree 3: opening leaf 0
+  Tree 4: opening leaf 2
+  Tree 5: opening leaf 3
+  Tree 6: opening leaf 2
+  Tree 7: opening leaf 2
+  Tree 8: opening leaf 0
+  Tree 9: opening leaf 1
+  ...
+
+INPUT PARAMETERS:
+-----------------
+Master Root: 0x01234567_89abcdef_fedcba98_76543210
+IV:          0xffeeddcc_bbaa9988_77665544_33221100
+
+=== PROVER PHASE ===
+Calling ggm_tree() (includes H hashing)...
+✓ ggm_tree() completed.
+
+Reading prover hashes from h_strm:
+  h_prover[0] = 0xde786ebb56f8c00bafb0c64c42cdf6df_d188422ed598ca5250cd41e4dba584a7
+  h_prover[1] = 0x0fc773ef44ec5273411bc68c3429c2b6_826f032b3d73baf95f550df7e900a1fe
+  h_prover[2] = 0xd33f202e5bae771763e040e3c313ee00_7078735833bbd4e1ff28586f02afc0cd
+  h_prover[3] = 0xc320c5aa4533030a60bbc7f412fabead_101d2d5bd8b904ccf9ac20fbae9fa4b3
+  h_prover[4] = 0x68f1f819b80af0164c61a32ffb11e628_1d4a34fb1ecdbdbd50978a71104aea8e
+  ...
+✓ All 64 prover hashes collected.
+
+=== OPENING PHASE ===
+Calling VC_Open()...
+✓ VC_Open() completed.
+  Generated 256 path elements
+  (64 trees × 4 elements per path)
+
+=== VERIFIER PHASE ===
+Calling ggm_reconstruct()...
+✓ ggm_reconstruct() completed.
+
+============================================
+HASH VERIFICATION
+============================================
+
+Comparing prover vs verifier hashes:
+  ✓✓✓ ALL 64 HASHES MATCH! ✓✓✓
+  Verification SUCCESSFUL!
+
+============================================
+DETAILED PATH VERIFICATION (First 3 Trees)
+============================================
+
+--- Tree 0 (Opening leaf 1) ---
+  Authentication Path:
+    [0] Root:        0x4dea6990_73925dc6_92f7b439_c6e2b9f4
+    [1] Sibling L1:   0xc835ead6_75f8d6cf_f0fbd7a6_09d4e693
+    [2] Sibling L2:   0x0eb4bb5e_28b3bd73_8e60bd1c_86e2b86d
+    [3] Com at leaf 1: 0x606b0d88_75436764_4053c1c2_8a861fe0
+  ✓ Path elements verified
+  Prover hash:     0xde786ebb_56f8c00b_afb0c64c_42cdf6df_d188422e_d598ca52_50cd41e4_dba584a7
+  Verifier hash:   0xde786ebb_56f8c00b_afb0c64c_42cdf6df_d188422e_d598ca52_50cd41e4_dba584a7
+  ✓ Hashes MATCH!
+
+--- Tree 1 (Opening leaf 3) ---
+  Authentication Path:
+    [0] Root:        0x723dffb4_4af06f6b_a536bdc2_e971c383
+    [1] Sibling L1:   0x83122c0d_6e80557c_ef2d5828_c2de0225
+    [2] Sibling L2:   0xede87783_1b76db26_f9855f8a_466f89e7
+    [3] Com at leaf 3: 0xb00bb456_39504e8d_4a53f5e4_4a57a176
+  ✓ Path elements verified
+  Prover hash:     0x0fc773ef_44ec5273_411bc68c_3429c2b6_826f032b_3d73baf9_5f550df7_e900a1fe
+  Verifier hash:   0x0fc773ef_44ec5273_411bc68c_3429c2b6_826f032b_3d73baf9_5f550df7_e900a1fe
+  ✓ Hashes MATCH!
+
+--- Tree 2 (Opening leaf 3) ---
+  Authentication Path:
+    [0] Root:        0x7a040796_be7b4376_26364a12_310ad4b8
+    [1] Sibling L1:   0xa6bb884d_ebbc72e4_66adf281_a90188ee
+    [2] Sibling L2:   0x87514930_b0ebe9d5_7aaf495a_24c023f8
+    [3] Com at leaf 3: 0x189f63d8_af6bad65_f76aeb25_ce762b4a
+  ✓ Path elements verified
+  Prover hash:     0xd33f202e_5bae7717_63e040e3_c313ee00_70787358_33bbd4e1_ff28586f_02afc0cd
+  Verifier hash:   0xd33f202e_5bae7717_63e040e3_c313ee00_70787358_33bbd4e1_ff28586f_02afc0cd
+  ✓ Hashes MATCH!
+
+============================================
+FINAL VERIFICATION SUMMARY
+============================================
+✓✓✓ ALL TESTS PASSED ✓✓✓
+  • All 64 trees generated correctly
+  • All 64 authentication paths valid
+  • All 64 hash verifications successful
+
+🎉 Vector Commitment scheme verified!
+============================================
+
+Statistics:
+  Total PRG calls:       416
+  Total h0 calls:        256 (prover)
+  Total h0 calls:        192 (verifier)
+  Total H (SHAKE256):    64 (prover)
+  Total H (SHAKE256):    64 (verifier)
+  Total path elements:   256
+  Path size per tree:    64 bytes
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<128>, 0>1' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<128>, 0>0' contains leftover data, which may result in RTL simulation hanging.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 256
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-112] Total CPU user time: 152.94 seconds. Total CPU system time: 3.51 seconds. Total elapsed time: 50.83 seconds; peak allocated memory: 560.555 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 54s

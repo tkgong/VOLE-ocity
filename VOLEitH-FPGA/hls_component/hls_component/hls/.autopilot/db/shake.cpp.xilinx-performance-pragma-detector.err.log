@@ -1,0 +1,145 @@
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:2:
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:102:51: error: Invalid Directive: for current device, ROM_2P + BRAM is invalid combination for BIND_STORAGE's option 'type + impl'
+#pragma HLS bind_storage variable=roundIndex type=ROM_2P impl=BRAM
+                                                  ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:251:10: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+ #pragma HLS resource variable = blkNumReg core = DivnS // latency = 20
+         ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:251:10: error: Resource with core_name: DivnS pragma is ignored, because this core doesn't exist at all 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:427:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = blkNumReg core = DivnS // latency = 200
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:427:9: error: Resource with core_name: DivnS pragma is ignored, because this core doesn't exist at all 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:759:18: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+         #pragma HLS resource variable=blkNumReg core=DivnS
+                 ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:759:18: error: Resource with core_name: DivnS pragma is ignored, because this core doesn't exist at all 
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:2:
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:38:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:127:9: error: use of undeclared identifier '__fpga_fifo_push'
+        __fpga_fifo_push(&V, &din);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:373:20: note: in instantiation of member function 'hls::stream<ap_uint<224>, 0>::write' requested here
+        digestStrm.write(digest.range(8 * hashLen - 1, 0));
+                   ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:587:15: note: in instantiation of function template specialization 'xf::security::internal::sha3Digest<28>' requested here
+    internal::sha3Digest<28>(msgStrm, msgLenStrm, endMsgLenStrm, digestStrm, endDigestStrm);
+              ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:2:
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:38:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:127:9: error: use of undeclared identifier '__fpga_fifo_push'
+        __fpga_fifo_push(&V, &din);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:373:20: note: in instantiation of member function 'hls::stream<ap_uint<384>, 0>::write' requested here
+        digestStrm.write(digest.range(8 * hashLen - 1, 0));
+                   ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:643:15: note: in instantiation of function template specialization 'xf::security::internal::sha3Digest<48>' requested here
+    internal::sha3Digest<48>(msgStrm, msgLenStrm, endMsgLenStrm, digestStrm, endDigestStrm);
+              ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:2:
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:38:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:127:9: error: use of undeclared identifier '__fpga_fifo_push'
+        __fpga_fifo_push(&V, &din);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:373:20: note: in instantiation of member function 'hls::stream<ap_uint<512>, 0>::write' requested here
+        digestStrm.write(digest.range(8 * hashLen - 1, 0));
+                   ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:671:15: note: in instantiation of function template specialization 'xf::security::internal::sha3Digest<64>' requested here
+    internal::sha3Digest<64>(msgStrm, msgLenStrm, endMsgLenStrm, digestStrm, endDigestStrm);
+              ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:2:
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:38:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:98:9: error: use of undeclared identifier '__fpga_fifo_pop'
+        __fpga_fifo_pop(&V, &dout);
+        ^
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:109:9: note: in instantiation of member function 'hls::stream<bool, 0>::read' requested here
+        read(tmp);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:746:37: note: in instantiation of member function 'hls::stream<bool, 0>::read' requested here
+    bool msgEndFlag = endMsgLenStrm.read();
+                                    ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:2:
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:38:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:98:9: error: use of undeclared identifier '__fpga_fifo_pop'
+        __fpga_fifo_pop(&V, &dout);
+        ^
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:109:9: note: in instantiation of member function 'hls::stream<ap_uint<128>, 0>::read' requested here
+        read(tmp);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:753:42: note: in instantiation of member function 'hls::stream<ap_uint<128>, 0>::read' requested here
+        ap_uint<128> msgLen = msgLenStrm.read();
+                                         ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:2:
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:38:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:98:9: error: use of undeclared identifier '__fpga_fifo_pop'
+        __fpga_fifo_pop(&V, &dout);
+        ^
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:109:9: note: in instantiation of member function 'hls::stream<ap_uint<64>, 0>::read' requested here
+        read(tmp);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:778:50: note: in instantiation of member function 'hls::stream<ap_uint<64>, 0>::read' requested here
+                    ap_uint<64> msgReg = msgStrm.read();
+                                                 ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:2:
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:38:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:127:9: error: use of undeclared identifier '__fpga_fifo_push'
+        __fpga_fifo_push(&V, &din);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:847:24: note: in instantiation of member function 'hls::stream<ap_uint<128>, 0>::write' requested here
+            digestStrm.write(output);
+                       ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:2:
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:38:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:127:9: error: use of undeclared identifier '__fpga_fifo_push'
+        __fpga_fifo_push(&V, &din);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:848:27: note: in instantiation of member function 'hls::stream<bool, 0>::write' requested here
+            endDigestStrm.write(false);
+                          ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:2:
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:38:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:127:9: error: use of undeclared identifier '__fpga_fifo_push'
+        __fpga_fifo_push(&V, &din);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:22:13: note: in instantiation of member function 'hls::stream<ap_uint<64>, 0>::write' requested here
+    msgStrm.write(x.range(63, 0));      // Low 64 bits of x (bytes 0-7)
+            ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:2:
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:38:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:98:9: error: use of undeclared identifier '__fpga_fifo_pop'
+        __fpga_fifo_pop(&V, &dout);
+        ^
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:109:9: note: in instantiation of member function 'hls::stream<ap_uint<256>, 0>::read' requested here
+        read(tmp);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:33:38: note: in instantiation of member function 'hls::stream<ap_uint<256>, 0>::read' requested here
+    ap_uint<256> digest = digestStrm.read();
+                                     ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:2:
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:38:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:89:17: error: use of undeclared identifier '__fpga_fifo_not_empty'
+        return !__fpga_fifo_not_empty(&V);
+                ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:39:26: note: in instantiation of member function 'hls::stream<bool, 0>::empty' requested here
+        if(endMsgLenStrm.empty()) break;
+                         ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:2:
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp:38:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:127:9: error: use of undeclared identifier '__fpga_fifo_push'
+        __fpga_fifo_push(&V, &din);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp:82:16: note: in instantiation of member function 'hls::stream<ap_uint<256>, 0>::write' requested here
+        h_strm.write(digest);
+               ^

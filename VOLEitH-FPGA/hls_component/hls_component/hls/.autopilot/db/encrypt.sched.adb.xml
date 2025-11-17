@@ -1,0 +1,807 @@
+<stg><name>encrypt</name>
+
+
+<trans_list>
+
+<trans id="86" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="87" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="88" from="3" to="4">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="89" from="4" to="5">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="90" from="5" to="6">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="91" from="6" to="7">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="92" from="7" to="8">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="93" from="8" to="9">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="94" from="9" to="10">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="95" from="10" to="11">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="96" from="11" to="12">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="97" from="12" to="13">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="98" from="13" to="14">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="99" from="14" to="15">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="100" from="15" to="16">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="101" from="16" to="17">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="102" from="17" to="18">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="103" from="18" to="19">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="104" from="19" to="20">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="105" from="20" to="21">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="106" from="21" to="22">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="107" from="22" to="23">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="24" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="128" op_0_bw="128" op_1_bw="128">
+<![CDATA[
+entry:0 %key_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %key
+
+]]></Node>
+<StgValue><ssdm name="key_read"/></StgValue>
+</operation>
+
+<operation id="25" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="128" op_0_bw="128" op_1_bw="128">
+<![CDATA[
+entry:1 %in_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %in_r
+
+]]></Node>
+<StgValue><ssdm name="in_read"/></StgValue>
+</operation>
+
+<operation id="26" st_id="1" stage="12" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="27" st_id="2" stage="11" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="28" st_id="3" stage="10" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="29" st_id="4" stage="9" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="5" st_id="5">
+
+<operation id="30" st_id="5" stage="8" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="6" st_id="6">
+
+<operation id="31" st_id="6" stage="7" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="7" st_id="7">
+
+<operation id="32" st_id="7" stage="6" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="8" st_id="8">
+
+<operation id="33" st_id="8" stage="5" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="9" st_id="9">
+
+<operation id="34" st_id="9" stage="4" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="10" st_id="10">
+
+<operation id="35" st_id="10" stage="3" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="11" st_id="11">
+
+<operation id="36" st_id="11" stage="2" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+</state>
+
+<state id="12" st_id="12">
+
+<operation id="37" st_id="12" stage="1" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="1408" op_0_bw="1408" op_1_bw="128" op_2_bw="8">
+<![CDATA[
+entry:3 %call_ret = call i1408 @updateKey, i128 %key_read, i8 %cipher_0_ssbox40
+
+]]></Node>
+<StgValue><ssdm name="call_ret"/></StgValue>
+</operation>
+
+<operation id="38" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:4 %cipher_key_list = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list"/></StgValue>
+</operation>
+
+<operation id="39" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:5 %cipher_key_list_1 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_1"/></StgValue>
+</operation>
+
+<operation id="40" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:6 %cipher_key_list_2 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_2"/></StgValue>
+</operation>
+
+<operation id="41" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:7 %cipher_key_list_3 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_3"/></StgValue>
+</operation>
+
+<operation id="42" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:8 %cipher_key_list_4 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_4"/></StgValue>
+</operation>
+
+<operation id="43" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:9 %cipher_key_list_5 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_5"/></StgValue>
+</operation>
+
+<operation id="44" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:10 %cipher_key_list_6 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_6"/></StgValue>
+</operation>
+
+<operation id="45" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:11 %cipher_key_list_7 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_7"/></StgValue>
+</operation>
+
+<operation id="46" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:12 %cipher_key_list_8 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_8"/></StgValue>
+</operation>
+
+<operation id="47" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:13 %cipher_key_list_9 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_9"/></StgValue>
+</operation>
+
+<operation id="48" st_id="12" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="128" op_0_bw="1408">
+<![CDATA[
+entry:14 %cipher_key_list_10 = extractvalue i1408 %call_ret
+
+]]></Node>
+<StgValue><ssdm name="cipher_key_list_10"/></StgValue>
+</operation>
+
+<operation id="49" st_id="12" stage="12" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="13" st_id="13">
+
+<operation id="50" st_id="13" stage="11" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="14" st_id="14">
+
+<operation id="51" st_id="14" stage="10" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="15" st_id="15">
+
+<operation id="52" st_id="15" stage="9" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="16" st_id="16">
+
+<operation id="53" st_id="16" stage="8" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="17" st_id="17">
+
+<operation id="54" st_id="17" stage="7" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="18" st_id="18">
+
+<operation id="55" st_id="18" stage="6" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="19" st_id="19">
+
+<operation id="56" st_id="19" stage="5" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="20" st_id="20">
+
+<operation id="57" st_id="20" stage="4" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="21" st_id="21">
+
+<operation id="58" st_id="21" stage="3" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="22" st_id="22">
+
+<operation id="59" st_id="22" stage="2" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+</state>
+
+<state id="23" st_id="23">
+
+<operation id="60" st_id="23" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="64" op_3_bw="64" op_4_bw="64">
+<![CDATA[
+entry:2 %specmemcore_ln18 = specmemcore void @_ssdm_op_SpecMemCore, i8 %cipher_0_ssbox, i64 666, i64 38, i64 18446744073709551615
+
+]]></Node>
+<StgValue><ssdm name="specmemcore_ln18"/></StgValue>
+</operation>
+
+<operation id="61" st_id="23" stage="1" lat="12">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="128" op_0_bw="128" op_1_bw="128" op_2_bw="128" op_3_bw="128" op_4_bw="128" op_5_bw="128" op_6_bw="128" op_7_bw="128" op_8_bw="128" op_9_bw="128" op_10_bw="128" op_11_bw="128" op_12_bw="128" op_13_bw="8">
+<![CDATA[
+entry:15 %out_write_assign = call i128 @process, i128 %cipher_key_list, i128 %cipher_key_list_1, i128 %cipher_key_list_2, i128 %cipher_key_list_3, i128 %cipher_key_list_4, i128 %cipher_key_list_5, i128 %cipher_key_list_6, i128 %cipher_key_list_7, i128 %cipher_key_list_8, i128 %cipher_key_list_9, i128 %cipher_key_list_10, i128 %in_read, i8 %cipher_0_ssbox
+
+]]></Node>
+<StgValue><ssdm name="out_write_assign"/></StgValue>
+</operation>
+
+<operation id="62" st_id="23" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="0" op_0_bw="128">
+<![CDATA[
+entry:16 %ret_ln8 = ret i128 %out_write_assign
+
+]]></Node>
+<StgValue><ssdm name="ret_ln8"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

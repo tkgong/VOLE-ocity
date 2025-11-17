@@ -1,0 +1,47 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'EvalCircuit'" level="0">
+<item name = "Date">Mon Nov 17 18:41:28 2025
+</item>
+<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Project">hls_component</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 4.978 ns, 0 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">577873, 577873, 2.889 ms, 2.889 ms, 577873, 577873, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_EvalCircuit_Pipeline_VITIS_LOOP_100_1_fu_56">EvalCircuit_Pipeline_VITIS_LOOP_100_1, 1603, 1603, 8.015 us, 8.015 us, 1602, 1602, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_EvalCircuit_Pipeline_VITIS_LOOP_107_2_fu_72">EvalCircuit_Pipeline_VITIS_LOOP_107_2, 576267, 576267, 2.881 ms, 2.881 ms, 576261, 576261, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

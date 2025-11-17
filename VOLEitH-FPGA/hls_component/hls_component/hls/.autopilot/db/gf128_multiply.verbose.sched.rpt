@@ -1,0 +1,205 @@
+
+
+================================================================
+== Vitis HLS Report for 'gf128_multiply'
+================================================================
+* Date:           Mon Nov 17 18:41:28 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.978 ns|        0 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        7|        7|  35.000 ns|  35.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 8
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 8, States = { 1 2 3 4 5 6 7 8 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.97>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%b_val_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %b_val" [gatebygate.cpp:43]   --->   Operation 9 'read' 'b_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%a_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %a" [gatebygate.cpp:43]   --->   Operation 10 'read' 'a_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [7/7] (3.97ns)   --->   "%product = call i255 @gf128_clmul, i128 %a_read, i128 %b_val_read" [gatebygate.cpp:48]   --->   Operation 11 'call' 'product' <Predicate = true> <Delay = 3.97> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 4.97>
+ST_2 : Operation 12 [6/7] (4.97ns)   --->   "%product = call i255 @gf128_clmul, i128 %a_read, i128 %b_val_read" [gatebygate.cpp:48]   --->   Operation 12 'call' 'product' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 4.97>
+ST_3 : Operation 13 [5/7] (4.97ns)   --->   "%product = call i255 @gf128_clmul, i128 %a_read, i128 %b_val_read" [gatebygate.cpp:48]   --->   Operation 13 'call' 'product' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 4.97>
+ST_4 : Operation 14 [4/7] (4.97ns)   --->   "%product = call i255 @gf128_clmul, i128 %a_read, i128 %b_val_read" [gatebygate.cpp:48]   --->   Operation 14 'call' 'product' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 4.97>
+ST_5 : Operation 15 [3/7] (4.97ns)   --->   "%product = call i255 @gf128_clmul, i128 %a_read, i128 %b_val_read" [gatebygate.cpp:48]   --->   Operation 15 'call' 'product' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 4.97>
+ST_6 : Operation 16 [2/7] (4.97ns)   --->   "%product = call i255 @gf128_clmul, i128 %a_read, i128 %b_val_read" [gatebygate.cpp:48]   --->   Operation 16 'call' 'product' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 7 <SV = 6> <Delay = 4.97>
+ST_7 : Operation 17 [1/7] (4.97ns)   --->   "%product = call i255 @gf128_clmul, i128 %a_read, i128 %b_val_read" [gatebygate.cpp:48]   --->   Operation 17 'call' 'product' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+ST_7 : Operation 18 [1/1] (0.00ns)   --->   "%high = partselect i127 @_ssdm_op_PartSelect.i127.i255.i32.i32, i255 %product, i32 128, i32 254" [gatebygate.cpp:21->gatebygate.cpp:49]   --->   Operation 18 'partselect' 'high' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 7> <Delay = 0.60>
+ST_8 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln43 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_34" [gatebygate.cpp:43]   --->   Operation 19 'specpipeline' 'specpipeline_ln43' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 20 [1/1] (0.00ns) (grouped into LUT with out node xor_ln40_4)   --->   "%low = trunc i255 %product" [gatebygate.cpp:20->gatebygate.cpp:49]   --->   Operation 20 'trunc' 'low' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 21 [1/1] (0.00ns) (grouped into LUT with out node temp)   --->   "%zext_ln21 = zext i127 %high" [gatebygate.cpp:21->gatebygate.cpp:49]   --->   Operation 21 'zext' 'zext_ln21' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 22 [1/1] (0.00ns) (grouped into LUT with out node temp)   --->   "%r1 = bitconcatenate i134 @_ssdm_op_BitConcatenate.i134.i127.i7, i127 %high, i7 0" [gatebygate.cpp:24->gatebygate.cpp:49]   --->   Operation 22 'bitconcatenate' 'r1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 23 [1/1] (0.00ns) (grouped into LUT with out node temp)   --->   "%r2 = bitconcatenate i129 @_ssdm_op_BitConcatenate.i129.i127.i2, i127 %high, i2 0" [gatebygate.cpp:25->gatebygate.cpp:49]   --->   Operation 23 'bitconcatenate' 'r2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 24 [1/1] (0.00ns) (grouped into LUT with out node temp)   --->   "%r3 = bitconcatenate i128 @_ssdm_op_BitConcatenate.i128.i127.i1, i127 %high, i1 0" [gatebygate.cpp:26->gatebygate.cpp:49]   --->   Operation 24 'bitconcatenate' 'r3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 25 [1/1] (0.00ns) (grouped into LUT with out node temp)   --->   "%xor_ln29 = xor i128 %r3, i128 %zext_ln21" [gatebygate.cpp:29->gatebygate.cpp:49]   --->   Operation 25 'xor' 'xor_ln29' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 26 [1/1] (0.00ns) (grouped into LUT with out node temp)   --->   "%zext_ln29 = zext i128 %xor_ln29" [gatebygate.cpp:29->gatebygate.cpp:49]   --->   Operation 26 'zext' 'zext_ln29' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 27 [1/1] (0.00ns) (grouped into LUT with out node temp)   --->   "%xor_ln29_1 = xor i129 %r2, i129 %zext_ln29" [gatebygate.cpp:29->gatebygate.cpp:49]   --->   Operation 27 'xor' 'xor_ln29_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.29> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 28 [1/1] (0.00ns) (grouped into LUT with out node temp)   --->   "%zext_ln29_1 = zext i129 %xor_ln29_1" [gatebygate.cpp:29->gatebygate.cpp:49]   --->   Operation 28 'zext' 'zext_ln29_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 29 [1/1] (0.30ns) (out node of the LUT)   --->   "%temp = xor i134 %r1, i134 %zext_ln29_1" [gatebygate.cpp:29->gatebygate.cpp:49]   --->   Operation 29 'xor' 'temp' <Predicate = true> <Delay = 0.30> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.29> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node xor_ln40_4)   --->   "%mid = trunc i134 %temp" [gatebygate.cpp:32->gatebygate.cpp:49]   --->   Operation 30 'trunc' 'mid' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 31 [1/1] (0.00ns)   --->   "%overflow = partselect i6 @_ssdm_op_PartSelect.i6.i134.i32.i32, i134 %temp, i32 128, i32 133" [gatebygate.cpp:33->gatebygate.cpp:49]   --->   Operation 31 'partselect' 'overflow' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node xor_ln40_4)   --->   "%zext_ln33 = zext i6 %overflow" [gatebygate.cpp:33->gatebygate.cpp:49]   --->   Operation 32 'zext' 'zext_ln33' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node xor_ln40_4)   --->   "%o1 = bitconcatenate i13 @_ssdm_op_BitConcatenate.i13.i6.i7, i6 %overflow, i7 0" [gatebygate.cpp:35->gatebygate.cpp:49]   --->   Operation 33 'bitconcatenate' 'o1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node xor_ln40_4)   --->   "%zext_ln35 = zext i13 %o1" [gatebygate.cpp:35->gatebygate.cpp:49]   --->   Operation 34 'zext' 'zext_ln35' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node xor_ln40_4)   --->   "%o2 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i6.i2, i6 %overflow, i2 0" [gatebygate.cpp:36->gatebygate.cpp:49]   --->   Operation 35 'bitconcatenate' 'o2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node xor_ln40_4)   --->   "%o3 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i6.i1, i6 %overflow, i1 0" [gatebygate.cpp:37->gatebygate.cpp:49]   --->   Operation 36 'bitconcatenate' 'o3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 37 [1/1] (0.00ns) (grouped into LUT with out node xor_ln40_4)   --->   "%xor_ln40 = xor i128 %low, i128 %zext_ln35" [gatebygate.cpp:40->gatebygate.cpp:49]   --->   Operation 37 'xor' 'xor_ln40' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 38 [1/1] (0.00ns) (grouped into LUT with out node xor_ln40_4)   --->   "%xor_ln40_1 = xor i128 %xor_ln40, i128 %mid" [gatebygate.cpp:40->gatebygate.cpp:49]   --->   Operation 38 'xor' 'xor_ln40_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 39 [1/1] (0.00ns) (grouped into LUT with out node xor_ln40_4)   --->   "%xor_ln40_2 = xor i7 %o3, i7 %zext_ln33" [gatebygate.cpp:40->gatebygate.cpp:49]   --->   Operation 39 'xor' 'xor_ln40_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node xor_ln40_4)   --->   "%zext_ln40 = zext i7 %xor_ln40_2" [gatebygate.cpp:40->gatebygate.cpp:49]   --->   Operation 40 'zext' 'zext_ln40' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node xor_ln40_4)   --->   "%xor_ln40_3 = xor i8 %zext_ln40, i8 %o2" [gatebygate.cpp:40->gatebygate.cpp:49]   --->   Operation 41 'xor' 'xor_ln40_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node xor_ln40_4)   --->   "%zext_ln40_1 = zext i8 %xor_ln40_3" [gatebygate.cpp:40->gatebygate.cpp:49]   --->   Operation 42 'zext' 'zext_ln40_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 43 [1/1] (0.30ns) (out node of the LUT)   --->   "%xor_ln40_4 = xor i128 %zext_ln40_1, i128 %xor_ln40_1" [gatebygate.cpp:40->gatebygate.cpp:49]   --->   Operation 43 'xor' 'xor_ln40_4' <Predicate = true> <Delay = 0.30> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 44 [1/1] (0.00ns)   --->   "%ret_ln50 = ret i128 %xor_ln40_4" [gatebygate.cpp:50]   --->   Operation 44 'ret' 'ret_ln50' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 0.000ns.
+
+ <State 1>: 3.975ns
+The critical path consists of the following:
+	wire read operation ('b_val_read', gatebygate.cpp:43) on port 'b_val' (gatebygate.cpp:43) [4]  (0.000 ns)
+	'call' operation 255 bit ('product', gatebygate.cpp:48) to 'gf128_clmul' [6]  (3.975 ns)
+
+ <State 2>: 4.978ns
+The critical path consists of the following:
+	'call' operation 255 bit ('product', gatebygate.cpp:48) to 'gf128_clmul' [6]  (4.978 ns)
+
+ <State 3>: 4.978ns
+The critical path consists of the following:
+	'call' operation 255 bit ('product', gatebygate.cpp:48) to 'gf128_clmul' [6]  (4.978 ns)
+
+ <State 4>: 4.978ns
+The critical path consists of the following:
+	'call' operation 255 bit ('product', gatebygate.cpp:48) to 'gf128_clmul' [6]  (4.978 ns)
+
+ <State 5>: 4.978ns
+The critical path consists of the following:
+	'call' operation 255 bit ('product', gatebygate.cpp:48) to 'gf128_clmul' [6]  (4.978 ns)
+
+ <State 6>: 4.978ns
+The critical path consists of the following:
+	'call' operation 255 bit ('product', gatebygate.cpp:48) to 'gf128_clmul' [6]  (4.978 ns)
+
+ <State 7>: 4.978ns
+The critical path consists of the following:
+	'call' operation 255 bit ('product', gatebygate.cpp:48) to 'gf128_clmul' [6]  (4.978 ns)
+
+ <State 8>: 0.600ns
+The critical path consists of the following:
+	'xor' operation 128 bit ('xor_ln29', gatebygate.cpp:29->gatebygate.cpp:49) [13]  (0.000 ns)
+	'xor' operation 129 bit ('xor_ln29_1', gatebygate.cpp:29->gatebygate.cpp:49) [15]  (0.000 ns)
+	'xor' operation 134 bit ('temp', gatebygate.cpp:29->gatebygate.cpp:49) [17]  (0.300 ns)
+	'xor' operation 128 bit ('xor_ln40_1', gatebygate.cpp:40->gatebygate.cpp:49) [26]  (0.000 ns)
+	'xor' operation 128 bit ('xor_ln40_4', gatebygate.cpp:40->gatebygate.cpp:49) [31]  (0.300 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

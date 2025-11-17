@@ -1,0 +1,248 @@
+
+
+================================================================
+== Vitis HLS Report for 'combineVOLEs'
+================================================================
+* Date:           Mon Nov 17 18:41:28 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.978 ns|        0 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     2993|     2993|  14.965 us|  14.965 us|  2993|  2993|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_57_1  |     2992|     2992|        11|          -|          -|   272|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.38>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%power = alloca i32 1" [gatebygate.cpp:55]   --->   Operation 13 'alloca' 'power' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%acc = alloca i32 1" [gatebygate.cpp:52]   --->   Operation 14 'alloca' 'acc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [gatebygate.cpp:57]   --->   Operation 15 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.38ns)   --->   "%store_ln57 = store i9 0, i9 %i" [gatebygate.cpp:57]   --->   Operation 16 'store' 'store_ln57' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 17 [1/1] (0.38ns)   --->   "%store_ln52 = store i128 0, i128 %acc" [gatebygate.cpp:52]   --->   Operation 17 'store' 'store_ln52' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 18 [1/1] (0.38ns)   --->   "%store_ln55 = store i128 1, i128 %power" [gatebygate.cpp:55]   --->   Operation 18 'store' 'store_ln55' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln57 = br void %for.inc" [gatebygate.cpp:57]   --->   Operation 19 'br' 'br_ln57' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.20>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%i_14 = load i9 %i" [gatebygate.cpp:57]   --->   Operation 20 'load' 'i_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.71ns)   --->   "%icmp_ln57 = icmp_eq  i9 %i_14, i9 272" [gatebygate.cpp:57]   --->   Operation 21 'icmp' 'icmp_ln57' <Predicate = true> <Delay = 0.71> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (0.71ns)   --->   "%add_ln57 = add i9 %i_14, i9 1" [gatebygate.cpp:57]   --->   Operation 22 'add' 'add_ln57' <Predicate = true> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln57 = br i1 %icmp_ln57, void %for.inc.split, void %for.end" [gatebygate.cpp:57]   --->   Operation 23 'br' 'br_ln57' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln57 = zext i9 %i_14" [gatebygate.cpp:57]   --->   Operation 24 'zext' 'zext_ln57' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%vals_addr = getelementptr i128 %vals, i64 0, i64 %zext_ln57" [gatebygate.cpp:59]   --->   Operation 25 'getelementptr' 'vals_addr' <Predicate = (!icmp_ln57)> <Delay = 0.00>
+ST_2 : Operation 26 [2/2] (1.20ns)   --->   "%vals_load = load i9 %vals_addr" [gatebygate.cpp:59]   --->   Operation 26 'load' 'vals_load' <Predicate = (!icmp_ln57)> <Delay = 1.20> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.20> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 272> <RAM>
+ST_2 : Operation 27 [1/1] (0.38ns)   --->   "%store_ln57 = store i9 %add_ln57, i9 %i" [gatebygate.cpp:57]   --->   Operation 27 'store' 'store_ln57' <Predicate = (!icmp_ln57)> <Delay = 0.38>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%acc_load_1 = load i128 %acc" [gatebygate.cpp:63]   --->   Operation 28 'load' 'acc_load_1' <Predicate = (icmp_ln57)> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%ret_ln63 = ret i128 %acc_load_1" [gatebygate.cpp:63]   --->   Operation 29 'ret' 'ret_ln63' <Predicate = (icmp_ln57)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.20>
+ST_3 : Operation 30 [1/2] ( I:1.20ns O:1.20ns )   --->   "%vals_load = load i9 %vals_addr" [gatebygate.cpp:59]   --->   Operation 30 'load' 'vals_load' <Predicate = true> <Delay = 1.20> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.20> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 128> <Depth = 272> <RAM>
+
+State 4 <SV = 3> <Delay = 3.97>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%power_load = load i128 %power" [gatebygate.cpp:60]   --->   Operation 31 'load' 'power_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [9/9] (3.97ns)   --->   "%ref_tmp = call i128 @gf128_multiply, i128 %vals_load, i128 %power_load" [gatebygate.cpp:59]   --->   Operation 32 'call' 'ref_tmp' <Predicate = true> <Delay = 3.97> <CoreType = "Generic">   --->   Generic Core
+ST_4 : Operation 33 [9/9] (3.97ns)   --->   "%power_1 = call i128 @gf128_multiply, i128 %power_load, i128 2" [gatebygate.cpp:60]   --->   Operation 33 'call' 'power_1' <Predicate = true> <Delay = 3.97> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 4.97>
+ST_5 : Operation 34 [8/9] (4.97ns)   --->   "%ref_tmp = call i128 @gf128_multiply, i128 %vals_load, i128 %power_load" [gatebygate.cpp:59]   --->   Operation 34 'call' 'ref_tmp' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+ST_5 : Operation 35 [8/9] (4.97ns)   --->   "%power_1 = call i128 @gf128_multiply, i128 %power_load, i128 2" [gatebygate.cpp:60]   --->   Operation 35 'call' 'power_1' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 4.97>
+ST_6 : Operation 36 [7/9] (4.97ns)   --->   "%ref_tmp = call i128 @gf128_multiply, i128 %vals_load, i128 %power_load" [gatebygate.cpp:59]   --->   Operation 36 'call' 'ref_tmp' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+ST_6 : Operation 37 [7/9] (4.97ns)   --->   "%power_1 = call i128 @gf128_multiply, i128 %power_load, i128 2" [gatebygate.cpp:60]   --->   Operation 37 'call' 'power_1' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 7 <SV = 6> <Delay = 4.97>
+ST_7 : Operation 38 [6/9] (4.97ns)   --->   "%ref_tmp = call i128 @gf128_multiply, i128 %vals_load, i128 %power_load" [gatebygate.cpp:59]   --->   Operation 38 'call' 'ref_tmp' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+ST_7 : Operation 39 [6/9] (4.97ns)   --->   "%power_1 = call i128 @gf128_multiply, i128 %power_load, i128 2" [gatebygate.cpp:60]   --->   Operation 39 'call' 'power_1' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 8 <SV = 7> <Delay = 4.97>
+ST_8 : Operation 40 [5/9] (4.97ns)   --->   "%ref_tmp = call i128 @gf128_multiply, i128 %vals_load, i128 %power_load" [gatebygate.cpp:59]   --->   Operation 40 'call' 'ref_tmp' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+ST_8 : Operation 41 [5/9] (4.97ns)   --->   "%power_1 = call i128 @gf128_multiply, i128 %power_load, i128 2" [gatebygate.cpp:60]   --->   Operation 41 'call' 'power_1' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 9 <SV = 8> <Delay = 4.97>
+ST_9 : Operation 42 [4/9] (4.97ns)   --->   "%ref_tmp = call i128 @gf128_multiply, i128 %vals_load, i128 %power_load" [gatebygate.cpp:59]   --->   Operation 42 'call' 'ref_tmp' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+ST_9 : Operation 43 [4/9] (4.97ns)   --->   "%power_1 = call i128 @gf128_multiply, i128 %power_load, i128 2" [gatebygate.cpp:60]   --->   Operation 43 'call' 'power_1' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 10 <SV = 9> <Delay = 4.97>
+ST_10 : Operation 44 [3/9] (4.97ns)   --->   "%ref_tmp = call i128 @gf128_multiply, i128 %vals_load, i128 %power_load" [gatebygate.cpp:59]   --->   Operation 44 'call' 'ref_tmp' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+ST_10 : Operation 45 [3/9] (4.97ns)   --->   "%power_1 = call i128 @gf128_multiply, i128 %power_load, i128 2" [gatebygate.cpp:60]   --->   Operation 45 'call' 'power_1' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 11 <SV = 10> <Delay = 4.97>
+ST_11 : Operation 46 [2/9] (4.97ns)   --->   "%ref_tmp = call i128 @gf128_multiply, i128 %vals_load, i128 %power_load" [gatebygate.cpp:59]   --->   Operation 46 'call' 'ref_tmp' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+ST_11 : Operation 47 [2/9] (4.97ns)   --->   "%power_1 = call i128 @gf128_multiply, i128 %power_load, i128 2" [gatebygate.cpp:60]   --->   Operation 47 'call' 'power_1' <Predicate = true> <Delay = 4.97> <CoreType = "Generic">   --->   Generic Core
+
+State 12 <SV = 11> <Delay = 1.28>
+ST_12 : Operation 48 [1/1] (0.00ns)   --->   "%acc_load = load i128 %acc" [gatebygate.cpp:59]   --->   Operation 48 'load' 'acc_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 49 [1/1] (0.00ns)   --->   "%specpipeline_ln58 = specpipeline void @_ssdm_op_SpecPipeline, i32 0, i32 0, i32 1, i32 0, void @empty_34" [gatebygate.cpp:58]   --->   Operation 49 'specpipeline' 'specpipeline_ln58' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 50 [1/1] (0.00ns)   --->   "%speclooptripcount_ln55 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 272, i64 272, i64 272" [gatebygate.cpp:55]   --->   Operation 50 'speclooptripcount' 'speclooptripcount_ln55' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 51 [1/1] (0.00ns)   --->   "%specloopname_ln57 = specloopname void @_ssdm_op_SpecLoopName, void @empty_48" [gatebygate.cpp:57]   --->   Operation 51 'specloopname' 'specloopname_ln57' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 52 [1/9] (0.60ns)   --->   "%ref_tmp = call i128 @gf128_multiply, i128 %vals_load, i128 %power_load" [gatebygate.cpp:59]   --->   Operation 52 'call' 'ref_tmp' <Predicate = true> <Delay = 0.60> <CoreType = "Generic">   --->   Generic Core
+ST_12 : Operation 53 [1/1] (0.30ns)   --->   "%acc_1 = xor i128 %ref_tmp, i128 %acc_load" [gatebygate.cpp:59]   --->   Operation 53 'xor' 'acc_1' <Predicate = true> <Delay = 0.30> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 54 [1/9] (0.60ns)   --->   "%power_1 = call i128 @gf128_multiply, i128 %power_load, i128 2" [gatebygate.cpp:60]   --->   Operation 54 'call' 'power_1' <Predicate = true> <Delay = 0.60> <CoreType = "Generic">   --->   Generic Core
+ST_12 : Operation 55 [1/1] (0.38ns)   --->   "%store_ln52 = store i128 %acc_1, i128 %acc" [gatebygate.cpp:52]   --->   Operation 55 'store' 'store_ln52' <Predicate = true> <Delay = 0.38>
+ST_12 : Operation 56 [1/1] (0.38ns)   --->   "%store_ln55 = store i128 %power_1, i128 %power" [gatebygate.cpp:55]   --->   Operation 56 'store' 'store_ln55' <Predicate = true> <Delay = 0.38>
+ST_12 : Operation 57 [1/1] (0.00ns)   --->   "%br_ln57 = br void %for.inc" [gatebygate.cpp:57]   --->   Operation 57 'br' 'br_ln57' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 0.000ns.
+
+ <State 1>: 0.387ns
+The critical path consists of the following:
+	'alloca' operation 9 bit ('i', gatebygate.cpp:57) [4]  (0.000 ns)
+	'store' operation 0 bit ('store_ln57', gatebygate.cpp:57) of constant 0 on local variable 'i', gatebygate.cpp:57 [5]  (0.387 ns)
+
+ <State 2>: 1.200ns
+The critical path consists of the following:
+	'load' operation 9 bit ('i', gatebygate.cpp:57) on local variable 'i', gatebygate.cpp:57 [10]  (0.000 ns)
+	'getelementptr' operation 9 bit ('vals_addr', gatebygate.cpp:59) [21]  (0.000 ns)
+	'load' operation 128 bit ('vals_load', gatebygate.cpp:59) on array 'vals' [22]  (1.200 ns)
+
+ <State 3>: 1.200ns
+The critical path consists of the following:
+	'load' operation 128 bit ('vals_load', gatebygate.cpp:59) on array 'vals' [22]  (1.200 ns)
+
+ <State 4>: 3.975ns
+The critical path consists of the following:
+	'load' operation 128 bit ('power_load', gatebygate.cpp:60) on local variable 'power', gatebygate.cpp:55 [15]  (0.000 ns)
+	'call' operation 128 bit ('ref_tmp', gatebygate.cpp:59) to 'gf128_multiply' [23]  (3.975 ns)
+
+ <State 5>: 4.978ns
+The critical path consists of the following:
+	'call' operation 128 bit ('ref_tmp', gatebygate.cpp:59) to 'gf128_multiply' [23]  (4.978 ns)
+
+ <State 6>: 4.978ns
+The critical path consists of the following:
+	'call' operation 128 bit ('ref_tmp', gatebygate.cpp:59) to 'gf128_multiply' [23]  (4.978 ns)
+
+ <State 7>: 4.978ns
+The critical path consists of the following:
+	'call' operation 128 bit ('ref_tmp', gatebygate.cpp:59) to 'gf128_multiply' [23]  (4.978 ns)
+
+ <State 8>: 4.978ns
+The critical path consists of the following:
+	'call' operation 128 bit ('ref_tmp', gatebygate.cpp:59) to 'gf128_multiply' [23]  (4.978 ns)
+
+ <State 9>: 4.978ns
+The critical path consists of the following:
+	'call' operation 128 bit ('ref_tmp', gatebygate.cpp:59) to 'gf128_multiply' [23]  (4.978 ns)
+
+ <State 10>: 4.978ns
+The critical path consists of the following:
+	'call' operation 128 bit ('ref_tmp', gatebygate.cpp:59) to 'gf128_multiply' [23]  (4.978 ns)
+
+ <State 11>: 4.978ns
+The critical path consists of the following:
+	'call' operation 128 bit ('ref_tmp', gatebygate.cpp:59) to 'gf128_multiply' [23]  (4.978 ns)
+
+ <State 12>: 1.287ns
+The critical path consists of the following:
+	'call' operation 128 bit ('ref_tmp', gatebygate.cpp:59) to 'gf128_multiply' [23]  (0.600 ns)
+	'xor' operation 128 bit ('acc', gatebygate.cpp:59) [24]  (0.300 ns)
+	'store' operation 0 bit ('store_ln52', gatebygate.cpp:52) of variable 'acc', gatebygate.cpp:59 on local variable 'result', gatebygate.cpp:52 [27]  (0.387 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

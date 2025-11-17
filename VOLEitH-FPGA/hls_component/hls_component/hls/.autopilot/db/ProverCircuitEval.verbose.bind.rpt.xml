@@ -1,0 +1,49 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'ProverCircuitEval'" level="0">
+<item name = "Date">Mon Nov 17 18:41:29 2025
+</item>
+<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Project">hls_component</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 4.978 ns, 0 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">773154, 773154, 3.866 ms, 3.866 ms, 581145, 581145, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_ProverCircuitEval_Block_entry_u_0_arg_proc_fu_108">ProverCircuitEval_Block_entry_u_0_arg_proc, 581144, 581144, 2.906 ms, 2.906 ms, 581144, 581144, no</column>
+<column name="grp_ToField_fu_129">ToField, 38402, 38402, 0.192 ms, 0.192 ms, 38401, 38401, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_chal2_fu_136">chal2, 40240, 40523, 0.201 ms, 0.203 ms, 40240, 40523, no</column>
+<column name="grp_aggregate_coef_fu_144">aggregate_coef, 192009, 192009, 0.960 ms, 0.960 ms, 192009, 192009, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

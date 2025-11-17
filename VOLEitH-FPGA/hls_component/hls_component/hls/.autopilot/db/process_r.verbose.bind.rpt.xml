@@ -1,0 +1,189 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'process_r'" level="0">
+<item name = "Date">Mon Nov 17 18:41:03 2025
+</item>
+<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Project">hls_component</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 2.945 ns, 0 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">10, 10, 50.000 ns, 50.000 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="ref_tmp85_assign_s_GFMul2_fu_2067">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_s_GFMul2_fu_2073">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_s_GFMul2_fu_2079">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_s_GFMul2_fu_2085">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_1_GFMul2_fu_2091">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_1_GFMul2_fu_2097">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_1_GFMul2_fu_2103">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_1_GFMul2_fu_2109">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_2_GFMul2_fu_2115">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_2_GFMul2_fu_2121">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_2_GFMul2_fu_2127">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_2_GFMul2_fu_2133">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_3_GFMul2_fu_2139">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_3_GFMul2_fu_2145">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_3_GFMul2_fu_2151">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_3_GFMul2_fu_2157">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_4_GFMul2_fu_2163">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_4_GFMul2_fu_2169">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_4_GFMul2_fu_2175">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_4_GFMul2_fu_2181">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_5_GFMul2_fu_2187">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_5_GFMul2_fu_2193">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_5_GFMul2_fu_2199">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_5_GFMul2_fu_2205">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_6_GFMul2_fu_2211">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_6_GFMul2_fu_2217">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_6_GFMul2_fu_2223">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_6_GFMul2_fu_2229">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_7_GFMul2_fu_2235">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_7_GFMul2_fu_2241">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_7_GFMul2_fu_2247">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_7_GFMul2_fu_2253">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_8_GFMul2_fu_2259">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_8_GFMul2_fu_2265">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_8_GFMul2_fu_2271">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_8_GFMul2_fu_2277">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_9_GFMul2_fu_2283">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_9_GFMul2_fu_2289">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_9_GFMul2_fu_2295">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_9_GFMul2_fu_2301">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_10_GFMul2_fu_2307">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_10_GFMul2_fu_2313">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_10_GFMul2_fu_2319">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_10_GFMul2_fu_2325">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_11_GFMul2_fu_2331">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_11_GFMul2_fu_2337">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_11_GFMul2_fu_2343">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_11_GFMul2_fu_2349">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_12_GFMul2_fu_2355">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_12_GFMul2_fu_2361">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_12_GFMul2_fu_2367">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_12_GFMul2_fu_2373">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_13_GFMul2_fu_2379">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_13_GFMul2_fu_2385">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_13_GFMul2_fu_2391">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_13_GFMul2_fu_2397">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_14_GFMul2_fu_2403">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_14_GFMul2_fu_2409">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_14_GFMul2_fu_2415">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_14_GFMul2_fu_2421">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_15_GFMul2_fu_2427">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_15_GFMul2_fu_2433">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_15_GFMul2_fu_2439">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_15_GFMul2_fu_2445">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_16_GFMul2_fu_2451">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_16_GFMul2_fu_2457">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_16_GFMul2_fu_2463">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_16_GFMul2_fu_2469">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_17_GFMul2_fu_2475">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_17_GFMul2_fu_2481">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_17_GFMul2_fu_2487">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_17_GFMul2_fu_2493">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_18_GFMul2_fu_2499">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_18_GFMul2_fu_2505">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_18_GFMul2_fu_2511">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_18_GFMul2_fu_2517">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_19_GFMul2_fu_2523">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_19_GFMul2_fu_2529">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_19_GFMul2_fu_2535">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_19_GFMul2_fu_2541">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_20_GFMul2_fu_2547">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_20_GFMul2_fu_2553">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_20_GFMul2_fu_2559">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_20_GFMul2_fu_2565">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_21_GFMul2_fu_2571">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_21_GFMul2_fu_2577">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_21_GFMul2_fu_2583">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_21_GFMul2_fu_2589">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_22_GFMul2_fu_2595">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_22_GFMul2_fu_2601">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_22_GFMul2_fu_2607">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_22_GFMul2_fu_2613">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_23_GFMul2_fu_2619">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_23_GFMul2_fu_2625">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_23_GFMul2_fu_2631">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_23_GFMul2_fu_2637">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_24_GFMul2_fu_2643">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_24_GFMul2_fu_2649">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_24_GFMul2_fu_2655">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_24_GFMul2_fu_2661">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_25_GFMul2_fu_2667">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_25_GFMul2_fu_2673">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_25_GFMul2_fu_2679">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_25_GFMul2_fu_2685">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_26_GFMul2_fu_2691">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_26_GFMul2_fu_2697">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_26_GFMul2_fu_2703">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_26_GFMul2_fu_2709">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_27_GFMul2_fu_2715">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_27_GFMul2_fu_2721">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_27_GFMul2_fu_2727">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_27_GFMul2_fu_2733">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_28_GFMul2_fu_2739">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_28_GFMul2_fu_2745">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_28_GFMul2_fu_2751">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_28_GFMul2_fu_2757">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_29_GFMul2_fu_2763">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_29_GFMul2_fu_2769">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_29_GFMul2_fu_2775">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_29_GFMul2_fu_2781">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_30_GFMul2_fu_2787">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_30_GFMul2_fu_2793">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_30_GFMul2_fu_2799">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_30_GFMul2_fu_2805">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_31_GFMul2_fu_2811">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_31_GFMul2_fu_2817">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_31_GFMul2_fu_2823">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_31_GFMul2_fu_2829">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_32_GFMul2_fu_2835">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_32_GFMul2_fu_2841">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_32_GFMul2_fu_2847">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_32_GFMul2_fu_2853">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_33_GFMul2_fu_2859">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_33_GFMul2_fu_2865">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_33_GFMul2_fu_2871">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_33_GFMul2_fu_2877">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_34_GFMul2_fu_2883">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_34_GFMul2_fu_2889">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_34_GFMul2_fu_2895">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_34_GFMul2_fu_2901">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp85_assign_35_GFMul2_fu_2907">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp90_assign_35_GFMul2_fu_2913">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp132_assign_35_GFMul2_fu_2919">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="ref_tmp175_assign_35_GFMul2_fu_2925">GFMul2, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

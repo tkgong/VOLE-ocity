@@ -1,0 +1,133 @@
+---
+MainSourceFile:  /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/gatebygate.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/gatebygate.pp.0.cpp
+        Offset:          279729
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/gatebygate.pp.0.cpp
+        Offset:          280195
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/gatebygate.pp.0.cpp
+        Offset:          280662
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/gatebygate.pp.0.cpp
+        Offset:          575204
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_10_1:  '
+    FileOffset:      10
+    FilePath:        gatebygate.cpp
+    Replacements:    
+      - FilePath:        /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/gatebygate.pp.0.cpp
+        Offset:          955909
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_10_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_57_1:  '
+    FileOffset:      57
+    FilePath:        gatebygate.cpp
+    Replacements:    
+      - FilePath:        /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/gatebygate.pp.0.cpp
+        Offset:          957145
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_57_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      70
+    FilePath:        gatebygate.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + uram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      71
+    FilePath:        gatebygate.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_76_1:  '
+    FileOffset:      76
+    FilePath:        gatebygate.cpp
+    Replacements:    
+      - FilePath:        /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/gatebygate.pp.0.cpp
+        Offset:          957628
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_76_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + bram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      98
+    FilePath:        gatebygate.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + uram is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      99
+    FilePath:        gatebygate.cpp
+    Replacements:    
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_100_1:  '
+    FileOffset:      100
+    FilePath:        gatebygate.cpp
+    Replacements:    
+      - FilePath:        /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/gatebygate.pp.0.cpp
+        Offset:          958296
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_100_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_107_2:  '
+    FileOffset:      107
+    FilePath:        gatebygate.cpp
+    Replacements:    
+      - FilePath:        /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/gatebygate.pp.0.cpp
+        Offset:          958489
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_107_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_138_1:  '
+    FileOffset:      138
+    FilePath:        gatebygate.cpp
+    Replacements:    
+      - FilePath:        /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/gatebygate.pp.0.cpp
+        Offset:          959442
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_138_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_163_1:  '
+    FileOffset:      163
+    FilePath:        gatebygate.cpp
+    Replacements:    
+      - FilePath:        /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/gatebygate.pp.0.cpp
+        Offset:          960053
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_163_1: '
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + BRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      200
+    FilePath:        gatebygate.cpp
+    Replacements:    
+  - DiagnosticName:  clang-diagnostic-error
+    Message:         'Invalid Directive: for current device, ram_2p + URAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
+    FileOffset:      201
+    FilePath:        gatebygate.cpp
+    Replacements:    
+...

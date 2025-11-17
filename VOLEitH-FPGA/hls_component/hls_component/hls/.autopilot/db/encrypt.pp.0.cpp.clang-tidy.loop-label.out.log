@@ -1,0 +1,211 @@
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:2382:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:2382:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:2396:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:2396:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:2410:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:2410:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:4378:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:4378:7: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6473:46: error: Invalid Directive: for current device, ROM_nP + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=ssbox type=ROM_nP impl=BRAM
+                                             ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6474:46: error: Invalid Directive: for current device, ROM_nP + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=iibox type=ROM_nP impl=BRAM
+                                             ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6534:9: warning: Added loop label VITIS_LOOP_79_1:   [xilinx-label-all-loops]
+        for (ap_uint<5> iter = 2; iter < 15; iter += 2) {
+        ^~~
+        VITIS_LOOP_79_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6534:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6592:9: warning: Added loop label VITIS_LOOP_137_1:   [xilinx-label-all-loops]
+        for (round_counter = 1; round_counter <= 14; round_counter++) {
+        ^~~
+        VITIS_LOOP_137_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6592:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6594:13: warning: Added loop label VITIS_LOOP_139_2:   [xilinx-label-all-loops]
+            for (int i = 0; i < 16; i++) {
+            ^~~
+            VITIS_LOOP_139_2: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6594:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6620:13: warning: Added loop label VITIS_LOOP_165_3:   [xilinx-label-all-loops]
+            for (int i = 0; i < 16; i++) {
+            ^~~
+            VITIS_LOOP_165_3: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6620:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6628:17: warning: Added loop label VITIS_LOOP_173_4:   [xilinx-label-all-loops]
+                for (int i = 0; i < 4; i++) {
+                ^~~
+                VITIS_LOOP_173_4: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6628:17: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6669:9: warning: Added loop label VITIS_LOOP_214_1:   [xilinx-label-all-loops]
+        for (ap_uint<5> iter = 2; iter < 15; iter++) {
+        ^~~
+        VITIS_LOOP_214_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6669:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6715:9: warning: Added loop label VITIS_LOOP_260_1:   [xilinx-label-all-loops]
+        for (ap_uint<5> iter = 3; iter < 26; iter += 3) {
+        ^~~
+        VITIS_LOOP_260_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6715:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6769:9: warning: Added loop label VITIS_LOOP_314_1:   [xilinx-label-all-loops]
+        for (round_counter = 1; round_counter <= 12; round_counter++) {
+        ^~~
+        VITIS_LOOP_314_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6769:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6771:13: warning: Added loop label VITIS_LOOP_316_2:   [xilinx-label-all-loops]
+            for (int i = 0; i < 16; i++) {
+            ^~~
+            VITIS_LOOP_316_2: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6771:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6797:13: warning: Added loop label VITIS_LOOP_342_3:   [xilinx-label-all-loops]
+            for (int i = 0; i < 16; i++) {
+            ^~~
+            VITIS_LOOP_342_3: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6797:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6805:17: warning: Added loop label VITIS_LOOP_350_4:   [xilinx-label-all-loops]
+                for (int i = 0; i < 4; i++) {
+                ^~~
+                VITIS_LOOP_350_4: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6805:17: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6853:9: warning: Added loop label VITIS_LOOP_398_1:   [xilinx-label-all-loops]
+        for (ap_uint<5> iter = 1; iter < 11; iter++) {
+        ^~~
+        VITIS_LOOP_398_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6853:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6896:9: warning: Added loop label VITIS_LOOP_441_1:   [xilinx-label-all-loops]
+        for (round_counter = 1; round_counter <= 10; round_counter++) {
+        ^~~
+        VITIS_LOOP_441_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6896:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6898:13: warning: Added loop label VITIS_LOOP_443_2:   [xilinx-label-all-loops]
+            for (int i = 0; i < 16; i++) {
+            ^~~
+            VITIS_LOOP_443_2: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6898:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6926:13: warning: Added loop label VITIS_LOOP_471_3:   [xilinx-label-all-loops]
+            for (int i = 0; i < 16; i++) {
+            ^~~
+            VITIS_LOOP_471_3: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6926:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6933:17: warning: Added loop label VITIS_LOOP_478_4:   [xilinx-label-all-loops]
+                for (int i = 0; i < 4; i++) {
+                ^~~
+                VITIS_LOOP_478_4: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:6933:17: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7007:9: warning: Added loop label VITIS_LOOP_552_1:   [xilinx-label-all-loops]
+        for (ap_uint<5> iter = 2; iter < 15; iter += 2) {
+        ^~~
+        VITIS_LOOP_552_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7007:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7056:9: warning: Added loop label VITIS_LOOP_601_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < 2; ++i) {
+        ^~~
+        VITIS_LOOP_601_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7056:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7070:9: warning: Added loop label VITIS_LOOP_615_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < 3; ++i) {
+        ^~~
+        VITIS_LOOP_615_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7070:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7089:9: warning: Added loop label VITIS_LOOP_634_1:   [xilinx-label-all-loops]
+        for (round_counter = 1; round_counter <= 14; round_counter++) {
+        ^~~
+        VITIS_LOOP_634_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7089:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7114:13: warning: Added loop label VITIS_LOOP_659_2:   [xilinx-label-all-loops]
+            for (int i = 0; i < 16; i++) {
+            ^~~
+            VITIS_LOOP_659_2: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7114:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7123:13: warning: Added loop label VITIS_LOOP_668_3:   [xilinx-label-all-loops]
+            for (int i = 0; i < 16; i++) {
+            ^~~
+            VITIS_LOOP_668_3: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7123:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7128:17: warning: Added loop label VITIS_LOOP_673_4:   [xilinx-label-all-loops]
+                for (int i = 0; i < 4; i++) {
+                ^~~
+                VITIS_LOOP_673_4: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7128:17: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7172:9: warning: Added loop label VITIS_LOOP_717_1:   [xilinx-label-all-loops]
+        for (ap_uint<5> iter = 3; iter < 26; iter += 3) {
+        ^~~
+        VITIS_LOOP_717_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7172:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7218:9: warning: Added loop label VITIS_LOOP_763_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < 2; ++i) {
+        ^~~
+        VITIS_LOOP_763_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7218:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7232:9: warning: Added loop label VITIS_LOOP_777_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < 3; ++i) {
+        ^~~
+        VITIS_LOOP_777_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7232:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7251:9: warning: Added loop label VITIS_LOOP_796_1:   [xilinx-label-all-loops]
+        for (round_counter = 1; round_counter <= 12; round_counter++) {
+        ^~~
+        VITIS_LOOP_796_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7251:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7275:13: warning: Added loop label VITIS_LOOP_820_2:   [xilinx-label-all-loops]
+            for (int i = 0; i < 16; i++) {
+            ^~~
+            VITIS_LOOP_820_2: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7275:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7284:13: warning: Added loop label VITIS_LOOP_829_3:   [xilinx-label-all-loops]
+            for (int i = 0; i < 16; i++) {
+            ^~~
+            VITIS_LOOP_829_3: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7284:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7289:17: warning: Added loop label VITIS_LOOP_834_4:   [xilinx-label-all-loops]
+                for (int i = 0; i < 4; i++) {
+                ^~~
+                VITIS_LOOP_834_4: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7289:17: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7330:9: warning: Added loop label VITIS_LOOP_875_1:   [xilinx-label-all-loops]
+        for (ap_uint<5> iter = 1; iter < 11; iter++) {
+        ^~~
+        VITIS_LOOP_875_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7330:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7367:9: warning: Added loop label VITIS_LOOP_912_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < 2; ++i) {
+        ^~~
+        VITIS_LOOP_912_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7367:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7381:9: warning: Added loop label VITIS_LOOP_926_1:   [xilinx-label-all-loops]
+        for (int i = 0; i < 3; ++i) {
+        ^~~
+        VITIS_LOOP_926_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7381:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7400:9: warning: Added loop label VITIS_LOOP_945_1:   [xilinx-label-all-loops]
+        for (round_counter = 1; round_counter <= 10; round_counter++) {
+        ^~~
+        VITIS_LOOP_945_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7400:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7424:13: warning: Added loop label VITIS_LOOP_969_2:   [xilinx-label-all-loops]
+            for (int i = 0; i < 16; i++) {
+            ^~~
+            VITIS_LOOP_969_2: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7424:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7433:13: warning: Added loop label VITIS_LOOP_978_3:   [xilinx-label-all-loops]
+            for (int i = 0; i < 16; i++) {
+            ^~~
+            VITIS_LOOP_978_3: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7433:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7439:17: warning: Added loop label VITIS_LOOP_984_4:   [xilinx-label-all-loops]
+                for (int i = 0; i < 4; i++) {
+                ^~~
+                VITIS_LOOP_984_4: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/encrypt.pp.0.cpp:7439:17: note: FIX-IT applied suggested code changes

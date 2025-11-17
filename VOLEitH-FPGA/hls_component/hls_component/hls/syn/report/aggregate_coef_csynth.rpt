@@ -1,0 +1,205 @@
+
+
+================================================================
+== Vitis HLS Report for 'aggregate_coef'
+================================================================
+* Date:           Mon Nov 17 18:42:26 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.978 ns|        0 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   192009|   192009|  0.960 ms|  0.960 ms|  192009|  192009|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+----------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                           |                |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |          Instance         |     Module     |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +---------------------------+----------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_gf128_multiply_fu_124  |gf128_multiply  |        7|        7|  35.000 ns|  35.000 ns|    1|    1|      yes|
+        +---------------------------+----------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- VITIS_LOOP_163_1  |   192006|   192006|        12|          5|          5|  38400|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|      574|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|     9089|    61405|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|      153|     -|
+|Register             |        -|      -|     1185|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|    10274|    62132|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|        1|       14|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|        3|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+----------------+---------+----+------+-------+-----+
+    |          Instance         |     Module     | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +---------------------------+----------------+---------+----+------+-------+-----+
+    |grp_gf128_multiply_fu_124  |gf128_multiply  |        0|   0|  9089|  61405|    0|
+    +---------------------------+----------------+---------+----+------+-------+-----+
+    |Total                      |                |        0|   0|  9089|  61405|    0|
+    +---------------------------+----------------+---------+----+------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------------+----------+----+---+-----+------------+------------+
+    |               Variable Name              | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +------------------------------------------+----------+----+---+-----+------------+------------+
+    |i_16_fu_154_p2                            |         +|   0|  0|   23|          16|           1|
+    |ap_block_pp0_stage1_01001_grp2            |       and|   0|  0|    2|           1|           1|
+    |ap_block_pp0_stage1_11001_grp1            |       and|   0|  0|    2|           1|           1|
+    |ap_block_pp0_stage1_11001_ignoreCallOp45  |       and|   0|  0|    2|           1|           1|
+    |ap_block_pp0_stage1_subdone               |       and|   0|  0|    2|           1|           1|
+    |ap_block_state3_pp0_stage1_iter0_grp1     |       and|   0|  0|    2|           1|           1|
+    |icmp_ln163_fu_148_p2                      |      icmp|   0|  0|   23|          16|          16|
+    |ap_block_state1                           |        or|   0|  0|    2|           1|           1|
+    |ap_block_state3_pp0_stage1_iter0_grp2     |        or|   0|  0|    2|           1|           1|
+    |agg_a0_1_fu_180_p2                        |       xor|   0|  0|  128|         128|         128|
+    |agg_a1_1_fu_194_p2                        |       xor|   0|  0|  128|         128|         128|
+    |ap_enable_pp0                             |       xor|   0|  0|    2|           1|           2|
+    |xor_ln182_fu_211_p2                       |       xor|   0|  0|  128|         128|         128|
+    |xor_ln183_fu_217_p2                       |       xor|   0|  0|  128|         128|         128|
+    +------------------------------------------+----------+----+---+-----+------------+------------+
+    |Total                                     |          |   0|  0|  574|         552|         538|
+    +------------------------------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+----+-----------+-----+-----------+
+    |               Name              | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------+----+-----------+-----+-----------+
+    |a0_tilde                         |   9|          2|  128|        256|
+    |a1_tilde                         |   9|          2|  128|        256|
+    |a_strm_blk_n                     |   9|          2|    1|          2|
+    |agg_a0_fu_66                     |   9|          2|  128|        256|
+    |agg_a1_fu_70                     |   9|          2|  128|        256|
+    |ap_NS_fsm                        |  49|          9|    1|          9|
+    |ap_done                          |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2          |   9|          2|    1|          2|
+    |ch2_strm_blk_n                   |   9|          2|    1|          2|
+    |grp_gf128_multiply_fu_124_b_val  |  14|          3|  128|        384|
+    |i_fu_74                          |   9|          2|   16|         32|
+    |proof_strm_TDATA_blk_n           |   9|          2|    1|          2|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Total                            | 153|         32|  662|       1459|
+    +---------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+-----+----+-----+-----------+
+    |                    Name                   |  FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |a0_reg_265                                 |  128|   0|  128|          0|
+    |a0_tilde_preg                              |  128|   0|  128|          0|
+    |a1_reg_270                                 |  128|   0|  128|          0|
+    |a1_tilde_preg                              |  128|   0|  128|          0|
+    |agg_a0_fu_66                               |  128|   0|  128|          0|
+    |agg_a1_fu_70                               |  128|   0|  128|          0|
+    |ap_CS_fsm                                  |    8|   0|    8|          0|
+    |ap_block_pp0_stage1_subdone_grp0_done_reg  |    1|   0|    1|          0|
+    |ap_block_pp0_stage1_subdone_grp1_done_reg  |    1|   0|    1|          0|
+    |ap_block_pp0_stage1_subdone_grp2_done_reg  |    1|   0|    1|          0|
+    |ap_done_reg                                |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0                    |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg                |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                    |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                    |    1|   0|    1|          0|
+    |ch2_strm_read_reg_260                      |  128|   0|  128|          0|
+    |i_fu_74                                    |   16|   0|   16|          0|
+    |icmp_ln163_reg_256                         |    1|   0|    1|          0|
+    |p_read_1_reg_246                           |  128|   0|  128|          0|
+    |p_read_2_reg_251                           |  128|   0|  128|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+    |Total                                      | 1185|   0| 1185|          0|
+    +-------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+----------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++-------------------------+-----+-----+------------+----------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  aggregate_coef|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  aggregate_coef|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  aggregate_coef|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  aggregate_coef|  return value|
+|ap_continue              |   in|    1|  ap_ctrl_hs|  aggregate_coef|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  aggregate_coef|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  aggregate_coef|  return value|
+|p_read                   |   in|  128|     ap_none|          p_read|        scalar|
+|p_read1                  |   in|  128|     ap_none|         p_read1|        scalar|
+|a_strm_dout              |   in|  256|     ap_fifo|          a_strm|       pointer|
+|a_strm_empty_n           |   in|    1|     ap_fifo|          a_strm|       pointer|
+|a_strm_read              |  out|    1|     ap_fifo|          a_strm|       pointer|
+|a_strm_num_data_valid    |   in|    3|     ap_fifo|          a_strm|       pointer|
+|a_strm_fifo_cap          |   in|    3|     ap_fifo|          a_strm|       pointer|
+|ch2_strm_dout            |   in|  128|     ap_fifo|        ch2_strm|       pointer|
+|ch2_strm_empty_n         |   in|    1|     ap_fifo|        ch2_strm|       pointer|
+|ch2_strm_read            |  out|    1|     ap_fifo|        ch2_strm|       pointer|
+|ch2_strm_num_data_valid  |   in|    3|     ap_fifo|        ch2_strm|       pointer|
+|ch2_strm_fifo_cap        |   in|    3|     ap_fifo|        ch2_strm|       pointer|
+|a0_tilde                 |  out|  128|      ap_vld|        a0_tilde|       pointer|
+|a0_tilde_ap_vld          |  out|    1|      ap_vld|        a0_tilde|       pointer|
+|a1_tilde                 |  out|  128|      ap_vld|        a1_tilde|       pointer|
+|a1_tilde_ap_vld          |  out|    1|      ap_vld|        a1_tilde|       pointer|
+|proof_strm_TDATA         |  out|  128|        axis|      proof_strm|       pointer|
+|proof_strm_TVALID        |  out|    1|        axis|      proof_strm|       pointer|
+|proof_strm_TREADY        |   in|    1|        axis|      proof_strm|       pointer|
++-------------------------+-----+-----+------------+----------------+--------------+
+

@@ -1,0 +1,525 @@
+  **** HLS Build v2025.1 6135595
+INFO: [HLS 200-2005] Using work_dir /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg
+WARNING: [HLS 200-1921] Skipping unknown config ini [hls] entry 'ldflags=-lstdc++' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=defs.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/defs.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=aes.hpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/aes.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=encrypt.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(16)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/encrypt.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=encrypt.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(17)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/encrypt.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=PRG.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(18)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/PRG.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=PRG.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/PRG.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ggm_tree.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(20)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/ggm_tree.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=ggm_tree.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(21)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/ggm_tree.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=sha3.hpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(22)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/sha3.hpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./shake.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(23)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=./shake.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(24)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/shake.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=vole.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(25)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/vole.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=vole.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(26)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/vole.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=Commit.h' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(27)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/Commit.h' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.file=Commit.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(28)
+INFO: [HLS 200-10] Adding design file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/Commit.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=tb_vole.cpp' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding test bench file '/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/tb_vole.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=ConvertToVOLE' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcu250-figd2104-2-e' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xcu250-figd2104-2-e'
+INFO: [HLS 200-1465] Applying config ini 'clock=7ns' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+INFO: [HLS 200-1465] Applying config ini 'csim.clean=1' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying config ini 'csim.code_analyzer=0' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(12)
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying config ini 'sim.O=1' from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/vitis-comp.json
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 2.83 seconds. CPU system time: 0.41 seconds. Elapsed time: 3.24 seconds; current allocated memory: 481.945 MB.
+INFO: [HLS 200-10] Analyzing design file 'Commit.cpp' ... 
+WARNING: [HLS 207-5292] unused parameter 'root' (Commit.cpp:8:19)
+WARNING: [HLS 207-5292] unused parameter 'iv' (Commit.cpp:9:9)
+WARNING: [HLS 207-5292] unused parameter 'path_strm' (Commit.cpp:10:32)
+WARNING: [HLS 207-5292] unused parameter 'u' (Commit.cpp:11:16)
+WARNING: [HLS 207-5292] unused parameter 'V' (Commit.cpp:12:18)
+INFO: [HLS 200-10] Analyzing design file 'vole.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'shake.cpp' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:101:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:251:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:426:9)
+INFO: [HLS 200-10] Analyzing design file 'ggm_tree.cpp' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:101:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:251:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./sha3.hpp:426:9)
+INFO: [HLS 200-10] Analyzing design file 'PRG.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'encrypt.cpp' ... 
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./aes.hpp:16:9)
+WARNING: [HLS 207-5539] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (./aes.hpp:17:9)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:57:31)
+WARNING: [HLS 207-5292] unused parameter 'plaintext' (./aes.hpp:58:31)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:58:53)
+WARNING: [HLS 207-5292] unused parameter 'ciphertext' (./aes.hpp:58:78)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:126:55)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:303:55)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:429:55)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:523:31)
+WARNING: [HLS 207-5292] unused parameter 'ciphertext' (./aes.hpp:531:31)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:531:54)
+WARNING: [HLS 207-5292] unused parameter 'plaintext' (./aes.hpp:531:79)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:624:56)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:786:56)
+WARNING: [HLS 207-5292] unused parameter 'cipherkey' (./aes.hpp:935:56)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 10.01 seconds. CPU system time: 1.82 seconds. Elapsed time: 11.84 seconds; current allocated memory: 487.098 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 38,303 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 200-1995] There were 143,724 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 91,338 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 84,153 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 84,153 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 84,580 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 84,441 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 84,441 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 84,441 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 84,441 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 84,441 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 60,705 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 46,727 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 46,677 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 46,830 instructions in the design after the 'HW Transforms' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 46,371 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function 'xf::security::aesTable::aesTable()' into 'xf::security::aesEnc<128>::aesEnc()' (./aes.hpp:386:5)
+INFO: [HLS 214-131] Inlining function 'xf::security::aesEnc<128>::aesEnc()' into 'encrypt(ap_uint<128>, ap_uint<128>, ap_uint<128>&)' (encrypt.cpp:4:31)
+INFO: [HLS 214-131] Inlining function 'PRG(ap_uint<128>&, ap_uint<128>, ap_uint<128>&, ap_uint<128>&)' into 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4])' (vole.cpp:34:21)
+WARNING: [HLS 214-340] The resource pragma (bind_storage) on top-level function argument, in 'call' is unsupported, please use INTERFACE pragma instead (vole.cpp:176:5)
+WARNING: [HLS 214-340] The resource pragma (bind_storage) on top-level function argument, in 'call' is unsupported, please use INTERFACE pragma instead (vole.cpp:164:9)
+WARNING: [HLS 214-340] The resource pragma (bind_storage) on top-level function argument, in 'call' is unsupported, please use INTERFACE pragma instead (vole.cpp:165:9)
+INFO: [HLS 214-377] Adding 'cipher' into disaggregation list because there's array-partition pragma applied on the struct field (./aes.hpp:388:9)
+INFO: [HLS 214-210] Disaggregating variable 'cipher' (encrypt.cpp:4:31)
+Resolution: For help on HLS 214-210 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=214-210.html
+INFO: [HLS 214-291] Loop 'INIT_V' is marked as complete unroll implied by the pipeline pragma (vole.cpp:63:10)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_65_1' is marked as complete unroll implied by the pipeline pragma (vole.cpp:65:19)
+INFO: [HLS 214-291] Loop 'READ_LEAVES' is marked as complete unroll implied by the pipeline pragma (vole.cpp:71:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_73_2' is marked as complete unroll implied by the pipeline pragma (vole.cpp:73:19)
+INFO: [HLS 214-291] Loop 'BUILD_LEVELS' is marked as complete unroll implied by the pipeline pragma (vole.cpp:80:27)
+INFO: [HLS 214-291] Loop 'PROCESS_NODES' is marked as complete unroll implied by the pipeline pragma (vole.cpp:85:32)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_86_3' is marked as complete unroll implied by the pipeline pragma (vole.cpp:86:38)
+INFO: [HLS 214-291] Loop 'WRITE_V' is marked as complete unroll implied by the pipeline pragma (vole.cpp:94:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_96_4' is marked as complete unroll implied by the pipeline pragma (vole.cpp:96:19)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_29_3' is marked as complete unroll implied by the pipeline pragma (vole.cpp:29:19)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_30_4' is marked as complete unroll implied by the pipeline pragma (vole.cpp:30:34)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_439_1' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:439:27)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_441_2' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:441:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_469_3' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:469:31)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_476_4' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:476:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_396_1' is marked as complete unroll implied by the pipeline pragma (./aes.hpp:396:27)
+INFO: [HLS 214-188] Unrolling loop 'UNPACK_U' (vole.cpp:123:12) in function 'mem_transfer' partially with a factor of 2 (vole.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'READ_V' (vole.cpp:132:9) in function 'mem_transfer' completely with a factor of 64 (vole.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_134_2' (vole.cpp:134:20) in function 'mem_transfer' completely with a factor of 2 (vole.cpp:115:0)
+INFO: [HLS 214-188] Unrolling loop 'WRITE_V' (vole.cpp:139:18) in function 'mem_transfer' partially with a factor of 2 (vole.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_142_3' (vole.cpp:142:31) in function 'mem_transfer' completely with a factor of 64 (vole.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_144_4' (vole.cpp:144:20) in function 'mem_transfer' completely with a factor of 2 (vole.cpp:115:0)
+INFO: [HLS 214-186] Unrolling loop 'INIT_V' (vole.cpp:63:10) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_65_1' (vole.cpp:65:19) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'READ_LEAVES' (vole.cpp:71:26) in function 'build_VOLE' completely with a factor of 4 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_73_2' (vole.cpp:73:19) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'BUILD_LEVELS' (vole.cpp:80:27) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'PROCESS_NODES' (vole.cpp:85:32) in function 'build_VOLE' completely with a factor of 1 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_86_3' (vole.cpp:86:38) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'PROCESS_NODES' (vole.cpp:85:32) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'WRITE_V' (vole.cpp:94:22) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_96_4' (vole.cpp:96:19) in function 'build_VOLE' completely with a factor of 2 (vole.cpp:50:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_20_2' (vole.cpp:20:30) in function 'expand_seed' completely with a factor of 2 (vole.cpp:10:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_29_3' (vole.cpp:29:19) in function 'expand_seed' completely with a factor of 4 (vole.cpp:10:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_30_4' (vole.cpp:30:34) in function 'expand_seed' completely with a factor of 2 (vole.cpp:10:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_439_1' (./aes.hpp:439:27) in function 'xf::security::aesEnc<128>::process' completely with a factor of 10 (./aes.hpp:429:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_476_4' (./aes.hpp:476:35) in function 'xf::security::aesEnc<128>::process' completely with a factor of 4 (./aes.hpp:429:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_469_3' (./aes.hpp:469:31) in function 'xf::security::aesEnc<128>::process' completely with a factor of 16 (./aes.hpp:429:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_441_2' (./aes.hpp:441:31) in function 'xf::security::aesEnc<128>::process' completely with a factor of 16 (./aes.hpp:429:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_396_1' (./aes.hpp:396:27) in function 'xf::security::aesEnc<128>::updateKey' completely with a factor of 10 (./aes.hpp:391:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'VITIS_LOOP_396_1' (./aes.hpp:396:27) in function 'xf::security::aesEnc<128>::updateKey' has been removed because the loop is unrolled completely (./aes.hpp:391:0)
+INFO: [HLS 214-248] Applying array_partition to 'cipher.1': Complete partitioning on dimension 1. (encrypt.cpp:4:31)
+INFO: [HLS 214-248] Applying array_partition to 'sd': Complete partitioning on dimension 2. (vole.cpp:15:22)
+INFO: [HLS 214-248] Applying array_partition to 'r_strm': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (vole.cpp:168:31)
+INFO: [HLS 214-248] Applying array_partition to 'v_strm': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (vole.cpp:172:31)
+INFO: [HLS 214-248] Applying array_partition to 'seed_strm': Complete partitioning on dimension 1. (vole.cpp:163:0)
+INFO: [HLS 214-248] Applying array_partition to 'u': Cyclic partitioning with factor 2 on dimension 1. (vole.cpp:163:0)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< WRITE_V> at vole.cpp:139:18 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< UNPACK_U> at vole.cpp:123:12 
+INFO: [HLS 214-376] automatically set the pipeline for Loop< READ_SEEDS> at vole.cpp:19:14 
+INFO: [HLS 214-364] Automatically inlining function 'encrypt(ap_uint<128>, ap_uint<128>, ap_uint<128>&)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.124.125)' (PRG.cpp:8:2)
+INFO: [HLS 214-364] Automatically inlining function 'encrypt(ap_uint<128>, ap_uint<128>, ap_uint<128>&)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.124.125)' (PRG.cpp:9:3)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::process(ap_uint<128>, ap_uint<128>, ap_uint<128>&) (.34)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.124.125)' (encrypt.cpp:6:12)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.124.125)' (./aes.hpp:479:29)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.124.125)' (./aes.hpp:480:48)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.124.125)' (./aes.hpp:485:54)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.124.125)' (./aes.hpp:486:54)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.124.125)' (./aes.hpp:491:55)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.124.125)' (./aes.hpp:492:55)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.124.125)' (./aes.hpp:494:55)
+INFO: [HLS 214-364] Automatically inlining function 'xf::security::aesEnc<128>::GFMul2(ap_uint<8>)' to improve effectiveness of pipeline pragma in function 'expand_seed(ap_uint<128>&, hls::stream<ap_uint<128>, 0>*, hls::stream<ap_uint<256>, 0> (*) [4]) (.124.125)' (./aes.hpp:498:55)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 49.07 seconds. CPU system time: 0.54 seconds. Elapsed time: 51.32 seconds; current allocated memory: 570.574 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 570.574 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 3.39 seconds. CPU system time: 0.04 seconds. Elapsed time: 3.43 seconds; current allocated memory: 645.902 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] vole.cpp:127: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 3.7 seconds. CPU system time: 0 seconds. Elapsed time: 3.7 seconds; current allocated memory: 639.441 MB.
+INFO: [XFORM 203-712] Applying dataflow to function 'ConvertToVOLE' (vole.cpp:158:1), detected/extracted 3 process function(s): 
+	 'expand_seed'
+	 'build_VOLE'
+	 'mem_transfer'.
+INFO: [XFORM 203-11] Balancing expressions in function 'expand_seed' (./aes.hpp:5:20)...3744 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 14.39 seconds. CPU system time: 0.05 seconds. Elapsed time: 14.44 seconds; current allocated memory: 685.797 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'PROCESS_BATCHES'(vole.cpp:54:22) and 'PROCESS_CHUNKS'(vole.cpp:55:25) in function 'build_VOLE' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'PROCESS_BATCHES' (vole.cpp:54:22) in function 'build_VOLE'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 47.03 seconds. CPU system time: 0.05 seconds. Elapsed time: 47.09 seconds; current allocated memory: 882.449 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ConvertToVOLE' ...
+WARNING: [SYN 201-303] Cannot apply memory assignment of 'ROM_nP_LUTRAM': 'cipher_0_ssbox' does not exist or is optimized away.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'expand_seed_Pipeline_READ_SEEDS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'READ_SEEDS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'READ_SEEDS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.08 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.11 seconds; current allocated memory: 885.406 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 885.406 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'updateKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'updateKey'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 11, function 'updateKey'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 888.316 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 888.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'expand_seed_Pipeline_PROCESS_CHUNKS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PROCESS_CHUNKS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 22, loop 'PROCESS_CHUNKS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 73.52 seconds. CPU system time: 0.08 seconds. Elapsed time: 73.61 seconds; current allocated memory: 1.123 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 237.27 seconds. CPU system time: 0.05 seconds. Elapsed time: 237.33 seconds; current allocated memory: 1.123 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'expand_seed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4.12 seconds. CPU system time: 0.04 seconds. Elapsed time: 4.17 seconds; current allocated memory: 1.123 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.123 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'build_VOLE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'PROCESS_BATCHES_PROCESS_CHUNKS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'PROCESS_BATCHES_PROCESS_CHUNKS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.123 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.123 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mem_transfer_Pipeline_UNPACK_U' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'UNPACK_U'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'UNPACK_U'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.123 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.123 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mem_transfer_Pipeline_WRITE_V' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'WRITE_V'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'WRITE_V'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.123 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.123 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mem_transfer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.123 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.123 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ConvertToVOLE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.123 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.123 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'expand_seed_Pipeline_READ_SEEDS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'expand_seed_Pipeline_READ_SEEDS' pipeline 'READ_SEEDS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'expand_seed_Pipeline_READ_SEEDS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.123 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'updateKey' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'updateKey' is 6088 from HDL expression: ((1'b1 == ap_ce_reg) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'updateKey'.
+INFO: [HLS 200-2168] Implementing memory 'ConvertToVOLE_updateKey_cipher_0_ssbox3_ROM_NP_LUTRAM_1R' using distributed ROMs with 40 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.123 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'expand_seed_Pipeline_PROCESS_CHUNKS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'expand_seed_Pipeline_PROCESS_CHUNKS' pipeline 'PROCESS_CHUNKS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'expand_seed_Pipeline_PROCESS_CHUNKS' is 56365 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'expand_seed_Pipeline_PROCESS_CHUNKS'.
+INFO: [HLS 200-2168] Implementing memory 'ConvertToVOLE_expand_seed_Pipeline_PROCESS_CHUNKS_cipher_0_ssbox_ROM_NP_LUTRAM_1R' using distributed ROMs with 2560 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 32.63 seconds. CPU system time: 0.12 seconds. Elapsed time: 32.76 seconds; current allocated memory: 1.359 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'expand_seed' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'expand_seed'.
+INFO: [RTMG 210-278] Implementing memory 'ConvertToVOLE_expand_seed_sd_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 10.32 seconds. CPU system time: 0.46 seconds. Elapsed time: 10.79 seconds; current allocated memory: 1.821 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'build_VOLE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'build_VOLE' pipeline 'PROCESS_BATCHES_PROCESS_CHUNKS' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'build_VOLE'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.821 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mem_transfer_Pipeline_UNPACK_U' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'bitselect_1ns_256ns_8ns_1_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mem_transfer_Pipeline_UNPACK_U'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.859 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mem_transfer_Pipeline_WRITE_V' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'bitselect_1ns_256ns_8ns_1_1_1': 256 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mem_transfer_Pipeline_WRITE_V'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.860 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mem_transfer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'mem_transfer' is 33039 from HDL expression: ((1'b1 == ap_CS_fsm_state2) & (1'b0 == ap_block_state2))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mem_transfer'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.29 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.873 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ConvertToVOLE' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'ConvertToVOLE/iv' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ConvertToVOLE/seed_strm_0' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ConvertToVOLE/seed_strm_1' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ConvertToVOLE/u_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ConvertToVOLE/u_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ConvertToVOLE/V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ConvertToVOLE' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ConvertToVOLE'.
+INFO: [RTMG 210-285] Implementing FIFO 'r_strm_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'r_strm_1_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'r_strm_2_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'r_strm_3_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'r_strm_4_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'r_strm_5_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'r_strm_6_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'r_strm_7_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'u_strm_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_1_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_2_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_3_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_4_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_5_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_6_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_7_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_8_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_9_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_10_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_11_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_12_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_13_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_14_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_15_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_16_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_17_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_18_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_19_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_20_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_21_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_22_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_23_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_24_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_25_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_26_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_27_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_28_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_29_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_30_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_31_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_32_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_33_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_34_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_35_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_36_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_37_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_38_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_39_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_40_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_41_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_42_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_43_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_44_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_45_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_46_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_47_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_48_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_49_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_50_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_51_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_52_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_53_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_54_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_55_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_56_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_57_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_58_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_59_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_60_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_61_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_62_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_63_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_64_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_65_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_66_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_67_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_68_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_69_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_70_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_71_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_72_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_73_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_74_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_75_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_76_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_77_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_78_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_79_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_80_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_81_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_82_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_83_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_84_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_85_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_86_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_87_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_88_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_89_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_90_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_91_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_92_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_93_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_94_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_95_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_96_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_97_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_98_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_99_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_100_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_101_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_102_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_103_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_104_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_105_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_106_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_107_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_108_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_109_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_110_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_111_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_112_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_113_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_114_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_115_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_116_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_117_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_118_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_119_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_120_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_121_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_122_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_123_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_124_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_125_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_126_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'v_strm_127_U(ConvertToVOLE_fifo_w256_d8_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_build_VOLE_U0_U(ConvertToVOLE_start_for_build_VOLE_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_mem_transfer_U0_U(ConvertToVOLE_start_for_mem_transfer_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.28 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.884 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.2 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.26 seconds; current allocated memory: 1.884 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2.69 seconds. CPU system time: 0.07 seconds. Elapsed time: 2.77 seconds; current allocated memory: 1.996 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for ConvertToVOLE.
+INFO: [VLOG 209-307] Generating Verilog RTL for ConvertToVOLE.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 239.41 MHz
+INFO: [HLS 200-112] Total CPU user time: 496.49 seconds. Total CPU system time: 3.98 seconds. Total elapsed time: 502.25 seconds; peak allocated memory: 1.996 GB.
+INFO: [v++ 60-791] Total elapsed time: 0h 8m 26s

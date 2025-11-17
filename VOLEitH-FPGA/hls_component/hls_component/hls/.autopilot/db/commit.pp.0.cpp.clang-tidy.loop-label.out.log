@@ -1,0 +1,62 @@
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:2257:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:2257:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:2271:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:2271:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:2285:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:2285:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:4253:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:4253:7: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:9637:51: error: Invalid Directive: for current device, ROM_2P + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=roundIndex type=ROM_2P impl=BRAM
+                                                  ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:9769:9: error: Resource with core_name: DivnS pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = blkNumReg core = DivnS
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:9918:9: error: Resource with core_name: DivnS pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = blkNumReg core = DivnS
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:10156:9: error: Resource with core_name: DivnS pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable=blkNumReg core=DivnS
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:10162:2: warning: Added loop label VITIS_LOOP_765_1:   [xilinx-label-all-loops]
+ for (ap_uint<5> i = 0; i < 25; i++) {
+ ^~~
+ VITIS_LOOP_765_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:10162:2: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:10169:9: warning: Added loop label VITIS_LOOP_772_2:   [xilinx-label-all-loops]
+        for (ap_uint<128> n = 0; n < blkNum; n++) {
+        ^~~
+        VITIS_LOOP_772_2: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:10169:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:10173:17: warning: Added loop label VITIS_LOOP_776_3:   [xilinx-label-all-loops]
+                for (ap_uint<5> i = 0; i < numMsgWord; ++i) {
+                ^~~
+                VITIS_LOOP_776_3: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:10173:17: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:10181:17: warning: Added loop label VITIS_LOOP_784_4:   [xilinx-label-all-loops]
+                for (ap_uint<5> i = 0; i < numMsgWord; ++i) {
+                ^~~
+                VITIS_LOOP_784_4: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:10181:17: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:10210:9: warning: Added loop label VITIS_LOOP_813_5:   [xilinx-label-all-loops]
+        for (ap_uint<128> chunk = 0; chunk < numOutputChunks; chunk++) {
+        ^~~
+        VITIS_LOOP_813_5: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:10210:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:10236:17: warning: Added loop label VITIS_LOOP_839_6:   [xilinx-label-all-loops]
+                for (ap_uint<5> i = 0; i < 16; i++) {
+                ^~~
+                VITIS_LOOP_839_6: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp:10236:17: note: FIX-IT applied suggested code changes

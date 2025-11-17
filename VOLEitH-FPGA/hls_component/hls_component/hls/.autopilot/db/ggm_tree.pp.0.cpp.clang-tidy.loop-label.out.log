@@ -1,0 +1,127 @@
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:30422:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:30422:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:30436:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:30436:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:30450:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:30450:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:32418:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:32418:7: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:37599:51: error: Invalid Directive: for current device, ROM_2P + BRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS bind_storage variable=roundIndex type=ROM_2P impl=BRAM
+                                                  ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:37731:9: error: Resource with core_name: DivnS pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = blkNumReg core = DivnS
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:37880:9: error: Resource with core_name: DivnS pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable = blkNumReg core = DivnS
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38118:9: error: Resource with core_name: DivnS pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
+#pragma HLS resource variable=blkNumReg core=DivnS
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38124:2: warning: Added loop label VITIS_LOOP_765_1:   [xilinx-label-all-loops]
+ for (ap_uint<5> i = 0; i < 25; i++) {
+ ^~~
+ VITIS_LOOP_765_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38124:2: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38131:9: warning: Added loop label VITIS_LOOP_772_2:   [xilinx-label-all-loops]
+        for (ap_uint<128> n = 0; n < blkNum; n++) {
+        ^~~
+        VITIS_LOOP_772_2: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38131:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38135:17: warning: Added loop label VITIS_LOOP_776_3:   [xilinx-label-all-loops]
+                for (ap_uint<5> i = 0; i < numMsgWord; ++i) {
+                ^~~
+                VITIS_LOOP_776_3: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38135:17: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38143:17: warning: Added loop label VITIS_LOOP_784_4:   [xilinx-label-all-loops]
+                for (ap_uint<5> i = 0; i < numMsgWord; ++i) {
+                ^~~
+                VITIS_LOOP_784_4: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38143:17: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38172:9: warning: Added loop label VITIS_LOOP_813_5:   [xilinx-label-all-loops]
+        for (ap_uint<128> chunk = 0; chunk < numOutputChunks; chunk++) {
+        ^~~
+        VITIS_LOOP_813_5: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38172:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38198:17: warning: Added loop label VITIS_LOOP_839_6:   [xilinx-label-all-loops]
+                for (ap_uint<5> i = 0; i < 16; i++) {
+                ^~~
+                VITIS_LOOP_839_6: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38198:17: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38264:5: warning: Added loop label VITIS_LOOP_22_1:   [xilinx-label-all-loops]
+    for(int d = 0; d < 2; d++){
+    ^~~
+    VITIS_LOOP_22_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38264:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38267:9: warning: Added loop label VITIS_LOOP_25_2:   [xilinx-label-all-loops]
+        for(int i = 0; i < num_parents; i++){
+        ^~~
+        VITIS_LOOP_25_2: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38267:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38293:5: warning: Added loop label VITIS_LOOP_51_1:   [xilinx-label-all-loops]
+    for(int i = 0; i < N; i++){
+    ^~~
+    VITIS_LOOP_51_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38293:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38309:5: warning: Added loop label VITIS_LOOP_67_1:   [xilinx-label-all-loops]
+    for(int i = 0; i < N; i++){
+    ^~~
+    VITIS_LOOP_67_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38309:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38318:5: warning: Added loop label VITIS_LOOP_76_1:   [xilinx-label-all-loops]
+    for(int i =0; i < N; i++){
+    ^~~
+    VITIS_LOOP_76_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38318:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38397:5: warning: Added loop label VITIS_LOOP_155_1:   [xilinx-label-all-loops]
+    for(int i = 0; i < (1<<2); i++){
+    ^~~
+    VITIS_LOOP_155_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38397:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38430:5: warning: Added loop label VITIS_LOOP_188_1:   [xilinx-label-all-loops]
+    for(int t = 0; t < 64; t++){
+    ^~~
+    VITIS_LOOP_188_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38430:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38468:5: warning: Added loop label VITIS_LOOP_226_1:   [xilinx-label-all-loops]
+    for(int idx = 0; idx < 64*(2 +2); idx++){
+    ^~~
+    VITIS_LOOP_226_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38468:5: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38530:9: warning: Added loop label VITIS_LOOP_288_1:   [xilinx-label-all-loops]
+        for(int i = 0; i < 2*(1<<2)-1; i++){
+        ^~~
+        VITIS_LOOP_288_1: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38530:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38536:9: warning: Added loop label VITIS_LOOP_294_2:   [xilinx-label-all-loops]
+        for(int p = 0; p < (2 +2); p++){
+        ^~~
+        VITIS_LOOP_294_2: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38536:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38582:13: warning: Added loop label VITIS_LOOP_340_3:   [xilinx-label-all-loops]
+            for(int i = 0; i < num_nodes; i++){
+            ^~~
+            VITIS_LOOP_340_3: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38582:13: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38625:9: warning: Added loop label VITIS_LOOP_383_4:   [xilinx-label-all-loops]
+        for(int i = 0; i < (1<<2); i++){
+        ^~~
+        VITIS_LOOP_383_4: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38625:9: note: FIX-IT applied suggested code changes
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38642:5: warning: Added loop label VITIS_LOOP_400_5:   [xilinx-label-all-loops]
+    for(int i = 0; i < 64; i++){
+    ^~~
+    VITIS_LOOP_400_5: 
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/ggm_tree.pp.0.cpp:38642:5: note: FIX-IT applied suggested code changes

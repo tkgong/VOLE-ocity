@@ -1,0 +1,36 @@
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/endtoend.cpp:26:46: error: Invalid Directive: for current device, ram_2p + BRAM is invalid combination for BIND_STORAGE's option 'type + impl'
+    #pragma HLS BIND_STORAGE variable=u type=ram_2p impl=BRAM
+                                             ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/endtoend.cpp:27:46: error: Invalid Directive: for current device, ram_2p + URAM is invalid combination for BIND_STORAGE's option 'type + impl'
+    #pragma HLS BIND_STORAGE variable=V type=ram_2p impl=URAM
+                                             ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/endtoend.cpp:3:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:98:9: error: use of undeclared identifier '__fpga_fifo_pop'
+        __fpga_fifo_pop(&V, &dout);
+        ^
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:109:9: note: in instantiation of member function 'hls::stream<ap_uint<1>, 0>::read' requested here
+        read(tmp);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/endtoend.cpp:35:29: note: in instantiation of member function 'hls::stream<ap_uint<1>, 0>::read' requested here
+        root[i] = root_strm.read();
+                            ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/endtoend.cpp:3:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:127:9: error: use of undeclared identifier '__fpga_fifo_push'
+        __fpga_fifo_push(&V, &din);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/endtoend.cpp:40:16: note: in instantiation of member function 'hls::stream<ap_uint<128>, 0>::write' requested here
+    proof_strm.write(hcom.range(127,0));
+               ^
+In file included from /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/endtoend.cpp:3:
+In file included from /opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream.h:12:
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:98:9: error: use of undeclared identifier '__fpga_fifo_pop'
+        __fpga_fifo_pop(&V, &dout);
+        ^
+/opt/Xillinx/2025.1/Vitis/common/technology/autopilot/hls_stream_39.h:109:9: note: in instantiation of member function 'hls::stream<ap_uint<128>, 0>::read' requested here
+        read(tmp);
+        ^
+/home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/endtoend.cpp:43:36: note: in instantiation of member function 'hls::stream<ap_uint<128>, 0>::read' requested here
+        proof_strm.write(path_strm.read());
+                                   ^

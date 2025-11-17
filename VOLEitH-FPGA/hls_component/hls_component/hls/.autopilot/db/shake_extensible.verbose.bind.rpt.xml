@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'shake_extensible'" level="0">
+<item name = "Date">Mon Nov 17 18:41:29 2025
+</item>
+<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Project">hls_component</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 4.913 ns, 0 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">169, 452, 0.845 us, 2.260 us, 169, 452, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_shake_extensible_Pipeline_VITIS_LOOP_784_4_fu_1832">shake_extensible_Pipeline_VITIS_LOOP_784_4, 19, 19, 95.000 ns, 95.000 ns, 18, 18, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_shake_extensible_Pipeline_VITIS_LOOP_776_3_fu_1891">shake_extensible_Pipeline_VITIS_LOOP_776_3, 19, 19, 95.000 ns, 95.000 ns, 18, 18, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_KECCAK_f_fu_1948">KECCAK_f, 5, 5, 25.000 ns, 25.000 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- LOOP_SHAKE_EXT_MAIN">168, 451, 168 ~ 451, -, -, 1, no</column>
+<column name=" + VITIS_LOOP_772_2">29, 29, 29, -, -, 1, no</column>
+<column name=" + VITIS_LOOP_813_5">5, 288, 5 ~ 18, -, -, 1 ~ 16, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

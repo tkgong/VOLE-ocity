@@ -1,0 +1,192 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'ProverCircuitEval'" level="0">
+<item name = "Date">Mon Nov 17 18:42:26 2025
+</item>
+<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Project">hls_component</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 4.978 ns, 0 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">773154, 773154, 3.866 ms, 3.866 ms, 581145, 581145, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="ProverCircuitEval_Block_entry_u_0_arg_proc_U0">ProverCircuitEval_Block_entry_u_0_arg_proc, 581144, 581144, 2.906 ms, 2.906 ms, 581144, 581144, no</column>
+<column name="ToField_U0">ToField, 38402, 38402, 0.192 ms, 0.192 ms, 38401, 38401, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="chal2_U0">chal2, 40240, 40523, 0.201 ms, 0.203 ms, 40240, 40523, no</column>
+<column name="aggregate_coef_U0">aggregate_coef, 192009, 192009, 0.960 ms, 0.960 ms, 192009, 192009, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 14, -</column>
+<column name="FIFO">-, -, 1570, 960, -</column>
+<column name="Instance">9, -, 93879, 583098, 0</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 9, -</column>
+<column name="Register">-, -, 2, -, -</column>
+<specialColumn name="Available SLR">1344, 3072, 864000, 432000, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">~0, 0, 11, 135, 0</specialColumn>
+<specialColumn name="Available">5376, 12288, 3456000, 1728000, 1280</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, 2, 33, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="ProverCircuitEval_Block_entry_u_0_arg_proc_U0">ProverCircuitEval_Block_entry_u_0_arg_proc, 9, 0, 47821, 309359, 0</column>
+<column name="ToField_U0">ToField, 0, 0, 19, 912, 0</column>
+<column name="aggregate_coef_U0">aggregate_coef, 0, 0, 10274, 62132, 0</column>
+<column name="chal2_U0">chal2, 0, 0, 35765, 210695, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="a0_strm_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="a1_strm_U">0, 260, 0, -, 2, 128, 256</column>
+<column name="a_strm_U">0, 516, 0, -, 2, 256, 512</column>
+<column name="ch2_strm_U">0, 260, 0, -, 2, 128, 256</column>
+<column name="d_strm_cp_U">0, 8, 0, -, 2, 1, 2</column>
+<column name="u_mask_U">0, 5, 0, -, 3, 128, 384</column>
+<column name="v_mask_U">0, 5, 0, -, 3, 128, 384</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ProverCircuitEval_Block_entry_u_0_arg_proc_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="ProverCircuitEval_Block_entry_u_0_arg_proc_U0_start_full_n">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_v_mask">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_continue">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_done">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_v_mask">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_sync_reg_channel_write_v_mask">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_sync_done">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_v_mask">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ch1_val1">in, 128, ap_none, ch1_val1, scalar</column>
+<column name="ch1_val1_ap_vld">in, 1, ap_none, ch1_val1, scalar</column>
+<column name="u_0_address0">out, 18, ap_memory, u_0, array</column>
+<column name="u_0_ce0">out, 1, ap_memory, u_0, array</column>
+<column name="u_0_d0">out, 1, ap_memory, u_0, array</column>
+<column name="u_0_q0">in, 1, ap_memory, u_0, array</column>
+<column name="u_0_we0">out, 1, ap_memory, u_0, array</column>
+<column name="u_0_address1">out, 18, ap_memory, u_0, array</column>
+<column name="u_0_ce1">out, 1, ap_memory, u_0, array</column>
+<column name="u_0_d1">out, 1, ap_memory, u_0, array</column>
+<column name="u_0_q1">in, 1, ap_memory, u_0, array</column>
+<column name="u_0_we1">out, 1, ap_memory, u_0, array</column>
+<column name="u_1_address0">out, 18, ap_memory, u_1, array</column>
+<column name="u_1_ce0">out, 1, ap_memory, u_1, array</column>
+<column name="u_1_d0">out, 1, ap_memory, u_1, array</column>
+<column name="u_1_q0">in, 1, ap_memory, u_1, array</column>
+<column name="u_1_we0">out, 1, ap_memory, u_1, array</column>
+<column name="u_1_address1">out, 18, ap_memory, u_1, array</column>
+<column name="u_1_ce1">out, 1, ap_memory, u_1, array</column>
+<column name="u_1_d1">out, 1, ap_memory, u_1, array</column>
+<column name="u_1_q1">in, 1, ap_memory, u_1, array</column>
+<column name="u_1_we1">out, 1, ap_memory, u_1, array</column>
+<column name="V_0_address0">out, 18, ap_memory, V_0, array</column>
+<column name="V_0_ce0">out, 1, ap_memory, V_0, array</column>
+<column name="V_0_d0">out, 128, ap_memory, V_0, array</column>
+<column name="V_0_q0">in, 128, ap_memory, V_0, array</column>
+<column name="V_0_we0">out, 1, ap_memory, V_0, array</column>
+<column name="V_0_address1">out, 18, ap_memory, V_0, array</column>
+<column name="V_0_ce1">out, 1, ap_memory, V_0, array</column>
+<column name="V_0_d1">out, 128, ap_memory, V_0, array</column>
+<column name="V_0_q1">in, 128, ap_memory, V_0, array</column>
+<column name="V_0_we1">out, 1, ap_memory, V_0, array</column>
+<column name="V_1_address0">out, 18, ap_memory, V_1, array</column>
+<column name="V_1_ce0">out, 1, ap_memory, V_1, array</column>
+<column name="V_1_d0">out, 128, ap_memory, V_1, array</column>
+<column name="V_1_q0">in, 128, ap_memory, V_1, array</column>
+<column name="V_1_we0">out, 1, ap_memory, V_1, array</column>
+<column name="V_1_address1">out, 18, ap_memory, V_1, array</column>
+<column name="V_1_ce1">out, 1, ap_memory, V_1, array</column>
+<column name="V_1_d1">out, 128, ap_memory, V_1, array</column>
+<column name="V_1_q1">in, 128, ap_memory, V_1, array</column>
+<column name="V_1_we1">out, 1, ap_memory, V_1, array</column>
+<column name="witness_TDATA">in, 8, axis, witness, pointer</column>
+<column name="witness_TVALID">in, 1, axis, witness, pointer</column>
+<column name="witness_TREADY">out, 1, axis, witness, pointer</column>
+<column name="circuit_TDATA">in, 128, axis, circuit, pointer</column>
+<column name="circuit_TVALID">in, 1, axis, circuit, pointer</column>
+<column name="circuit_TREADY">out, 1, axis, circuit, pointer</column>
+<column name="d_strm_TDATA">out, 8, axis, d_strm, pointer</column>
+<column name="d_strm_TVALID">out, 1, axis, d_strm, pointer</column>
+<column name="d_strm_TREADY">in, 1, axis, d_strm, pointer</column>
+<column name="a0_tilde">out, 128, ap_vld, a0_tilde, pointer</column>
+<column name="a0_tilde_ap_vld">out, 1, ap_vld, a0_tilde, pointer</column>
+<column name="a1_tilde">out, 128, ap_vld, a1_tilde, pointer</column>
+<column name="a1_tilde_ap_vld">out, 1, ap_vld, a1_tilde, pointer</column>
+<column name="proof_strm_TDATA">out, 128, axis, proof_strm, pointer</column>
+<column name="proof_strm_TVALID">out, 1, axis, proof_strm, pointer</column>
+<column name="proof_strm_TREADY">in, 1, axis, proof_strm, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, ProverCircuitEval, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, ProverCircuitEval, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, ProverCircuitEval, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, ProverCircuitEval, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, ProverCircuitEval, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, ProverCircuitEval, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, ProverCircuitEval, return value</column>
+</table>
+</item>
+</section>
+</profile>

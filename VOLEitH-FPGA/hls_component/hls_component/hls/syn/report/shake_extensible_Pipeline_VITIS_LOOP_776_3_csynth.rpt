@@ -1,0 +1,238 @@
+
+
+================================================================
+== Vitis HLS Report for 'shake_extensible_Pipeline_VITIS_LOOP_776_3'
+================================================================
+* Date:           Mon Nov 17 18:42:25 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  2.085 ns|        0 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    | min | max |                      Type                      |
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+    |       19|       19|  95.000 ns|  95.000 ns|   18|   18|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_776_3  |       17|       17|         2|          1|          1|    17|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       94|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|        0|       81|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|      198|     -|
+|Register             |        -|      -|     1101|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|     1101|      373|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+-----------------------+---------+----+---+----+-----+
+    |           Instance          |         Module        | BRAM_18K| DSP| FF| LUT| URAM|
+    +-----------------------------+-----------------------+---------+----+---+----+-----+
+    |sparsemux_35_5_64_1_1_U1857  |sparsemux_35_5_64_1_1  |        0|   0|  0|  81|    0|
+    +-----------------------------+-----------------------+---------+----+---+----+-----+
+    |Total                        |                       |        0|   0|  0|  81|    0|
+    +-----------------------------+-----------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |add_ln776_fu_536_p2             |         +|   0|  0|  12|           5|           1|
+    |ap_block_pp0_stage0_01001_grp1  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_460                |       and|   0|  0|   2|           1|           1|
+    |icmp_ln776_fu_530_p2            |      icmp|   0|  0|  12|           5|           5|
+    |ap_enable_pp0                   |       xor|   0|  0|   2|           1|           2|
+    |stateArray_fu_673_p2            |       xor|   0|  0|  64|          64|          64|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |Total                           |          |   0|  0|  94|          77|          74|
+    +--------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_2     |   9|          2|    5|         10|
+    |i_fu_138                 |   9|          2|    5|         10|
+    |msgStrm_blk_n            |   9|          2|    1|          2|
+    |stateArray_10_1_fu_182   |   9|          2|   64|        128|
+    |stateArray_11_1_fu_186   |   9|          2|   64|        128|
+    |stateArray_1213_fu_142   |   9|          2|   64|        128|
+    |stateArray_12_1_fu_190   |   9|          2|   64|        128|
+    |stateArray_13_1_fu_194   |   9|          2|   64|        128|
+    |stateArray_14_1_fu_198   |   9|          2|   64|        128|
+    |stateArray_15_1_fu_202   |   9|          2|   64|        128|
+    |stateArray_16_1_fu_206   |   9|          2|   64|        128|
+    |stateArray_1_1_fu_146    |   9|          2|   64|        128|
+    |stateArray_2_1_fu_150    |   9|          2|   64|        128|
+    |stateArray_3_1_fu_154    |   9|          2|   64|        128|
+    |stateArray_4_1_fu_158    |   9|          2|   64|        128|
+    |stateArray_5_1_fu_162    |   9|          2|   64|        128|
+    |stateArray_6_1_fu_166    |   9|          2|   64|        128|
+    |stateArray_7_1_fu_170    |   9|          2|   64|        128|
+    |stateArray_8_1_fu_174    |   9|          2|   64|        128|
+    |stateArray_9_1_fu_178    |   9|          2|   64|        128|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 198|         44| 1101|       2202|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_2_reg_1010             |   5|   0|    5|          0|
+    |i_fu_138                 |   5|   0|    5|          0|
+    |stateArray_10_1_fu_182   |  64|   0|   64|          0|
+    |stateArray_11_1_fu_186   |  64|   0|   64|          0|
+    |stateArray_1213_fu_142   |  64|   0|   64|          0|
+    |stateArray_12_1_fu_190   |  64|   0|   64|          0|
+    |stateArray_13_1_fu_194   |  64|   0|   64|          0|
+    |stateArray_14_1_fu_198   |  64|   0|   64|          0|
+    |stateArray_15_1_fu_202   |  64|   0|   64|          0|
+    |stateArray_16_1_fu_206   |  64|   0|   64|          0|
+    |stateArray_1_1_fu_146    |  64|   0|   64|          0|
+    |stateArray_2_1_fu_150    |  64|   0|   64|          0|
+    |stateArray_3_1_fu_154    |  64|   0|   64|          0|
+    |stateArray_4_1_fu_158    |  64|   0|   64|          0|
+    |stateArray_5_1_fu_162    |  64|   0|   64|          0|
+    |stateArray_6_1_fu_166    |  64|   0|   64|          0|
+    |stateArray_7_1_fu_170    |  64|   0|   64|          0|
+    |stateArray_8_1_fu_174    |  64|   0|   64|          0|
+    |stateArray_9_1_fu_178    |  64|   0|   64|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |1101|   0| 1101|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------+-----+-----+------------+--------------------------------------------+--------------+
+|          RTL Ports         | Dir | Bits|  Protocol  |                Source Object               |    C Type    |
++----------------------------+-----+-----+------------+--------------------------------------------+--------------+
+|ap_clk                      |   in|    1|  ap_ctrl_hs|  shake_extensible_Pipeline_VITIS_LOOP_776_3|  return value|
+|ap_rst                      |   in|    1|  ap_ctrl_hs|  shake_extensible_Pipeline_VITIS_LOOP_776_3|  return value|
+|ap_start                    |   in|    1|  ap_ctrl_hs|  shake_extensible_Pipeline_VITIS_LOOP_776_3|  return value|
+|ap_done                     |  out|    1|  ap_ctrl_hs|  shake_extensible_Pipeline_VITIS_LOOP_776_3|  return value|
+|ap_idle                     |  out|    1|  ap_ctrl_hs|  shake_extensible_Pipeline_VITIS_LOOP_776_3|  return value|
+|ap_ready                    |  out|    1|  ap_ctrl_hs|  shake_extensible_Pipeline_VITIS_LOOP_776_3|  return value|
+|msgStrm_dout                |   in|   64|     ap_fifo|                                     msgStrm|       pointer|
+|msgStrm_empty_n             |   in|    1|     ap_fifo|                                     msgStrm|       pointer|
+|msgStrm_read                |  out|    1|     ap_fifo|                                     msgStrm|       pointer|
+|stateArray_16_0             |   in|   64|     ap_none|                             stateArray_16_0|        scalar|
+|stateArray_15_0             |   in|   64|     ap_none|                             stateArray_15_0|        scalar|
+|stateArray_14_0             |   in|   64|     ap_none|                             stateArray_14_0|        scalar|
+|stateArray_13_0             |   in|   64|     ap_none|                             stateArray_13_0|        scalar|
+|stateArray_12_0             |   in|   64|     ap_none|                             stateArray_12_0|        scalar|
+|stateArray_11_0             |   in|   64|     ap_none|                             stateArray_11_0|        scalar|
+|stateArray_10_0             |   in|   64|     ap_none|                             stateArray_10_0|        scalar|
+|stateArray_9_0              |   in|   64|     ap_none|                              stateArray_9_0|        scalar|
+|stateArray_8_0              |   in|   64|     ap_none|                              stateArray_8_0|        scalar|
+|stateArray_7_0              |   in|   64|     ap_none|                              stateArray_7_0|        scalar|
+|stateArray_6_0              |   in|   64|     ap_none|                              stateArray_6_0|        scalar|
+|stateArray_5_0              |   in|   64|     ap_none|                              stateArray_5_0|        scalar|
+|stateArray_4_0              |   in|   64|     ap_none|                              stateArray_4_0|        scalar|
+|stateArray_3_0              |   in|   64|     ap_none|                              stateArray_3_0|        scalar|
+|stateArray_2_0              |   in|   64|     ap_none|                              stateArray_2_0|        scalar|
+|stateArray_1_0              |   in|   64|     ap_none|                              stateArray_1_0|        scalar|
+|stateArray_0                |   in|   64|     ap_none|                                stateArray_0|        scalar|
+|stateArray_16_1_out         |  out|   64|      ap_vld|                         stateArray_16_1_out|       pointer|
+|stateArray_16_1_out_ap_vld  |  out|    1|      ap_vld|                         stateArray_16_1_out|       pointer|
+|stateArray_15_1_out         |  out|   64|      ap_vld|                         stateArray_15_1_out|       pointer|
+|stateArray_15_1_out_ap_vld  |  out|    1|      ap_vld|                         stateArray_15_1_out|       pointer|
+|stateArray_14_1_out         |  out|   64|      ap_vld|                         stateArray_14_1_out|       pointer|
+|stateArray_14_1_out_ap_vld  |  out|    1|      ap_vld|                         stateArray_14_1_out|       pointer|
+|stateArray_13_1_out         |  out|   64|      ap_vld|                         stateArray_13_1_out|       pointer|
+|stateArray_13_1_out_ap_vld  |  out|    1|      ap_vld|                         stateArray_13_1_out|       pointer|
+|stateArray_12_1_out         |  out|   64|      ap_vld|                         stateArray_12_1_out|       pointer|
+|stateArray_12_1_out_ap_vld  |  out|    1|      ap_vld|                         stateArray_12_1_out|       pointer|
+|stateArray_11_1_out         |  out|   64|      ap_vld|                         stateArray_11_1_out|       pointer|
+|stateArray_11_1_out_ap_vld  |  out|    1|      ap_vld|                         stateArray_11_1_out|       pointer|
+|stateArray_10_1_out         |  out|   64|      ap_vld|                         stateArray_10_1_out|       pointer|
+|stateArray_10_1_out_ap_vld  |  out|    1|      ap_vld|                         stateArray_10_1_out|       pointer|
+|stateArray_9_1_out          |  out|   64|      ap_vld|                          stateArray_9_1_out|       pointer|
+|stateArray_9_1_out_ap_vld   |  out|    1|      ap_vld|                          stateArray_9_1_out|       pointer|
+|stateArray_8_1_out          |  out|   64|      ap_vld|                          stateArray_8_1_out|       pointer|
+|stateArray_8_1_out_ap_vld   |  out|    1|      ap_vld|                          stateArray_8_1_out|       pointer|
+|stateArray_7_1_out          |  out|   64|      ap_vld|                          stateArray_7_1_out|       pointer|
+|stateArray_7_1_out_ap_vld   |  out|    1|      ap_vld|                          stateArray_7_1_out|       pointer|
+|stateArray_6_1_out          |  out|   64|      ap_vld|                          stateArray_6_1_out|       pointer|
+|stateArray_6_1_out_ap_vld   |  out|    1|      ap_vld|                          stateArray_6_1_out|       pointer|
+|stateArray_5_1_out          |  out|   64|      ap_vld|                          stateArray_5_1_out|       pointer|
+|stateArray_5_1_out_ap_vld   |  out|    1|      ap_vld|                          stateArray_5_1_out|       pointer|
+|stateArray_4_1_out          |  out|   64|      ap_vld|                          stateArray_4_1_out|       pointer|
+|stateArray_4_1_out_ap_vld   |  out|    1|      ap_vld|                          stateArray_4_1_out|       pointer|
+|stateArray_3_1_out          |  out|   64|      ap_vld|                          stateArray_3_1_out|       pointer|
+|stateArray_3_1_out_ap_vld   |  out|    1|      ap_vld|                          stateArray_3_1_out|       pointer|
+|stateArray_2_1_out          |  out|   64|      ap_vld|                          stateArray_2_1_out|       pointer|
+|stateArray_2_1_out_ap_vld   |  out|    1|      ap_vld|                          stateArray_2_1_out|       pointer|
+|stateArray_1_1_out          |  out|   64|      ap_vld|                          stateArray_1_1_out|       pointer|
+|stateArray_1_1_out_ap_vld   |  out|    1|      ap_vld|                          stateArray_1_1_out|       pointer|
+|stateArray_1213_out         |  out|   64|      ap_vld|                         stateArray_1213_out|       pointer|
+|stateArray_1213_out_ap_vld  |  out|    1|      ap_vld|                         stateArray_1213_out|       pointer|
++----------------------------+-----+-----+------------+--------------------------------------------+--------------+
+

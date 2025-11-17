@@ -1,0 +1,43 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../tb_vole.cpp in release mode
+   Compiling ../../../../Commit.cpp in release mode
+   Compiling ../../../../vole.cpp in release mode
+   Compiling ../../../../shake.cpp in release mode
+   Compiling ../../../../ggm_tree.cpp in release mode
+   Compiling ../../../../PRG.cpp in release mode
+   Compiling ../../../../encrypt.cpp in release mode
+   Generating csim.exe
+INPUT PARAMETERS:
+-----------------
+Master Root: 0x01234567_89abcdef_fedcba98_76543210
+IV:          0xffeeddcc_bbaa9988_77665544_33221100
+K = 2 (N = 4 leaves per tree)
+TAU = 64 trees
+GGM_UNROLL_FAC = 2
+ELL_HAT = 1041
+
+=== PROVER PHASE ===
+Calling ggm_tree()...
+✓ ggm_tree() completed.
+
+=== SOFTWARE REFERENCE ===
+✓ _SW_ConvertToVOLE() completed.
+
+=== HARDWARE IMPLEMENTATION ===
+✓ ConvertToVOLE() completed.
+
+
+=== VERIFICATION ===
+Checking u vector (1041 bits)...
+✓ u vector MATCH!
+Checking V matrix (1041 x 128)...
+✓ V matrix MATCH!
+
+=== FINAL RESULT ===
+✓✓✓ ALL TESTS PASSED! ✓✓✓
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<256>, 0>1' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'hls::stream<ap_uint<256>, 0>0' contains leftover data, which may result in RTL simulation hanging.
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 160
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

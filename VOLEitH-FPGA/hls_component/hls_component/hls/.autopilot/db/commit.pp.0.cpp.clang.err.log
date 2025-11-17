@@ -1,0 +1,126 @@
+In file included from commit.cpp:6:
+In file included from ./shake.h:3:
+./sha3.hpp:53:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=blockType_XLX_SEP_ PragmaOptions=variable = M dim = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable = M dim = 1
+        ^
+./sha3.hpp:74:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=ROTL_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+./sha3.hpp:102:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=KECCAK_f_XLX_SEP_ PragmaOptions=variable=roundIndex type=ROM_2P impl=BRAM_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS bind_storage variable=roundIndex type=ROM_2P impl=BRAM
+        ^
+./sha3.hpp:108:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=KECCAK_f_XLX_SEP_ PragmaOptions=variable = rowReg complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable = rowReg complete
+        ^
+./sha3.hpp:111:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=KECCAK_f_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+./sha3.hpp:118:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=KECCAK_f_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+./sha3.hpp:122:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=KECCAK_f_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+./sha3.hpp:129:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=KECCAK_f_XLX_SEP_ PragmaOptions=variable = tmpStateArray dim = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable = tmpStateArray dim = 1
+        ^
+./sha3.hpp:187:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=KECCAK_f_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+./sha3.hpp:189:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=KECCAK_f_XLX_SEP_ PragmaOptions=variable = stateReg complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable = stateReg complete
+        ^
+./sha3.hpp:192:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=KECCAK_f_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+./sha3.hpp:197:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=KECCAK_f_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+./sha3.hpp:244:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sha3Digest_XLX_SEP_ PragmaOptions=min = 1 max = 1 avg = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS loop_tripcount min = 1 max = 1 avg = 1
+        ^
+./sha3.hpp:251:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = blkNumReg core = DivnS
+        ^
+./sha3.hpp:251:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sha3Digest_XLX_SEP_ PragmaOptions=variable = blkNumReg core = DivnS_XLX_SEP_ [-Wdump-hls-pragmas]
+./sha3.hpp:259:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sha3Digest_XLX_SEP_ PragmaOptions=variable = stateArray.M complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable = stateArray.M complete
+        ^
+./sha3.hpp:262:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sha3Digest_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+./sha3.hpp:271:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sha3Digest_XLX_SEP_ PragmaOptions=min = 1 max = 1 avg = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS loop_tripcount min = 1 max = 1 avg = 1
+        ^
+./sha3.hpp:277:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sha3Digest_XLX_SEP_ PragmaOptions=II = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II = 1
+        ^
+./sha3.hpp:289:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sha3Digest_XLX_SEP_ PragmaOptions=II = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II = 1
+        ^
+./sha3.hpp:368:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sha3Digest_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+./sha3.hpp:420:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shakeXOF_XLX_SEP_ PragmaOptions=min = 1 max = 1 avg = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS loop_tripcount min = 1 max = 1 avg = 1
+        ^
+./sha3.hpp:427:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable = blkNumReg core = DivnS
+        ^
+./sha3.hpp:427:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shakeXOF_XLX_SEP_ PragmaOptions=variable = blkNumReg core = DivnS_XLX_SEP_ [-Wdump-hls-pragmas]
+./sha3.hpp:436:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shakeXOF_XLX_SEP_ PragmaOptions=variable = stateArray.M complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable = stateArray.M complete
+        ^
+./sha3.hpp:439:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shakeXOF_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+./sha3.hpp:448:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shakeXOF_XLX_SEP_ PragmaOptions=min = 1 max = 1 avg = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS loop_tripcount min = 1 max = 1 avg = 1
+        ^
+./sha3.hpp:454:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shakeXOF_XLX_SEP_ PragmaOptions=II = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II = 1
+        ^
+./sha3.hpp:545:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shakeXOF_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+./sha3.hpp:751:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shake_extensible_XLX_SEP_ PragmaOptions=min=1 max=1 avg=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS loop_tripcount min=1 max=1 avg=1
+        ^
+./sha3.hpp:759:9: warning: 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead [-Wignored-hls-pragmas]
+#pragma HLS resource variable=blkNumReg core=DivnS
+        ^
+./sha3.hpp:759:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=resource_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shake_extensible_XLX_SEP_ PragmaOptions=variable=blkNumReg core=DivnS_XLX_SEP_ [-Wdump-hls-pragmas]
+./sha3.hpp:763:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shake_extensible_XLX_SEP_ PragmaOptions=variable=stateArray.M complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS array_partition variable=stateArray.M complete
+        ^
+./sha3.hpp:766:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shake_extensible_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+./sha3.hpp:773:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shake_extensible_XLX_SEP_ PragmaOptions=min=1 max=1 avg=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS loop_tripcount min=1 max=1 avg=1
+        ^
+./sha3.hpp:777:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shake_extensible_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II=1
+        ^
+./sha3.hpp:785:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shake_extensible_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline II=1
+        ^
+./sha3.hpp:815:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shake_extensible_XLX_SEP_ PragmaOptions=OFF_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline OFF
+        ^
+./sha3.hpp:816:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shake_extensible_XLX_SEP_ PragmaOptions=min=1 max=16 avg=8_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS loop_tripcount min=1 max=16 avg=8
+        ^
+./sha3.hpp:840:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=shake_extensible_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+commit.cpp:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=VOLECommit_XLX_SEP_ PragmaOptions=OFF_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE OFF
+        ^
+commit.cpp:22:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=VOLECommit_XLX_SEP_ PragmaOptions=variable=seed_strm depth=2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=seed_strm depth=2
+        ^
+commit.cpp:23:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=stream_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=VOLECommit_XLX_SEP_ PragmaOptions=variable=h_strm depth=2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS STREAM variable=h_strm depth=2
+        ^
+43 warnings generated.

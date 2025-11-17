@@ -1,0 +1,222 @@
+
+
+================================================================
+== Vitis HLS Report for 'ggm_small'
+================================================================
+* Date:           Mon Nov 17 18:41:33 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.913 ns|        0 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       83|      719|  0.415 us|  3.595 us|   83|  719|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+----------------+---------+---------+----------+----------+-----+-----+---------+
+        |                           |                |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |          Instance         |     Module     |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +---------------------------+----------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_PRG_fu_167             |PRG             |       23|       23|  0.115 us|  0.115 us|    1|    1|      yes|
+        |grp_shakeXOF_32u_s_fu_179  |shakeXOF_32u_s  |        1|      158|  5.000 ns|  0.790 us|    1|  158|       no|
+        +---------------------------+----------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       28|     -|
+|FIFO                 |        -|      -|      797|      461|     -|
+|Instance             |      200|      -|    43119|   239573|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|      648|     -|
+|Register             |        -|      -|     2085|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |      200|      0|    46001|   240710|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |       14|      0|        5|       55|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        3|      0|        1|       13|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+----------------+---------+----+-------+--------+-----+
+    |          Instance         |     Module     | BRAM_18K| DSP|   FF  |   LUT  | URAM|
+    +---------------------------+----------------+---------+----+-------+--------+-----+
+    |grp_PRG_fu_167             |PRG             |      200|   0|  17349|   20867|    0|
+    |grp_shakeXOF_32u_s_fu_179  |shakeXOF_32u_s  |        0|   0|  25770|  218706|    0|
+    +---------------------------+----------------+---------+----+-------+--------+-----+
+    |Total                      |                |      200|   0|  43119|  239573|    0|
+    +---------------------------+----------------+---------+----+-------+--------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +----------------------+---------+-----+----+-----+------+-----+---------+
+    |         Name         | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +----------------------+---------+-----+----+-----+------+-----+---------+
+    |digestStrm_fifo_U     |        0|  516|   0|    -|     2|  256|      512|
+    |endDigestStrm_fifo_U  |        0|    8|   0|    -|     2|    1|        2|
+    |endMsgLenStrm_fifo_U  |        0|    8|   0|    -|     2|    1|        2|
+    |msgLenStrm_fifo_U     |        0|  260|   0|    -|     2|  128|      256|
+    |msgStrm_fifo_U        |        0|    5|   0|    -|     4|   64|      256|
+    +----------------------+---------+-----+----+-----+------+-----+---------+
+    |Total                 |        0|  797|   0|    0|    12|  450|     1028|
+    +----------------------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state56                 |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op216_read_state58  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op245_read_state67  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op274_read_state76  |       and|   0|  0|   2|           1|           1|
+    |ap_predicate_op303_read_state85  |       and|   0|  0|   2|           1|           1|
+    |grp_nbreadreq_fu_141_p3          |       and|   0|  0|   2|           1|           0|
+    |ap_block_state49                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state50                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state55                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state58                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state67                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state76                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state85                 |        or|   0|  0|   2|           1|           1|
+    |ap_block_state86                 |        or|   0|  0|   2|           1|           1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |Total                            |          |   0|  0|  28|          14|          13|
+    +---------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------+-----+-----------+-----+-----------+
+    |         Name        | LUT | Input Size| Bits| Total Bits|
+    +---------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm            |  435|         89|    1|         89|
+    |com_strm_blk_n       |    9|          2|    1|          2|
+    |com_strm_din         |   26|          5|  128|        640|
+    |digestStrm_write     |    9|          2|    1|          2|
+    |endDigestStrm_write  |    9|          2|    1|          2|
+    |endMsgLenStrm_din    |   14|          3|    1|          3|
+    |endMsgLenStrm_read   |   14|          3|    1|          3|
+    |grp_PRG_fu_167_seed  |   20|          4|  128|        512|
+    |msgLenStrm_read      |    9|          2|    1|          2|
+    |msgStrm_din          |   59|         11|   64|        704|
+    |msgStrm_read         |    9|          2|    1|          2|
+    |seed_strm_blk_n      |    9|          2|    1|          2|
+    |seed_strm_din        |   26|          5|  128|        640|
+    +---------------------+-----+-----------+-----+-----------+
+    |Total                |  648|        132|  457|       2603|
+    +---------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+-----+----+-----+-----------+
+    |                  Name                  |  FF | LUT| Bits| Const Bits|
+    +----------------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                               |   88|   0|   88|          0|
+    |grp_shakeXOF_32u_s_fu_179_ap_start_reg  |    1|   0|    1|          0|
+    |keys_1_ret_reg_397                      |  128|   0|  128|          0|
+    |keys_2_ret_reg_403                      |  128|   0|  128|          0|
+    |keys_3_ret_reg_409                      |  128|   0|  128|          0|
+    |keys_4_ret_reg_414                      |  128|   0|  128|          0|
+    |keys_5_ret_reg_426                      |  128|   0|  128|          0|
+    |keys_6_ret_reg_433                      |  128|   0|  128|          0|
+    |p_0_reg_392                             |   64|   0|   64|          0|
+    |p_1_reg_455                             |  128|   0|  128|          0|
+    |p_3_reg_481                             |  128|   0|  128|          0|
+    |p_5_reg_507                             |  128|   0|  128|          0|
+    |p_s_reg_421                             |   64|   0|   64|          0|
+    |reg_197                                 |  256|   0|  256|          0|
+    |tmp_185_reg_444                         |    1|   0|    1|          0|
+    |tmp_186_reg_448                         |    1|   0|    1|          0|
+    |tmp_188_reg_466                         |    1|   0|    1|          0|
+    |tmp_189_reg_470                         |    1|   0|    1|          0|
+    |tmp_190_reg_474                         |    1|   0|    1|          0|
+    |tmp_192_reg_492                         |    1|   0|    1|          0|
+    |tmp_193_reg_496                         |    1|   0|    1|          0|
+    |tmp_194_reg_500                         |    1|   0|    1|          0|
+    |tmp_196_reg_518                         |    1|   0|    1|          0|
+    |tmp_197_reg_522                         |    1|   0|    1|          0|
+    |tmp_198_reg_526                         |    1|   0|    1|          0|
+    |tmp_s_reg_440                           |    1|   0|    1|          0|
+    |trunc_ln24_reg_387                      |   64|   0|   64|          0|
+    |trunc_ln44_1_reg_486                    |  128|   0|  128|          0|
+    |trunc_ln44_2_reg_512                    |  128|   0|  128|          0|
+    |trunc_ln44_reg_460                      |  128|   0|  128|          0|
+    +----------------------------------------+-----+----+-----+-----------+
+    |Total                                   | 2085|   0| 2085|          0|
+    +----------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------------+-----+-----+------------+--------------+--------------+
+|ap_clk            |   in|    1|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_rst            |   in|    1|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_start          |   in|    1|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_done           |  out|    1|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_idle           |  out|    1|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_ready          |  out|    1|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_return_0       |  out|  128|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_return_1       |  out|  128|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_return_2       |  out|  128|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_return_3       |  out|  128|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_return_4       |  out|  128|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_return_5       |  out|  128|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_return_6       |  out|  128|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_return_7       |  out|  128|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_return_8       |  out|  128|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_return_9       |  out|  128|  ap_ctrl_hs|     ggm_small|  return value|
+|ap_return_10      |  out|  128|  ap_ctrl_hs|     ggm_small|  return value|
+|root_val          |   in|  128|     ap_none|      root_val|        scalar|
+|iv_val            |   in|  128|     ap_none|        iv_val|        scalar|
+|seed_strm_din     |  out|  128|     ap_fifo|     seed_strm|       pointer|
+|seed_strm_full_n  |   in|    1|     ap_fifo|     seed_strm|       pointer|
+|seed_strm_write   |  out|    1|     ap_fifo|     seed_strm|       pointer|
+|com_strm_din      |  out|  128|     ap_fifo|      com_strm|       pointer|
+|com_strm_full_n   |   in|    1|     ap_fifo|      com_strm|       pointer|
+|com_strm_write    |  out|    1|     ap_fifo|      com_strm|       pointer|
++------------------+-----+-----+------------+--------------+--------------+
+

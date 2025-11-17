@@ -1,0 +1,335 @@
+
+
+================================================================
+== Vitis HLS Report for 'chal1'
+================================================================
+* Date:           Mon Nov 17 18:41:25 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.913 ns|        0 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        9|      166|  45.000 ns|  0.830 us|    9|  166|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.42>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%iv_val_read = read i128 @_ssdm_op_Read.ap_auto.i128, i128 %iv_val"   --->   Operation 10 'read' 'iv_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%msgStrm = alloca i64 1" [fiat_shamir.cpp:10]   --->   Operation 11 'alloca' 'msgStrm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 16> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%msgLenStrm = alloca i64 1" [fiat_shamir.cpp:12]   --->   Operation 12 'alloca' 'msgLenStrm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 2> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%endMsgLenStrm = alloca i64 1" [fiat_shamir.cpp:14]   --->   Operation 13 'alloca' 'endMsgLenStrm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%digestStrm = alloca i64 1" [fiat_shamir.cpp:16]   --->   Operation 14 'alloca' 'digestStrm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 2> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%endDigestStrm = alloca i64 1" [fiat_shamir.cpp:18]   --->   Operation 15 'alloca' 'endDigestStrm' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 16 [1/1] ( I:1.42ns O:1.42ns )   --->   "%write_ln23 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %endMsgLenStrm, i1 0" [fiat_shamir.cpp:23]   --->   Operation 16 'write' 'write_ln23' <Predicate = true> <Delay = 1.42> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%trunc_ln25 = trunc i128 %iv_val_read" [fiat_shamir.cpp:25]   --->   Operation 17 'trunc' 'trunc_ln25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] ( I:1.37ns O:1.37ns )   --->   "%write_ln25 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %msgStrm, i64 %trunc_ln25" [fiat_shamir.cpp:25]   --->   Operation 18 'write' 'write_ln25' <Predicate = true> <Delay = 1.37> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 16> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_s = partselect i64 @_ssdm_op_PartSelect.i64.i128.i32, i128 %iv_val_read, i32 64" [fiat_shamir.cpp:26]   --->   Operation 19 'partselect' 'p_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] ( I:1.40ns O:1.40ns )   --->   "%write_ln32 = write void @_ssdm_op_Write.ap_fifo.volatile.i128P0A, i128 %msgLenStrm, i128 48" [fiat_shamir.cpp:32]   --->   Operation 20 'write' 'write_ln32' <Predicate = true> <Delay = 1.40> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 128> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 1.42>
+ST_2 : Operation 21 [1/1] ( I:1.37ns O:1.37ns )   --->   "%write_ln26 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %msgStrm, i64 %p_s" [fiat_shamir.cpp:26]   --->   Operation 21 'write' 'write_ln26' <Predicate = true> <Delay = 1.37> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 16> <FIFO>
+ST_2 : Operation 22 [1/1] ( I:1.42ns O:1.42ns )   --->   "%write_ln33 = write void @_ssdm_op_Write.ap_fifo.volatile.i1P0A, i1 %endMsgLenStrm, i1 1" [fiat_shamir.cpp:33]   --->   Operation 22 'write' 'write_ln33' <Predicate = true> <Delay = 1.42> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+
+State 3 <SV = 2> <Delay = 1.37>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%hcom_val_read = read i256 @_ssdm_op_Read.ap_auto.i256, i256 %hcom_val"   --->   Operation 23 'read' 'hcom_val_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln27 = trunc i256 %hcom_val_read" [fiat_shamir.cpp:27]   --->   Operation 24 'trunc' 'trunc_ln27' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] ( I:1.37ns O:1.37ns )   --->   "%write_ln27 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %msgStrm, i64 %trunc_ln27" [fiat_shamir.cpp:27]   --->   Operation 25 'write' 'write_ln27' <Predicate = true> <Delay = 1.37> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 16> <FIFO>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%p_8 = partselect i64 @_ssdm_op_PartSelect.i64.i256.i32, i256 %hcom_val_read, i32 64" [fiat_shamir.cpp:28]   --->   Operation 26 'partselect' 'p_8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%p_9 = partselect i64 @_ssdm_op_PartSelect.i64.i256.i32, i256 %hcom_val_read, i32 128" [fiat_shamir.cpp:29]   --->   Operation 27 'partselect' 'p_9' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%p_0 = partselect i64 @_ssdm_op_PartSelect.i64.i256.i32, i256 %hcom_val_read, i32 192" [fiat_shamir.cpp:30]   --->   Operation 28 'partselect' 'p_0' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.37>
+ST_4 : Operation 29 [1/1] ( I:1.37ns O:1.37ns )   --->   "%write_ln28 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %msgStrm, i64 %p_8" [fiat_shamir.cpp:28]   --->   Operation 29 'write' 'write_ln28' <Predicate = true> <Delay = 1.37> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 16> <FIFO>
+
+State 5 <SV = 4> <Delay = 1.37>
+ST_5 : Operation 30 [1/1] ( I:1.37ns O:1.37ns )   --->   "%write_ln29 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %msgStrm, i64 %p_9" [fiat_shamir.cpp:29]   --->   Operation 30 'write' 'write_ln29' <Predicate = true> <Delay = 1.37> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 16> <FIFO>
+
+State 6 <SV = 5> <Delay = 1.37>
+ST_6 : Operation 31 [1/1] ( I:1.37ns O:1.37ns )   --->   "%write_ln30 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %msgStrm, i64 %p_0" [fiat_shamir.cpp:30]   --->   Operation 31 'write' 'write_ln30' <Predicate = true> <Delay = 1.37> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.37> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 16> <FIFO>
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 32 [2/2] (0.00ns)   --->   "%call_ln727 = call void @shakeXOF<32u>, i64 %msgStrm, i128 %msgLenStrm, i1 %endMsgLenStrm, i256 %digestStrm, i1 %endDigestStrm" [./sha3.hpp:727->fiat_shamir.cpp:35]   --->   Operation 32 'call' 'call_ln727' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 33 [1/2] (0.00ns)   --->   "%call_ln727 = call void @shakeXOF<32u>, i64 %msgStrm, i128 %msgLenStrm, i1 %endMsgLenStrm, i256 %digestStrm, i1 %endDigestStrm" [./sha3.hpp:727->fiat_shamir.cpp:35]   --->   Operation 33 'call' 'call_ln727' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 9 <SV = 8> <Delay = 1.42>
+ST_9 : Operation 34 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @msgStrm_str, i32 1, void @p_str, void @p_str, i32 16, i32 16, i64 %msgStrm, i64 %msgStrm"   --->   Operation 34 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %msgStrm, void @empty_46, i32 0, i32 0, void @empty_34, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 36 [1/1] (0.00ns)   --->   "%empty_280 = specchannel i32 @_ssdm_op_SpecChannel, void @msgLenStrm_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i128 %msgLenStrm, i128 %msgLenStrm"   --->   Operation 36 'specchannel' 'empty_280' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %msgLenStrm, void @empty_46, i32 0, i32 0, void @empty_34, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 38 [1/1] (0.00ns)   --->   "%empty_281 = specchannel i32 @_ssdm_op_SpecChannel, void @endMsgLenStrm_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i1 %endMsgLenStrm, i1 %endMsgLenStrm"   --->   Operation 38 'specchannel' 'empty_281' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %endMsgLenStrm, void @empty_46, i32 0, i32 0, void @empty_34, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 40 [1/1] (0.00ns)   --->   "%empty_282 = specchannel i32 @_ssdm_op_SpecChannel, void @digestStrm_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i256 %digestStrm, i256 %digestStrm"   --->   Operation 40 'specchannel' 'empty_282' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %digestStrm, void @empty_46, i32 0, i32 0, void @empty_34, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 42 [1/1] (0.00ns)   --->   "%empty_283 = specchannel i32 @_ssdm_op_SpecChannel, void @endDigestStrm_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i1 %endDigestStrm, i1 %endDigestStrm"   --->   Operation 42 'specchannel' 'empty_283' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %endDigestStrm, void @empty_46, i32 0, i32 0, void @empty_34, i32 0, i32 0, void @empty_34, void @empty_34, void @empty_34, i32 0, i32 0, i32 0, i32 0, void @empty_34, void @empty_34, i32 4294967295, i32 0, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 44 [1/1] ( I:1.42ns O:1.42ns )   --->   "%c = read i256 @_ssdm_op_Read.ap_fifo.volatile.i256P0A, i256 %digestStrm" [fiat_shamir.cpp:37]   --->   Operation 44 'read' 'c' <Predicate = true> <Delay = 1.42> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 256> <Depth = 2> <FIFO>
+ST_9 : Operation 45 [1/1] ( I:1.42ns O:1.42ns )   --->   "%p_016 = read i1 @_ssdm_op_Read.ap_fifo.volatile.i1P0A, i1 %endDigestStrm" [fiat_shamir.cpp:38]   --->   Operation 45 'read' 'p_016' <Predicate = true> <Delay = 1.42> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.42> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_9 : Operation 46 [1/1] (0.00ns)   --->   "%trunc_ln40 = trunc i256 %c" [fiat_shamir.cpp:40]   --->   Operation 46 'trunc' 'trunc_ln40' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 47 [1/1] (0.00ns)   --->   "%trunc_ln43 = trunc i256 %c" [fiat_shamir.cpp:43]   --->   Operation 47 'trunc' 'trunc_ln43' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 48 [1/1] (0.00ns)   --->   "%chal_1 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 2" [fiat_shamir.cpp:43]   --->   Operation 48 'partselect' 'chal_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 49 [1/1] (0.00ns)   --->   "%chal_2 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 4" [fiat_shamir.cpp:43]   --->   Operation 49 'partselect' 'chal_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 50 [1/1] (0.00ns)   --->   "%chal_3 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 6" [fiat_shamir.cpp:43]   --->   Operation 50 'partselect' 'chal_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 51 [1/1] (0.00ns)   --->   "%chal_4 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 8" [fiat_shamir.cpp:43]   --->   Operation 51 'partselect' 'chal_4' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 52 [1/1] (0.00ns)   --->   "%chal_5 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 10" [fiat_shamir.cpp:43]   --->   Operation 52 'partselect' 'chal_5' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 53 [1/1] (0.00ns)   --->   "%chal_6 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 12" [fiat_shamir.cpp:43]   --->   Operation 53 'partselect' 'chal_6' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 54 [1/1] (0.00ns)   --->   "%chal_7 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 14" [fiat_shamir.cpp:43]   --->   Operation 54 'partselect' 'chal_7' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 55 [1/1] (0.00ns)   --->   "%chal_8 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 16" [fiat_shamir.cpp:43]   --->   Operation 55 'partselect' 'chal_8' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 56 [1/1] (0.00ns)   --->   "%chal_9 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 18" [fiat_shamir.cpp:43]   --->   Operation 56 'partselect' 'chal_9' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 57 [1/1] (0.00ns)   --->   "%chal_s = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 20" [fiat_shamir.cpp:43]   --->   Operation 57 'partselect' 'chal_s' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 58 [1/1] (0.00ns)   --->   "%chal_10 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 22" [fiat_shamir.cpp:43]   --->   Operation 58 'partselect' 'chal_10' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 59 [1/1] (0.00ns)   --->   "%chal_11 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 24" [fiat_shamir.cpp:43]   --->   Operation 59 'partselect' 'chal_11' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 60 [1/1] (0.00ns)   --->   "%chal_12 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 26" [fiat_shamir.cpp:43]   --->   Operation 60 'partselect' 'chal_12' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 61 [1/1] (0.00ns)   --->   "%chal_13 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 28" [fiat_shamir.cpp:43]   --->   Operation 61 'partselect' 'chal_13' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 62 [1/1] (0.00ns)   --->   "%chal_14 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 30" [fiat_shamir.cpp:43]   --->   Operation 62 'partselect' 'chal_14' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 63 [1/1] (0.00ns)   --->   "%chal_15 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 32" [fiat_shamir.cpp:43]   --->   Operation 63 'partselect' 'chal_15' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 64 [1/1] (0.00ns)   --->   "%chal_16 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 34" [fiat_shamir.cpp:43]   --->   Operation 64 'partselect' 'chal_16' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 65 [1/1] (0.00ns)   --->   "%chal_17 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 36" [fiat_shamir.cpp:43]   --->   Operation 65 'partselect' 'chal_17' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 66 [1/1] (0.00ns)   --->   "%chal_18 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 38" [fiat_shamir.cpp:43]   --->   Operation 66 'partselect' 'chal_18' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 67 [1/1] (0.00ns)   --->   "%chal_19 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 40" [fiat_shamir.cpp:43]   --->   Operation 67 'partselect' 'chal_19' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 68 [1/1] (0.00ns)   --->   "%chal_20 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 42" [fiat_shamir.cpp:43]   --->   Operation 68 'partselect' 'chal_20' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 69 [1/1] (0.00ns)   --->   "%chal_21 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 44" [fiat_shamir.cpp:43]   --->   Operation 69 'partselect' 'chal_21' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 70 [1/1] (0.00ns)   --->   "%chal_22 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 46" [fiat_shamir.cpp:43]   --->   Operation 70 'partselect' 'chal_22' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 71 [1/1] (0.00ns)   --->   "%chal_23 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 48" [fiat_shamir.cpp:43]   --->   Operation 71 'partselect' 'chal_23' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 72 [1/1] (0.00ns)   --->   "%chal_24 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 50" [fiat_shamir.cpp:43]   --->   Operation 72 'partselect' 'chal_24' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 73 [1/1] (0.00ns)   --->   "%chal_25 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 52" [fiat_shamir.cpp:43]   --->   Operation 73 'partselect' 'chal_25' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 74 [1/1] (0.00ns)   --->   "%chal_26 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 54" [fiat_shamir.cpp:43]   --->   Operation 74 'partselect' 'chal_26' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 75 [1/1] (0.00ns)   --->   "%chal_27 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 56" [fiat_shamir.cpp:43]   --->   Operation 75 'partselect' 'chal_27' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 76 [1/1] (0.00ns)   --->   "%chal_28 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 58" [fiat_shamir.cpp:43]   --->   Operation 76 'partselect' 'chal_28' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 77 [1/1] (0.00ns)   --->   "%chal_29 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 60" [fiat_shamir.cpp:43]   --->   Operation 77 'partselect' 'chal_29' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 78 [1/1] (0.00ns)   --->   "%chal_30 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 62" [fiat_shamir.cpp:43]   --->   Operation 78 'partselect' 'chal_30' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 79 [1/1] (0.00ns)   --->   "%chal_31 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 64" [fiat_shamir.cpp:43]   --->   Operation 79 'partselect' 'chal_31' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 80 [1/1] (0.00ns)   --->   "%chal_32 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 66" [fiat_shamir.cpp:43]   --->   Operation 80 'partselect' 'chal_32' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 81 [1/1] (0.00ns)   --->   "%chal_33 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 68" [fiat_shamir.cpp:43]   --->   Operation 81 'partselect' 'chal_33' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 82 [1/1] (0.00ns)   --->   "%chal_34 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 70" [fiat_shamir.cpp:43]   --->   Operation 82 'partselect' 'chal_34' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 83 [1/1] (0.00ns)   --->   "%chal_35 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 72" [fiat_shamir.cpp:43]   --->   Operation 83 'partselect' 'chal_35' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 84 [1/1] (0.00ns)   --->   "%chal_36 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 74" [fiat_shamir.cpp:43]   --->   Operation 84 'partselect' 'chal_36' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 85 [1/1] (0.00ns)   --->   "%chal_37 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 76" [fiat_shamir.cpp:43]   --->   Operation 85 'partselect' 'chal_37' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 86 [1/1] (0.00ns)   --->   "%chal_38 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 78" [fiat_shamir.cpp:43]   --->   Operation 86 'partselect' 'chal_38' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 87 [1/1] (0.00ns)   --->   "%chal_39 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 80" [fiat_shamir.cpp:43]   --->   Operation 87 'partselect' 'chal_39' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 88 [1/1] (0.00ns)   --->   "%chal_40 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 82" [fiat_shamir.cpp:43]   --->   Operation 88 'partselect' 'chal_40' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 89 [1/1] (0.00ns)   --->   "%chal_41 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 84" [fiat_shamir.cpp:43]   --->   Operation 89 'partselect' 'chal_41' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 90 [1/1] (0.00ns)   --->   "%chal_42 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 86" [fiat_shamir.cpp:43]   --->   Operation 90 'partselect' 'chal_42' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 91 [1/1] (0.00ns)   --->   "%chal_43 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 88" [fiat_shamir.cpp:43]   --->   Operation 91 'partselect' 'chal_43' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 92 [1/1] (0.00ns)   --->   "%chal_44 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 90" [fiat_shamir.cpp:43]   --->   Operation 92 'partselect' 'chal_44' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 93 [1/1] (0.00ns)   --->   "%chal_45 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 92" [fiat_shamir.cpp:43]   --->   Operation 93 'partselect' 'chal_45' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 94 [1/1] (0.00ns)   --->   "%chal_46 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 94" [fiat_shamir.cpp:43]   --->   Operation 94 'partselect' 'chal_46' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 95 [1/1] (0.00ns)   --->   "%chal_47 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 96" [fiat_shamir.cpp:43]   --->   Operation 95 'partselect' 'chal_47' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 96 [1/1] (0.00ns)   --->   "%chal_48 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 98" [fiat_shamir.cpp:43]   --->   Operation 96 'partselect' 'chal_48' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 97 [1/1] (0.00ns)   --->   "%chal_49 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 100" [fiat_shamir.cpp:43]   --->   Operation 97 'partselect' 'chal_49' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 98 [1/1] (0.00ns)   --->   "%chal_50 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 102" [fiat_shamir.cpp:43]   --->   Operation 98 'partselect' 'chal_50' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 99 [1/1] (0.00ns)   --->   "%chal_51 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 104" [fiat_shamir.cpp:43]   --->   Operation 99 'partselect' 'chal_51' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 100 [1/1] (0.00ns)   --->   "%chal_52 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 106" [fiat_shamir.cpp:43]   --->   Operation 100 'partselect' 'chal_52' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 101 [1/1] (0.00ns)   --->   "%chal_53 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 108" [fiat_shamir.cpp:43]   --->   Operation 101 'partselect' 'chal_53' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 102 [1/1] (0.00ns)   --->   "%chal_54 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 110" [fiat_shamir.cpp:43]   --->   Operation 102 'partselect' 'chal_54' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 103 [1/1] (0.00ns)   --->   "%chal_55 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 112" [fiat_shamir.cpp:43]   --->   Operation 103 'partselect' 'chal_55' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 104 [1/1] (0.00ns)   --->   "%chal_56 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 114" [fiat_shamir.cpp:43]   --->   Operation 104 'partselect' 'chal_56' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 105 [1/1] (0.00ns)   --->   "%chal_57 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 116" [fiat_shamir.cpp:43]   --->   Operation 105 'partselect' 'chal_57' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 106 [1/1] (0.00ns)   --->   "%chal_58 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 118" [fiat_shamir.cpp:43]   --->   Operation 106 'partselect' 'chal_58' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 107 [1/1] (0.00ns)   --->   "%chal_59 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 120" [fiat_shamir.cpp:43]   --->   Operation 107 'partselect' 'chal_59' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 108 [1/1] (0.00ns)   --->   "%chal_60 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 122" [fiat_shamir.cpp:43]   --->   Operation 108 'partselect' 'chal_60' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 109 [1/1] (0.00ns)   --->   "%chal_61 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 124" [fiat_shamir.cpp:43]   --->   Operation 109 'partselect' 'chal_61' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 110 [1/1] (0.00ns)   --->   "%chal_62 = partselect i2 @_ssdm_op_PartSelect.i2.i256.i32, i256 %c, i32 126" [fiat_shamir.cpp:43]   --->   Operation 110 'partselect' 'chal_62' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 111 [1/1] (0.00ns)   --->   "%mrv = insertvalue i256 <undef>, i2 %trunc_ln43" [fiat_shamir.cpp:45]   --->   Operation 111 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 112 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i256 %mrv, i2 %chal_1" [fiat_shamir.cpp:45]   --->   Operation 112 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 113 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i256 %mrv_1, i2 %chal_2" [fiat_shamir.cpp:45]   --->   Operation 113 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 114 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i256 %mrv_2, i2 %chal_3" [fiat_shamir.cpp:45]   --->   Operation 114 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 115 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue i256 %mrv_3, i2 %chal_4" [fiat_shamir.cpp:45]   --->   Operation 115 'insertvalue' 'mrv_4' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 116 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue i256 %mrv_4, i2 %chal_5" [fiat_shamir.cpp:45]   --->   Operation 116 'insertvalue' 'mrv_5' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 117 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue i256 %mrv_5, i2 %chal_6" [fiat_shamir.cpp:45]   --->   Operation 117 'insertvalue' 'mrv_6' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 118 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue i256 %mrv_6, i2 %chal_7" [fiat_shamir.cpp:45]   --->   Operation 118 'insertvalue' 'mrv_7' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 119 [1/1] (0.00ns)   --->   "%mrv_8 = insertvalue i256 %mrv_7, i2 %chal_8" [fiat_shamir.cpp:45]   --->   Operation 119 'insertvalue' 'mrv_8' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 120 [1/1] (0.00ns)   --->   "%mrv_9 = insertvalue i256 %mrv_8, i2 %chal_9" [fiat_shamir.cpp:45]   --->   Operation 120 'insertvalue' 'mrv_9' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 121 [1/1] (0.00ns)   --->   "%mrv_10 = insertvalue i256 %mrv_9, i2 %chal_s" [fiat_shamir.cpp:45]   --->   Operation 121 'insertvalue' 'mrv_10' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 122 [1/1] (0.00ns)   --->   "%mrv_11 = insertvalue i256 %mrv_10, i2 %chal_10" [fiat_shamir.cpp:45]   --->   Operation 122 'insertvalue' 'mrv_11' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 123 [1/1] (0.00ns)   --->   "%mrv_12 = insertvalue i256 %mrv_11, i2 %chal_11" [fiat_shamir.cpp:45]   --->   Operation 123 'insertvalue' 'mrv_12' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 124 [1/1] (0.00ns)   --->   "%mrv_13 = insertvalue i256 %mrv_12, i2 %chal_12" [fiat_shamir.cpp:45]   --->   Operation 124 'insertvalue' 'mrv_13' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 125 [1/1] (0.00ns)   --->   "%mrv_14 = insertvalue i256 %mrv_13, i2 %chal_13" [fiat_shamir.cpp:45]   --->   Operation 125 'insertvalue' 'mrv_14' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 126 [1/1] (0.00ns)   --->   "%mrv_15 = insertvalue i256 %mrv_14, i2 %chal_14" [fiat_shamir.cpp:45]   --->   Operation 126 'insertvalue' 'mrv_15' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 127 [1/1] (0.00ns)   --->   "%mrv_16 = insertvalue i256 %mrv_15, i2 %chal_15" [fiat_shamir.cpp:45]   --->   Operation 127 'insertvalue' 'mrv_16' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 128 [1/1] (0.00ns)   --->   "%mrv_17 = insertvalue i256 %mrv_16, i2 %chal_16" [fiat_shamir.cpp:45]   --->   Operation 128 'insertvalue' 'mrv_17' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 129 [1/1] (0.00ns)   --->   "%mrv_18 = insertvalue i256 %mrv_17, i2 %chal_17" [fiat_shamir.cpp:45]   --->   Operation 129 'insertvalue' 'mrv_18' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 130 [1/1] (0.00ns)   --->   "%mrv_19 = insertvalue i256 %mrv_18, i2 %chal_18" [fiat_shamir.cpp:45]   --->   Operation 130 'insertvalue' 'mrv_19' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 131 [1/1] (0.00ns)   --->   "%mrv_20 = insertvalue i256 %mrv_19, i2 %chal_19" [fiat_shamir.cpp:45]   --->   Operation 131 'insertvalue' 'mrv_20' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 132 [1/1] (0.00ns)   --->   "%mrv_21 = insertvalue i256 %mrv_20, i2 %chal_20" [fiat_shamir.cpp:45]   --->   Operation 132 'insertvalue' 'mrv_21' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 133 [1/1] (0.00ns)   --->   "%mrv_22 = insertvalue i256 %mrv_21, i2 %chal_21" [fiat_shamir.cpp:45]   --->   Operation 133 'insertvalue' 'mrv_22' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 134 [1/1] (0.00ns)   --->   "%mrv_23 = insertvalue i256 %mrv_22, i2 %chal_22" [fiat_shamir.cpp:45]   --->   Operation 134 'insertvalue' 'mrv_23' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 135 [1/1] (0.00ns)   --->   "%mrv_24 = insertvalue i256 %mrv_23, i2 %chal_23" [fiat_shamir.cpp:45]   --->   Operation 135 'insertvalue' 'mrv_24' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 136 [1/1] (0.00ns)   --->   "%mrv_25 = insertvalue i256 %mrv_24, i2 %chal_24" [fiat_shamir.cpp:45]   --->   Operation 136 'insertvalue' 'mrv_25' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 137 [1/1] (0.00ns)   --->   "%mrv_26 = insertvalue i256 %mrv_25, i2 %chal_25" [fiat_shamir.cpp:45]   --->   Operation 137 'insertvalue' 'mrv_26' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 138 [1/1] (0.00ns)   --->   "%mrv_27 = insertvalue i256 %mrv_26, i2 %chal_26" [fiat_shamir.cpp:45]   --->   Operation 138 'insertvalue' 'mrv_27' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 139 [1/1] (0.00ns)   --->   "%mrv_28 = insertvalue i256 %mrv_27, i2 %chal_27" [fiat_shamir.cpp:45]   --->   Operation 139 'insertvalue' 'mrv_28' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 140 [1/1] (0.00ns)   --->   "%mrv_29 = insertvalue i256 %mrv_28, i2 %chal_28" [fiat_shamir.cpp:45]   --->   Operation 140 'insertvalue' 'mrv_29' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 141 [1/1] (0.00ns)   --->   "%mrv_30 = insertvalue i256 %mrv_29, i2 %chal_29" [fiat_shamir.cpp:45]   --->   Operation 141 'insertvalue' 'mrv_30' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 142 [1/1] (0.00ns)   --->   "%mrv_31 = insertvalue i256 %mrv_30, i2 %chal_30" [fiat_shamir.cpp:45]   --->   Operation 142 'insertvalue' 'mrv_31' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 143 [1/1] (0.00ns)   --->   "%mrv_32 = insertvalue i256 %mrv_31, i2 %chal_31" [fiat_shamir.cpp:45]   --->   Operation 143 'insertvalue' 'mrv_32' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 144 [1/1] (0.00ns)   --->   "%mrv_33 = insertvalue i256 %mrv_32, i2 %chal_32" [fiat_shamir.cpp:45]   --->   Operation 144 'insertvalue' 'mrv_33' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 145 [1/1] (0.00ns)   --->   "%mrv_34 = insertvalue i256 %mrv_33, i2 %chal_33" [fiat_shamir.cpp:45]   --->   Operation 145 'insertvalue' 'mrv_34' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 146 [1/1] (0.00ns)   --->   "%mrv_35 = insertvalue i256 %mrv_34, i2 %chal_34" [fiat_shamir.cpp:45]   --->   Operation 146 'insertvalue' 'mrv_35' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 147 [1/1] (0.00ns)   --->   "%mrv_36 = insertvalue i256 %mrv_35, i2 %chal_35" [fiat_shamir.cpp:45]   --->   Operation 147 'insertvalue' 'mrv_36' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 148 [1/1] (0.00ns)   --->   "%mrv_37 = insertvalue i256 %mrv_36, i2 %chal_36" [fiat_shamir.cpp:45]   --->   Operation 148 'insertvalue' 'mrv_37' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 149 [1/1] (0.00ns)   --->   "%mrv_38 = insertvalue i256 %mrv_37, i2 %chal_37" [fiat_shamir.cpp:45]   --->   Operation 149 'insertvalue' 'mrv_38' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 150 [1/1] (0.00ns)   --->   "%mrv_39 = insertvalue i256 %mrv_38, i2 %chal_38" [fiat_shamir.cpp:45]   --->   Operation 150 'insertvalue' 'mrv_39' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 151 [1/1] (0.00ns)   --->   "%mrv_40 = insertvalue i256 %mrv_39, i2 %chal_39" [fiat_shamir.cpp:45]   --->   Operation 151 'insertvalue' 'mrv_40' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 152 [1/1] (0.00ns)   --->   "%mrv_41 = insertvalue i256 %mrv_40, i2 %chal_40" [fiat_shamir.cpp:45]   --->   Operation 152 'insertvalue' 'mrv_41' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 153 [1/1] (0.00ns)   --->   "%mrv_42 = insertvalue i256 %mrv_41, i2 %chal_41" [fiat_shamir.cpp:45]   --->   Operation 153 'insertvalue' 'mrv_42' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 154 [1/1] (0.00ns)   --->   "%mrv_43 = insertvalue i256 %mrv_42, i2 %chal_42" [fiat_shamir.cpp:45]   --->   Operation 154 'insertvalue' 'mrv_43' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 155 [1/1] (0.00ns)   --->   "%mrv_44 = insertvalue i256 %mrv_43, i2 %chal_43" [fiat_shamir.cpp:45]   --->   Operation 155 'insertvalue' 'mrv_44' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 156 [1/1] (0.00ns)   --->   "%mrv_45 = insertvalue i256 %mrv_44, i2 %chal_44" [fiat_shamir.cpp:45]   --->   Operation 156 'insertvalue' 'mrv_45' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 157 [1/1] (0.00ns)   --->   "%mrv_46 = insertvalue i256 %mrv_45, i2 %chal_45" [fiat_shamir.cpp:45]   --->   Operation 157 'insertvalue' 'mrv_46' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 158 [1/1] (0.00ns)   --->   "%mrv_47 = insertvalue i256 %mrv_46, i2 %chal_46" [fiat_shamir.cpp:45]   --->   Operation 158 'insertvalue' 'mrv_47' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 159 [1/1] (0.00ns)   --->   "%mrv_48 = insertvalue i256 %mrv_47, i2 %chal_47" [fiat_shamir.cpp:45]   --->   Operation 159 'insertvalue' 'mrv_48' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 160 [1/1] (0.00ns)   --->   "%mrv_49 = insertvalue i256 %mrv_48, i2 %chal_48" [fiat_shamir.cpp:45]   --->   Operation 160 'insertvalue' 'mrv_49' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 161 [1/1] (0.00ns)   --->   "%mrv_50 = insertvalue i256 %mrv_49, i2 %chal_49" [fiat_shamir.cpp:45]   --->   Operation 161 'insertvalue' 'mrv_50' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 162 [1/1] (0.00ns)   --->   "%mrv_51 = insertvalue i256 %mrv_50, i2 %chal_50" [fiat_shamir.cpp:45]   --->   Operation 162 'insertvalue' 'mrv_51' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 163 [1/1] (0.00ns)   --->   "%mrv_52 = insertvalue i256 %mrv_51, i2 %chal_51" [fiat_shamir.cpp:45]   --->   Operation 163 'insertvalue' 'mrv_52' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 164 [1/1] (0.00ns)   --->   "%mrv_53 = insertvalue i256 %mrv_52, i2 %chal_52" [fiat_shamir.cpp:45]   --->   Operation 164 'insertvalue' 'mrv_53' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 165 [1/1] (0.00ns)   --->   "%mrv_54 = insertvalue i256 %mrv_53, i2 %chal_53" [fiat_shamir.cpp:45]   --->   Operation 165 'insertvalue' 'mrv_54' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 166 [1/1] (0.00ns)   --->   "%mrv_55 = insertvalue i256 %mrv_54, i2 %chal_54" [fiat_shamir.cpp:45]   --->   Operation 166 'insertvalue' 'mrv_55' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 167 [1/1] (0.00ns)   --->   "%mrv_56 = insertvalue i256 %mrv_55, i2 %chal_55" [fiat_shamir.cpp:45]   --->   Operation 167 'insertvalue' 'mrv_56' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 168 [1/1] (0.00ns)   --->   "%mrv_57 = insertvalue i256 %mrv_56, i2 %chal_56" [fiat_shamir.cpp:45]   --->   Operation 168 'insertvalue' 'mrv_57' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 169 [1/1] (0.00ns)   --->   "%mrv_58 = insertvalue i256 %mrv_57, i2 %chal_57" [fiat_shamir.cpp:45]   --->   Operation 169 'insertvalue' 'mrv_58' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 170 [1/1] (0.00ns)   --->   "%mrv_59 = insertvalue i256 %mrv_58, i2 %chal_58" [fiat_shamir.cpp:45]   --->   Operation 170 'insertvalue' 'mrv_59' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 171 [1/1] (0.00ns)   --->   "%mrv_60 = insertvalue i256 %mrv_59, i2 %chal_59" [fiat_shamir.cpp:45]   --->   Operation 171 'insertvalue' 'mrv_60' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 172 [1/1] (0.00ns)   --->   "%mrv_61 = insertvalue i256 %mrv_60, i2 %chal_60" [fiat_shamir.cpp:45]   --->   Operation 172 'insertvalue' 'mrv_61' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 173 [1/1] (0.00ns)   --->   "%mrv_62 = insertvalue i256 %mrv_61, i2 %chal_61" [fiat_shamir.cpp:45]   --->   Operation 173 'insertvalue' 'mrv_62' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 174 [1/1] (0.00ns)   --->   "%mrv_63 = insertvalue i256 %mrv_62, i2 %chal_62" [fiat_shamir.cpp:45]   --->   Operation 174 'insertvalue' 'mrv_63' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 175 [1/1] (0.00ns)   --->   "%mrv_64 = insertvalue i256 %mrv_63, i128 %trunc_ln40" [fiat_shamir.cpp:45]   --->   Operation 175 'insertvalue' 'mrv_64' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 176 [1/1] (0.00ns)   --->   "%ret_ln45 = ret i256 %mrv_64" [fiat_shamir.cpp:45]   --->   Operation 176 'ret' 'ret_ln45' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 0.000ns.
+
+ <State 1>: 1.429ns
+The critical path consists of the following:
+	'alloca' operation 1 bit ('endMsgLenStrm', fiat_shamir.cpp:14) [11]  (0.000 ns)
+	fifo write operation ('write_ln23', fiat_shamir.cpp:23) on port 'endMsgLenStrm', fiat_shamir.cpp:14 (fiat_shamir.cpp:23) [20]  (1.429 ns)
+
+ <State 2>: 1.429ns
+The critical path consists of the following:
+	fifo write operation ('write_ln33', fiat_shamir.cpp:33) on port 'endMsgLenStrm', fiat_shamir.cpp:14 (fiat_shamir.cpp:33) [34]  (1.429 ns)
+
+ <State 3>: 1.374ns
+The critical path consists of the following:
+	wire read operation ('hcom_val_read') on port 'hcom_val' [4]  (0.000 ns)
+	fifo write operation ('write_ln27', fiat_shamir.cpp:27) on port 'msgStrm', fiat_shamir.cpp:10 (fiat_shamir.cpp:27) [26]  (1.374 ns)
+
+ <State 4>: 1.374ns
+The critical path consists of the following:
+	fifo write operation ('write_ln28', fiat_shamir.cpp:28) on port 'msgStrm', fiat_shamir.cpp:10 (fiat_shamir.cpp:28) [28]  (1.374 ns)
+
+ <State 5>: 1.374ns
+The critical path consists of the following:
+	fifo write operation ('write_ln29', fiat_shamir.cpp:29) on port 'msgStrm', fiat_shamir.cpp:10 (fiat_shamir.cpp:29) [30]  (1.374 ns)
+
+ <State 6>: 1.374ns
+The critical path consists of the following:
+	fifo write operation ('write_ln30', fiat_shamir.cpp:30) on port 'msgStrm', fiat_shamir.cpp:10 (fiat_shamir.cpp:30) [32]  (1.374 ns)
+
+ <State 7>: 0.000ns
+The critical path consists of the following:
+
+ <State 8>: 0.000ns
+The critical path consists of the following:
+
+ <State 9>: 1.429ns
+The critical path consists of the following:
+	fifo read operation ('p_016', fiat_shamir.cpp:38) on port 'endDigestStrm', fiat_shamir.cpp:18 (fiat_shamir.cpp:38) [37]  (1.429 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,221 @@
+
+
+================================================================
+== Vitis HLS Report for 'ProverCircuitEval'
+================================================================
+* Date:           Mon Nov 17 18:42:26 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.978 ns|        0 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+----------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline |
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type   |
+    +---------+---------+----------+----------+--------+--------+----------+
+    |   773154|   773154|  3.866 ms|  3.866 ms|  581145|  581145|  dataflow|
+    +---------+---------+----------+----------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------+--------------------------------------------+---------+---------+----------+----------+--------+--------+------------------------------------------------+
+        |                                               |                                            |  Latency (cycles) |  Latency (absolute) |     Interval    |                    Pipeline                    |
+        |                    Instance                   |                   Module                   |   min   |   max   |    min   |    max   |   min  |   max  |                      Type                      |
+        +-----------------------------------------------+--------------------------------------------+---------+---------+----------+----------+--------+--------+------------------------------------------------+
+        |ProverCircuitEval_Block_entry_u_0_arg_proc_U0  |ProverCircuitEval_Block_entry_u_0_arg_proc  |   581144|   581144|  2.906 ms|  2.906 ms|  581144|  581144|                                              no|
+        |ToField_U0                                     |ToField                                     |    38402|    38402|  0.192 ms|  0.192 ms|   38401|   38401|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |chal2_U0                                       |chal2                                       |    40240|    40523|  0.201 ms|  0.203 ms|   40240|   40523|                                              no|
+        |aggregate_coef_U0                              |aggregate_coef                              |   192009|   192009|  0.960 ms|  0.960 ms|  192009|  192009|                                              no|
+        +-----------------------------------------------+--------------------------------------------+---------+---------+----------+----------+--------+--------+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       14|     -|
+|FIFO                 |        -|      -|     1570|      960|     -|
+|Instance             |        9|      -|    93879|   583098|     0|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|        9|     -|
+|Register             |        -|      -|        2|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        9|      0|    95451|   584081|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |       ~0|      0|       11|      135|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |       ~0|      0|        2|       33|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------+--------------------------------------------+---------+----+-------+--------+-----+
+    |                    Instance                   |                   Module                   | BRAM_18K| DSP|   FF  |   LUT  | URAM|
+    +-----------------------------------------------+--------------------------------------------+---------+----+-------+--------+-----+
+    |ProverCircuitEval_Block_entry_u_0_arg_proc_U0  |ProverCircuitEval_Block_entry_u_0_arg_proc  |        9|   0|  47821|  309359|    0|
+    |ToField_U0                                     |ToField                                     |        0|   0|     19|     912|    0|
+    |aggregate_coef_U0                              |aggregate_coef                              |        0|   0|  10274|   62132|    0|
+    |chal2_U0                                       |chal2                                       |        0|   0|  35765|  210695|    0|
+    +-----------------------------------------------+--------------------------------------------+---------+----+-------+--------+-----+
+    |Total                                          |                                            |        9|   0|  93879|  583098|    0|
+    +-----------------------------------------------+--------------------------------------------+---------+----+-------+--------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +-------------+---------+-----+----+-----+------+-----+---------+
+    |     Name    | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +-------------+---------+-----+----+-----+------+-----+---------+
+    |a0_strm_U    |        0|  516|   0|    -|     2|  256|      512|
+    |a1_strm_U    |        0|  260|   0|    -|     2|  128|      256|
+    |a_strm_U     |        0|  516|   0|    -|     2|  256|      512|
+    |ch2_strm_U   |        0|  260|   0|    -|     2|  128|      256|
+    |d_strm_cp_U  |        0|    8|   0|    -|     2|    1|        2|
+    |u_mask_U     |        0|    5|   0|    -|     3|  128|      384|
+    |v_mask_U     |        0|    5|   0|    -|     3|  128|      384|
+    +-------------+---------+-----+----+-----+------+-----+---------+
+    |Total        |        0| 1570|   0|    0|    16| 1025|     2306|
+    +-------------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                        Variable Name                       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |ProverCircuitEval_Block_entry_u_0_arg_proc_U0_ap_continue   |       and|   0|  0|   2|           1|           1|
+    |ProverCircuitEval_Block_entry_u_0_arg_proc_U0_start_full_n  |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_v_mask                                      |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                                     |       and|   0|  0|   2|           1|           1|
+    |ap_sync_continue                                            |       and|   0|  0|   2|           1|           1|
+    |ap_sync_done                                                |       and|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_v_mask                                |        or|   0|  0|   2|           1|           1|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                       |          |   0|  0|  14|           7|           7|
+    +------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_v_mask  |   9|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |   9|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+---+----+-----+-----------+
+    |               Name               | FF| LUT| Bits| Const Bits|
+    +----------------------------------+---+----+-----+-----------+
+    |ap_sync_done                      |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_v_mask  |  1|   0|    1|          0|
+    +----------------------------------+---+----+-----+-----------+
+    |Total                             |  2|   0|    2|          0|
+    +----------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+-------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++-------------------+-----+-----+------------+-------------------+--------------+
+|ch1_val1           |   in|  128|     ap_none|           ch1_val1|        scalar|
+|ch1_val1_ap_vld    |   in|    1|     ap_none|           ch1_val1|        scalar|
+|u_0_address0       |  out|   18|   ap_memory|                u_0|         array|
+|u_0_ce0            |  out|    1|   ap_memory|                u_0|         array|
+|u_0_d0             |  out|    1|   ap_memory|                u_0|         array|
+|u_0_q0             |   in|    1|   ap_memory|                u_0|         array|
+|u_0_we0            |  out|    1|   ap_memory|                u_0|         array|
+|u_0_address1       |  out|   18|   ap_memory|                u_0|         array|
+|u_0_ce1            |  out|    1|   ap_memory|                u_0|         array|
+|u_0_d1             |  out|    1|   ap_memory|                u_0|         array|
+|u_0_q1             |   in|    1|   ap_memory|                u_0|         array|
+|u_0_we1            |  out|    1|   ap_memory|                u_0|         array|
+|u_1_address0       |  out|   18|   ap_memory|                u_1|         array|
+|u_1_ce0            |  out|    1|   ap_memory|                u_1|         array|
+|u_1_d0             |  out|    1|   ap_memory|                u_1|         array|
+|u_1_q0             |   in|    1|   ap_memory|                u_1|         array|
+|u_1_we0            |  out|    1|   ap_memory|                u_1|         array|
+|u_1_address1       |  out|   18|   ap_memory|                u_1|         array|
+|u_1_ce1            |  out|    1|   ap_memory|                u_1|         array|
+|u_1_d1             |  out|    1|   ap_memory|                u_1|         array|
+|u_1_q1             |   in|    1|   ap_memory|                u_1|         array|
+|u_1_we1            |  out|    1|   ap_memory|                u_1|         array|
+|V_0_address0       |  out|   18|   ap_memory|                V_0|         array|
+|V_0_ce0            |  out|    1|   ap_memory|                V_0|         array|
+|V_0_d0             |  out|  128|   ap_memory|                V_0|         array|
+|V_0_q0             |   in|  128|   ap_memory|                V_0|         array|
+|V_0_we0            |  out|    1|   ap_memory|                V_0|         array|
+|V_0_address1       |  out|   18|   ap_memory|                V_0|         array|
+|V_0_ce1            |  out|    1|   ap_memory|                V_0|         array|
+|V_0_d1             |  out|  128|   ap_memory|                V_0|         array|
+|V_0_q1             |   in|  128|   ap_memory|                V_0|         array|
+|V_0_we1            |  out|    1|   ap_memory|                V_0|         array|
+|V_1_address0       |  out|   18|   ap_memory|                V_1|         array|
+|V_1_ce0            |  out|    1|   ap_memory|                V_1|         array|
+|V_1_d0             |  out|  128|   ap_memory|                V_1|         array|
+|V_1_q0             |   in|  128|   ap_memory|                V_1|         array|
+|V_1_we0            |  out|    1|   ap_memory|                V_1|         array|
+|V_1_address1       |  out|   18|   ap_memory|                V_1|         array|
+|V_1_ce1            |  out|    1|   ap_memory|                V_1|         array|
+|V_1_d1             |  out|  128|   ap_memory|                V_1|         array|
+|V_1_q1             |   in|  128|   ap_memory|                V_1|         array|
+|V_1_we1            |  out|    1|   ap_memory|                V_1|         array|
+|witness_TDATA      |   in|    8|        axis|            witness|       pointer|
+|witness_TVALID     |   in|    1|        axis|            witness|       pointer|
+|witness_TREADY     |  out|    1|        axis|            witness|       pointer|
+|circuit_TDATA      |   in|  128|        axis|            circuit|       pointer|
+|circuit_TVALID     |   in|    1|        axis|            circuit|       pointer|
+|circuit_TREADY     |  out|    1|        axis|            circuit|       pointer|
+|d_strm_TDATA       |  out|    8|        axis|             d_strm|       pointer|
+|d_strm_TVALID      |  out|    1|        axis|             d_strm|       pointer|
+|d_strm_TREADY      |   in|    1|        axis|             d_strm|       pointer|
+|a0_tilde           |  out|  128|      ap_vld|           a0_tilde|       pointer|
+|a0_tilde_ap_vld    |  out|    1|      ap_vld|           a0_tilde|       pointer|
+|a1_tilde           |  out|  128|      ap_vld|           a1_tilde|       pointer|
+|a1_tilde_ap_vld    |  out|    1|      ap_vld|           a1_tilde|       pointer|
+|proof_strm_TDATA   |  out|  128|        axis|         proof_strm|       pointer|
+|proof_strm_TVALID  |  out|    1|        axis|         proof_strm|       pointer|
+|proof_strm_TREADY  |   in|    1|        axis|         proof_strm|       pointer|
+|ap_clk             |   in|    1|  ap_ctrl_hs|  ProverCircuitEval|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  ProverCircuitEval|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  ProverCircuitEval|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  ProverCircuitEval|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  ProverCircuitEval|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  ProverCircuitEval|  return value|
+|ap_continue        |   in|    1|  ap_ctrl_hs|  ProverCircuitEval|  return value|
++-------------------+-----+-----+------------+-------------------+--------------+
+

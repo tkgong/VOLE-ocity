@@ -1,0 +1,223 @@
+
+
+================================================================
+== Vitis HLS Report for 'EvalCircuit'
+================================================================
+* Date:           Mon Nov 17 18:42:25 2025
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        hls_component
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  4.978 ns|        0 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   577873|   577873|  2.889 ms|  2.889 ms|  577873|  577873|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------+---------------------------------------+---------+---------+----------+----------+--------+--------+------------------------------------------------+
+        |                                                 |                                       |  Latency (cycles) |  Latency (absolute) |     Interval    |                    Pipeline                    |
+        |                     Instance                    |                 Module                |   min   |   max   |    min   |    max   |   min  |   max  |                      Type                      |
+        +-------------------------------------------------+---------------------------------------+---------+---------+----------+----------+--------+--------+------------------------------------------------+
+        |grp_EvalCircuit_Pipeline_VITIS_LOOP_100_1_fu_56  |EvalCircuit_Pipeline_VITIS_LOOP_100_1  |     1603|     1603|  8.015 us|  8.015 us|    1602|    1602|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        |grp_EvalCircuit_Pipeline_VITIS_LOOP_107_2_fu_72  |EvalCircuit_Pipeline_VITIS_LOOP_107_2  |   576267|   576267|  2.881 ms|  2.881 ms|  576261|  576261|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +-------------------------------------------------+---------------------------------------+---------+---------+----------+----------+--------+--------+------------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|        4|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|    10087|    62422|     -|
+|Memory               |        1|      -|        0|        0|     0|
+|Multiplexer          |        -|      -|        0|      261|     -|
+|Register             |        -|      -|       14|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        1|      0|    10101|    62687|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     1344|   3072|   864000|   432000|   320|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |       ~0|      0|        1|       14|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     5376|  12288|  3456000|  1728000|  1280|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |       ~0|      0|       ~0|        3|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------+---------------------------------------+---------+----+-------+-------+-----+
+    |                     Instance                    |                 Module                | BRAM_18K| DSP|   FF  |  LUT  | URAM|
+    +-------------------------------------------------+---------------------------------------+---------+----+-------+-------+-----+
+    |grp_EvalCircuit_Pipeline_VITIS_LOOP_100_1_fu_56  |EvalCircuit_Pipeline_VITIS_LOOP_100_1  |        0|   0|     25|    109|    0|
+    |grp_EvalCircuit_Pipeline_VITIS_LOOP_107_2_fu_72  |EvalCircuit_Pipeline_VITIS_LOOP_107_2  |        0|   0|  10062|  62313|    0|
+    +-------------------------------------------------+---------------------------------------+---------+----+-------+-------+-----+
+    |Total                                            |                                       |        0|   0|  10087|  62422|    0|
+    +-------------------------------------------------+---------------------------------------+---------+----+-------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +--------------------+-------------------------------------------------+---------+---+----+-----+--------+-----+------+-------------+
+    |       Memory       |                      Module                     | BRAM_18K| FF| LUT| URAM|  Words | Bits| Banks| W*Bits*Banks|
+    +--------------------+-------------------------------------------------+---------+---+----+-----+--------+-----+------+-------------+
+    |extended_witness_U  |EvalCircuit_extended_witness_RAM_1WNR_AUTO_1R1W  |        1|  0|   0|    0|  386045|    1|     1|       386045|
+    +--------------------+-------------------------------------------------+---------+---+----+-----+--------+-----+------+-------------+
+    |Total               |                                                 |        1|  0|   0|    0|  386045|    1|     1|       386045|
+    +--------------------+-------------------------------------------------+---------+---+----+-----+--------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                         Variable Name                         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |grp_EvalCircuit_Pipeline_VITIS_LOOP_100_1_fu_56_d_strm_TREADY  |       and|   0|  0|   2|           1|           1|
+    |grp_EvalCircuit_Pipeline_VITIS_LOOP_107_2_fu_72_d_strm_TREADY  |       and|   0|  0|   2|           1|           1|
+    +---------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                          |          |   0|  0|   4|           2|           2|
+    +---------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                  |  26|          5|    1|          5|
+    |circuit_TREADY             |   9|          2|    1|          2|
+    |d_strm_TDATA               |  14|          3|    8|         24|
+    |d_strm_TDATA_reg           |   9|          2|    8|         16|
+    |d_strm_TVALID              |  14|          3|    1|          3|
+    |d_strm_cp_din              |   9|          2|    1|          2|
+    |d_strm_cp_write            |  14|          3|    1|          3|
+    |extended_witness_address0  |  14|          3|   19|         57|
+    |extended_witness_ce0       |  14|          3|    1|          3|
+    |extended_witness_ce1       |   9|          2|    1|          2|
+    |extended_witness_d0        |  14|          3|    1|          3|
+    |extended_witness_we0       |  14|          3|    1|          3|
+    |u_0_address0               |  14|          3|   18|         54|
+    |u_0_ce0                    |  14|          3|    1|          3|
+    |u_0_ce1                    |   9|          2|    1|          2|
+    |u_0_we1                    |   9|          2|    1|          2|
+    |u_1_address0               |  14|          3|   18|         54|
+    |u_1_ce0                    |  14|          3|    1|          3|
+    |u_1_ce1                    |   9|          2|    1|          2|
+    |u_1_we1                    |   9|          2|    1|          2|
+    |witness_TREADY             |   9|          2|    1|          2|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      | 261|         56|   87|        247|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------+---+----+-----+-----------+
+    |                             Name                             | FF| LUT| Bits| Const Bits|
+    +--------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                     |  4|   0|    4|          0|
+    |d_strm_TDATA_reg                                              |  8|   0|    8|          0|
+    |grp_EvalCircuit_Pipeline_VITIS_LOOP_100_1_fu_56_ap_start_reg  |  1|   0|    1|          0|
+    |grp_EvalCircuit_Pipeline_VITIS_LOOP_107_2_fu_72_ap_start_reg  |  1|   0|    1|          0|
+    +--------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                         | 14|   0|   14|          0|
+    +--------------------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+--------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  | Source Object|    C Type    |
++--------------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|   EvalCircuit|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|   EvalCircuit|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|   EvalCircuit|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|   EvalCircuit|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|   EvalCircuit|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|   EvalCircuit|  return value|
+|u_0_address0              |  out|   18|   ap_memory|           u_0|         array|
+|u_0_ce0                   |  out|    1|   ap_memory|           u_0|         array|
+|u_0_q0                    |   in|    1|   ap_memory|           u_0|         array|
+|u_0_address1              |  out|   18|   ap_memory|           u_0|         array|
+|u_0_ce1                   |  out|    1|   ap_memory|           u_0|         array|
+|u_0_we1                   |  out|    1|   ap_memory|           u_0|         array|
+|u_0_d1                    |  out|    1|   ap_memory|           u_0|         array|
+|u_1_address0              |  out|   18|   ap_memory|           u_1|         array|
+|u_1_ce0                   |  out|    1|   ap_memory|           u_1|         array|
+|u_1_q0                    |   in|    1|   ap_memory|           u_1|         array|
+|u_1_address1              |  out|   18|   ap_memory|           u_1|         array|
+|u_1_ce1                   |  out|    1|   ap_memory|           u_1|         array|
+|u_1_we1                   |  out|    1|   ap_memory|           u_1|         array|
+|u_1_d1                    |  out|    1|   ap_memory|           u_1|         array|
+|V_0_address0              |  out|   18|   ap_memory|           V_0|         array|
+|V_0_ce0                   |  out|    1|   ap_memory|           V_0|         array|
+|V_0_q0                    |   in|  128|   ap_memory|           V_0|         array|
+|V_0_address1              |  out|   18|   ap_memory|           V_0|         array|
+|V_0_ce1                   |  out|    1|   ap_memory|           V_0|         array|
+|V_0_we1                   |  out|    1|   ap_memory|           V_0|         array|
+|V_0_d1                    |  out|  128|   ap_memory|           V_0|         array|
+|V_0_q1                    |   in|  128|   ap_memory|           V_0|         array|
+|V_1_address0              |  out|   18|   ap_memory|           V_1|         array|
+|V_1_ce0                   |  out|    1|   ap_memory|           V_1|         array|
+|V_1_q0                    |   in|  128|   ap_memory|           V_1|         array|
+|V_1_address1              |  out|   18|   ap_memory|           V_1|         array|
+|V_1_ce1                   |  out|    1|   ap_memory|           V_1|         array|
+|V_1_we1                   |  out|    1|   ap_memory|           V_1|         array|
+|V_1_d1                    |  out|  128|   ap_memory|           V_1|         array|
+|V_1_q1                    |   in|  128|   ap_memory|           V_1|         array|
+|witness_TDATA             |   in|    8|        axis|       witness|       pointer|
+|witness_TVALID            |   in|    1|        axis|       witness|       pointer|
+|witness_TREADY            |  out|    1|        axis|       witness|       pointer|
+|circuit_TDATA             |   in|  128|        axis|       circuit|       pointer|
+|circuit_TVALID            |   in|    1|        axis|       circuit|       pointer|
+|circuit_TREADY            |  out|    1|        axis|       circuit|       pointer|
+|d_strm_TDATA              |  out|    8|        axis|        d_strm|       pointer|
+|d_strm_TVALID             |  out|    1|        axis|        d_strm|       pointer|
+|d_strm_TREADY             |   in|    1|        axis|        d_strm|       pointer|
+|d_strm_cp_din             |  out|    1|     ap_fifo|     d_strm_cp|       pointer|
+|d_strm_cp_full_n          |   in|    1|     ap_fifo|     d_strm_cp|       pointer|
+|d_strm_cp_write           |  out|    1|     ap_fifo|     d_strm_cp|       pointer|
+|d_strm_cp_num_data_valid  |   in|    3|     ap_fifo|     d_strm_cp|       pointer|
+|d_strm_cp_fifo_cap        |   in|    3|     ap_fifo|     d_strm_cp|       pointer|
+|a0_strm_din               |  out|  256|     ap_fifo|       a0_strm|       pointer|
+|a0_strm_full_n            |   in|    1|     ap_fifo|       a0_strm|       pointer|
+|a0_strm_write             |  out|    1|     ap_fifo|       a0_strm|       pointer|
+|a0_strm_num_data_valid    |   in|    3|     ap_fifo|       a0_strm|       pointer|
+|a0_strm_fifo_cap          |   in|    3|     ap_fifo|       a0_strm|       pointer|
+|a1_strm_din               |  out|  128|     ap_fifo|       a1_strm|       pointer|
+|a1_strm_full_n            |   in|    1|     ap_fifo|       a1_strm|       pointer|
+|a1_strm_write             |  out|    1|     ap_fifo|       a1_strm|       pointer|
+|a1_strm_num_data_valid    |   in|    3|     ap_fifo|       a1_strm|       pointer|
+|a1_strm_fifo_cap          |   in|    3|     ap_fifo|       a1_strm|       pointer|
++--------------------------+-----+-----+------------+--------------+--------------+
+

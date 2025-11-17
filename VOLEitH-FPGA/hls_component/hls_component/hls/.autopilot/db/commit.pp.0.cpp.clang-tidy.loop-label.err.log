@@ -1,0 +1,4 @@
+3 warnings and 4 errors generated.
+Error while processing /home/tkgong/Research/VOLE-ocity/VOLEitH-FPGA/hls_component/hls_component/hls/.autopilot/db/commit.pp.0.cpp.
+clang-tidy applied 10 of 10 suggested fixes.
+Suppressed 3 warnings (3 with check filters).

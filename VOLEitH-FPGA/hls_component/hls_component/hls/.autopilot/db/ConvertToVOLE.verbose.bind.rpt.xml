@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'ConvertToVOLE'" level="0">
+<item name = "Date">Mon Nov 17 18:41:27 2025
+</item>
+<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Project">hls_component</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 4.895 ns, 0 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">21046, 21046, 0.105 ms, 0.105 ms, 21016, 21016, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_expand_seed_fu_864">expand_seed, 12481, 12481, 62.405 us, 62.405 us, 12481, 12481, no</column>
+<column name="grp_build_VOLE_fu_880">build_VOLE, 10114, 10114, 50.570 us, 50.570 us, 10113, 10113, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_mem_transfer_fu_1017">mem_transfer, 21015, 21015, 0.105 ms, 0.105 ms, 21015, 21015, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
